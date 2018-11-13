@@ -1,0 +1,10 @@
+.headerphone{
+  margin-top: 10px;
+  text-align: right;
+  &-link{
+    font: 13px/16px MuseoSansNormal;
+    text-transform: uppercase;
+    color: $input;
+    border-bottom: 0;    
+  }
+}

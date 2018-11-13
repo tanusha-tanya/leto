@@ -1,0 +1,8 @@
+.headercity{
+  &-link{
+    font: 12px/14px MuseoSansNormal;
+    text-transform: uppercase;
+    border-bottom: 1px dotted $selection;
+    margin-left: 10px;
+  }
+}

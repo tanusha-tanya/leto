@@ -1,0 +1,14 @@
+.headermenu{
+  &-items{
+    display:flex;
+    justify-content: space-between;
+    margin: 7px -12px; 
+  }
+  &-item{
+    list-style:none;
+    margin: 0 12px;
+  }
+  &-link{
+    text-decoration: none;
+  }
+}

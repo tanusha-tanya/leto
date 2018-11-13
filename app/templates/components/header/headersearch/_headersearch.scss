@@ -1,0 +1,43 @@
+.headersearch{
+  &-form{
+      display:flex;
+  }
+  &-label{
+    width: calc(100% - 80px);
+    position: relative;
+  }
+  &-input{
+    width: 100%;
+    padding: 11px;
+    padding-left:46px;
+    box-sizing: border-box;
+    border: 1px solid $border;
+    font: 15px/18px MuseoSansMidle;
+    color: $input;
+    height:40px;
+    &:hover{
+      border: 1px solid $border;
+    }
+  }
+  &-svg{
+    position: absolute;
+    left: 24px;
+    top: 11px;
+  }
+  input::placeholder {
+    color: $input;
+    font: 15px/18px MuseoSansMidle;
+    opacity:1;
+  }
+  &-button{
+    width: 80px;
+    height:40px;
+    border:none;
+    background: $border;
+    color: $buttontext;
+    font: 15px/18px MuseoSansMidle;
+    border-top-right-radius: 50px;
+    text-align: center;
+    padding:11px;
+  }
+}
