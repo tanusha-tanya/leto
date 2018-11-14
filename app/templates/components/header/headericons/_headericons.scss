@@ -1,13 +1,29 @@
 .headericons{
   display: flex;
-  border-left: 1px solid $verticalline;
-  padding-left: 30px;
   justify-content: space-between;
+  @media(min-width:$desctop){
+    border-left: 1px solid $verticalline;
+    padding-left: 30px;
+  }
   &-title{
     font: 12px/14px MuseoSansNormal;
-    margin-top: 10px;
+    display: none;
+    @media(min-width:$tablet){
+      display: block;
+    }
+    @media(min-width:$desctop){
+        margin-top: 10px;
+    }
   }
   &-item{
     text-align: center;
+    width: 37px;
+    @media(min-width:$tablet){
+      width: auto;
+    }
+  }
+  &-svg{
+    width: 28px;
+    height:26px;
   }
 }

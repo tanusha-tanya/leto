@@ -1,0 +1,42 @@
+.headerburger{
+  position: relative;
+  width: 26px;
+  margin-right: 10px;
+  @media(min-width: $tablet){
+    margin-right: 46px;
+  }
+  @media(min-width: $desctop){
+    display: none;
+  }
+  span{
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: $border;
+    position: absolute;
+    top: -14px;
+    @media(min-width: $tablet){
+      top: -18px;
+    }
+    &:before,&:after{
+      content: "";
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: $border;
+      position: absolute;
+    }
+    &:before{
+      top: 14px;
+      @media(min-width: $tablet){
+        top: 18px;
+      }
+    }
+    &:after{
+      top: 7px;
+      @media(min-width: $tablet){
+        top: 9px;
+      }
+    }
+  }
+}

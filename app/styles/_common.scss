@@ -16,6 +16,7 @@ body{
   justify-content: space-between;
   color: $primary;
   font: 15px/24px MuseoSansNormal;
+  overflow-x: hidden;
 }
 i,em{
   font-family: MuseoSansNormalItalic;
@@ -88,14 +89,21 @@ h6{
   width: 100%;
   margin: 0 auto;
   padding: 15px;
+  box-sizing: border-box;
   @media(min-width:$desctop){
     padding: 0;
     max-width: 1180px;
-    box-sizing: border-box;
   }
   &__header{
+    display: flex;
+    padding: 20px;
+    align-items: center;
     @media(min-width:$desctop){
-      display: flex;
+      padding: 20px 0;
     }
   }
+}
+.main-wrap{
+  flex-grow: 1;
+  flex-shrink: 0;
 }

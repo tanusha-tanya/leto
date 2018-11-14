@@ -1,8 +1,9 @@
 .headercity{
+  display: flex;
   &-link{
     font: 12px/14px MuseoSansNormal;
     text-transform: uppercase;
-    border-bottom: 1px dotted $selection;
+    border-bottom: 1px dashed $selection;
     margin-left: 10px;
   }
 }

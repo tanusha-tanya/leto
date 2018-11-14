@@ -1,0 +1,8 @@
+.headerlogo{
+  &-svg{
+    @media(min-width:$tablet){
+      width: 174px;
+      height: 60px;
+    }
+  }
+}

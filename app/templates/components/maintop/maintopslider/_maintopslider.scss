@@ -1,0 +1,84 @@
+/* Feel free to change duration  */
+.animated  {
+  -webkit-animation-duration : 1000 ms  ;
+  animation-duration : 1000 ms  ;
+  -webkit-animation-fill-mode : both  ;
+  animation-fill-mode : both  ;
+}
+/* .owl-animated-out - only for current item */
+/* This is very important class. Use z-index if you want move Out item above In item */
+.owl-animated-out {
+  z-index : 1
+   }
+/* .owl-animated-in - only for upcoming item
+/* This is very important class. Use z-index if you want move In item above Out item */
+.owl-animated-in {
+  z-index : 0
+   }
+/* .fadeOut is style taken from Animation.css and this is how it looks in owl.carousel.css:  */
+.fadeOut  {
+  -webkit-animation-name : fadeOut  ;
+  animation-name : fadeOut  ;
+}
+@-webkit-keyframes  fadeOut  {
+  0% {
+    opacity : 1   ;
+  }
+  100% {
+    opacity : 0   ;
+  }
+}
+@keyframes  fadeOut  {
+  0% {
+    opacity : 1   ;
+  }
+  100% {
+    opacity : 0   ;
+  }
+}
+.maintopslider{
+  position: relative;
+  &-item{
+    width:100%;
+    height: 230px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &.owl-theme .owl-nav.disabled + .owl-dots{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    bottom:0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &.owl-theme .owl-dots .owl-dot span{
+    background: $primary;
+    height: 15px;
+    width: 15px;
+    position: relative;
+    margin: 8px 0;
+    &:before{
+      content: '';
+      display: block;
+      height: 30px;
+      width: 30px;
+      background: rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      position: absolute;
+      left:-7px;
+      top:-7px;
+      transition: opacity .3s;
+      border-radius:100%;
+    }
+  }
+  &.owl-theme .owl-dots .owl-dot.active span, &.owl-theme .owl-dots .owl-dot:hover span{
+    background: $link;
+    &:before{
+      opacity: 1;
+    }
+  }
+}

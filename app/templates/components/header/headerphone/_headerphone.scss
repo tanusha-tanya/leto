@@ -1,10 +1,13 @@
 .headerphone{
-  margin-top: 10px;
   text-align: right;
+  margin-top: 5px;
+  @media(min-width:$desctop){
+      margin-top: 10px;
+  }
   &-link{
     font: 13px/16px MuseoSansNormal;
     text-transform: uppercase;
     color: $input;
-    border-bottom: 0;    
+    border-bottom: 0;
   }
 }
