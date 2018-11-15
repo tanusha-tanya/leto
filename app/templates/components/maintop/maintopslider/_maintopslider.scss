@@ -44,6 +44,9 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    @media(min-width: $tablet){
+      height: 570px;
+    }
   }
   &.owl-theme .owl-nav.disabled + .owl-dots{
     position: absolute;
