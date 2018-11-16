@@ -1,6 +1,8 @@
 .headericons{
   display: flex;
-  justify-content: space-between;
+  @media(min-width:$tablet){
+    justify-content: space-between;
+  }
   @media(min-width:$desctop){
     border-left: 1px solid $verticalline;
     padding-left: 30px;
@@ -12,18 +14,90 @@
       display: block;
     }
     @media(min-width:$desctop){
-        margin-top: 10px;
+      margin-top: 10px;
     }
   }
   &-item{
     text-align: center;
-    width: 37px;
+    margin-right: 30px;
+    &:last-of-type{
+      margin-right: 10px;
+    }
     @media(min-width:$tablet){
       width: auto;
+      margin-right: 20px;
+      &:last-of-type{
+        margin-right: 20px;
+      }
+    }
+    &__big{
+      display: none;
+      @media(min-width:$tablet){
+        display: block;
+      }
+    }
+    &__small{
+      display: block;
+      @media(min-width:$tablet){
+        margin-right: 40px;
+      }
+      @media(min-width:$desctop){
+        display: none;
+      }
     }
   }
   &-svg{
     width: 28px;
-    height:26px;
+    height: 26px;
+    color: $border;
+    fill: $border;
+    @media(min-width:460px){
+      width: 35px;
+      height: 35px;
+    }
+    @media(min-width:$tablet){
+      width: 26px;
+      height: 26px;
+    }
+  }
+  &-counter{
+    position: relative;
+    width: 28px;
+    height: 26px;
+    @media(min-width:460px){
+      width: 35px;
+      height: 35px;
+    }
+    @media(min-width:$tablet){
+      width: 26px;
+      height: 26px;
+    }
+    span{
+      z-index: 100;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      right: -10px;
+      top: -15px;
+      box-sizing: border-box;
+      border-radius: 100%;
+      background: $decorative;
+      color: $buttontext;
+      font: 9px MuseoSansDark;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media(min-width:475px){
+        right: -15px;
+        top: -23px;
+        width: 20px;
+        height: 20px;
+        font: 10px MuseoSansDark;
+      }
+      @media(min-width:$tablet){
+        right: -15px;
+        top: -15px;        
+      }
+    }
   }
 }

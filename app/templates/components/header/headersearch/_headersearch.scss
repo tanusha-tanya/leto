@@ -7,22 +7,40 @@
     position: relative;
   }
   &-input{
-    width: 100%;
-    padding: 11px;
-    padding-left:46px;
-    box-sizing: border-box;
-    border: 1px solid $border;
-    font: 15px/18px MuseoSansMidle;
-    color: $input;
-    height:40px;
-    &:hover{
+    display: none;
+    @media(min-width:$desctop){
+      display: block;
+      width: 100%;
+      padding: 11px;
+      padding-left:46px;
+      box-sizing: border-box;
       border: 1px solid $border;
+      font: 15px/18px MuseoSansMidle;
+      color: $input;
+      height:40px;
+      &:hover{
+        border: 1px solid $border;
+      }
     }
   }
-  &-svg{
-    position: absolute;
-    left: 24px;
-    top: 11px;
+  &-svg{    
+    @media(min-width:460px){
+      width: 35px;
+      height: 35px;
+    }
+    @media(min-width:$tablet){
+      width: 26px;
+      height: 26px;
+    }
+    @media(min-width:$desctop){
+      position: absolute;
+      left: 24px;
+      top: 11px;
+      width: 16px;
+      height: 16px;
+      color: $selection;
+      fill: $selection;
+    }
   }
   input::placeholder {
     color: $input;
@@ -30,14 +48,25 @@
     opacity:1;
   }
   &-button{
-    width: 80px;
-    height:40px;
-    border:none;
-    background: $border;
-    color: $buttontext;
-    font: 15px/18px MuseoSansMidle;
-    border-top-right-radius: 50px;
-    text-align: center;
-    padding:11px;
+    display: none;
+    @media(min-width:$desctop){
+      display: block;
+      width: 80px;
+      height:40px;
+      border:none;
+      background: $border;
+      color: $buttontext;
+      font: 15px/18px MuseoSansMidle;
+      border-top-right-radius: 50px;
+      text-align: center;
+      padding:11px;
+    }
+  }
+  &-title{
+    display: none;
+    font: 12px/14px MuseoSansNormal;
+      @media(min-width:$tablet){
+        display: block;
+      }
   }
 }

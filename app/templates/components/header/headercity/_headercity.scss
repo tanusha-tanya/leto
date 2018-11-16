@@ -1,5 +1,8 @@
 .headercity{
   display: flex;
+  @media(min-width:$desctop){
+    margin-left: 30px;
+  }
   &-link{
     font: 12px/14px MuseoSansNormal;
     text-transform: uppercase;

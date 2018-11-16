@@ -1,9 +1,9 @@
 .headerburger{
   position: relative;
   width: 26px;
-  margin-right: 10px;
+  margin-right: 20px;
   @media(min-width: $tablet){
-    margin-right: 46px;
+    margin-right: 62px;
   }
   @media(min-width: $desctop){
     display: none;
@@ -14,9 +14,9 @@
     height: 2px;
     background: $border;
     position: absolute;
-    top: -14px;
+    top: -8px;
     @media(min-width: $tablet){
-      top: -18px;
+      top: -6px;
     }
     &:before,&:after{
       content: "";
@@ -29,13 +29,13 @@
     &:before{
       top: 14px;
       @media(min-width: $tablet){
-        top: 18px;
+        top: 16px;
       }
     }
     &:after{
       top: 7px;
       @media(min-width: $tablet){
-        top: 9px;
+        top: 8px;
       }
     }
   }

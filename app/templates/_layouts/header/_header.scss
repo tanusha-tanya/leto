@@ -1,36 +1,21 @@
 .header{
-  @media(min-width:$desctop){
-    padding: 20px 0;
+  &-left{
+    display: flex;
+    align-items: center;
   }
-  &-logo{
-    margin-right: 30px;
-    @media(min-width:$tablet){
-      margin-right: 67px;
-    }
-    @media(min-width:$desctop){
-      margin-right: 40px;
-    }
-  }
-  &-search{
-    margin-right: 30px;
+  &-center{
     display: none;
-    @media(min-width:$desctop){
-      display: block;
+    @media(min-width: $desctop){
+      display: flex;
     }
   }
-  &-city{
-    margin-right: 20px;
-    display: none;
-    @media(min-width:$tablet){
-      margin-right: 59px;
-      display: block;
+  &-right{
+    @media(min-width: $tablet){
+      margin-top: 18px;
+      width: calc(50% - 20px);
     }
-    @media(min-width:$desctop){
-      margin-right: 20px;
+    @media(min-width: $desctop){
+        width: auto;
     }
-  }
-  &-icons{
-    flex-grow: 1;
-    flex-shrink: 0;
   }
 }

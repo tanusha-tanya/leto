@@ -1,8 +1,19 @@
 .headerlogo{
   &-svg{
-    @media(min-width:$tablet){
-      width: 174px;
-      height: 60px;
+    &__small{
+      @media(min-width: 400px){
+        display: none;
+      }
     }
+    &__big{
+        display: none;
+        @media(min-width:400px){
+          display: block;
+        }
+        @media(min-width:$desctop){
+          width: 174px;
+          height: 61px;
+        }
+     }
   }
 }
