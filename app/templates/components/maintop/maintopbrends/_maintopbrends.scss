@@ -1,0 +1,40 @@
+.maintopbrends{
+  margin: 0 auto;
+  position: relative;
+  width: calc(100% - 20px);
+  padding: 0 10px;
+  box-sizing: border-box;
+  max-width: 1280px;
+  @media(min-width: $tablet){
+    width: calc(100% - 68px);
+  }
+  &-carousel{
+    position: absolute;
+    top: -30px;
+    border: 1px solid $brandborder;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background: $buttontext;
+    padding: 13px 20px;
+    box-sizing: border-box;
+    margin: 0 -10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    @media(min-width: $tablet){
+      padding: 25px 20px;
+    }
+    @media(min-width: $desctop){
+      padding: 25px 50px;
+    }
+  }
+  a:hover, a:active, a:focus{
+    border: 0;
+    outline: none;
+  }
+  &-item{
+    margin: 0 10px;
+    @media(min-width: $tablet){
+      margin: 0 20px;
+    }
+  }
+}

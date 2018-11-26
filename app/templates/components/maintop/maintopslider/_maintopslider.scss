@@ -57,6 +57,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @media(min-width: $desctop){
+      right: 323px;
+    }
   }
   &.owl-theme .owl-dots .owl-dot span{
     background: $primary;

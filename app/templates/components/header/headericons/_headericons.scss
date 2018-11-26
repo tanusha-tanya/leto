@@ -4,17 +4,21 @@
     justify-content: space-between;
   }
   @media(min-width:$desctop){
-    border-left: 1px solid $verticalline;
-    padding-left: 30px;
+    &:before{
+      content: '';
+      display: block;
+      width: 1px;
+      height: 80px;
+      background: $verticalline;
+      margin-right: 30px;
+      margin-top: -15px;
+    }
   }
   &-title{
     font: 12px/14px MuseoSansNormal;
     display: none;
     @media(min-width:$tablet){
       display: block;
-    }
-    @media(min-width:$desctop){
-      margin-top: 10px;
     }
   }
   &-item{
@@ -28,6 +32,11 @@
       margin-right: 20px;
       &:last-of-type{
         margin-right: 20px;
+      }
+    }
+    @media(min-width:$desctop){
+      &:last-of-type{
+        margin-right: 3px;
       }
     }
     &__big{
@@ -96,7 +105,7 @@
       }
       @media(min-width:$tablet){
         right: -15px;
-        top: -15px;        
+        top: -15px;
       }
     }
   }

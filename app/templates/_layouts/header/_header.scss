@@ -2,11 +2,19 @@
   &-left{
     display: flex;
     align-items: center;
+    @media(min-width: $desctop){
+      margin-right: 40px;
+    }
   }
   &-center{
     display: none;
     @media(min-width: $desctop){
       display: flex;
+    }
+  }
+  &-city{
+    @media(min-width:$desctop){
+      margin-left: 30px;
     }
   }
   &-right{
@@ -16,6 +24,7 @@
     }
     @media(min-width: $desctop){
         width: auto;
+        margin-top: 10px;
     }
   }
 }

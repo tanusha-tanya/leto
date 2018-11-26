@@ -1,7 +1,7 @@
 .headercity{
   display: flex;
-  @media(min-width:$desctop){
-    margin-left: 30px;
+  @media(min-width:$desctop){    
+    margin-top: 10px;
   }
   &-link{
     font: 12px/14px MuseoSansNormal;

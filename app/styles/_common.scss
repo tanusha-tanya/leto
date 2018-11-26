@@ -104,7 +104,8 @@ h6{
       padding-bottom: 30px;
     }
     @media(min-width:$desctop){
-      padding: 20px 0;
+      padding: 25px 0;
+      align-items: flex-start;
     }
   }
 }
