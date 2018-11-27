@@ -15,7 +15,7 @@
       padding-left:46px;
       box-sizing: border-box;
       border: 1px solid $border;
-      font: 15px/18px MuseoSansMidle;
+      font: 15px/18px MuseoSansMidle, Arial, Helvetica, sans-serif;
       color: $input;
       height:40px;
       &:hover{
@@ -23,7 +23,7 @@
       }
     }
   }
-  &-svg{    
+  &-svg{
     @media(min-width:460px){
       width: 35px;
       height: 35px;
@@ -44,7 +44,7 @@
   }
   input::placeholder {
     color: $input;
-    font: 15px/18px MuseoSansMidle;
+    font: 15px/18px MuseoSansMidle, Arial, Helvetica, sans-serif;
     opacity:1;
   }
   &-button{
@@ -56,7 +56,7 @@
       border:none;
       background: $border;
       color: $buttontext;
-      font: 15px/18px MuseoSansMidle;
+      font: 15px/18px MuseoSansMidle, Arial, Helvetica, sans-serif;
       border-top-right-radius: 50px;
       text-align: center;
       padding:11px;
@@ -64,7 +64,7 @@
   }
   &-title{
     display: none;
-    font: 12px/14px MuseoSansNormal;
+    font: 12px/14px MuseoSansNormal, Arial, Helvetica, sans-serif;
       @media(min-width:$tablet){
         display: block;
       }

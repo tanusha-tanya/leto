@@ -15,21 +15,21 @@ body{
   flex-direction: column;
   justify-content: space-between;
   color: $primary;
-  font: 15px/24px MuseoSansNormal;
+  font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
 i,em{
-  font-family: MuseoSansNormalItalic;
+  font-family: MuseoSansNormalItalic, Arial, Helvetica, sans-serif;
   font-style: italic;
   font-weight: 500;
 }
 b,strong{
-  font-family: MuseoSansBold;
+  font-family: MuseoSansBold, Arial, Helvetica, sans-serif;
   font-weight: 900;
   font-style: normal;
 }
 a{
-  font: 12px/18px MuseoSansNormal;
+  font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
   transition: color .3s;
   text-decoration: none;
   border-bottom: 1px solid;
@@ -39,31 +39,31 @@ a{
   }
 }
 h1{
-  font: 40px/60px MuseoSansNormal;
+  font: 40px/60px MuseoSansNormal, Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 h2{
-  font: 30px/40px MuseoSansNormal;
+  font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
 }
 h3{
-  font: 26px/36px MuseoSansDark;
+  font: 26px/36px MuseoSansDark, Arial, Helvetica, sans-serif;
 }
 h4{
-  font: 20px/30px PlayfairDisplayItalic;
+  font: 20px/30px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
   font-style: italic;
 }
 h5{
-  font: 15px/24px MuseoSansNormal;
+  font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
 }
 h6{
-  font: 15px/28px PlayfairDisplayItalic;
+  font: 15px/28px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
 }
 .secondary-text{
-  font: 36px/22px MuseoSansNormal;
+  font: 36px/22px MuseoSansNormal, Arial, Helvetica, sans-serif;
 }
 .link__menu{
-  font: 12px/14px MuseoSansDark;
+  font: 12px/14px MuseoSansDark, Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   transition: color .3s;
@@ -78,7 +78,7 @@ h6{
   }
 }
 .link{
-  font: 24px/15px MuseoSansNormal;
+  font: 24px/15px MuseoSansNormal, Arial, Helvetica, sans-serif;
   transition: color .3s;
   text-decoration: none;
   &:hover, &:active{
@@ -90,6 +90,9 @@ h6{
   margin: 0 auto;
   padding: 15px;
   box-sizing: border-box;
+  @media(min-width:$tablet){
+    padding: 30px;
+  }
   @media(min-width:$desctop){
     padding: 0;
     max-width: 1180px;

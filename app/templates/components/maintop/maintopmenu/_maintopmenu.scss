@@ -33,7 +33,7 @@
     transition: .3 font-family;
     position: relative;
     &:active{
-      font-family: MuseoSansBold;
+      font-family: MuseoSansBold, Arial, Helvetica, sans-serif;
     }
     &__icon{
       &:before{
