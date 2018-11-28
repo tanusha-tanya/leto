@@ -1,0 +1,251 @@
+.bestseller{
+  margin-top: 60px;
+  position: relative;
+  @media(min-width:$desctop){
+    background-image: url('../images/svg/rose.svg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+  &-title{
+    text-align: center;
+    font: 30px/50px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: $link;
+    background-image: url('../images/svg/flower_little.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    padding: 10px 0;
+    position: relative;
+    @media(min-width:$tablet){
+      font: 40px/60px MuseoSansNormal, Arial, Helvetica, sans-serif;
+      background-image: url('../images/svg/flower_middle.svg');
+      padding: 20px 0;
+    }
+    @media(min-width:$desctop){
+      background-image: url('../images/svg/flower.svg');
+      padding: 30px 0;
+    }
+    &:after, &:before{
+      @media(min-width:$tablet){
+        content: '';
+        position: absolute;
+        background: $brandborder;
+        width: 160px;
+        height: 1px;
+      }
+      @media(min-width:$desctop){
+        width: 378px;
+      }
+    }
+    &:before{
+      right: 0;
+      top: 50%;
+    }
+    &:after{
+      left: 0;
+      top: 50%;
+    }
+  }
+  &-carousel{
+    margin-top: 30px;
+    @media(min-width:$tablet){
+      margin-top: 40px;
+    }
+  }
+  &-item{
+    border: 1px solid $bordergray;
+    padding: 40px 20px;
+    text-align: center;
+    max-width: 500px;
+    position: relative;
+    margin: 0 auto;
+    @media(min-width: $desctop){
+      border: 0;
+      transition: border .3s, box-shadow .3s;
+      box-shadow:0;
+      &:hover{
+      border: 1px solid $bordergray;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+  &-sticker{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-repeat: no-repeat;
+    width: 52px;
+    height: 52px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 12px;
+    font: 12px/28px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    &__new{
+        background-image: url('../images/svg/ellipse_green.svg');
+    }
+    &__sale{
+        background-image: url('../images/svg/ellipse_purple.svg');
+    }
+    &__action{
+        background-image: url('../images/svg/ellipse_yellow.svg');
+    }
+  }
+  &-heart{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+  &-pick{
+    margin: 20px 0;
+    @media(min-width: $desctop){
+      margin: 40px 0;
+    }
+  }
+  &-img{
+    max-width: 86px;
+    position: relative;
+    margin: 0 auto;
+    @media(min-width: $desctop){
+      max-width: 140px;
+    }
+  }
+  &-name{
+    text-align: center;
+    color: $title;
+    font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
+  }
+  &-brand{
+    text-align: center;
+    color: $secondary;
+    font: 15px/24px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
+  }
+  &-rating{
+    display: none;
+    @media(min-width:$tablet){
+      display: block;
+      margin-top: 20px;
+    }
+  }
+  &-stars{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &-star{
+    color: $brandborder;
+    fill: $brandborder;
+    transition: color .3s, fill .3s;
+    &:hover{
+      color: $border;
+      fill: $border;
+    }
+    cursor: pointer;
+    &__full{
+      color: $border;
+      fill: $border;
+    }
+  }
+  &-reviews{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 6px;
+    font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
+  }
+  &-priceblock{
+    text-align: center;
+    margin-top: 20px;
+  }
+  &-price{
+    margin-top: 60px;
+    font: 26px/28px MuseoSansDark, Arial, Helvetica, sans-serif;
+  }
+  &-oldprice{
+    font: 15px/36px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    @media(min-width:$desctop){
+      text-align: left;
+    }
+    span{
+      text-decoration: line-through;
+    }
+  }
+  &-newprice{
+    color: $price;
+    font: 26px/36px MuseoSansDark, Arial, Helvetica, sans-serif;
+  }
+  &-button{
+    border: 1px solid $primary;
+    outline: none;
+    width: 156px;
+    height: 40px;
+    box-sizing: border-box;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font: 12px/28px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    cursor:pointer;
+    background: transparent;
+    margin-top: 20px;
+    &:focus, &:hover{
+      outline: none;
+    }
+  }
+  &-carousel{
+    &.owl-theme{
+      .owl-dots .owl-dot span{
+        border-radius: 0;
+        width: 28px;
+        height: 2px;
+        margin: 5px 2px;
+        background: $dots;
+      }
+      .owl-dots .owl-dot.active span{
+        background:$selection;
+      }
+      .owl-dots .owl-dot:hover span{
+        background:$selection;
+      }
+    }
+    .owl-nav{
+      position: relative;
+    }
+    .owl-nav button.owl-prev{
+      width: 80px;
+      height: 80px;
+      border-top-right-radius: 40px;
+      border-bottom-left-radius: 40px;
+      border: 1px solid $bordergray;
+      svg{
+        color: $arrow;
+        fill: $arrow;
+      }
+      &:hover{
+        background: $buttontext;
+        svg{
+          transition: color .3s, fill .3s;
+          color: $selection;
+          fill: $selection;
+        }
+      }
+    }
+    .owl-nav button.owl-next{
+      width: 80px;
+      height: 80px;
+      border-top-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      border: 1px solid $bordergray;
+      svg{
+        transition: color .3s, fill .3s;
+        color: $arrow;
+        fill: $arrow;
+      }
+      &:hover{
+        background: $buttontext;
+        svg{
+          color: $selection;
+          fill: $selection;
+        }
+      }
+    }
+  }
+}

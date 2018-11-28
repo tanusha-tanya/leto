@@ -1,0 +1,129 @@
+.maingoods{
+  position: relative;
+  @media(min-width:$desctop){
+    margin-top: 60px;
+    &:after{
+      content: '';
+      position:absolute;
+      left: 0;
+      background-image: url('../images/svg/branch.svg');
+      width: 180px;
+      height: 247px;
+      top: 300px;
+    }
+  }
+  &-title{
+    color: $title;
+    font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    @media(min-width:$tablet){
+      font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
+      max-width:340px;
+    }
+    @media(min-width:$desctop){
+      max-width:100%;
+    }
+  }
+  &-brand{
+    color: $secondary;
+    font: 15px/24px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
+  }
+  &-price{
+    font: 26px/36px MuseoSansDark, Arial, Helvetica, sans-serif;
+  }
+  &-pick{
+    position: relative;
+    text-align: center;
+    @media(min-width:$tablet){
+      margin-top:50px;
+    }
+  }
+  &-image{
+    max-width: 260px;
+    @media(min-width:$tablet){
+      max-width: 280px;
+    }
+    @media(min-width:$desctop){
+      max-width: 100%;
+    }
+  }
+  &-link{
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    font: 15px/18px MuseoSansDark, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    padding: 30px;
+    box-sizing: border-box;
+    border-bottom: 0;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    &__new{
+      background: $greenbutton;
+      width: 200px;
+      color: $buttontext;
+      &:hover, &:active{
+        color: $buttontext;
+      }
+      .maingoods-svg{
+        color: $buttontext;
+        fill: $buttontext;
+      }
+    }
+    &__day{
+      background: $yellowbutton;
+      width: 200px;
+      color: $primary;
+      &:hover, &:active{
+        color: $primary;
+      }
+      .maingoods-svg{
+        color: $primary;
+        fill: $primary;
+      }
+    }
+  }
+  &-priceblock{
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    @media(min-width:$tablet){
+      display: block;
+    }
+  }
+  &-oldprice{
+    font: 15px/36px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    span{
+      text-decoration: line-through;
+    }
+  }
+  &-newprice{
+    color: $price;
+    font: 26px/36px MuseoSansDark, Arial, Helvetica, sans-serif;
+  }
+  &-figure{
+    position: relative;
+    padding-bottom: 30px;
+    @media(min-width:$tablet){
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 80px;
+      align-items: flex-start;
+    }
+  }
+  &-item{
+    @media(min-width:$desctop){
+      margin: 0 35px;
+      width: calc(50% - 70px);
+    }
+  }
+  &-container{
+    @media(min-width:$desctop){
+      display: flex;
+    }
+  }
+}

@@ -21,6 +21,7 @@
     }
     @media(min-width:$desctop){
       left: 40%;
+      background-position: -143px 17px;
     }
   }
   @media(min-width:$desctop){
@@ -62,9 +63,10 @@
     }
     @media(min-width:$desctop){
       background-image: url("../images/svg/brown_flower.svg");
-      padding-left: 225px;
+      padding-left: 254px;
       background-position: bottom left;
       background-repeat: no-repeat;
+      padding-bottom: 97px;
     }
   }
   &-sticker{
@@ -81,6 +83,9 @@
     @media(min-width:$tablet){
       left: auto;
       right: -80px;
+    }
+    @media(min-width:$desctop){
+      right: -130px;
     }
   }
   &-pick{
@@ -106,6 +111,8 @@
     }
     @media(min-width:$desctop){
       z-index: 100;
+      width: 360px;
+      height: 368px;
     }
   }
   &-image{
@@ -121,8 +128,8 @@
     @media(min-width:$desctop){
       display:block;
       position: absolute;
-      left:-10px;
-      bottom: 0;
+      left: 148px;
+      bottom: 82px;
     }
   }
   &-figcaption{
@@ -130,6 +137,9 @@
     @media(min-width:$tablet){
       margin-top: 80px;
       margin-left: 30px;
+    }
+    @media(min-width:$desctop){
+      margin-left: 70px;
     }
   }
   &-name{
