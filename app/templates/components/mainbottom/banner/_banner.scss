@@ -1,0 +1,107 @@
+.banner{
+  background: #EFEEE9;
+  position: relative;
+  &-content{
+    @media(min-width:$tablet){
+      width: 400px;
+    }
+    @media(min-width:$desctop){
+      width: 700px;
+    }
+  }
+  &-logo{
+    margin: 40px 0 20px 0;
+    @media(min-width:$tablet){
+      width: 370px;
+      height: 125px;
+      margin: 30px 0;
+    }
+    @media(min-width:$desctop){
+      margin: 60px 0 30px 0;
+    }
+  }
+  &-title{
+    font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    color: $link;
+    @media(min-width:$tablet){
+      font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    }
+  }
+  &-text{
+    margin-top: 8px;
+    font: 20px/30px  PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
+    color: $bannertext;
+  }
+  &-more{
+    font: 15px/20px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+    display: inline-block;
+  }
+  &-items{
+    margin-top: 37px;
+    margin-left: 5px;
+    position: relative;
+    z-index: 100;
+    @media(min-width:$tablet){
+      margin: 10px -20px;
+      margin-bottom: 0;
+      display: flex;
+      width: 100%;
+      align-content: flex-start;
+    }
+  }
+  &-item{
+    margin-top: 16px;
+    @media(min-width:$tablet){
+      margin: 16px 20px;
+    }
+    @media(min-width:$desctop){
+
+    }
+  }
+  &-description{
+    margin-top: 14px;
+    font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    color: $bannerdescription;
+  }
+  &:after{
+    @media(min-width:$tablet){
+      content: '';
+      display: block;
+      position: absolute;
+      right:0;
+      top: 0;
+      background-image: url(../assets/footerpick.png);
+      height: 100%;
+      width: 50%;
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+    @media(min-width:$desctop){
+      background-image: url(../assets/footerpickbig.png);
+      background-position: 100px 0;
+    }
+  }
+  &-container{
+    @media(min-width:$desctop){
+      &:after{
+        content: '';
+        width: 427px;
+        height: 380px;
+        background-image: url(../images/svg/footer_flower.svg);
+        background-repeat: no-repeat;
+        background-position: 130% top;
+        position:absolute;
+        right:150px;
+        top:0;
+      }
+    }
+  }
+  &-logotype{
+    @media(min-width:$desctop){
+      background-image: url(../images/svg/rose_bg.svg);
+      background-repeat: no-repeat;
+      background-position: 80% top;
+    }
+  }
+}

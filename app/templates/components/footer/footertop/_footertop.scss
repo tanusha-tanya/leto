@@ -1,0 +1,43 @@
+.footertop{
+  position: relative;
+  margin: 0 auto;
+  margin-top:45px;
+  @media(min-width: $tablet){
+    margin-top:30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media(min-width: $desctop){
+    width: 870px;
+  }
+  &-svg{
+    @media(min-width: $tablet){
+      order:1;
+    }
+  }
+  &-soc{
+    margin-top:30px;
+    @media(min-width: $tablet){
+      order:2;
+    }
+  }
+  &-socsvg{
+    margin-right: 46px;
+    border-bottom: 0;
+    &:last-of-type{
+      margin-right: 0;
+    }
+  }
+  &-phone{
+    margin-top:30px;
+  }
+  &-num{
+    font: 14px/17px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    color: $buttontext;
+  }
+  &-country{
+    font: 14px/17px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    color: $secondary;
+  }
+}

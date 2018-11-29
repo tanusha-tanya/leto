@@ -1,0 +1,262 @@
+.saleofday{
+  position: relative;
+  padding-bottom: 100px;
+  &:after{
+    content: '';
+    position: absolute;
+    left: 70%;
+    right: 0;
+    top: 0;
+    bottom: 50px;
+    background-color: $price;
+    background-image: url('../images/svg/sale_flower.svg');
+    background-repeat: no-repeat;
+    background-position: -135px top;
+    display: block;
+    width: 100%;
+    @media(min-width: $tablet){
+      left: 50%;
+      background-position: 63px top;
+    }
+  }
+  &-head{
+    display: flex;
+    align-items: center;
+  }
+  &-title{
+    font: 30px/50px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: $link;
+    background-image: url('../images/svg/flower_little.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+    display: block;
+    padding: 10px 0;
+    position: relative;
+    @media(min-width: $tablet){
+      font: 40px/60px MuseoSansNormal, Arial, Helvetica, sans-serif;
+      background-image: url('../images/svg/flower_middle.svg');
+      padding: 20px 0;
+    }
+  }
+  &-svg{
+    position: relative;
+    z-index: 100;
+    fill: $arrow;
+    color: $arrow;
+    margin: 10px 20px;
+    @media(min-width: $tablet){
+      margin-left: 40px;
+    }
+  }
+  &-pick{
+    border: 1px solid $brandborder;
+    padding: 20px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    margin: 0 auto;
+    margin-top: 40px;
+    background: $buttontext;
+    text-align: center;
+    width: 180px;
+    @media(min-width: $tablet){
+      border: none;
+      box-shadow: none;
+      position: static;
+      order: 1;
+      width: 60%;
+    }
+  }
+  &-img{
+    width: 140px!important;
+    position: relative;
+    margin: 0 auto;
+      @media(min-width: $tablet){
+        margin: 0;
+        width: 100%!important;
+      }
+  }
+  &-sticker{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-repeat: no-repeat;
+    width: 52px;
+    height: 52px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 12px;
+    font: 12px/28px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    z-index:100;
+    @media(min-width: $tablet){
+      top: 30px;
+      left: 30px;
+    }
+    &__sale{
+      background-image: url("../images/svg/ellipse_purple.svg");
+    }
+  }
+  &-name{
+    font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    margin-right: 50px;
+    @media(min-width: $tablet){
+      font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
+      margin-right: 0;
+      margin-top: 50px;
+      text-align: left;
+    }
+  }
+  &-brand{
+    color: $secondary;
+    font: 15px/24px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
+    @media(min-width: $tablet){
+      width: 100%;
+      text-align: left;
+    }
+  }
+  &-prices{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: flex-end;
+    @media(min-width: $tablet){
+      display: block;
+      width: 40%;
+    }
+  }
+  &-oldprice{
+    font: 15px/36px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    span{
+      text-decoration: line-through;
+    }
+  }
+  &-newprice{
+    color: $price;
+    font: 26px/36px MuseoSansDark, Arial, Helvetica, sans-serif;
+  }
+  &-button{
+    border: 1px solid $primary;
+    outline: none;
+    width: 156px;
+    height: 40px;
+    box-sizing: border-box;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    font: 12px/28px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    cursor:pointer;
+    background: transparent;
+    &:focus, &:hover{
+      outline: none;
+    }
+  }
+  &-items{
+    @media(min-width: $tablet){
+      width: 75%;
+    }
+
+    &.owl-theme{
+      .owl-dots{
+        position: absolute;
+        bottom: -100px;
+        width: 100%;
+        text-align: center;
+      }
+      .owl-dots .owl-dot span{
+        border-radius: 0;
+        width: 28px;
+        height: 2px;
+        margin: 5px 2px;
+        background: $dots;
+      }
+      .owl-dots .owl-dot.active span{
+        background:$selection;
+      }
+      .owl-dots .owl-dot:hover span{
+        background:$selection;
+      }
+    }
+  }
+  &-item{
+    @media(min-width: $tablet){
+      border: 1px solid #E0E0E0;
+      padding: 40px;
+      border-top-right-radius: 50px;
+      border-bottom-left-radius: 50px;
+      box-sizing: border-box;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+      position: relative;
+      margin: 10px;
+      margin-top: 40px;
+      background: #fff;
+      text-align: left;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+    }
+    @media(min-width: $desctop){
+      max-width: 560px;
+    }
+  }
+  &-links{
+    display: none;
+    @media(min-width: $tablet){
+      display: block;
+    }
+  }
+  &-link{
+    border: 1px solid #E0E0E0;
+    padding: 20px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    width: 160px;
+    margin: 20px;
+    margin-left: 0;
+    .saleofday-sticker{
+      top: 10px;
+      left: 10px;
+    }
+    @media(min-width: $desctop){
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 0;
+      border: 0;
+      border-bottom: 1px solid #E0E0E0;
+      display: flex;
+      width: auto;
+    }
+  }
+  &-goods{
+    @media(min-width: $tablet){
+      display: flex;
+    }
+  }
+  &-linkpick{
+
+  }
+  &-linkimg{
+    width: 120px;
+  }
+  &-description{
+    display: none;
+    @media(min-width: $desctop){
+      display: block;
+      width: 300px;
+      margin-left: 40px;
+    }
+  }
+  &-linkname{
+    color: $link;
+    font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
+  }
+  &-linkbrand{
+    font: 15px/24px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
+    color: $secondary;
+  }
+}

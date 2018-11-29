@@ -1,7 +1,18 @@
 .banner
-  .container
-    svg.banner-svg__small(role="img")(width="266")(height="89"): use(xlink:href="#logobig")
-    h3.banner-title Все для Вас и Вашего успешного бизнеса
-    .banner-text Более 8 лет успешной работы с ведущими салонами и профессионалами индустрии красоты Москвы и Московской области
-
-  
+  .container.banner-container
+    .banner-content
+      .banner-logotype
+        svg.banner-logo(role="img")(width="266")(height="89"): use(xlink:href="#logosmall")
+      h3.banner-title Все для Вас и Вашего успешного бизнеса
+      .banner-text Более 8 лет успешной работы с ведущими салонами и профессионалами индустрии красоты Москвы и Московской области
+      a.banner-more(href="#") Читать о нас
+    .banner-items
+      .banner-item
+        svg.banner-svg(role="img")(width="80")(height="60"): use(xlink:href="#delivery")
+        .banner-description Доставка по всей России
+      .banner-item
+        svg.banner-svg(role="img")(width="58")(height="60"): use(xlink:href="#price-tag")
+        .banner-description Доступные цены
+      .banner-item
+        svg.banner-svg(role="img")(width="53")(height="60"): use(xlink:href="#bags")
+        .banner-description Услуга товар на выбор
