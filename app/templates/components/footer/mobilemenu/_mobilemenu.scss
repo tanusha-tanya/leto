@@ -3,11 +3,28 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 50px;
+  top: 70px;
   z-index: 999;
   border-top: 1px solid $brandborder;
-  max-width: 320px;
-  display: none;
+  background: $buttontext;
+  transform: translateX(-100%);
+  transition: transform .3s;
+  @media(min-width: 400px){
+    top: 92px;
+  }
+  @media(min-width: 600px){
+    max-width: 320px;
+  }
+  @media(min-width: $tablet){
+    top: 115px;
+  }
+
+  @media(min-width: $desctop){
+    display: none;
+  }
+  &.open{
+    transform: translateX(0);
+  }
   &-top{
     background: $buttontext;
   }
@@ -18,6 +35,9 @@
   &-topli{
     list-style: none;
     margin: 20px 10px;
+    @media(min-width: $tablet){
+      margin: 20px 36px;
+    }
   }
   &-toplink{
     font: 15px/18px MuseoSansDark, Arial, Helvetica, sans-serif;
@@ -50,6 +70,9 @@
   &-botli{
     list-style: none;
     margin: 20px 10px;
+    @media(min-width: $tablet){
+      margin: 20px 36px;
+    }
   }
   &-botlink{
     font: 12px/14px MuseoSansNormal, Arial, Helvetica, sans-serif;
@@ -59,6 +82,10 @@
   }
   &-address{
     margin-top: 40px;
+    padding-left: 10px;
+    @media(min-width:$tablet){
+      padding-left: 30px;
+    }
     .headerphone{
       text-align: left;
       margin-left: 30px;
@@ -67,8 +94,15 @@
   &-enterance{
     margin-top: 30px;
     font: 13px/16px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+    display: inline-block;
+    border-bottom: none;
+    @media(min-width:$tablet){
+      padding-left: 30px;
+    }
   }
   &-svg{
     margin-right: 7px;
   }
+
 }

@@ -1,0 +1,64 @@
+.mobilesearch{
+  background: $buttontext;
+  position: absolute;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-100%);
+  transition: transform .3s;
+  @media(min-width:$desctop){
+    display: none;
+  }
+  &-label{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: block;
+  }
+  &-svg{
+    position: absolute;
+    left: 15px;
+    top: calc(50% - 20px);
+    color: $border;
+    fill: $border;
+  }
+  &-input{
+    width: 100%;
+    padding: 30px 50px;
+    border: none;
+    outline: none;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  &-close{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    display: block;
+    cursor: pointer;
+    &:after, &:before{
+      content: '';
+      position: absolute;
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: $arrow;
+    }
+    &:after{
+      transform: rotate(130deg);
+    }
+    &:before{
+      transform: rotate(-130deg);
+    }
+  }
+  &.open{
+    transform: translateY(0);
+  }
+}
