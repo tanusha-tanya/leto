@@ -23,10 +23,10 @@
   }
   &-item{
     text-align: center;
-    margin-right: 30px;
+    margin-right: 31px;
     border-bottom: 0;
     &:last-of-type{
-      margin-right: 10px;
+      margin-right: 3px;
     }
     @media(min-width:$tablet){
       width: auto;

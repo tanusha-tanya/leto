@@ -1,10 +1,11 @@
 .saleofday{
   position: relative;
   padding-bottom: 100px;
+  margin-top: 13px;
   &:after{
     content: '';
     position: absolute;
-    left: 70%;
+    left: 72%;
     right: 0;
     top: 0;
     bottom: 50px;
@@ -55,13 +56,23 @@
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
     box-sizing: border-box;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     position: relative;
     margin: 0 auto;
     margin-top: 40px;
     background: $buttontext;
     text-align: center;
     width: 180px;
+    &:after{
+      content: "";
+      display: block;
+      width: calc(100% - 56px);
+      height: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
+      right: 8px;
+    }
     @media(min-width: $tablet){
       border: none;
       box-shadow: none;
@@ -74,10 +85,10 @@
     width: 140px!important;
     position: relative;
     margin: 0 auto;
-      @media(min-width: $tablet){
-        margin: 0;
-        width: 100%!important;
-      }
+    @media(min-width: $tablet){
+      margin: 0;
+      width: 100%!important;
+    }
   }
   &-sticker{
     position: absolute;
@@ -128,6 +139,11 @@
       width: 40%;
     }
   }
+  &-priceblock{
+    @media(min-width: $tablet){
+      margin-bottom: 30px;
+    }
+  }
   &-oldprice{
     font: 15px/36px MuseoSansNormal, Arial, Helvetica, sans-serif;
     span{
@@ -158,7 +174,6 @@
     @media(min-width: $tablet){
       width: 75%;
     }
-
     &.owl-theme{
       .owl-dots{
         position: absolute;
@@ -183,33 +198,55 @@
   }
   &-item{
     @media(min-width: $tablet){
-      border: 1px solid #E0E0E0;
+      border: 1px solid $brandborder;
       padding: 40px;
       border-top-right-radius: 50px;
       border-bottom-left-radius: 50px;
       box-sizing: border-box;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
       position: relative;
       margin: 10px;
       margin-top: 40px;
-      background: #fff;
+      background: $buttontext;
       text-align: left;
       display: flex;
       flex-wrap: wrap;
       align-items: flex-end;
+      z-index: auto!important;
+      &:after{
+        display: none;
+      }
+      &.slick-current{
+        z-index: auto!important;
+        display: flex;
+        &:after{
+          content: "";
+          display: block;
+          width: calc(100% - 56px);
+          height: 20px;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+          position: absolute;
+          bottom: 0;
+          z-index: -1;
+          right: 8px;
+        }
+      }
     }
     @media(min-width: $desctop){
       max-width: 560px;
     }
   }
   &-links{
-    display: none;
+      display: none;
     @media(min-width: $tablet){
       display: block;
+      .slick-list{
+        margin-top:-20px;
+        padding-top:10px;
+      }
     }
   }
   &-link{
-    border: 1px solid #E0E0E0;
+    border: 1px solid $brandborder;
     padding: 20px;
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
@@ -219,6 +256,8 @@
     width: 160px;
     margin: 20px;
     margin-left: 0;
+    transition: border-color .3s;
+    cursor:pointer;
     .saleofday-sticker{
       top: 10px;
       left: 10px;
@@ -226,19 +265,25 @@
     @media(min-width: $desctop){
       border-top-right-radius: 0;
       border-bottom-left-radius: 0;
-      border: 0;
-      border-bottom: 1px solid #E0E0E0;
-      display: flex;
-      width: auto;
+      display: flex;      
     }
   }
   &-goods{
     @media(min-width: $tablet){
       display: flex;
     }
-  }
-  &-linkpick{
-
+    .slick-vertical .slick-slide{
+      border: 1px solid $brandborder;
+      border-color: transparent;
+      border-bottom: 1px solid $brandborder;
+      width: auto;
+    }
+    .slick-vertical .slick-current{
+      border: 1px solid $bannerdescription;
+      border-color: transparent;
+      border-bottom: 1px solid $brandborder;
+      width: auto;
+    }
   }
   &-linkimg{
     width: 120px;

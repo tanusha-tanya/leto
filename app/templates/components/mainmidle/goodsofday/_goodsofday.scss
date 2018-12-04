@@ -1,14 +1,15 @@
 .goodsofday{
-  margin-top: 80px;
+  margin-top: 98px;
   position: relative;
+  padding-bottom: 25px;
   @media(min-width:$tablet){
-    margin-top: 200px;
+    margin-top: 185px;
   }
   &:after{
     content: '';
     position:absolute;
     display: block;
-    left: 70%;
+    left: 72%;
     right: 0;
     background-color: $background;
     top: 0;
@@ -55,7 +56,7 @@
     }
   }
   &-figure{
-    margin-top: 30px;
+    margin-top: 20px;
     position: relative;
     z-index: 100;
     @media(min-width:$tablet){
@@ -100,17 +101,26 @@
     display: flex;
     align-item:center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    position: relative;
     margin: 0 auto;
     background: $buttontext;
+    z-index: auto;
+    &:after{
+      content: "";
+      display: block;
+      width: calc(100% - 56px);
+      height: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
+      right: 8px;
+    }
     @media(min-width:$tablet){
       margin: 0;
       width: 338px;
       height: 368px;
     }
     @media(min-width:$desctop){
-      z-index: 100;
       width: 360px;
       height: 368px;
     }
@@ -154,7 +164,7 @@
     font: 15px/24px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
   }
   &-priceblock{
-    margin-top: 30px;
+    margin-top: 15px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -183,8 +193,8 @@
     width: 156px;
     height: 40px;
     box-sizing: border-box;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-right-radius: 35px;
+    border-bottom-left-radius: 35px;
     font: 12px/28px MuseoSansNormal, Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     cursor:pointer;

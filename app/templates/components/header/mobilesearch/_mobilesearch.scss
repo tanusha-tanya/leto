@@ -38,7 +38,7 @@
   &-close{
     position: absolute;
     right: 20px;
-    top: 50%;
+    top: calc(50% - 5px);
     width: 16px;
     height: 16px;
     display: block;

@@ -1,7 +1,7 @@
 .headerburger{
   position: relative;
   width: 26px;
-  margin-right: 20px;
+  margin-right: 25px;
   cursor: pointer;
   height: 26px;
   @media(min-width: $tablet){
@@ -47,13 +47,13 @@
     span{
       background: none;
       &:after{
-        transform: rotate(130deg);
+        transform: rotate(135deg);
       }
       &:before{
-        transform: rotate(-130deg);
+        transform: rotate(-135deg);
       }
       &:after, &:before{
-        width: 30px;
+        width: 38px;
         top: 8px;
       }
     }

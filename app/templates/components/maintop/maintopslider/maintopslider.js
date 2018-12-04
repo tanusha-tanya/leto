@@ -1,6 +1,6 @@
 $('.maintopslider').owlCarousel({
-    animateOut: 'slideOutDown',
-    animateIn: 'flipInX',
+    animateOut: 'fadeOut',
+    animateIn: 'fadeIn',
     autoplay:true,
     autoplayTimeout:3000,
     autoplayHoverPause:true,

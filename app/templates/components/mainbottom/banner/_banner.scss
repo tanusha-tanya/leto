@@ -1,6 +1,7 @@
 .banner{
   background: #EFEEE9;
   position: relative;
+  margin-top: 15px;
   &-content{
     @media(min-width:$tablet){
       width: 400px;

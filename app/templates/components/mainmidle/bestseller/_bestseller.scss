@@ -1,5 +1,5 @@
 .bestseller{
-  margin-top: 60px;
+  margin-top: -30px;
   position: relative;
   @media(min-width:$desctop){
     background-image: url('../images/svg/rose.svg');
@@ -48,7 +48,7 @@
     }
   }
   &-carousel{
-    margin-top: 30px;
+    margin-top: 15px;
     @media(min-width:$tablet){
       margin-top: 40px;
     }
@@ -204,6 +204,9 @@
       }
       .owl-dots .owl-dot:hover span{
         background:$selection;
+      }
+      .owl-nav.disabled + .owl-dots{
+        margin-top: 0;
       }
     }
     .owl-nav{
