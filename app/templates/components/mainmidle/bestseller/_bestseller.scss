@@ -5,6 +5,7 @@
     background-image: url('../images/svg/rose.svg');
     background-repeat: no-repeat;
     background-position: right bottom;
+    margin-top: 150px;
   }
   &-title{
     text-align: center;
@@ -60,13 +61,28 @@
     max-width: 500px;
     position: relative;
     margin: 0 auto;
+    z-index: auto;
+    box-sizing: border-box;
+    background: $buttontext;
     @media(min-width: $desctop){
-      border: 0;
+      border-color: transparent;
       transition: border .3s, box-shadow .3s;
       box-shadow:0;
+      cursor: pointer;
+      margin-bottom: 30px;
       &:hover{
-      border: 1px solid $bordergray;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        border: 1px solid $bordergray;
+        &:after{
+          content: "";
+          display: block;
+          width: calc(100% - 20px);
+          height: 20px;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+          position: absolute;
+          bottom: 0;
+          z-index: -1;
+          right: 10px;
+        }
       }
     }
   }

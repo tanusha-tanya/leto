@@ -35,7 +35,9 @@
   &-pick{
     position: relative;
     text-align: center;
-    @media(min-width:$tablet){
+    @media(min-width:$desctop){
+      top: -20px;
+      left: 100px;
     }
   }
   &-image{
@@ -119,6 +121,9 @@
       justify-content: space-between;
       padding-bottom: 0;
     }
+    @media(min-width:$desctop){
+      display: block;
+    }
   }
   &-item{
     margin: 60px 0 25px 0;
@@ -130,6 +135,14 @@
       .maingoods-figure{
         @media(min-width:$tablet){
           padding-bottom: 80px;
+        }
+        @media(min-width:$desctop){
+          padding-bottom: 0;
+        }
+      }
+      .maingoods-pick{
+        @media(min-width:$desctop){
+          top:-50px;
         }
       }
     }
