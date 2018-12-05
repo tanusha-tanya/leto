@@ -19,10 +19,24 @@
       left: 50%;
       background-position: 63px top;
     }
+    @media(min-width: $desctop){
+      left: 65%;
+    }
   }
   &-head{
     display: flex;
     align-items: center;
+    @media(min-width: $desctop){
+      position:relative;
+      &:after{
+        content: '';
+        position: absolute;
+        background: #E0E0E0;
+        width: 495px;
+        height: 1px;
+        right:250px;
+      }
+    }
   }
   &-title{
     font: 30px/50px MuseoSansNormal, Arial, Helvetica, sans-serif;
@@ -174,6 +188,9 @@
     @media(min-width: $tablet){
       width: 75%;
     }
+    @media(min-width: $desctop){
+      width: 50%;
+    }
     &.owl-theme{
       .owl-dots{
         position: absolute;
@@ -197,6 +214,7 @@
     }
   }
   &-item{
+    width:100%;
     @media(min-width: $tablet){
       border: 1px solid $brandborder;
       padding: 40px;
@@ -212,12 +230,16 @@
       flex-wrap: wrap;
       align-items: flex-end;
       z-index: auto!important;
+      width:auto;
       &:after{
         display: none;
+        opacity:0;
+        transition: opacity .5s;
       }
       &.slick-current{
         z-index: auto!important;
         display: flex;
+        background: $buttontext;
         &:after{
           content: "";
           display: block;
@@ -228,6 +250,7 @@
           bottom: 0;
           z-index: -1;
           right: 8px;
+          opacity:1;
         }
       }
     }
@@ -236,13 +259,18 @@
     }
   }
   &-links{
-      display: none;
+    display: none;
     @media(min-width: $tablet){
       display: block;
       .slick-list{
         margin-top:-20px;
         padding-top:10px;
       }
+    }
+    @media(min-width: $desctop){
+      padding-left: 50px;
+      margin-top: 30px;
+      margin-right:20px;
     }
   }
   &-link{
@@ -254,7 +282,7 @@
     display: block;
     position: relative;
     width: 160px;
-    margin: 20px;
+    margin: 17px;
     margin-left: 0;
     transition: border-color .3s;
     cursor:pointer;
@@ -263,9 +291,9 @@
       left: 10px;
     }
     @media(min-width: $desctop){
+      margin: 0;
       border-top-right-radius: 0;
       border-bottom-left-radius: 0;
-      display: flex;      
     }
   }
   &-goods{
@@ -274,15 +302,81 @@
     }
     .slick-vertical .slick-slide{
       border: 1px solid $brandborder;
-      border-color: transparent;
-      border-bottom: 1px solid $brandborder;
+      border-color: $brandborder;
       width: auto;
+      display: flex;
+      opacity: 0;
+      transition: opacity .3s, border .3s;
+      &.slick-active{
+        opacity: 1;
+      }
+      &:hover{
+        border: 1px solid $bannerdescription;
+        border-color: $bannerdescription;
+      }
+      @media(min-width: $desctop){
+        border-color: transparent;
+        border-bottom: 1px solid $brandborder;
+        &:hover{
+          border-color: transparent;
+          border-bottom: 1px solid $brandborder;
+        }
+      }
     }
     .slick-vertical .slick-current{
       border: 1px solid $bannerdescription;
-      border-color: transparent;
-      border-bottom: 1px solid $brandborder;
+      border-color: $bannerdescription;
       width: auto;
+      @media(min-width: $desctop){
+        border-color: transparent;
+        border-bottom: 1px solid $brandborder;
+      }
+    }
+    .slick-dots{
+      position: absolute;
+      top: calc(50% - 75px);
+      cursor: pointer;
+      left: 0;
+      li{
+        list-style:none;
+        width:16px;
+        height:16px;
+        background: $dots;
+        border-radius:50%;
+        margin: 15px 0;
+        cursor: pointer;
+        position: relative;
+        transition: background .3s;
+        &:hover{
+          background:$selection!important;
+          &:after{
+            content: '';
+            width:30px;
+            height:30px;
+            position: absolute;
+            border-radius:50%;
+            background: rgba(105, 127, 52, 0.3);
+            left: -7px;
+            top: -7px;
+          }
+        }
+        &.slick-active{
+          background:$selection!important;
+          &:after{
+            content: '';
+            width:30px;
+            height:30px;
+            position: absolute;
+            border-radius:50%;
+            background: rgba(105, 127, 52, 0.3);
+            left: -7px;
+            top: -7px;
+          }
+        }
+      }
+      li button{
+        opacity:0;
+      }
     }
   }
   &-linkimg{

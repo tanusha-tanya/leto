@@ -18,7 +18,8 @@ $('.maintopbrends-carousel').owlCarousel({
       },
        1220:{
         items:7,
-        nav: true
+        nav: true,
+        navText:["<svg role='img' width='21' height='21'><use xlink:href='#arrow_carousel'></svg>", "<svg role='img' width='21' height='21'><use xlink:href='#arrow_carousel-right'></svg>"]
        }
     }
 });

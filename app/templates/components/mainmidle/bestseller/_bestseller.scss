@@ -36,7 +36,7 @@
         height: 1px;
       }
       @media(min-width:$desctop){
-        width: 378px;
+        width: 25%;
       }
     }
     &:before{
@@ -52,6 +52,21 @@
     margin-top: 15px;
     @media(min-width:$tablet){
       margin-top: 40px;
+    }
+    @media(min-width:$desctop){
+      padding-bottom: 100px;
+      .owl-nav{
+        position: absolute;
+        left: calc(50% - 150px);
+        width: 300px;
+        bottom: 20px;
+      }
+      .owl-dots{
+        position: absolute;
+        left: calc(50% - 100px);
+        width: 200px;
+        bottom: 50px;
+      }
     }
   }
   &-item{
@@ -234,6 +249,8 @@
       border-top-right-radius: 40px;
       border-bottom-left-radius: 40px;
       border: 1px solid $bordergray;
+      position:absolute;
+      left:0;
       svg{
         color: $arrow;
         fill: $arrow;
@@ -253,6 +270,8 @@
       border-top-left-radius: 40px;
       border-bottom-right-radius: 40px;
       border: 1px solid $bordergray;
+      position:absolute;
+      right:0;
       svg{
         transition: color .3s, fill .3s;
         color: $arrow;

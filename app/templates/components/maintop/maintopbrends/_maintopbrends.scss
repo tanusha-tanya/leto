@@ -41,6 +41,50 @@
     }
     @media(min-width: $desctop){
       padding: 25px 50px;
+      .owl-nav button.owl-prev{
+        width: 80px;
+        height: 80px;
+        border-top-right-radius: 40px;
+        border-bottom-left-radius: 40px;
+        border: 1px solid $bordergray;
+        position:absolute;
+        left:15px;
+        top:30px;
+        svg{
+          color: $arrow;
+          fill: $arrow;
+        }
+        &:hover{
+          background: $buttontext;
+          svg{
+            transition: color .3s, fill .3s;
+            color: $selection;
+            fill: $selection;
+          }
+        }
+      }
+      .owl-nav button.owl-next{
+        width: 80px;
+        height: 80px;
+        border-top-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        border: 1px solid $bordergray;
+        position:absolute;
+        right:15px;
+        top:30px;
+        svg{
+          transition: color .3s, fill .3s;
+          color: $arrow;
+          fill: $arrow;
+        }
+        &:hover{
+          background: $buttontext;
+          svg{
+            color: $selection;
+            fill: $selection;
+          }
+        }
+      }
     }
   }
   &-item{

@@ -67,6 +67,7 @@
     align-items: center;
     width: 200px;
     height: 80px;
+    z-index: 999;
     @media(min-width:$tablet){
       bottom: 0;
     }
