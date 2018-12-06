@@ -26,6 +26,7 @@
   &-head{
     display: flex;
     align-items: center;
+    border:0;
     @media(min-width: $desctop){
       position:relative;
       &:after{
@@ -35,6 +36,12 @@
         width: 495px;
         height: 1px;
         right:250px;
+      }
+    }
+    &:hover{
+      .saleofday-svg{
+        fill: $selection;
+        color: $selection;
       }
     }
   }
@@ -60,6 +67,7 @@
     fill: $arrow;
     color: $arrow;
     margin: 10px 20px;
+    transition: color .3s, fill .3s;
     @media(min-width: $tablet){
       margin-left: 40px;
     }
@@ -180,8 +188,18 @@
     text-transform: uppercase;
     cursor:pointer;
     background: transparent;
-    &:focus, &:hover{
+    position: relative;
+    z-index:999;
+    &:hover, &:focus{
       outline: none;
+      border: 1px solid $selection;
+      color: $selection;
+    }
+    &:active{
+      outline: none;
+      border: 1px solid $selection;
+      color: $buttontext;
+      background: $selection;
     }
   }
   &-items{

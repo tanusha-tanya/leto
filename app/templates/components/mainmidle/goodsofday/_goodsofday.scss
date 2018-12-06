@@ -199,8 +199,17 @@
     text-transform: uppercase;
     cursor:pointer;
     background: transparent;
-    &:focus, &:hover{
+    transition: border .3s, color .3s, background .3s;
+    &:hover, &:focus{
       outline: none;
+      border: 1px solid $selection;
+      color: $selection;
+    }
+    &:active{
+      outline: none;
+      border: 1px solid $selection;
+      color: $buttontext;
+      background: $selection;
     }
   }
 }

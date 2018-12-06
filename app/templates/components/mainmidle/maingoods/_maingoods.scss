@@ -68,15 +68,21 @@
     width: 200px;
     height: 80px;
     z-index: 999;
+    transition: background .3s, color .3s;
     @media(min-width:$tablet){
       bottom: 0;
+    }
+    &:hover, &:active{
+      background: $selection;
+      color:$buttontext;
+      svg{
+        color:$buttontext;
+        fill:$buttontext; 
+      }
     }
     &__new{
       background: $greenbutton;
       color: $buttontext;
-      &:hover, &:active{
-        color: $buttontext;
-      }
       .maingoods-svg{
         color: $buttontext;
         fill: $buttontext;
@@ -86,9 +92,6 @@
       background: $yellowbutton;
       width: 200px;
       color: $primary;
-      &:hover, &:active{
-        color: $primary;
-      }
       .maingoods-svg{
         color: $primary;
         fill: $primary;

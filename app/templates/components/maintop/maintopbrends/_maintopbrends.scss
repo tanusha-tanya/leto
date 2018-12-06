@@ -41,7 +41,8 @@
     }
     @media(min-width: $desctop){
       padding: 25px 50px;
-      .owl-nav button.owl-prev{
+      .owl-nav button.owl-prev, .owl-nav button.owl-next{
+        opacity:0;
         width: 80px;
         height: 80px;
         border-top-right-radius: 40px;
@@ -50,40 +51,37 @@
         position:absolute;
         left:15px;
         top:30px;
+        transition: opacity .3s;
         svg{
           color: $arrow;
           fill: $arrow;
         }
         &:hover{
-          background: $buttontext;
+          opacity:1;
+          background: rgba(255, 255, 255, 0.5);
           svg{
             transition: color .3s, fill .3s;
             color: $selection;
             fill: $selection;
           }
         }
-      }
-      .owl-nav button.owl-next{
-        width: 80px;
-        height: 80px;
-        border-top-left-radius: 40px;
-        border-bottom-right-radius: 40px;
-        border: 1px solid $bordergray;
-        position:absolute;
-        right:15px;
-        top:30px;
-        svg{
-          transition: color .3s, fill .3s;
-          color: $arrow;
-          fill: $arrow;
-        }
-        &:hover{
-          background: $buttontext;
+        &:active{
+          background: $selection;
+          border: 1px solid $selection;
           svg{
-            color: $selection;
-            fill: $selection;
+            color: $buttontext;
+            fill: $buttontext;
           }
         }
+      }
+      .owl-nav button.owl-next{
+        right:15px;
+        top:30px;
+        left: auto;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 40px;
+        border-bottom-right-radius: 40px;
       }
     }
   }
