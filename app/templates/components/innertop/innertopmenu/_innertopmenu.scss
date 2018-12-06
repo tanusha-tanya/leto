@@ -1,4 +1,4 @@
-.maintopmenu{
+.innertopmenu{
   display: none;
   @media(min-width:$desctop){
     display: block;
@@ -6,11 +6,12 @@
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
+    margin-bottom: 70px;
   }
   &-nav{
     box-sizing: border-box;
     width: 100%;
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: space-between;
     z-index: 100;
@@ -52,7 +53,7 @@
   }
   &-submenu{
     position: absolute;
-    visibility: hidden;    
+    visibility: hidden;
     box-sizing: border-box;
     z-index:1;
     height: 0;

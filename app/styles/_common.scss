@@ -16,6 +16,7 @@ body{
   color: $primary;
   font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 i,em{
   font-family: MuseoSansNormalItalic, Arial, Helvetica, sans-serif;
