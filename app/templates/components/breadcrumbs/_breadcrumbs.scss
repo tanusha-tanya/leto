@@ -1,0 +1,45 @@
+.breadcrumbs{
+  border-bottom: 1px solid $brandborder;
+  padding: 7px 15px;
+  margin-bottom:16px;
+  @media(min-width:$tablet){
+    padding: 7px 30px;
+  }
+  @media(min-width:$desctop){
+    max-width: 1180px;
+    margin: 50px auto;  
+    border-bottom: none;
+  }
+  &-link{
+    display: inline-block;
+    border-bottom: none;
+    color: $selection;
+    text-transform: uppercase;
+    font: 12px/20px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    @media(min-width:$tablet){
+      text-transform: capitalize;
+      font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    }
+  }
+  &-svg{
+    transform: rotate(180deg);
+    fill: $selection;
+    color: $selection;
+    margin-right: 30px;
+    vertical-align: middle;
+    @media(min-width:$tablet){
+      display: none;
+    }
+  }
+  &-current{
+    display: none;
+    @media(min-width:$tablet){
+      display: inline-block;
+      font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
+      color:$brandborder;
+      span{
+        color: $link;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.filter{
+  color: $link;
+  text-transform: uppercase;
+  font: 12px/20px MuseoSansNormal, Arial, Helvetica, sans-serif;
+  margin: 40px 0;
+  cursor: pointer;
+  width: 100px;
+  &-svg{
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+  @media(min-width:$tablet){
+    margin: 35px 0;
+  }
+}

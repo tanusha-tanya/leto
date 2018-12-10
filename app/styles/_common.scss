@@ -17,6 +17,7 @@ body{
   font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
   overflow-x: hidden;
   min-height: 100vh;
+  position: relative;
 }
 i,em{
   font-family: MuseoSansNormalItalic, Arial, Helvetica, sans-serif;
@@ -39,9 +40,15 @@ a{
   }
 }
 h1{
-  font: 40px/60px MuseoSansNormal, Arial, Helvetica, sans-serif;
+  font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  @media(min-width:$tablet){
+    font: 30px/50px MuseoSansNormal, Arial, Helvetica, sans-serif;
+  }
+  @media(min-width:$desctop){
+    font: 40px/60px MuseoSansNormal, Arial, Helvetica, sans-serif;
+  }
 }
 h2{
   font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
@@ -88,10 +95,10 @@ h6{
 .container{
   width: 100%;
   margin: 0 auto;
-  padding: 15px;
+  padding: 0 15px;
   box-sizing: border-box;
   @media(min-width:$tablet){
-    padding: 30px;
+    padding: 0 30px;
   }
   @media(min-width:$desctop){
     padding: 0;
@@ -102,6 +109,7 @@ h6{
     padding: 20px 10px;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid $brandborder;
     @media(min-width:$tablet){
       padding: 20px 36px;
       padding-bottom: 30px;
@@ -109,6 +117,7 @@ h6{
     @media(min-width:$desctop){
       padding: 25px 0;
       align-items: flex-start;
+      border-bottom: none;
     }
   }
 }
@@ -120,5 +129,19 @@ h6{
     @media(min-width:600px){
       display: block;
     }
+  }
+}
+.body-dark.active{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  transition: background .3s;
+  width: 100%;
+  z-index: 998;
+  @media(min-width: $desctop){
+    display: none;
   }
 }
