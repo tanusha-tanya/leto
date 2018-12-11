@@ -15,7 +15,7 @@
     position: relative;
     z-index: 100;
     top: 20px;
-    padding: 27px 50px;
+    padding: 0 50px;
     background: $buttontext;
     border-bottom-left-radius: 50px;
     border-top-right-radius: 50px;
@@ -23,6 +23,7 @@
   }
   &-li{
     list-style: none;
+    padding: 21px 5px;
   }
   &-link{
     text-transform: uppercase;
@@ -64,10 +65,10 @@
     &.active{
       visibility: visible;
       background:$buttontext;
-      width: 100%;
-      left:0;
-      right:0;
-      top: 60px;
+      width: calc(100% - 4px);
+      left:2px;
+      right:3px;
+      top: 50px;
       display: flex;
       padding: 50px;
       padding-top:65px;
@@ -75,12 +76,18 @@
       flex-wrap: wrap;
       height: 600px;
       overflow:hidden;
-      align-content: space-between;
+      align-content: flex-start;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     }
   }
   &-subul{
     margin-bottom: 10px;
+    margin-right:20px;
+    width: calc(25% - 20px);
+    &:last-of-type{
+      width: 25%;
+      margin-right:0;
+    }
   }
   &-subli{
     list-style:none;

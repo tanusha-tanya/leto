@@ -89,9 +89,9 @@
       display: block;
       width: calc(100% - 56px);
       height: 20px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 28px 20px rgba(0, 0, 0, 0.5);
       position: absolute;
-      bottom: 0;
+      bottom: 20px;
       z-index: -1;
       right: 8px;
     }
@@ -231,7 +231,7 @@
       }
     }
   }
-  &-item{
+  &-wrap{
     width:100%;
     @media(min-width: $tablet){
       border: 1px solid $brandborder;
@@ -240,7 +240,7 @@
       border-bottom-left-radius: 50px;
       box-sizing: border-box;
       position: relative;
-      margin: 10px;
+      margin: 13px;
       margin-top: 40px;
       background: $buttontext;
       text-align: left;
@@ -258,18 +258,6 @@
         z-index: auto!important;
         display: flex;
         background: $buttontext;
-        &:after{
-          content: "";
-          display: block;
-          width: calc(100% - 56px);
-          height: 20px;
-          box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-          position: absolute;
-          bottom: 0;
-          z-index: -1;
-          right: 8px;
-          opacity:1;
-        }
       }
     }
     @media(min-width: $desctop){

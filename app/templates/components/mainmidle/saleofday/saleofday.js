@@ -2,8 +2,6 @@ function owlInitialize() {
   $('.saleofday-items').owlCarousel({
     loop:true,
     smartSpeed:450,
-    //animateOut: 'fadeOut',
-    //animateIn: 'fadeIn',
     dots: true,
     autoheight: false,
     center: true,
@@ -51,13 +49,13 @@ $(document).ready(function() {
 });
 
 $(window).resize(function() {
+  $('.saleofday-items').slick('unslick');
+  $('.saleofday-links').slick('unslick');
+  $('.saleofday-items').owlCarousel('destroy');
   if ($(window).width() < 768) {
-    $('.saleofday-items').slick('unslick');
-    $('.saleofday-links').slick('unslick');
     owlInitialize();
   }
-  else{
-    $('.saleofday-items').owlCarousel('destroy');
+  else{    
     slickInitialize();
   }
 });
