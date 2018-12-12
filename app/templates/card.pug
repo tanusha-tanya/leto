@@ -1,0 +1,17 @@
+extends _layouts/default
+include components/maintop/maintopmenu/maintopmenu
+block title
+  title Гипоаллергенный ультра усилитель с алоэ и кокосовым маслом
+block header
+  include  _layouts/header/header
+block content
+  main.main-wrap
+    +maintopmenu()
+    include components/breadcrumbs/breadcrumbs
+    .container
+      h1 Гипоаллергенный ультра усилитель с алоэ и кокосовым маслом
+      include components/filter/filter
+block footer
+  include  _layouts/footer/footer
+  .body-dark
+  include  components/filterpanel/filterpanel

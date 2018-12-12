@@ -1,0 +1,24 @@
+include ../../sticker/sticker
+mixin product()
+  .product
+    +sticker("green", "New")
+    .product-heart
+      svg(role="img")(width="20")(height="18"): use(xlink:href="#heart")
+    .product-pick
+      img.product-img(src="/assets/bestseller.png" alt="Спрей с кератином для сильно поврежденных волос Biolage")
+    .product-name Спрей с кератином для сильно поврежденных волос Biolage
+    .product-brand Loreal Professional
+    .product-rating
+      .product-stars
+        svg.bestseller-star.bestseller-star__full(role="img")(width="20")(height="20"): use(xlink:href="#star")
+        svg.bestseller-star.bestseller-star__full(role="img")(width="20")(height="20"): use(xlink:href="#star")
+        svg.bestseller-star.bestseller-star__full(role="img")(width="20")(height="20"): use(xlink:href="#star")
+        svg.bestseller-star(role="img")(width="20")(height="20"): use(xlink:href="#star")
+        svg.bestseller-star(role="img")(width="20")(height="20"): use(xlink:href="#star")
+      .product-reviews 257 отзывов
+    .product-priceblock
+      .product-oldprice
+        span 1 600
+        | руб
+      .product-newprice 1 200 руб
+    button.product-button Купить

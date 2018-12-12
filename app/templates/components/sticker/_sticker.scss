@@ -1,0 +1,24 @@
+.sticker{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-repeat: no-repeat;
+  width: 52px;
+  height: 52px;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 12px;
+  font: 12px/28px MuseoSansNormal, Arial, Helvetica, sans-serif;
+  &__green{
+      background-image: url('../images/svg/ellipse_green.svg');
+  }
+  &__purple{
+      background-image: url('../images/svg/ellipse_purple.svg');
+  }
+  &__action{
+      background-image: url('../images/svg/ellipse_yellow.svg');
+  }
+  span{
+    color: $sticker
+  }
+}

@@ -112,26 +112,6 @@
       width: 100%!important;
     }
   }
-  &-sticker{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-repeat: no-repeat;
-    width: 52px;
-    height: 52px;
-    text-align: center;
-    box-sizing: border-box;
-    padding-top: 12px;
-    font: 12px/28px MuseoSansNormal, Arial, Helvetica, sans-serif;
-    z-index:100;
-    @media(min-width: $tablet){
-      top: 30px;
-      left: 30px;
-    }
-    &__sale{
-      background-image: url("../images/svg/ellipse_purple.svg");
-    }
-  }
   &-name{
     font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
     margin-top: 20px;
