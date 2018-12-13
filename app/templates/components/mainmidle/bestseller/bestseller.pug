@@ -20,7 +20,7 @@ mixin bestseller(text)
                 span 1 600
                 | руб
               .product-newprice 1 200 руб
-              button.product-button Купить
+            button.product-button Купить
         .bestseller-item
           .product
             +sticker("purple", "Sale")
@@ -32,7 +32,7 @@ mixin bestseller(text)
             .product-brand Loreal Professional
             .product-rating
               include ../../stars/stars
-              .bestseller-reviews 257 отзывов
+              .product-reviews 257 отзывов
             .product-priceblock
               .product-price 1 335 руб
             button.product-button Купить
@@ -72,18 +72,18 @@ mixin bestseller(text)
         .bestseller-item
           .product
             +sticker("green", "New")
-          .product-heart
-            svg(role="img")(width="20")(height="18"): use(xlink:href="#heart")
-          .product-pick
-            img.product-img(src="/assets/bestseller.png" alt="Спрей с кератином для сильно поврежденных волос Biolage")
-          .product-name Спрей с кератином для сильно поврежденных волос Biolage
-          .product-brand Loreal Professional
-          .product-rating
-            include ../../stars/stars
-            .product-reviews 257 отзывов
-          .product-priceblock
-            .product-oldprice
-              span 1 600
-              | руб
-            .product-newprice 1 200 руб
-          button.product-button Купить
+            .product-heart
+              svg(role="img")(width="20")(height="18"): use(xlink:href="#heart")
+            .product-pick
+              img.product-img(src="/assets/bestseller.png" alt="Спрей с кератином для сильно поврежденных волос Biolage")
+            .product-name Спрей с кератином для сильно поврежденных волос Biolage
+            .product-brand Loreal Professional
+            .product-rating
+              include ../../stars/stars
+              .product-reviews 257 отзывов
+            .product-priceblock
+              .product-oldprice
+                span 1 600
+                | руб
+              .product-newprice 1 200 руб
+            button.product-button Купить
