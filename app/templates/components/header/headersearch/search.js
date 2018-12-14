@@ -31,21 +31,29 @@ if(search){
 
   input.oninput = function(){
     let word = input.value.toLowerCase().trim();
-    parseJson(word);
+    if(word != ""){
+      parseJson(word);
+    }
   }
 
   function setArray(string){
     if(array.length > 0){
-      array.forEach((content)=>{
-        if(content.item.indexOf(string.item) == -1){
-
-        }
-      })
+      let filterArr = array.filter(function(element) {
+        if (element.item.indexOf(string) == -1) {
+          console.log(string)
+          console.log("строки нет в массиве")
+      	} else {
+      		console.log("строка есть в массиве")
+      	}
+      });
     }
     else{
-      array.push(string)
+        array.push(string);
+      	console.log("массив не пустой");
+        return
     }
     console.log(array)
+
     /*list.classList.add("active")
     list.innerHTML = li*/
   }
