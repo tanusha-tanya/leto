@@ -5,6 +5,7 @@ if(search){
   let list = document.querySelector('.autocomplete');
   let li = "";
   let array = [];
+  let flag = true;
   function parseJson(word){
     fetch(json)
   	.then(function (response) {
@@ -20,10 +21,14 @@ if(search){
       data.forEach((string)=>{
         let smallString = string.item.toLowerCase().trim();
         if(smallString.indexOf(word) != -1){
-          setArray(string)
+          setArray(string);
+        }
+        else{
+          hideAutocomplite(array)
         }
       })
   	})
+
   	.catch(function (error) {
   		document.body.innerHTML = error;
   	})
@@ -34,31 +39,48 @@ if(search){
     if(word != ""){
       parseJson(word);
     }
+    else{
+      hideAutocomplite(array)
+    }
   }
 
   function setArray(string){
-    if(array.length > 0){
-      let filterArr = array.filter(function(element) {
-        if (element.item.indexOf(string) == -1) {
-          console.log(string)
-          console.log("строки нет в массиве")
-      	} else {
-      		console.log("строка есть в массиве")
-      	}
-      });
-    }
-    else{
+    if (array.length > 0){
+      checkArray(string.item);
+      if (flag === true){
         array.push(string);
-      	console.log("массив не пустой");
+      }
+      else{
         return
+      }
     }
-    console.log(array)
+    else {
+      array.push(string);
+    }
+    showAutocomplite(array)
+  }
 
-    /*list.classList.add("active")
-    list.innerHTML = li*/
+  function checkArray(string, flag){
+    let newArr = array.filter(function(words) {
+      return string.indexOf(words.item) != -1;
+    });
+    if(newArr.length > 0){
+      flag = false;
+    }
+  }
+
+  function showAutocomplite(array){
+    list.classList.add("active");
+    array.forEach((item) =>{
+      li += `<li><a href="${item.link}">${item.item}</a></li>`
+    });
+    list.innerHTML = li;
+  }
+
+  function hideAutocomplite(array){
+    list.classList.remove("active");
+    li = "";
+    list.innerHTML = li;
+    array = [];
   }
 }
-//1. получаем содержимое инпута
-//2. сравниваем со строками
-//3. пушим совпадения в автокомплит
-//4. показываем автокомплит

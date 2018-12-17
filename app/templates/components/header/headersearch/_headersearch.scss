@@ -77,7 +77,8 @@
     z-index:999;
     padding: 10px;
     top:calc(100% - 5px);
-    width: 100%;
+    width: calc(100% - 2px);
+    left: 1px;
     box-sizing: border-box;
   }
   li{
