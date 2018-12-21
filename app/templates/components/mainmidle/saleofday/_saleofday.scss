@@ -2,13 +2,14 @@
   position: relative;
   padding-bottom: 100px;
   margin-top: 13px;
+  margin-bottom: 30px;
   &:after{
     content: '';
     position: absolute;
     left: 72%;
     right: 0;
     top: 0;
-    bottom: 50px;
+    bottom: 120px;
     background-color: $price;
     background-image: url('../images/svg/sale_flower.svg');
     background-repeat: no-repeat;
@@ -80,7 +81,7 @@
     box-sizing: border-box;
     position: relative;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 19px;
     background: $buttontext;
     text-align: center;
     width: 180px;
@@ -134,7 +135,7 @@
   &-prices{
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 7px;
     align-items: flex-end;
     @media(min-width: $tablet){
       display: block;
@@ -159,17 +160,18 @@
   &-button{
     border: 1px solid $primary;
     outline: none;
-    width: 156px;
+    width: 158px;
     height: 40px;
     box-sizing: border-box;
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px;
+    border-top-right-radius: 31px;
+    border-bottom-left-radius: 31px;
     font: 12px/28px MuseoSansNormal, Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     cursor:pointer;
     background: transparent;
     position: relative;
     z-index:999;
+    margin-bottom: 12px;
     &:hover, &:focus{
       outline: none;
       border: 1px solid $selection;

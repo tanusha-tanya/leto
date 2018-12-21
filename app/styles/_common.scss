@@ -52,6 +52,7 @@ h1{
 }
 h2{
   font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
+  letter-spacing: 0.05em;
 }
 h3{
   font: 26px/36px MuseoSansDark, Arial, Helvetica, sans-serif;
@@ -95,7 +96,7 @@ h6{
 .container{
   width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 10px;
   box-sizing: border-box;
   @media(min-width:$tablet){
     padding: 0 30px;
@@ -106,7 +107,7 @@ h6{
   }
   &__header{
     display: flex;
-    padding: 20px 10px;
+    padding: 18px 10px;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid $brandborder;

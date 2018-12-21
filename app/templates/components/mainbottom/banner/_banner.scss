@@ -24,6 +24,7 @@
   &-title{
     font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
     color: $link;
+    margin-top: -10px;
     @media(min-width:$tablet){
       font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
     }
@@ -35,12 +36,13 @@
   }
   &-more{
     font: 15px/20px MuseoSansNormal, Arial, Helvetica, sans-serif;
-    margin-top: 15px;
+    margin-top: 6px;
     display: inline-block;
   }
   &-items{
     margin-top: 37px;
-    margin-left: 5px;
+    margin-left: 9px;
+    padding-bottom: 40px;
     position: relative;
     z-index: 100;
     @media(min-width:$tablet){
@@ -52,16 +54,17 @@
     }
   }
   &-item{
-    margin-top: 16px;
+    margin-top: 11px;
     @media(min-width:$tablet){
       margin: 16px 20px;
+      padding-bottom: 0;
     }
     @media(min-width:$desctop){
 
     }
   }
   &-description{
-    margin-top: 14px;
+    margin-top: 11px;
     font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
     color: $bannerdescription;
   }

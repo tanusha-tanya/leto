@@ -2,6 +2,7 @@
   margin-top: 98px;
   position: relative;
   padding-bottom: 25px;
+  margin-bottom: 40px;
   @media(min-width:$tablet){
     margin-top: 185px;
   }
@@ -164,7 +165,7 @@
     font: 15px/24px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
   }
   &-priceblock{
-    margin-top: 15px;
+    margin-top: 7px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -190,11 +191,12 @@
   &-button{
     border: 1px solid $primary;
     outline: none;
-    width: 156px;
+    width: 160px;
     height: 40px;
+    margin-bottom: 11px;
     box-sizing: border-box;
-    border-top-right-radius: 35px;
-    border-bottom-left-radius: 35px;
+    border-top-right-radius: 31px;
+    border-bottom-left-radius: 31px;
     font: 12px/28px MuseoSansNormal, Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     cursor:pointer;
