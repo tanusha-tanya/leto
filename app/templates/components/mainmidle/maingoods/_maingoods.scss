@@ -1,5 +1,6 @@
 .maingoods{
   position: relative;
+  margin-bottom: 47px;
   @media(min-width:$desctop){
     margin-top: 60px;
     &:after{
@@ -98,6 +99,7 @@
       background: $yellowbutton;
       width: 200px;
       color: $primary;
+      bottom:0;
       .maingoods-svg{
         color: $primary;
         fill: $primary;

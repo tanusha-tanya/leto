@@ -1,6 +1,7 @@
 .product{
   border: 1px solid $bordergray;
   padding: 40px 20px;
+  padding-bottom: 27px;
   text-align: center;
   max-width: 500px;
   position: relative;
@@ -131,6 +132,7 @@
     text-align: center;
     color: $title;
     font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    margin-top:25px;
   }
   &-brand{
     text-align: center;
@@ -170,7 +172,7 @@
   }
   &-priceblock{
     text-align: center;
-    margin-top: 20px;
+    margin-top: 14px;
   }
   &-price{
     margin-top: 60px;
@@ -188,20 +190,21 @@
   &-newprice{
     color: $price;
     font: 26px/36px MuseoSansDark, Arial, Helvetica, sans-serif;
+    margin-top: -8px;
   }
   &-button{
     border: 1px solid $primary;
     outline: none;
-    width: 156px;
+    width: 160px;
     height: 40px;
     box-sizing: border-box;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-right-radius: 32px;
+    border-bottom-left-radius: 32px;
     font: 12px/28px MuseoSansNormal, Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     cursor:pointer;
     background: transparent;
-    margin-top: 20px;
+    margin-top: 16px;
     &:hover, &:focus{
       outline: none;
       border: 1px solid $selection;
