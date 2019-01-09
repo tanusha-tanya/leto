@@ -21,7 +21,7 @@
   &-right{
     @media(min-width: $tablet){
       margin-top: 18px;
-      width: calc(50% - 20px);
+      width: 50%;
     }
     @media(min-width: $desctop){
         width: auto;

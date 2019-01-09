@@ -1,6 +1,9 @@
 .bestseller{
   position: relative;
   margin-bottom: 25px;
+  @media(min-width:$tablet){
+    margin-top: 112px;
+  }
   @media(min-width:$desctop){
     background-image: url('../images/svg/rose.svg');
     background-repeat: no-repeat;

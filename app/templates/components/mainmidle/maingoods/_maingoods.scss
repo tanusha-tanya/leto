@@ -21,6 +21,7 @@
     @media(min-width:$tablet){
       font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
       max-width:340px;
+      margin-top: 44px;
     }
     @media(min-width:$desctop){
       max-width:100%;
@@ -32,11 +33,17 @@
   }
   &-price{
     font: 26px/36px MuseoSansDark, Arial, Helvetica, sans-serif;
+    @media(min-width:$tablet){
+      margin-top: 13px;
+    }
   }
   &-pick{
     position: relative;
     text-align: center;
     margin-top:30px;
+    @media(min-width:$tablet){
+      margin-top:0;
+    }
     @media(min-width:$desctop){
       top: -20px;
       left: 100px;
@@ -47,7 +54,8 @@
     @media(min-width:$tablet){
       max-width: 100%;
       position:relative;
-      top:50px;
+      top: 43px;
+      right: 33px;
     }
     @media(min-width:$desctop){
       max-width: 100%;
@@ -90,6 +98,9 @@
     &__new{
       background: $greenbutton;
       color: $buttontext;
+      @media(min-width:$tablet){
+        bottom: -15px;
+      }
       .maingoods-svg{
         color: $buttontext;
         fill: $buttontext;
@@ -100,6 +111,9 @@
       width: 200px;
       color: $primary;
       bottom:0;
+      @media(min-width:$tablet){
+        bottom: -29px;
+      }
       .maingoods-svg{
         color: $primary;
         fill: $primary;
@@ -158,6 +172,23 @@
         @media(min-width:$desctop){
           top:-50px;
         }
+      }
+      .maingoods-image{
+        @media(min-width:$tablet){
+          top: 164px;
+          right: -12px;
+        }
+      }
+      .maingoods-title{
+        @media(min-width:$tablet){
+          margin-top: 58px;
+          margin-bottom: 14px;
+        }
+      }
+    }
+    .maingoods-newprice{
+      @media(min-width:$tablet){
+        margin-top: 8px;
       }
     }
   }

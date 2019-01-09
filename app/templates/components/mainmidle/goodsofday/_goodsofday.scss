@@ -16,9 +16,10 @@
     top: 0;
     bottom: 0;
     @media(min-width:$tablet){
-      left: 35%;
-      background-image: url('../images/svg/white_flower.svg');
-      background-position: -221px 85px;
+      left: 40%;
+      top: 5px;
+      background-image: url(../images/svg/white_flower.svg);
+      background-position: -260px 68px;
       background-repeat: no-repeat;
     }
     @media(min-width:$desctop){
@@ -49,7 +50,7 @@
     @media(min-width:$tablet){
       font: 40px/60px MuseoSansNormal, Arial, Helvetica, sans-serif;
       background-image: url('../images/svg/flower_middle.svg');
-      padding: 20px 0;
+      padding: 38px 2px;
     }
     @media(min-width:$desctop){
       background-image: url('../images/svg/flower.svg');
@@ -62,6 +63,7 @@
     z-index: 100;
     @media(min-width:$tablet){
       display: flex;
+      margin-top: 0;
     }
     @media(min-width:$desctop){
       background-image: url("../images/svg/brown_flower.svg");
@@ -84,7 +86,8 @@
     padding-top: 12px;
     @media(min-width:$tablet){
       left: auto;
-      right: -80px;
+      right: -78px;
+      top: 8px;
     }
     @media(min-width:$desctop){
       right: -130px;
@@ -130,7 +133,7 @@
     width: 140px;
     height: 140px;
     @media(min-width:$tablet){
-      width: 291px;
+      width: 297px;
       height: auto;
     }
   }
@@ -146,8 +149,8 @@
   &-figcaption{
     margin-top: 20px;
     @media(min-width:$tablet){
-      margin-top: 80px;
-      margin-left: 30px;
+      margin-top: 78px;
+      margin-left: 25px;
     }
     @media(min-width:$desctop){
       margin-left: 70px;
@@ -170,6 +173,7 @@
     align-items: flex-end;
     justify-content: space-between;
     @media(min-width:$tablet){
+      margin-top: 17px;
       display: block;
     }
   }
@@ -182,10 +186,13 @@
   &-newprice{
     color: $price;
     font: 26px/36px MuseoSansDark, Arial, Helvetica, sans-serif;
+    @media(min-width:$tablet){
+      font: 26px/30px MuseoSansDark, Arial, Helvetica, sans-serif;
+    }
   }
   &-buy{
     @media(min-width:$tablet){
-      margin-top: 20px;
+      margin-top: 24px;
     }
   }
   &-button{
