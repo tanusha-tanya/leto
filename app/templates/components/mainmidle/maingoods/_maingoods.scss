@@ -21,7 +21,7 @@
     @media(min-width:$tablet){
       font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
       max-width:340px;
-      margin-top: 44px;
+      margin-top: 18px;
     }
     @media(min-width:$desctop){
       max-width:100%;
@@ -54,7 +54,7 @@
     @media(min-width:$tablet){
       max-width: 100%;
       position:relative;
-      top: 43px;
+      top: 13px;
       right: 33px;
     }
     @media(min-width:$desctop){
@@ -99,7 +99,7 @@
       background: $greenbutton;
       color: $buttontext;
       @media(min-width:$tablet){
-        bottom: -15px;
+        bottom: 10px;
       }
       .maingoods-svg{
         color: $buttontext;
@@ -175,13 +175,13 @@
       }
       .maingoods-image{
         @media(min-width:$tablet){
-          top: 164px;
-          right: -12px;
+          top: 142px;
+          right: -3px;
         }
       }
       .maingoods-title{
         @media(min-width:$tablet){
-          margin-top: 58px;
+          margin-top: 31px;
           margin-bottom: 14px;
         }
       }

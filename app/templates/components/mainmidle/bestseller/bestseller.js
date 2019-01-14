@@ -1,7 +1,7 @@
 $('.bestseller-carousel').owlCarousel({
     autoplayHoverPause:true,
     loop:true,
-    smartSpeed:450,
+    //smartSpeed:450,
     dots: true,
     autoheight: false,
     center: true,

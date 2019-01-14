@@ -4,12 +4,12 @@
     @media(min-width: $desctop){
       display:flex;
       justify-content: space-between;
-      margin: 7px -12px;
-    }  
+      margin: 7px -6px;
+    }
   }
   &-item{
     list-style:none;
-    margin: 0 12px;
+    margin: 0 6px;
   }
   &-link{
     text-decoration: none;

@@ -19,6 +19,7 @@
     display: none;
     @media(min-width:$tablet){
       display: block;
+      font: 12px/19px MuseoSansNormal, Arial, Helvetica, sans-serif;
     }
   }
   &-item{

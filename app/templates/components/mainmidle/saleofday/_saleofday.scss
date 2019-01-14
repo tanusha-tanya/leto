@@ -3,6 +3,10 @@
   padding-bottom: 100px;
   margin-top: 13px;
   margin-bottom: -56px;
+  @media(min-width: $tablet){
+    padding-bottom: 146px;
+    margin-bottom: -149px;   
+  }
   &:after{
     content: '';
     position: absolute;
@@ -17,11 +21,17 @@
     display: block;
     width: 100%;
     @media(min-width: $tablet){
-      left: 50%;
+      left: 51%;
+      top: 22px;
       background-position: 63px top;
     }
     @media(min-width: $desctop){
       left: 65%;
+    }
+  }
+  &-container{
+    @media(min-width: $tablet){
+      padding-top: 43px;
     }
   }
   &-head{
@@ -138,13 +148,14 @@
     margin-top: 7px;
     align-items: flex-end;
     @media(min-width: $tablet){
+      margin-top: 158px;
       display: block;
       width: 40%;
     }
   }
   &-priceblock{
     @media(min-width: $tablet){
-      margin-bottom: 30px;
+      margin-bottom: 18px;
     }
   }
   &-oldprice{
@@ -187,6 +198,7 @@
   &-items{
     @media(min-width: $tablet){
       width: 75%;
+      margin-bottom: 16px;
     }
     @media(min-width: $desctop){
       width: 50%;
@@ -217,7 +229,7 @@
     width:100%;
     @media(min-width: $tablet){
       border: 1px solid $brandborder;
-      padding: 40px;
+      padding: 29px;
       border-top-right-radius: 50px;
       border-bottom-left-radius: 50px;
       box-sizing: border-box;
@@ -252,7 +264,6 @@
       display: block;
       .slick-list{
         margin-top:-20px;
-        padding-top:10px;
       }
     }
     @media(min-width: $desctop){
@@ -263,14 +274,14 @@
   }
   &-link{
     border: 1px solid $brandborder;
-    padding: 20px;
+    padding: 15px 10px;
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
     box-sizing: border-box;
     display: block;
     position: relative;
     width: 160px;
-    margin: 17px;
+    margin: 10px;
     margin-left: 0;
     transition: border-color .3s;
     cursor:pointer;

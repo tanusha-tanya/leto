@@ -3,10 +3,11 @@
   margin: 0 auto;
   margin-top:45px;
   @media(min-width: $tablet){
-    margin-top:30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 -12px;
+    margin-top: 42px;
   }
   @media(min-width: $desctop){
     width: 870px;

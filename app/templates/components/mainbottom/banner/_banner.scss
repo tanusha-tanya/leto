@@ -2,9 +2,13 @@
   background: #EFEEE9;
   position: relative;
   margin-top: 15px;
+  @media(min-width:$tablet){
+    margin-top: 47px;
+  }
   &-content{
     @media(min-width:$tablet){
       width: 400px;
+      padding-top: 40px;
     }
     @media(min-width:$desctop){
       width: 700px;
@@ -38,6 +42,9 @@
     font: 15px/20px MuseoSansNormal, Arial, Helvetica, sans-serif;
     margin-top: 6px;
     display: inline-block;
+    @media(min-width:$tablet){
+      margin-top: 0;
+    }
   }
   &-items{
     margin-top: 37px;
@@ -46,7 +53,7 @@
     position: relative;
     z-index: 100;
     @media(min-width:$tablet){
-      margin: 10px -20px;
+      margin: 9px -20px;
       margin-bottom: 0;
       display: flex;
       width: 100%;
@@ -58,6 +65,7 @@
     @media(min-width:$tablet){
       margin: 16px 20px;
       padding-bottom: 0;
+      max-width: 162px;
     }
     @media(min-width:$desctop){
 

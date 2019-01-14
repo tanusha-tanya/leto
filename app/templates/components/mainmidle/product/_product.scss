@@ -116,6 +116,11 @@
   }
   &-pick{
     margin: 20px 0;
+    @media(min-width:$tablet){
+      margin: 7px 0;
+      height: 183px;
+      overflow: hidden;
+    }
     @media(min-width: $desctop){
       margin: 40px 0;
     }
@@ -124,6 +129,10 @@
     max-width: 86px;
     position: relative;
     margin: 0 auto;
+    @media(min-width:$tablet){
+      max-width: 140px;
+      height: auto;
+    }
     @media(min-width: $desctop){
       max-width: 140px;
     }
@@ -133,6 +142,9 @@
     color: $title;
     font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
     margin-top:25px;
+    @media(min-width:$tablet){
+      margin-top: 56px;
+    }
   }
   &-brand{
     text-align: center;
@@ -144,6 +156,7 @@
     @media(min-width:$tablet){
       display: block;
       margin-top: 20px;
+      font-size: 0;
     }
   }
   &-stars{
@@ -166,7 +179,7 @@
   }
   &-reviews{
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: top;
     margin-left: 6px;
     font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
   }
@@ -177,6 +190,9 @@
   &-price{
     margin-top: 60px;
     font: 26px/28px MuseoSansDark, Arial, Helvetica, sans-serif;
+    @media(min-width:$tablet){
+      margin-top: 20px;
+    }
   }
   &-oldprice{
     font: 15px/36px MuseoSansNormal, Arial, Helvetica, sans-serif;
@@ -215,6 +231,9 @@
       border: 1px solid $selection;
       color: $buttontext;
       background: $selection;
+    }
+    @media(min-width:$tablet){
+      margin-top: 31px;
     }
   }
 }

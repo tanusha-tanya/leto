@@ -54,7 +54,7 @@
   &-carousel{
     margin-top: 15px;
     @media(min-width:$tablet){
-      margin-top: 40px;
+      margin-top: 28px;
     }
     @media(min-width:$desctop){
       padding-bottom: 100px;
@@ -112,6 +112,9 @@
       }
       .owl-nav.disabled + .owl-dots{
         margin-top: 11px;
+        @media(min-width:$tablet){
+          margin-top: 0;
+        }
       }
     }
     .owl-nav{
