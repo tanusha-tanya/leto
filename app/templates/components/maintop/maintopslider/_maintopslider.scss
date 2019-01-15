@@ -47,6 +47,9 @@
     @media(min-width: $tablet){
       height: 570px;
     }
+    @media(min-width: $desctop){
+      height: 572px;
+    }
   }
   &.owl-theme .owl-nav.disabled + .owl-dots{
     position: absolute;

@@ -1,16 +1,10 @@
 .headersearch{
   &-form{
     display:flex;
-    @media(min-width:$desctop){
-      width: 536px;
-    }
   }
   &-label{
-    width: calc(100% - 80px);
+    width: 447px;
     position: relative;
-    @media(min-width:$desctop){
-      width: calc(100% - 87px);
-    }
   }
   &-input{
     display: none;

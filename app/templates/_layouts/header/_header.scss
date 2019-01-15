@@ -11,11 +11,13 @@
     display: none;
     @media(min-width: $desctop){
       display: flex;
+      flex-grow: 1;
+      flex-shrink: 0;
     }
   }
   &-city{
-    @media(min-width:$desctop){
-      margin-left: 30px;
+    @media(min-width: $desctop){
+      margin-left: 31px;
     }
   }
   &-right{
@@ -24,8 +26,8 @@
       width: 50%;
     }
     @media(min-width: $desctop){
-        width: auto;
-        margin-top: 10px;
+      width: auto;
+      margin-top: 14px;
     }
   }
 }

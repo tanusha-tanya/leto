@@ -28,6 +28,9 @@
         z-index: -1;
         right: 10px;
       }
+      .product-heart{
+        opacity: 1;
+      }
     }
   }
   &-title{
@@ -97,7 +100,10 @@
     top: 20px;
     right: 20px;
     cursor: pointer;
-    transition: color .3s, fill .3s, background .3s;
+    transition: color .3s, fill .3s, background .3s, opacity .3s;
+    @media(min-width:$desctop){
+      opacity: 0;
+    }
     svg{
       color: $primary;
       fill:$primary;

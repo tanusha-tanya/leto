@@ -7,6 +7,10 @@
     margin-top: 185px;
     padding-bottom: 50px;
   }
+  @media(min-width:$desctop){
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
   &:after{
     content: '';
     position:absolute;
@@ -24,20 +28,20 @@
       background-repeat: no-repeat;
     }
     @media(min-width:$desctop){
-      left: 40%;
-      background-position: -143px 17px;
+      left: 38%;
+      background-position: -157px 29px;
     }
   }
   @media(min-width:$desctop){
     &:before{
       content: '';
       display: block;
-      width: 102px;
+      width: 122px;
       height:1px;
       position:absolute;
       background-color: $background;
-      top: 72px;
-      left: calc(40% - 120px);
+      top: 84px;
+      left: calc(38% - 120px);
     }
   }
   &-title{
@@ -55,7 +59,8 @@
     }
     @media(min-width:$desctop){
       background-image: url('../images/svg/flower.svg');
-      padding: 30px 0;
+      padding: 45px 0;
+      background-position: 43px 16px;
     }
   }
   &-figure{
@@ -68,10 +73,11 @@
     }
     @media(min-width:$desctop){
       background-image: url("../images/svg/brown_flower.svg");
-      padding-left: 254px;
+      padding-left: 199px;
       background-position: bottom left;
       background-repeat: no-repeat;
       padding-bottom: 97px;
+      margin-top: 36px;
     }
   }
   &-sticker{
@@ -91,7 +97,7 @@
       top: 8px;
     }
     @media(min-width:$desctop){
-      right: -130px;
+      right: -125px;
     }
   }
   &-pick{
@@ -126,8 +132,8 @@
       height: 368px;
     }
     @media(min-width:$desctop){
-      width: 360px;
-      height: 368px;
+      width: 330px;
+      height: 358px;
     }
   }
   &-image{
@@ -167,6 +173,9 @@
   &-brand{
     color: $secondary;
     font: 15px/24px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
+    @media(min-width:$desctop){
+      margin-top: 14px;
+    }
   }
   &-priceblock{
     margin-top: 7px;
@@ -176,6 +185,9 @@
     @media(min-width:$tablet){
       margin-top: 17px;
       display: block;
+    }
+    @media(min-width:$desctop){
+      margin-top: 25px;
     }
   }
   &-oldprice{
