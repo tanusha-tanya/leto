@@ -43,7 +43,7 @@ gulp.task('scripts', function () {
     }))
     .pipe(sourcemaps.init())
     .pipe(babel({
-        presets: ['es2015']
+        presets: ['es2015', 'env']
     }))
     .pipe(concat('all.js'))
     .pipe(sourcemaps.write('.'))

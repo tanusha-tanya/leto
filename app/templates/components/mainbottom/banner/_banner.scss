@@ -5,6 +5,9 @@
   @media(min-width:$tablet){
     margin-top: 47px;
   }
+  @media(min-width:$desctop){
+    margin-top: 0;
+  }
   &-content{
     @media(min-width:$tablet){
       width: 400px;
@@ -12,6 +15,7 @@
     }
     @media(min-width:$desctop){
       width: 700px;
+      padding-top: 0;
     }
   }
   &-logo{
@@ -91,7 +95,7 @@
     }
     @media(min-width:$desctop){
       background-image: url(../assets/footerpickbig.png);
-      background-position: 100px 0;
+      background-position: 68px 0;
     }
   }
   &-container{

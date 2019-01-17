@@ -5,7 +5,11 @@
   margin-bottom: -56px;
   @media(min-width: $tablet){
     padding-bottom: 146px;
-    margin-bottom: -149px;   
+    margin-bottom: -149px;
+  }
+  @media(min-width: $desctop){
+    padding-bottom: 318px;
+    margin-bottom: -66px;
   }
   &:after{
     content: '';
@@ -26,7 +30,7 @@
       background-position: 63px top;
     }
     @media(min-width: $desctop){
-      left: 65%;
+      left: 68%;
     }
   }
   &-container{
@@ -152,6 +156,9 @@
       display: block;
       width: 40%;
     }
+    @media(min-width: $desctop){
+      margin-top: 0;
+    }
   }
   &-priceblock{
     @media(min-width: $tablet){
@@ -268,7 +275,7 @@
     }
     @media(min-width: $desctop){
       padding-left: 50px;
-      margin-top: 30px;
+      margin-top: 65px;
       margin-right:20px;
     }
   }
@@ -380,13 +387,16 @@
   }
   &-linkimg{
     width: 120px;
+    @media(min-width: $desctop){
+      margin-top: 33px;
+    }
   }
   &-description{
     display: none;
     @media(min-width: $desctop){
       display: block;
       width: 300px;
-      margin-left: 40px;
+      margin-left: 69px;
     }
   }
   &-linkname{
