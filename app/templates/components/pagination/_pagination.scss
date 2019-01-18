@@ -1,0 +1,49 @@
+.pagination{
+  position:relative;
+  margin: 40px 0;
+  padding: 30px 95px;
+  @media(min-width:$tablet){
+    padding: 30px 200px;
+  }
+  &-svg{
+    color:$arrow;
+    fill:$arrow;
+    position: absolute;
+    top:30px;
+    left: 30px;
+  }
+  &-arrow{
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #E0DFDA;
+    position: absolute;
+    &__left{
+      border-top-right-radius: 40px;
+      border-bottom-left-radius: 40px;
+      left:0;
+      top: 0;
+    }
+    &__right{
+      border-top-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      right:0;
+      top: 0;
+    }
+  }
+  &-links{
+    display: flex;
+    justify-content: space-between;
+  }
+  &-num{
+    border:0;
+    font: 15px/28px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    @media(min-width:$tablet){
+      padding: 0 30px;
+    }
+    &__current{
+      color: $selection;
+      border-bottom: 2px $selection solid;
+    }
+  }
+}

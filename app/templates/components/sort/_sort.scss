@@ -24,6 +24,9 @@
       height: 7px;
       transform: rotate(-135deg);
       transition: transform .3s, border-color .3s;
+      @media(min-width:$tablet){
+        display: none;
+      }
     }
     &__active{
       .sort-list{
@@ -45,6 +48,10 @@
     font-weight: 500;
     display: inline-block;
     position: relative;
+    cursor:pointer;
+    @media(min-width:$tablet){
+      display: none;
+    }
   }
   &-list{
     position: absolute;
@@ -56,6 +63,9 @@
     right:0;
     top: 100%;
     box-sizing: border-box;
+    @media(min-width:$tablet){
+      display: none;
+    }
   }
   &-item{
     list-style: none;
@@ -67,6 +77,17 @@
     border: none;
     &__active{
       color: $selection;
+      cursor: text;
     }
+  }
+  &-links{
+    display: none;
+    @media(min-width:$tablet){
+      display: inline-block;
+    }
+  }
+  &-anchor{
+    margin:0 20px;
+    border: none;
   }
 }
