@@ -145,3 +145,15 @@ h6{
     display: none;
   }
 }
+.row{
+  display: flex;
+  margin: 0 -10px;
+}
+.left-column{
+  margin: 0 10px;
+  width: calc(25% - 20px)
+}
+.right-column{
+  margin: 0 10px;
+  width: calc(75% - 20px)
+}

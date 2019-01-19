@@ -10,11 +10,14 @@ block content
     include components/breadcrumbs/breadcrumbs
     .container
       h1 салонам красоты
-      include components/filter/filter
-      include components/sort/sort
-      include _layouts/products/products
-      include components/pagination/pagination
-      include components/seoText/seoText
+      .row
+        .left-column
+          include components/filter/filter
+        .right-column
+          include components/sort/sort
+          include _layouts/products/products
+          include components/pagination/pagination
+          include components/seoText/seoText
 block footer
   include  _layouts/footer/footer
   .body-dark
