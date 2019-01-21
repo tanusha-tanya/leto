@@ -4,7 +4,7 @@
   @media(min-width:$tablet){
     margin-top: 112px;
   }
-  @media(min-width:$desctop){
+  @media(min-width:$desktop){
     background-image: url('../images/svg/rose.svg');
     background-repeat: no-repeat;
     background-position: right 82%;
@@ -26,7 +26,7 @@
       background-image: url('../images/svg/flower_middle.svg');
       padding: 20px 0;
     }
-    @media(min-width:$desctop){
+    @media(min-width:$desktop){
       background-image: url('../images/svg/flower.svg');
       padding: 30px 0;
     }
@@ -38,7 +38,7 @@
         width: 160px;
         height: 1px;
       }
-      @media(min-width:$desctop){
+      @media(min-width:$desktop){
         width: 25%;
       }
     }
@@ -56,7 +56,7 @@
     @media(min-width:$tablet){
       margin-top: 28px;
     }
-    @media(min-width:$desctop){
+    @media(min-width:$desktop){
       padding-bottom: 100px;
       .owl-nav{
         position: absolute;

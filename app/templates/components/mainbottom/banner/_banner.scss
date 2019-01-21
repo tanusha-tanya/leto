@@ -5,7 +5,7 @@
   @media(min-width:$tablet){
     margin-top: 47px;
   }
-  @media(min-width:$desctop){
+  @media(min-width:$desktop){
     margin-top: 0;
   }
   &-content{
@@ -13,7 +13,7 @@
       width: 400px;
       padding-top: 40px;
     }
-    @media(min-width:$desctop){
+    @media(min-width:$desktop){
       width: 700px;
       padding-top: 0;
     }
@@ -25,7 +25,7 @@
       height: 125px;
       margin: 30px 0;
     }
-    @media(min-width:$desctop){
+    @media(min-width:$desktop){
       margin: 60px 0 30px 0;
     }
   }
@@ -71,7 +71,7 @@
       padding-bottom: 0;
       max-width: 162px;
     }
-    @media(min-width:$desctop){
+    @media(min-width:$desktop){
 
     }
   }
@@ -93,13 +93,13 @@
       background-repeat: no-repeat;
       background-position: right;
     }
-    @media(min-width:$desctop){
+    @media(min-width:$desktop){
       background-image: url(../assets/footerpickbig.png);
       background-position: 68px 0;
     }
   }
   &-container{
-    @media(min-width:$desctop){
+    @media(min-width:$desktop){
       &:after{
         content: '';
         width: 427px;
@@ -114,7 +114,7 @@
     }
   }
   &-logotype{
-    @media(min-width:$desctop){
+    @media(min-width:$desktop){
       background-image: url(../images/svg/rose_bg.svg);
       background-repeat: no-repeat;
       background-position: 80% top;

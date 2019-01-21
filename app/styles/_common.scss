@@ -46,7 +46,7 @@ h1{
   @media(min-width:$tablet){
     font: 30px/50px MuseoSansNormal, Arial, Helvetica, sans-serif;
   }
-  @media(min-width:$desctop){
+  @media(min-width:$desktop){
     font: 40px/60px MuseoSansNormal, Arial, Helvetica, sans-serif;
   }
 }
@@ -100,7 +100,7 @@ h6{
   @media(min-width:$tablet){
     padding: 0 34px;
   }
-  @media(min-width:$desctop){
+  @media(min-width:$desktop){
     padding: 0;
     max-width: 1180px;
   }
@@ -114,7 +114,7 @@ h6{
       padding: 10px 36px;
       padding-bottom: 25px;
     }
-    @media(min-width:$desctop){
+    @media(min-width:$desktop){
       padding: 24px 0;
       align-items: flex-start;
       border-bottom: none;
@@ -141,19 +141,50 @@ h6{
   transition: background .3s;
   width: 100%;
   z-index: 998;
-  @media(min-width: $desctop){
+  @media(min-width: $desktop){
     display: none;
   }
 }
 .row{
-  display: flex;
-  margin: 0 -10px;
+  @media(min-width: $desktop){
+    display: flex;
+    margin: 0 -10px;
+    margin-top:30px;
+  }
 }
 .left-column{
-  margin: 0 10px;
-  width: calc(25% - 20px)
+  @media(min-width: $desktop){
+    margin: 0 10px;
+    width: calc(25% - 20px)
+  }
 }
 .right-column{
-  margin: 0 10px;
-  width: calc(75% - 20px)
+  @media(min-width: $desktop){
+    margin: 0 10px;
+    width: calc(75% - 20px)
+  }
+}
+.catalog{
+  position: relative;
+  @media(min-width: $desktop){
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      background-image: url("../images/svg/branch.svg");
+      width: 180px;
+      height: 247px;
+      top: 10%;
+    }
+    &:after{
+      content: '';
+      background-image: url("../images/svg/rose.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 0;
+      width: 180px;
+      height: 247px;
+      top: 50%;
+    }
+  }
 }

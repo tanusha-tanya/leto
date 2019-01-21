@@ -7,7 +7,7 @@
     padding-bottom: 146px;
     margin-bottom: -149px;
   }
-  @media(min-width: $desctop){
+  @media(min-width: $desktop){
     padding-bottom: 318px;
     margin-bottom: -66px;
   }
@@ -29,7 +29,7 @@
       top: 22px;
       background-position: 63px top;
     }
-    @media(min-width: $desctop){
+    @media(min-width: $desktop){
       left: 68%;
     }
   }
@@ -42,7 +42,7 @@
     display: flex;
     align-items: center;
     border:0;
-    @media(min-width: $desctop){
+    @media(min-width: $desktop){
       position:relative;
       &:after{
         content: '';
@@ -156,7 +156,7 @@
       display: block;
       width: 40%;
     }
-    @media(min-width: $desctop){
+    @media(min-width: $desktop){
       margin-top: 0;
     }
   }
@@ -207,7 +207,7 @@
       width: 75%;
       margin-bottom: 16px;
     }
-    @media(min-width: $desctop){
+    @media(min-width: $desktop){
       width: 50%;
     }
     &.owl-theme{
@@ -261,7 +261,7 @@
         background: $buttontext;
       }
     }
-    @media(min-width: $desctop){
+    @media(min-width: $desktop){
       max-width: 560px;
     }
   }
@@ -273,7 +273,7 @@
         margin-top:-20px;
       }
     }
-    @media(min-width: $desctop){
+    @media(min-width: $desktop){
       padding-left: 50px;
       margin-top: 65px;
       margin-right:20px;
@@ -296,7 +296,7 @@
       top: 10px;
       left: 10px;
     }
-    @media(min-width: $desctop){
+    @media(min-width: $desktop){
       margin: 0;
       border-top-right-radius: 0;
       border-bottom-left-radius: 0;
@@ -320,7 +320,7 @@
         border: 1px solid $bannerdescription;
         border-color: $bannerdescription;
       }
-      @media(min-width: $desctop){
+      @media(min-width: $desktop){
         border-color: transparent;
         border-bottom: 1px solid $brandborder;
         &:hover{
@@ -333,7 +333,7 @@
       border: 1px solid $bannerdescription;
       border-color: $bannerdescription;
       width: auto;
-      @media(min-width: $desctop){
+      @media(min-width: $desktop){
         border-color: transparent;
         border-bottom: 1px solid $brandborder;
       }
@@ -387,13 +387,13 @@
   }
   &-linkimg{
     width: 120px;
-    @media(min-width: $desctop){
+    @media(min-width: $desktop){
       margin-top: 33px;
     }
   }
   &-description{
     display: none;
-    @media(min-width: $desctop){
+    @media(min-width: $desktop){
       display: block;
       width: 300px;
       margin-left: 69px;

@@ -40,7 +40,7 @@ gulp.task('scripts', function () {
   return gulp.src('app/templates/**/*.js')
     .pipe(plumber({
       errorHandler: notify.onError('Error: <%= error.message %>')
-    }))
+    }))    
     .pipe(sourcemaps.init())
     .pipe(babel({
         presets: ['es2015', 'env']

@@ -9,7 +9,7 @@
   z-index: auto;
   box-sizing: border-box;
   background: $buttontext;
-  @media(min-width: $desctop){
+  @media(min-width: $desktop){
     border-color: transparent;
     transition: border .3s, box-shadow .3s;
     box-shadow:0;
@@ -49,7 +49,7 @@
       background-image: url('../images/svg/flower_middle.svg');
       padding: 20px 0;
     }
-    @media(min-width:$desctop){
+    @media(min-width:$desktop){
       background-image: url('../images/svg/flower.svg');
       padding: 30px 0;
     }
@@ -61,7 +61,7 @@
         width: 160px;
         height: 1px;
       }
-      @media(min-width:$desctop){
+      @media(min-width:$desktop){
         width: 25%;
       }
     }
@@ -101,7 +101,7 @@
     right: 20px;
     cursor: pointer;
     transition: color .3s, fill .3s, background .3s, opacity .3s;
-    @media(min-width:$desctop){
+    @media(min-width:$desktop){
       opacity: 0;
     }
     svg{
@@ -127,7 +127,7 @@
       height: 183px;
       overflow: hidden;
     }
-    @media(min-width: $desctop){
+    @media(min-width: $desktop){
       margin: 40px 0;
     }
   }
@@ -139,7 +139,7 @@
       max-width: 140px;
       height: auto;
     }
-    @media(min-width: $desctop){
+    @media(min-width: $desktop){
       max-width: 140px;
     }
   }
@@ -202,7 +202,7 @@
   }
   &-oldprice{
     font: 15px/36px MuseoSansNormal, Arial, Helvetica, sans-serif;
-    @media(min-width:$desctop){
+    @media(min-width:$desktop){
       text-align: left;
     }
     span{

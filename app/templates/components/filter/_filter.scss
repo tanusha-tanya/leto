@@ -12,4 +12,7 @@
   @media(min-width:$tablet){
     margin: 35px 0;
   }
+  @media(min-width:$desktop){
+    display: none;
+  }
 }

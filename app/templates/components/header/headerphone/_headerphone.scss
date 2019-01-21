@@ -1,7 +1,7 @@
 .headerphone{
   text-align: right;
   margin-top: 5px;
-  @media(min-width:$desctop){
+  @media(min-width:$desktop){
       margin-top: 4px;
   }
   &-link{

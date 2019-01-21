@@ -8,16 +8,18 @@ block content
   main.main-wrap
     +maintopmenu()
     include components/breadcrumbs/breadcrumbs
-    .container
-      h1 салонам красоты
-      .row
-        .left-column
-          include components/filter/filter
-        .right-column
-          include components/sort/sort
-          include _layouts/products/products
-          include components/pagination/pagination
-          include components/seoText/seoText
+    section.catalog
+      .container
+        h1 салонам красоты
+        .row
+          .left-column
+            include components/filter/filter
+            include components/filter_desktop/filter_desktop
+          .right-column
+            include components/sort/sort
+            include _layouts/products/products
+            include components/pagination/pagination
+            include components/seoText/seoText
 block footer
   include  _layouts/footer/footer
   .body-dark

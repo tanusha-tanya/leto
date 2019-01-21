@@ -1,0 +1,92 @@
+.deskfilter{
+  display: none;
+  @media(min-width: $desktop){
+    display: block;
+  }
+  &-spoilers{
+    border-top: 1px solid $brandborder;
+  }
+  &-spoiler{
+    &__active{
+      .deskfilter-spoiler-content{
+        position: relative;
+        height: auto;
+        overflow: auto;
+        visibility: visible;
+        border-bottom: 1px solid $brandborder;
+      }
+      .deskfilter-spoiler-title::after{
+        transform: rotate(130deg) translate(5px);
+      }
+      .deskfilter-spoiler-title{
+        border-bottom:0;
+      }
+    }
+  }
+  &-spoiler-title{
+    border-bottom: 1px solid $brandborder;
+    padding: 15px 0;
+    padding-right: 12px;
+    font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    color: $link;
+    position: relative;
+    cursor: pointer;
+    &:after{
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-left: $arrow 2px solid;
+      border-bottom: $arrow 2px solid;
+      position: absolute;
+      right: 12px;
+      top: 20px;
+      transform: rotate(-45deg);
+      transition: transform .3s;
+    }
+  }
+  &-spoiler-content{
+    padding: 16px 20px;
+    position: absolute;
+    height:0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: height .3s;
+  }
+  &-spoiler-item{
+    list-style: none;
+  }
+  &-link{
+    font: 12px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    color: $title;
+    border-bottom: none;
+    transition: color .3s;
+    &:hover{
+      color: $border;
+    }
+  }
+  &-brands{
+    margin-top: 40px;
+  }
+  &-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 17px;
+    border-bottom: 1px solid $brandborder;
+  }
+  &-title{
+    font: 15px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    color: $primary;
+  }
+  &-counter{
+    font: 12px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    color: $primary;
+    span{
+      margin-left: 5px;
+    }
+  }
+  &-reset{
+    color: $link;
+    font: 12px/1 MuseoSansNormal, Arial, Helvetica, sans-serif;
+  }
+}

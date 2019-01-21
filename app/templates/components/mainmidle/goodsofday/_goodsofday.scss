@@ -7,7 +7,7 @@
     margin-top: 185px;
     padding-bottom: 50px;
   }
-  @media(min-width:$desctop){
+  @media(min-width:$desktop){
     margin-bottom: 0;
     padding-bottom: 0;
   }
@@ -27,12 +27,12 @@
       background-position: -260px 68px;
       background-repeat: no-repeat;
     }
-    @media(min-width:$desctop){
+    @media(min-width:$desktop){
       left: 38%;
       background-position: -157px 29px;
     }
   }
-  @media(min-width:$desctop){
+  @media(min-width:$desktop){
     &:before{
       content: '';
       display: block;
@@ -57,7 +57,7 @@
       background-image: url('../images/svg/flower_middle.svg');
       padding: 38px 2px;
     }
-    @media(min-width:$desctop){
+    @media(min-width:$desktop){
       background-image: url('../images/svg/flower.svg');
       padding: 45px 0;
       background-position: 43px 16px;
@@ -71,7 +71,7 @@
       display: flex;
       margin-top: 0;
     }
-    @media(min-width:$desctop){
+    @media(min-width:$desktop){
       background-image: url("../images/svg/brown_flower.svg");
       padding-left: 199px;
       background-position: bottom left;
@@ -96,7 +96,7 @@
       right: -78px;
       top: 8px;
     }
-    @media(min-width:$desctop){
+    @media(min-width:$desktop){
       right: -125px;
     }
   }
@@ -131,7 +131,7 @@
       width: 338px;
       height: 368px;
     }
-    @media(min-width:$desctop){
+    @media(min-width:$desktop){
       width: 330px;
       height: 358px;
     }
@@ -146,7 +146,7 @@
   }
   &-decor{
     display: none;
-    @media(min-width:$desctop){
+    @media(min-width:$desktop){
       display:block;
       position: absolute;
       left: 148px;
@@ -159,7 +159,7 @@
       margin-top: 78px;
       margin-left: 25px;
     }
-    @media(min-width:$desctop){
+    @media(min-width:$desktop){
       margin-left: 70px;
     }
   }
@@ -173,7 +173,7 @@
   &-brand{
     color: $secondary;
     font: 15px/24px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
-    @media(min-width:$desctop){
+    @media(min-width:$desktop){
       margin-top: 14px;
     }
   }
@@ -186,7 +186,7 @@
       margin-top: 17px;
       display: block;
     }
-    @media(min-width:$desctop){
+    @media(min-width:$desktop){
       margin-top: 25px;
     }
   }

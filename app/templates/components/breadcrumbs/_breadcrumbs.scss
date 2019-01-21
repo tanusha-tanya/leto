@@ -5,9 +5,9 @@
   @media(min-width:$tablet){
     padding: 7px 30px;
   }
-  @media(min-width:$desctop){
+  @media(min-width:$desktop){
     max-width: 1180px;
-    margin: 50px auto;  
+    margin: 50px auto;
     border-bottom: none;
   }
   &-link{

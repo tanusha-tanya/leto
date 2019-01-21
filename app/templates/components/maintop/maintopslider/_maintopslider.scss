@@ -47,7 +47,7 @@
     @media(min-width: $tablet){
       height: 570px;
     }
-    @media(min-width: $desctop){
+    @media(min-width: $desktop){
       height: 572px;
     }
   }
@@ -61,7 +61,7 @@
     flex-direction: column;
     justify-content: center;
     margin-top: -7px;
-    @media(min-width: $desctop){
+    @media(min-width: $desktop){
       right: 323px;
     }
   }

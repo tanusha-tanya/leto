@@ -10,7 +10,7 @@
   height: 100%;
   transform: translateY(-100%);
   transition: transform .3s;
-  @media(min-width:$desctop){
+  @media(min-width:$desktop){
     display: none;
   }
   &-label{
