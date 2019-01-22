@@ -1,0 +1,44 @@
+.card{
+  &-slider{
+    &-item{
+      img{
+        max-width: 100%;
+        position: relative;
+        margin: 0 auto;
+      }
+      &__for{
+        position: relative;
+        padding-bottom: 40px;
+      }
+    }
+  &__nav{
+    position: relative;
+    padding-top: 10px;
+    .slick-dots{
+      position: absolute;
+      top: -10px;
+      font-size:0;
+      height: 20px;
+        li{
+          button{
+            &:before{
+              width: 100%;
+              height: 2px;
+              background: $dots;
+              transition: background .3s, height .3s;
+              font-size: 0;
+            }
+          }
+        }
+        .slick-active{
+          button{
+            &:before{
+              background: $selection;
+              height: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

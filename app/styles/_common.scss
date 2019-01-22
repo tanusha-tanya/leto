@@ -167,6 +167,9 @@ h6{
 .catalog{
   position: relative;
   @media(min-width: $desktop){
+    background-image: url("../images/svg/rowan.svg");
+    background-repeat: no-repeat;
+    background-position: left 80%;
     &:before{
       content: '';
       position: absolute;

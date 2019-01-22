@@ -9,9 +9,10 @@ block content
     +maintopmenu()
     include components/breadcrumbs/breadcrumbs
     .container
-      h1 Гипоаллергенный ультра усилитель с алоэ и кокосовым маслом
-      include components/filter/filter
-block footer
+      include components/card/card
+      include components/cardcontent/cardcontent
+    +bestseller("с этим товаром покупают")
+    +bestseller("недавно просмотренные")
+    block footer
   include  _layouts/footer/footer
   .body-dark
-  include  components/filterpanel/filterpanel

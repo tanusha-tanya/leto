@@ -11,6 +11,7 @@
     position: absolute;
     top:30px;
     left: 30px;
+    transition: color .3s, fill .3s;
   }
   &-arrow{
     cursor: pointer;
@@ -29,6 +30,12 @@
       border-bottom-right-radius: 40px;
       right:0;
       top: 0;
+    }
+    &:hover{
+      .pagination-svg{
+        color:$selection;
+        fill:$selection;
+      }
     }
   }
   &-links{
