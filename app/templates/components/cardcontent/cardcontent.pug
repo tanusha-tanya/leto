@@ -1,2 +1,32 @@
-h1.card-title Гипоаллергенный ультра усилитель с алоэ и кокосовым маслом
-.card-brand Soleo Pure Hypoallergenic
+.card-info
+  h1.card-title Гипоаллергенный ультра усилитель с алоэ и кокосовым маслом
+  .card-brand Soleo Pure Hypoallergenic
+  .card-volume
+    .card-volume-text Объём:
+    input(type="radio", id="15", name="value", checked).card-volume-num
+    label(for="15").card-volume-label 15 МЛ
+    input(type="radio", id="200", name="value").card-volume-num
+    label(for="200").card-volume-label 200 МЛ
+  a(href="#").card-promo Скидка 10% по промокоду
+  a(href="pro.html").card-special
+    span PROLETO
+    | Цена для мастера: 999 руб
+.card-price
+  .card-oldprice
+    span 170
+    | руб
+  .card-currentprice.card-currentprice__discount(data-15="153", data-200="1050") 153 руб
+.card-pricecontroller
+  button.card-minus -
+  input(type="text" placeholder="1").card-pricecontroller-input
+  button.card-plus +
+button.card-button добавить в корзину
+.card-heart
+  svg(role="img")(width="20")(height="18"): use(xlink:href="#heart")
+.card-delivery Товар может быть доставлен вам в кратчайшие сроки.
+.card-article
+  strong Артикул:
+  |F114171A
+.card-feedback
+  include ../stars/stars
+  .card-feedback-counter 257 отзывов

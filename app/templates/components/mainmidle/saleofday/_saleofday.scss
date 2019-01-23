@@ -353,6 +353,7 @@
         cursor: pointer;
         position: relative;
         transition: background .3s;
+        display: block;
         &:hover{
           background:$selection!important;
           &:after{

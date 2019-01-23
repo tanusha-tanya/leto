@@ -13,14 +13,13 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-    z-index: 100;
     top: 23px;
     padding: 0 50px;
     background: $buttontext;
     border-bottom-left-radius: 50px;
     border-top-right-radius: 50px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    z-index: 400;
+    z-index: 900;
   }
   &-li{
     list-style: none;
@@ -79,7 +78,7 @@
       overflow:hidden;
       align-content: flex-start;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-      z-index: 300;
+      z-index: 700;
     }
   }
   &-subul{

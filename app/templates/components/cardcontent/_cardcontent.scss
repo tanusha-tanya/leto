@@ -1,0 +1,170 @@
+.card{
+  &-info{
+    border-bottom: 1px solid $bordergray;
+  }
+  &-title{
+    font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    color: $link;
+  }
+  &-brand{
+    font: 15px/24px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    color: $secondary;
+    margin: 18px 0;
+  }
+  &-volume{
+    margin: 18px 0;
+    &-text{
+      display: inline-block;
+      font: 15px MuseoSansNormal, Arial, Helvetica, sans-serif;
+      color: $primary;
+    }
+    &-num{
+      position: absolute;
+      visibility: hidden;
+      &:checked{
+        &+label{
+          color: $selection;
+        }
+      }
+    }
+    &-label{
+      cursor: pointer;
+      transition: color .3s;
+      margin: 0 10px;
+      color: $link;
+    }
+  }
+  &-promo{
+    color: $link;
+    font: 12px MuseoSansNormal, Arial, Helvetica, sans-serif;
+  }
+  &-special{
+    display: block;
+    border: none;
+    margin: 20px 0;
+    text-align: center;
+    padding: 12px 19px;
+    background: $background;
+    border-radius: 30px;
+    color: $link;
+    max-width: 290px;
+    box-sizing: border-box;
+    span{
+      text-transform: uppercase;
+      color: $selection;
+      margin-right: 20px;
+      font: 15px/28px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    }
+  }
+  &-price{
+    margin: 20px 0;
+  }
+  &-oldprice{
+    display: inline-block;
+    font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    color: $primary;
+    vertical-align: middle;
+    span{
+      text-decoration:line-through;
+      margin-right: 5px;
+    }
+  }
+  &-currentprice{
+    display: inline-block;
+    margin-left: 17px;
+    font: 28px/26px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    vertical-align: middle;
+    color: $price;
+  }
+  &-pricecontroller{
+    font-size: 0;
+    margin: 20px 0;
+  }
+  &-minus, &-plus {
+    display: inline-block;
+    border: 1px solid $bordergray;
+    background: transparent;
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    font-size: 20px;
+    text-align: center;
+    color: $link;
+    cursor: pointer;
+  }
+  &-minus{
+    border-bottom-left-radius: 30px;
+  }
+  &-plus{
+    border-top-right-radius: 30px;
+  }
+  &-pricecontroller-input{
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    border-top: 1px solid $bordergray;
+    border-bottom: 1px solid $bordergray;
+    border-left:0;
+    border-right:0;
+    outline: none;
+    font-size: 20px;
+    text-align: center;
+    &::placeholder{
+      color: $link;
+      opacity: 1;
+    }
+  }
+  &-button{
+    width: 239px;
+    height: 60px;
+    box-sizing: border-box;
+    color: $buttontext;
+    background: $selection;
+    text-transform: uppercase;
+    border: none;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  &-heart{
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: middle;
+    transition: color .3s, fill .3s;
+    cursor:pointer;
+    &:hover svg{
+      color: $selection;
+      fill: $selection;
+    }
+    &:active{
+      background-image: url("../images/svg/click.svg");
+      background-repeat: no-repeat;
+      svg{
+        opacity: 0;
+      }
+    }
+  }
+  &-delivery{
+    font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    margin: 20px 0;
+    color: $primary;
+  }
+  &-article{
+    color: $primary;
+    margin: 20px 0;
+    strong{
+      font-weight: 700;
+      margin-right: 3px;
+    }
+  }
+  &-feedback{
+    &-counter{
+      margin-left: 5px;
+      display: inline-block;
+    }
+  }
+}
