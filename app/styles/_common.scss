@@ -191,3 +191,21 @@ h6{
     }
   }
 }
+.container__card{
+  @media(min-width: $tablet){
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+}
+.tabletrow{
+  @media(min-width: $tablet){
+    display: flex;
+    margin: 0 -10px;
+  }
+}
+.card-col{
+  @media(min-width: $tablet){
+    width: calc(50% - 20px);
+    margin: 0 10px;
+  }
+}

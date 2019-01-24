@@ -1,0 +1,1 @@
+$('.reviews-block').mCustomScrollbar();

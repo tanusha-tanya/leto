@@ -1,0 +1,19 @@
+.tabs
+  .tabs-header
+    ul.tabs-links
+      li.tabs-links-item
+        a(href="#about").tabs-anchor.tabs-anchor__active О товаре
+      li.tabs-links-item
+        a(href="#usage").tabs-anchor применение
+      li.tabs-links-item
+        a(href="#consist").tabs-anchor Состав
+      li.tabs-links-item
+        a(href="#pack").tabs-anchor Упаковка
+      li.tabs-links-item
+        a(href="#reviews").tabs-anchor отзывы 257
+  .tabs-inner
+    include about
+    include usage
+    include consist
+    include pack
+    include reviews

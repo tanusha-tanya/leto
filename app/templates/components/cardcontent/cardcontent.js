@@ -1,8 +1,36 @@
-const quantity = document.querySelector('.card-pricecontroller-input')
+const quantity = document.querySelector('#quantity')
 if(quantity){
   const minus = document.querySelector('.card-minus')
   const plus = document.querySelector('.card-plus')
 
+  quantity.onblur = ()=>{
+    if(quantity.value === '')
+      quantity.value = 1
+  }
+
+  quantity.onkeypress = (e)=> {
+    e = e || event;
+    if (e.ctrlKey || e.altKey || e.metaKey) return;
+    var chr = getChar(e);
+    if (chr == null) return;
+    if (chr <= '0' || chr > '9') {
+      return false;
+    }
+}
+
+  function getChar(event) {
+      if (event.which == null) {
+        if (event.keyCode < 32) return null;
+        return String.fromCharCode(event.keyCode)
+      }
+
+      if (event.which != 0 && event.charCode != 0) {
+        if (event.which < 32) return null;
+        return String.fromCharCode(event.which)
+      }
+
+      return null;
+    }
   minus.addEventListener('click', ()=>{
     quantityChange(false)
   })
@@ -12,16 +40,31 @@ if(quantity){
   })
 
   let quantityChange = function(sign){
+    let value = quantity.value
     if (!sign){
-      if(quantity.placeholder <= 1){
+      if(value <= 1){
         return
       }
       else{
-        quantity.placeholder--
+         value--
       }
     }
     else{
-      quantity.placeholder++
+       value++
     }
+    quantity.value = value
   }
+}
+
+const valume = document.querySelector('.card-volume')
+
+if(valume){
+  const valumeNum = valume.querySelectorAll('.card-volume-num');
+  const price = document.querySelector('#price');
+  valumeNum.forEach((elem)=>{
+    elem.addEventListener('click', ()=>{
+      let valumeId = elem.id
+      price.textContent = price.dataset[valumeId]
+    })
+  })
 }
