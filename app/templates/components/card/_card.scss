@@ -7,14 +7,33 @@
         position: relative;
         margin: 0 auto;
       }
-      &__for{
-        position: relative;
-        padding-bottom: 40px;
+    }
+    &__for{
+      position: relative;
+      padding-bottom: 40px;
+      @media(min-width:$desktop){
+        width: 380px;
+        margin: 0 auto;
+        .card-slider-item{
+          padding: 17px 70px;
+        }
       }
     }
   &__nav{
     position: relative;
     padding-top: 10px;
+    @media(min-width:$desktop){
+      width: 270px;
+      margin: 0 auto;
+      .card-slider-item{
+        width: 80px;
+        height: 80px;
+        overflow: hidden;
+      }
+      img{
+        width: 80px; 
+      }
+    }
     .slick-dots{
       position: absolute;
       top: -10px;

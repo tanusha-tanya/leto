@@ -2,13 +2,16 @@
   position: relative;
   margin-bottom: 25px;
   @media(min-width:$tablet){
-    margin-top: 112px;
+    //margin-top: 112px;
+    margin-bottom: 60px;
   }
   @media(min-width:$desktop){
-    background-image: url('../images/svg/rose.svg');
-    background-repeat: no-repeat;
-    background-position: right 82%;
-    margin-top: 107px;
+    &__main{
+      background-image: url('../images/svg/rose.svg');
+      background-repeat: no-repeat;
+      background-position: right 82%;
+      margin-top: 107px;
+    }
   }
   &-title{
     text-align: center;
@@ -29,26 +32,45 @@
     @media(min-width:$desktop){
       background-image: url('../images/svg/flower.svg');
       padding: 30px 0;
-    }
-    &:after, &:before{
-      @media(min-width:$tablet){
-        content: '';
-        position: absolute;
-        background: $brandborder;
-        width: 160px;
-        height: 1px;
+      &:after, &:before{
+          content: '';
+          position: absolute;
+          background: $brandborder;
+          width: 15%;
+          height: 1px;
       }
-      @media(min-width:$desktop){
-        width: 25%;
+      &:before{
+        right: 0;
+        top: 50%;
+      }
+      &:after{
+        left: 0;
+        top: 50%;
       }
     }
-    &:before{
-      right: 0;
-      top: 50%;
-    }
-    &:after{
-      left: 0;
-      top: 50%;
+  }
+  &__main{
+    .bestseller-title{
+      &:after, &:before{
+        @media(min-width:$tablet){
+          content: '';
+          position: absolute;
+          background: $brandborder;
+          width: 160px;
+          height: 1px;
+        }
+        @media(min-width:$desktop){
+          width: 25%;
+        }
+      }
+      &:before{
+        right: 0;
+        top: 50%;
+      }
+      &:after{
+        left: 0;
+        top: 50%;
+      }
     }
   }
   &-carousel{

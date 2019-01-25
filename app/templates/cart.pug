@@ -8,9 +8,11 @@ block content
   main.main-wrap
     +maintopmenu()
     include components/breadcrumbs/breadcrumbs
-    .container
-      h1 ваша корзина
-      include components/filter/filter
+    section.catalog
+      .container
+        h1 ваша корзина (5)
+        .cartgoods-wrap
+          include components/cartgoods/cartgoods
 block footer
   include  _layouts/footer/footer
   .body-dark

@@ -6,6 +6,9 @@
     font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
     text-transform: capitalize;
     color: $link;
+    @media(min-width:$desktop){
+      font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    }
   }
   &-brand{
     font: 15px/24px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
@@ -35,11 +38,17 @@
       transition: color .3s;
       margin: 0 10px;
       color: $link;
+      @media(min-width: $tablet){
+        margin: 0 5px;
+      }
     }
   }
   &-promo{
     color: $link;
     font: 12px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    @media(min-width: $desktop){
+      width: 180px;
+    }
   }
   &-special{
     display: block;
@@ -52,6 +61,11 @@
     color: $link;
     max-width: 290px;
     box-sizing: border-box;
+    @media(min-width: $desktop){
+      display: inline-block;
+      margin-left: 40px;
+      margin-top: 0;
+    }
     span{
       text-transform: uppercase;
       color: $selection;
@@ -85,6 +99,11 @@
   &-pricecontroller{
     font-size: 0;
     margin: 20px 0;
+    @media(min-width: $desktop){
+      display: inline-block;
+      margin: 0;
+      margin-right: 20px;
+    }
   }
   &-minus, &-plus {
     display: inline-block;
@@ -106,7 +125,7 @@
     border-top-right-radius: 30px;
   }
   &-pricecontroller-input{
-    width: 60px;
+    width: 59px;
     height: 60px;
     box-sizing: border-box;
     border-top: 1px solid $bordergray;

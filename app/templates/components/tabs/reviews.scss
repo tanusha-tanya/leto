@@ -1,4 +1,13 @@
 .reviews{
+  @media(min-width:$desktop){
+    display: flex;
+    margin: 0 -10px;
+  }
+  &-left-col{
+    @media(min-width:$desktop){
+      text-align: center;
+    }
+  }
   &-title{
     font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
     color: $primary;
@@ -6,6 +15,12 @@
   &-total{
     font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
     margin: 15px 0;
+    @media(min-width:$tablet){
+      margin: 0;
+    }
+    @media(min-width:$desktop){
+      margin: 20px 0;
+    }
   }
   &-button{
     border: 1px solid #333333;
@@ -29,6 +44,14 @@
     margin-top: 40px;
     max-height: 450px;
     position: relative;
+    @media(min-width:$tablet){
+      margin-top: 40px;
+    }
+    @media(min-width: $desktop){
+      display: block;
+      width: calc(50% - 20px);
+      margin: 0 10px;
+    }
     &:after{
       content: '';
       width: 100%;
@@ -36,12 +59,22 @@
       position: absolute;
       bottom: 0;
       background: linear-gradient(180deg, rgba(244, 244, 240, 0) 0%, #F4F4F0 100%);
+      @media(min-width:$tablet){
+        height: 150px
+      }
     }
   }
   &-item{
     margin-top: 30px;
     &:last-of-type{
       margin-bottom: 80px;
+    }
+    @media(min-width:$tablet){
+      margin-top: 0;
+      margin-bottom: 40px;
+      &:last-of-type{
+        margin-bottom: 150px;
+      }
     }
   }
   &-header{
@@ -57,10 +90,27 @@
   &-date{
     color: $secondary;
     font: 12px/20px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    @media(min-width:$tablet){
+      font: 12px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    }
   }
   &-body{
     font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
     color: $link;
     margin-top: 10px;
+  }
+  &-top{
+    @media(min-width: $tablet){
+      display: flex;
+      justify-content: space-between;
+    }
+    @media(min-width:$desktop){
+      order: 1;
+      flex-direction:column;
+      justify-content: center;
+      align-items: center;
+      width: calc(50% - 20px);
+      margin: 0 10px;
+    }
   }
 }

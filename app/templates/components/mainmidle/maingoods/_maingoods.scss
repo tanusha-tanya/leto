@@ -1,6 +1,9 @@
 .maingoods{
   position: relative;
   margin-bottom: 47px;
+  @media(min-width:$tablet){
+    margin-bottom: 100px;
+  }
   @media(min-width:$desktop){
     margin-top: 65px;
     &:after{

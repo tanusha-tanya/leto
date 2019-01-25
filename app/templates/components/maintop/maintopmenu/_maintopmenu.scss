@@ -13,12 +13,11 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-    top: 23px;
     padding: 0 50px;
     background: $buttontext;
     border-bottom-left-radius: 50px;
     border-top-right-radius: 50px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
     z-index: 900;
   }
   &-li{
@@ -68,7 +67,7 @@
       width: calc(100% - 4px);
       left:2px;
       right:3px;
-      top: 50px;
+      top: 35px;
       display: flex;
       padding: 50px;
       padding-top:65px;
@@ -106,6 +105,12 @@
   &__main{
     .maintopmenu-nav{
       position: absolute;
+      top: 23px;
+    }
+    .maintopmenu-submenu{
+      &.active{
+        top: 57px
+      }
     }
   }
 }

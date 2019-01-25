@@ -21,5 +21,9 @@
       justify-content: center;
       margin: 30px -80px;
     }
+    @media(min-width: $desktop){
+      margin: 30px -23px;
+      justify-content: space-between;
+    }
   }
 }

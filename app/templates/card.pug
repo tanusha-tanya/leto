@@ -8,15 +8,16 @@ block content
   main.main-wrap
     +maintopmenu()
     include components/breadcrumbs/breadcrumbs
-    .container.container__card
-      .tabletrow
-        .card-col
-          include components/card/card
-        .card-col
-          include components/cardcontent/cardcontent
-    include components/tabs/tabs
-    +bestseller("с этим товаром покупают")
-    +bestseller("недавно просмотренные")
+    section.catalog
+      .container.container__card
+        .tabletrow
+          .card-col
+            include components/card/card
+          .card-col
+            include components/cardcontent/cardcontent
+      include components/tabs/tabs
+      +bestseller("с этим товаром покупают")
+      +bestseller("недавно просмотренные")
 block footer
   include  _layouts/footer/footer
   .body-dark
