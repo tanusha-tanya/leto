@@ -1,0 +1,26 @@
+ .cartgoods{
+     background: $buttontext;
+     padding: 20px 10px;
+     &-pic{
+         position: relative;
+         margin: 0 auto;
+         text-align: center;
+         padding: 5px 0;
+     }
+    &-name{
+        margin: 20px;
+        font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        color: $title;
+        text-align: center;
+    }
+    &-brand{
+        font: 15px/24px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
+        text-align:center;
+    }
+    &-priceblock{
+        margin: 20px 0;
+        &-title{
+            font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
+        }
+    }
+ }
