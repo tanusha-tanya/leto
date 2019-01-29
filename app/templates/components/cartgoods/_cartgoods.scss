@@ -23,4 +23,76 @@
             font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
         }
     }
+    &-oldprice{
+        display: inline-block;
+        font: 15px/36px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        margin-right: 30px;
+        span{
+            text-decoration:line-through;
+        }  
+    }
+    &-newprice{
+        display: inline-block;
+        font: 26px/36px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        color: $price;
+    }
+    &-quantity{
+        margin-top: 30px;
+        font-size:0;
+        display: inline-block;  
+        vertical-align: top;      
+        &-title{
+            margin-bottom: 20px;
+            font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
+        }
+    }
+  &-button-minus, &-button-plus {
+    display: inline-block;
+    border: 1px solid $bordergray;
+    background: transparent;
+    width: 47px;
+    height: 50px;
+    box-sizing: border-box;
+    font-size: 20px;
+    text-align: center;
+    color: $link;
+    cursor: pointer;
+  }
+  &-button-minus{
+    border-bottom-left-radius: 30px;
+  }
+  &-button-plus{
+    border-top-right-radius: 30px;
+  }
+  &-button-input{
+    width: 47px;
+    height: 50px;
+    box-sizing: border-box;
+    border-top: 1px solid $bordergray;
+    border-bottom: 1px solid $bordergray;
+    border-left:0;
+    border-right:0;
+    outline: none;
+    font-size: 20px;
+    text-align: center;
+  }
+  &-currentprice{
+      display: inline-block;
+      vertical-align: top;
+      margin-top:30px;
+      margin-left:20px;
+      &-title{
+          margin-bottom:30px;
+          font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
+      }
+      &-price{
+          font: 26px/36px MuseoSansDark, Arial, Helvetica, sans-serif;
+      }  
+  }
+    &-reset{
+        font: 12px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        color: $link;
+        text-align: center;
+        text-decoration: underline;
+    }
  }

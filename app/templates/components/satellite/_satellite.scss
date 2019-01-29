@@ -1,0 +1,140 @@
+.cartgoods-satellite{
+    margin-top: 20px;
+    &-title{
+        font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
+        position:relative;
+        &:after{
+            content: '';
+            width: 90px;
+            height: 1px;
+            background: $bordergray;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 12px;
+        }
+    }
+    &-item{
+        width: 100%;
+    }
+    &-content{
+        margin: 30px 0;
+    }
+    &-top{
+        display: flex;
+    }
+    &-bottom{
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-between;
+    }
+    &-nameblock{
+       width: calc(100% - 90px);
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+    }
+    &-name{
+        color: $link;
+        font: 15px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    }
+    &-brand{
+        color: $secondary;
+        font: 15px/24px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
+    }
+    &-priceblock{
+        width: 80px;
+        margin-right: 10px;
+    }
+    &-pic{
+        width: 80px;
+        margin-right: 10px;
+    }
+    &-button{
+        width: 156px;
+        border: 1px solid #333333;
+        outline: none;
+        height: 40px;
+        box-sizing: border-box;
+        border-top-right-radius: 31px;
+        border-bottom-left-radius: 31px;
+        font: 12px/28px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        cursor: pointer;
+        background: transparent;
+        transition: border .3s, color .3s, background .3s;
+    }
+    &-oldprice{
+        font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        span{
+            text-decoration: line-through;
+        }
+    }
+    &-price{
+        color: $price;
+        font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    }
+    &-slider{
+    &.owl-theme{
+      .owl-dots .owl-dot span{
+        border-radius: 0;
+        width: 28px;
+        height: 2px;
+        margin: 5px 2px;
+        background: $dots;
+      }
+      .owl-dots .owl-dot.active span{
+        background:$selection;
+      }
+      .owl-dots .owl-dot:hover span{
+        background:$selection;
+      }
+      .owl-nav.disabled + .owl-dots{
+        margin-top: 11px;
+        @media(min-width:$tablet){
+          margin-top: 0;
+        }
+      }
+    }
+    .owl-nav{
+      position: relative;
+    }
+    .owl-nav button.owl-prev, .owl-nav button.owl-next{
+      width: 80px;
+      height: 80px;
+      border-top-right-radius: 40px;
+      border-bottom-left-radius: 40px;
+      border: 1px solid $bordergray;
+      position:absolute;
+      left:0;
+      svg{
+        color: $arrow;
+        fill: $arrow;
+      }
+      &:hover{
+        background: $buttontext;
+        svg{
+          transition: color .3s, fill .3s;
+          color: $selection;
+          fill: $selection;
+        }
+      }
+      &:active{
+        background: $selection;
+        border: 1px solid $selection;
+        svg{
+          color: $buttontext;
+          fill: $buttontext;
+        }
+      }
+    }
+    .owl-nav button.owl-next{
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      left: auto;
+      right:0;
+    }
+  }
+}

@@ -17,11 +17,13 @@
           .cartgoods-quantity-title Кол-во
           button.cartgoods-button-minus -
           input(type="text" value="1").cartgoods-button-input
-          button.cartgoods-button-minus +
+          button.cartgoods-button-plus +
           .cartgoods-reset Обновить
-        .cartgoods-currentprice-title Итого
-          .cartgoods-currentprice
-            #cartcurrentprice 2400 руб
+        .cartgoods-currentprice
+          .cartgoods-currentprice-title Итого
+          .cartgoods-currentprice-price
+            span.cartcurrentprice(data-price = "2400") 2400 
+            | руб
       .cartgoods-row
         .cartgoods-col
           include ../satellite/satellite
@@ -43,8 +45,10 @@
           .cartgoods-quantity-title Кол-во
           button.cartgoods-button-minus -
           input(type="text" value="1").cartgoods-button-input
-          button.cartgoods-button-minus +
+          button.cartgoods-button-plus +
           .cartgoods-reset Обновить
-        .cartgoods-currentprice-title Итого
-          .cartgoods-currentprice
-            #cartcurrentprice 2400 руб
+        .cartgoods-currentprice
+          .cartgoods-currentprice-title Итого
+          .cartgoods-currentprice-price
+            span.cartcurrentprice(data-price="2400") 2400 
+            | руб

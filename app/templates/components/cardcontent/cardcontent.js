@@ -1,7 +1,7 @@
 const quantity = document.querySelector('#quantity')
 if(quantity){
-  const minus = document.querySelector('.card-minus')
-  const plus = document.querySelector('.card-plus')
+  let minus = document.querySelector('.card-minus')
+  let plus = document.querySelector('.card-plus')
 
   quantity.onblur = ()=>{
     if(quantity.value === '')
