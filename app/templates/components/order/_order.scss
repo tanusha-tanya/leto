@@ -1,0 +1,25 @@
+.cartgoods-order{
+    padding: 20px 10px;
+    &-title{
+        font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        display: inline-block;
+    }
+    &-summ{
+        font: 26px/36px MuseoSansDark, Arial, Helvetica, sans-serif;
+        display: inline-block;
+    }
+    &-button{
+        width: 280px;
+        height: 60px;
+        margin-top: 20px;
+        box-sizing: border-box;
+        color: $buttontext;
+        background: $selection;
+        text-transform: uppercase;
+        border: none;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        cursor: pointer;
+        display: inline-block;
+    }
+}

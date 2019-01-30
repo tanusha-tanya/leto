@@ -1,0 +1,79 @@
+.cartgoods-action{
+    padding: 20px 10px;
+    &-title{
+        font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        color: $title;
+        margin-bottom: 23px;
+    }
+    &-checkbox{
+        visibility: hidden;
+        position: absolute;
+        &:checked{
+            +label{
+                &:after{
+                    border-bottom: 2px solid $selection;
+                    border-right: 2px solid $selection;
+                    transition: border-color .3s;
+                }
+            }
+        }
+    }
+    &-label{
+        position: relative;
+        font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif; 
+        color: $primary;
+        padding-left: 40px;
+        cursor:pointer;
+        display: block;
+        &:before{
+            content: '';
+            position:absolute;
+            display: block;
+            left: 0;
+            top: 0;
+            border: 1px solid $bordergray;
+            width: 20px;
+            height: 20px;
+            background: $buttontext;
+        }
+        &:after{
+                content: '';
+                position:absolute;
+                display: block;
+                width: 7px;
+                height: 17px;
+                border-bottom: 2px solid transparent;
+                border-right: 2px solid transparent;
+                left: 13px;
+                bottom: 7px;
+                transform: rotate(35deg)
+        }
+    }
+    &-input{
+        width: 250px;
+        height: 40px; 
+        border-top-right-radius: 50px;
+        background: $buttontext;
+        border: 1px solid $bordergray;
+        box-sizing: border-box;
+        padding: 17px;
+        padding-right: 45px;
+    }
+    &-promo{        
+        position: relative;
+        margin-top: 40px;
+        display: inline-block;
+        &:after{
+            content: '';
+            position:absolute;
+            display: block;
+            width: 7px;
+            height: 13px;
+            border-bottom: 2px solid $arrow;
+            border-right: 2px solid $arrow;
+            right: 35px;
+            bottom: 15px;
+            transform: rotate(35deg)
+        }
+    }
+} 

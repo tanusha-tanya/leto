@@ -1,6 +1,9 @@
  .cartgoods{
-     background: $buttontext;
-     padding: 20px 10px;
+     &-item{
+        margin-bottom: 20px;
+        background: $buttontext;
+        padding: 20px 10px;
+     }
      &-pic{
          position: relative;
          margin: 0 auto;
@@ -89,10 +92,4 @@
           font: 26px/36px MuseoSansDark, Arial, Helvetica, sans-serif;
       }  
   }
-    &-reset{
-        font: 12px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
-        color: $link;
-        text-align: center;
-        text-decoration: underline;
-    }
  }

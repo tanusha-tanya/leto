@@ -14,16 +14,8 @@ block content
       .cartgoods-wrap
         include components/cartgoods/cartgoods
         include components/freedelivery/freedelivery
-        .cartgoods-action
-          .cartgoods-action-title Акции
-          input(type="checkbox").cartgoods-action-checkbox
-          .cartgoods-action-title Упаковать в подарочную упаковку БЕСПЛАТНО
-          input(type="text").cartgoods-promo
-        .cartgoods-order
-          .cartgoods-order-summ Итого
-            span 15 352 руб
-          button.cartgoods-order-button Оформить заказ
-
+        include components/cartaction/cartaction
+        include components/order/order
 block footer
   include  _layouts/footer/footer
   .body-dark
