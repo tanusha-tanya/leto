@@ -3,6 +3,7 @@ if(cartQuantity){
   let minus = document.querySelectorAll('.cartgoods-button-minus')
   let plus = document.querySelectorAll('.cartgoods-button-plus')
   let quantityCollection = document.querySelectorAll('.cartgoods-button-input')
+  let resetCollection = document.querySelectorAll('.cartgoods-reset')
   minus.forEach((elem) => {
     elem.addEventListener('click', () => {    
         changeAmount(elem, false)
@@ -70,7 +71,20 @@ quantityCollection.forEach((quantity) =>{
 
       return null;
     }
+
+    
 })
+  resetCollection.forEach((reset) =>{
+      reset.addEventListener('click', function(){
+        let goods = reset.closest('.cartgoods-item')
+        let input = goods.querySelector('.cartgoods-button-input')
+        let priceContainer = goods.querySelector('.cartcurrentprice')
+        let price = priceContainer.dataset.price
+        priceContainer.textContent = price
+        input.value = 1 
+          
+      })
+    })
   /*quantity.onblur = ()=>{
     if(quantity.value === '')
       quantity.value = 1
