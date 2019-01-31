@@ -1,6 +1,9 @@
 .cartgoods-satellite{
     margin-top: 20px;
     overflow: hidden;
+    @media(min-width:$desktop){
+      padding: 20px 40px;
+    }
     &-title{
         font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
         position:relative;
@@ -16,10 +19,16 @@
             @media(min-width:$tablet){
               width:490px;
             }
+            @media(min-width:$desktop){
+              width:950px;
+            }
         }
     }
     &-item{
         width: 100%;
+        @media(min-width: $desktop){
+          max-width: 360px;
+        }
     }
     &-content{
         margin: 30px 0;
@@ -72,6 +81,9 @@
         transition: border .3s, color .3s, background .3s;
         @media(min-width:$tablet){
           width: 160px;
+        }
+        @media(min-width:$tablet){
+          width: 156px;
         }
     }
     &-oldprice{

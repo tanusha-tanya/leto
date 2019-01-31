@@ -1,5 +1,15 @@
 .cartgoods-order{
     padding: 20px 10px;
+     @media(min-width:$tablet){
+        padding: 0;
+        margin:0 10px;
+        width: calc(50% - 20px);
+        text-align: right;
+    }
+     @media(min-width:$desktop){
+        margin: 0;
+        width: 50%;
+    }
     &-title{
         font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
         display: inline-block;
@@ -7,6 +17,7 @@
     &-summ{
         font: 26px/36px MuseoSansDark, Arial, Helvetica, sans-serif;
         display: inline-block;
+        margin-right: 30px;
     }
     &-button{
         width: 280px;

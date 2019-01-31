@@ -213,9 +213,22 @@ h6{
   background: $cartbg;
   padding: 20px 0;
   margin: 16px 0 40px 0;
+  @media(min-width:$tablet){
+    margin-bottom: 60px;
+  }
+  @media(min-width: $desktop){
+    margin: 50px auto 60px auto;
+    width: 100%;
+    max-width: 1280px;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    position:relative;
+    z-index:300;
+  }
 }
 .cartgoods-bottom{
   @media(min-width: $tablet){
     display:flex;
+    padding: 30px 24px;
   }
 }

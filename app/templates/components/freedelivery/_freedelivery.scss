@@ -7,4 +7,7 @@
          text-align: center;
          padding: 20px 34px;
      }
+    @media(min-width:$desktop){
+         padding: 12px 34px;
+     }
  }

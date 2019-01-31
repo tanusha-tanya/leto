@@ -11,6 +11,11 @@ $('.cartgoods-satellite-slider').owlCarousel({
         items:2,
         center: false,
         margin: 20
+      },
+      1220:{
+         items:3,
+         center: true,
+         loop: true 
       }
     }
 });

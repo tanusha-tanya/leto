@@ -1,5 +1,14 @@
 .cartgoods-action{
     padding: 20px 10px;
+    @media(min-width:$tablet){
+        padding: 0;
+        margin:0 10px;
+        width: calc(50% - 20px)
+    }
+    @media(min-width:$desktop){
+        margin: 0;
+        width: 50%;
+    }
     &-title{
         font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
         color: $title;
@@ -45,8 +54,8 @@
                 border-bottom: 2px solid transparent;
                 border-right: 2px solid transparent;
                 left: 13px;
-                bottom: 7px;
-                transform: rotate(35deg)
+                top: -3px;
+                transform: rotate(35deg);
         }
     }
     &-input{

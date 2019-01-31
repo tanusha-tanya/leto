@@ -1,0 +1,17 @@
+.carttitles{
+    &-wrap{
+        display: none;
+        @media(min-width:$desktop){
+            display: flex;
+            margin: 0 -10px;
+        }
+    }
+    &-item{
+        margin: 0 10px;
+        width: calc(50% / 3 - 20px);
+        &__2{
+            margin: 0 10px;
+            width: calc(50% - 20px);
+        }
+    }
+}
