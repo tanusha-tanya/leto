@@ -1,5 +1,6 @@
 .cartgoods-satellite{
     margin-top: 20px;
+    overflow: hidden;
     &-title{
         font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
         position:relative;
@@ -12,6 +13,9 @@
             position: absolute;
             right: 0;
             top: 12px;
+            @media(min-width:$tablet){
+              width:490px;
+            }
         }
     }
     &-item{
@@ -45,6 +49,9 @@
     &-priceblock{
         width: 80px;
         margin-right: 10px;
+        @media(min-width:$tablet){
+          width: auto;
+        }
     }
     &-pic{
         width: 80px;
@@ -63,16 +70,28 @@
         cursor: pointer;
         background: transparent;
         transition: border .3s, color .3s, background .3s;
+        @media(min-width:$tablet){
+          width: 160px;
+        }
     }
     &-oldprice{
         font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
         span{
             text-decoration: line-through;
         }
+        @media(min-width:$tablet){
+          display: inline-block;
+          margin-right: 10px;
+          margin-top: 10px;
+        }
     }
     &-price{
         color: $price;
         font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        @media(min-width:$tablet){
+          display: inline-block;
+          margin-top: 10px;
+        }
     }
     &-slider{
     &.owl-theme{
@@ -137,4 +156,4 @@
       right:0;
     }
   }
-}
+} 

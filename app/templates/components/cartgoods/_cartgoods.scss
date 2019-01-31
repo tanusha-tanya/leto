@@ -3,27 +3,67 @@
         margin-bottom: 20px;
         background: $buttontext;
         padding: 20px 10px;
+         @media(min-width: $tablet){
+            padding: 20px 34px 40px 34px;
+        }
      }
+    &-col{
+        @media(min-width: $tablet){
+            display: flex;
+            margin: 0 -10px;
+        }
+    }
      &-pic{
          position: relative;
          margin: 0 auto;
          text-align: center;
          padding: 5px 0;
+         @media(min-width: $tablet){
+             margin: 0 10px;
+             width: calc(38% - 20px);
+         }
      }
+    &-title{
+        @media(min-width: $tablet){
+             margin: 0 10px;
+             width: calc(38% - 20px);
+         }
+    }
     &-name{
         margin: 20px;
         font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
         color: $title;
         text-align: center;
+        @media(min-width:$tablet){
+            text-align: left;
+            margin:0;
+            margin-bottom: 10px;
+        }
     }
     &-brand{
         font: 15px/24px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
         text-align:center;
+        @media(min-width:$tablet){
+            text-align: left;
+        }
+    }
+     &-article{
+        display: none;
+        @media(min-width: $tablet){
+            display: block;
+            color: $primary;
+            font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
+            margin: 20px 0;
+        }
     }
     &-priceblock{
         margin: 20px 0;
         &-title{
             font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
+        }
+        @media(min-width:$tablet){
+            margin: 0 10px;
+            width: calc(38% - 20px);
         }
     }
     &-oldprice{
@@ -32,12 +72,18 @@
         margin-right: 30px;
         span{
             text-decoration:line-through;
+        }
+        @media(min-width:$tablet){
+            display: block;
         }  
     }
     &-newprice{
         display: inline-block;
         font: 26px/36px MuseoSansNormal, Arial, Helvetica, sans-serif;
         color: $price;
+        @media(min-width:$tablet){
+            display: block;
+        }
     }
     &-quantity{
         margin-top: 30px;
@@ -47,6 +93,10 @@
         &-title{
             margin-bottom: 20px;
             font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
+        }
+        @media(min-width:$tablet){
+            margin: 0 10px;
+            width: calc(38% - 20px);
         }
     }
   &-button-minus, &-button-plus {
@@ -60,6 +110,10 @@
     text-align: center;
     color: $link;
     cursor: pointer;
+    @media(min-width:$tablet){
+        width: 60px;
+        height: 60px;
+    }
   }
   &-button-minus{
     border-bottom-left-radius: 30px;
@@ -78,12 +132,19 @@
     outline: none;
     font-size: 20px;
     text-align: center;
+    @media(min-width:$tablet){
+        width: 60px;
+        height: 60px;
+    }
   }
   &-currentprice{
       display: inline-block;
       vertical-align: top;
       margin-top:30px;
       margin-left:20px;
+      @media(min-width:$tablet){
+          margin: 0 10px;
+      }
       &-title{
           margin-bottom:30px;
           font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
@@ -91,5 +152,22 @@
       &-price{
           font: 26px/36px MuseoSansDark, Arial, Helvetica, sans-serif;
       }  
+  }
+  &-edit{
+    &-links{
+      display: none;
+      @media(min-width:$tablet){
+          display: block;
+          margin: 0 10px;
+      }
+    }
+    &-delete,&-favorite{
+        color: $link;
+        display:inline-block;
+        font: 12px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    }
+    &-favorite{
+        margin-top: 15px;        
+    }
   }
  }

@@ -14,8 +14,9 @@ block content
       .cartgoods-wrap
         include components/cartgoods/cartgoods
         include components/freedelivery/freedelivery
-        include components/cartaction/cartaction
-        include components/order/order
+        .cartgoods-bottom
+          include components/cartaction/cartaction
+          include components/order/order
 block footer
   include  _layouts/footer/footer
   .body-dark

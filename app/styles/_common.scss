@@ -214,3 +214,8 @@ h6{
   padding: 20px 0;
   margin: 16px 0 40px 0;
 }
+.cartgoods-bottom{
+  @media(min-width: $tablet){
+    display:flex;
+  }
+}

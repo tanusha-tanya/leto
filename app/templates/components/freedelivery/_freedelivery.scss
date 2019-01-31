@@ -3,4 +3,8 @@
      padding: 30px 10px;
      color: $buttontext;
      margin-top: -20px;
+     @media(min-width:$tablet){
+         text-align: center;
+         padding: 20px 34px;
+     }
  }
