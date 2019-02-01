@@ -1,7 +1,7 @@
 extends _layouts/default
 include components/maintop/maintopmenu/maintopmenu
 block title
-  title Оформление заказа
+  title оформить заказ
 block header
   include  _layouts/header/header
 block content
@@ -9,8 +9,10 @@ block content
     +maintopmenu()
     include components/breadcrumbs/breadcrumbs
     .container
-      h1 Оформление заказа
-      include components/filter/filter
+      h1 оформить заказ
+      include components/auth/auth
+      include components/deliveryfree/deliveryfree
+      include components/ordersum/ordersum
 block footer
   include  _layouts/footer/footer
   .body-dark

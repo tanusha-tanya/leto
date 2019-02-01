@@ -1,0 +1,16 @@
+.order-auth{
+    margin: 20px 0;
+    background:$background;
+    border-radius:30px;
+    padding: 10px 23px;
+    box-sizing: border-box;
+    &-logo{
+        color: $selection;
+        font: 15px/20px MuseoSansDark, Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        margin-right: 10px;
+    }
+    &-link{
+        color: $primary;
+    }
+}

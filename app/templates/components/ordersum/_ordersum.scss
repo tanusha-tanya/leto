@@ -1,0 +1,98 @@
+.order-sum{
+    border: 1px solid $borderorder;
+    border-top: transparent;
+    border-bottom-left-radius: 50px;
+    position: relative;
+    padding: 16px 30px;
+    margin-bottom: 40px;
+    z-index:3;
+    background: $buttontext;
+    &-shadow{
+        position: relative;
+        &:after{
+        content: "";
+        display: block;
+        width: 75%;
+        height: 20px;
+        -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+        right: 12%;
+        }
+    }    
+    &-top{
+        padding: 20px 0;        
+        text-align:center;
+        span{
+            font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        }
+    }
+    &-bottom{
+        z-index: 3;
+        position:relative;
+    }
+    &-spoiler{
+        position: absolute;
+        overflow: hidden;
+        visibility: hidden;
+        height: 0;
+        &__active{
+            position: static;
+            visibility: visible;
+            height: auto;
+        }
+    }
+    &-openspoiler{
+        cursor: pointer;
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        border-top: 1px solid $borderorder;
+        &:after{
+            content: '';
+            border-top: 2px solid $arrow;
+            border-left: 2px solid $arrow;
+            width: 7px;
+            height: 7px;
+            display: inline-block;
+            transform: rotate(218deg) translate(1px,1px);
+            
+        }
+    }
+    &-link{
+        font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        color: $link;
+        text-align: center;
+        margin: 16px auto;
+        position: relative;
+        display: inline-block;
+        margin-right: 10px;        
+        border-bottom: 1px solid $link;
+    }
+    &-item{
+        padding: 20px 0 8px 0;
+        border-top: 1px solid $borderorder; 
+    }
+    &-name{
+       font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif; 
+    }
+    &-brand{
+        font: 15px/24px MuseoSansLightItalic, Arial, Helvetica, sans-serif;
+        color: $secondary;
+    }
+    &-quantity{
+        margin-top: 10px;
+        span{
+            font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;  
+            margin-right: 15px;  
+        }
+    }
+    &-info{
+        font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;  
+        color:$secondary;
+        margin-bottom: 10px;
+    }
+}
