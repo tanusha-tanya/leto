@@ -59,7 +59,11 @@
             height: 7px;
             display: inline-block;
             transform: rotate(218deg) translate(1px,1px);
-            
+        }        
+        &__active{
+            &:after{
+                transform: rotate(45deg) translate(3px, 3px);  
+            }
         }
     }
     &-link{
