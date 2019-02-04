@@ -10,13 +10,14 @@
             fieldset.order-fieldset
                 legend.order-legend Способ доставки
                 input.order-orderform-radio(type="radio", name="delivery", id="ship")
-                label.order-orderform-label Курьерская доставка
+                label.order-orderform-label(for="ship") Курьерская доставка
                 input.order-orderform-radio(type="radio", name="delivery", id="pickup")
-                label.order-orderform-label Самовывоз
+                label.order-orderform-label(for="pickup") Самовывоз
                 button.order-fieldset-button Выбрать
             fieldset.order-fieldset
                 legend.order-legend Адрес
                 input.order-orderform-input(type="text", placeholder="Улица")
+            fieldset.order-fieldset
                 input.order-orderform-input__small(type="text", placeholder="Дом")
                 input.order-orderform-input__small(type="text", placeholder="Квартира")
             fieldset.order-fieldset
