@@ -1,0 +1,24 @@
+.order-bgform{
+    background: $cartbg;
+    margin: 0 -10px;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+.order-fieldset{
+    border: none;
+    outline: none;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 400px;
+}
+.order-legend{
+    font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif; 
+    margin: 10px 0;
+}
+.order-orderform-input{
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 400px;
+    height: 50px;
+    border: 1px solid $brandborder;
+}

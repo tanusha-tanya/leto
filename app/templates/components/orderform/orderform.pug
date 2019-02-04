@@ -1,0 +1,66 @@
+.order-orderform
+    form.order-form
+        .order-bgform
+            fieldset.order-fieldset
+                legend.order-legend Телефон
+                input.order-orderform-input(type="text")
+            fieldset.order-fieldset
+                legend.order-legend Город
+                input.order-orderform-input(type="text", value="Анжеро-Судженск") 
+            fieldset.order-fieldset
+                legend.order-legend Способ доставки
+                input.order-orderform-radio(type="radio", name="delivery", id="ship")
+                label.order-orderform-label Курьерская доставка
+                input.order-orderform-radio(type="radio", name="delivery", id="pickup")
+                label.order-orderform-label Самовывоз
+                button.order-fieldset-button Выбрать
+            fieldset.order-fieldset
+                legend.order-legend Адрес
+                input.order-orderform-input(type="text", placeholder="Улица")
+                input.order-orderform-input__small(type="text", placeholder="Дом")
+                input.order-orderform-input__small(type="text", placeholder="Квартира")
+            fieldset.order-fieldset
+                legend.order-legend Имя
+                input.order-orderform-input(type="text")
+            fieldset.order-fieldset
+                legend.order-legend Фамилия
+                input.order-orderform-input(type="text")
+            fieldset.order-fieldset
+                legend.order-legend Комментарий
+                input.order-orderform-textarea(type="textarea")
+        .order-payblock
+            input(type="radio", name="pay", id="cash").order-pay-radiobutton
+            label.order-pay-radiolabel(for="cash") Оплата наличными при получении
+            input(type="radio", name="pay", id="card").order-pay-radiobutton
+            label.order-pay-radiolabel(for="card") Оплата картой при получении
+            input(type="radio", name="pay", id="online").order-pay-radiobutton
+            label.order-pay-radiolabel(for="online") Онлайн-оплата 
+                span Robokassa, Chronopay, PayPal 
+        .order-totalblock
+            .order-totalblock-top
+                .order-totalblock-title Сказать мастеру спасибо
+                fieldset.order-donate
+                    label.donate-label Введите сумму: 
+                    input.donate-input(type="text", value="0")
+            .order-totalblock-bottom
+                .order-totalblock-string
+                    .order-totalblock-total Итого:
+                    .order-totalblock-sum 12 256 руб
+                .order-totalblock-string
+                    .order-string Товары (123)
+                    .order-num 3 352 руб
+                .order-totalblock-string
+                    .order-string Скидка по промокоду
+                    .order-num 20 руб
+                .order-totalblock-string
+                    .order-string Доставка
+                    .order-num 50 руб
+                .order-totalblock-string
+                    .order-string Спасибо мастеру
+                    .order-num 0 руб
+        .order-send
+            button.order-buttom Оформить заказ
+            .order-disclaimer Нажимая на кнопку «Оформить заказ», вы даете своё согласие на обработку персональных данных в соответствии с 
+                a(href="#") Политикой конфидициальности
+                | и принимаете условия 
+                a(href="#") Публичной оферты

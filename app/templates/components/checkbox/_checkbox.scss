@@ -1,0 +1,50 @@
+.order-checkbox{
+    margin-bottom: 35px;
+    &-item{
+        margin: 16px 0;
+    }
+    &-input{
+        visibility: hidden;
+        position: absolute;
+        &:checked{
+            +label{
+                &:after{
+                    border-bottom: 2px solid $selection;
+                    border-right: 2px solid $selection;
+                    transition: border-color .3s;
+                }
+            }
+        }
+    }
+    &-label{
+        position: relative;
+        font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif; 
+        color: $primary;
+        padding-left: 40px;
+        cursor:pointer;
+        display: block;
+        &:before{
+            content: '';
+            position:absolute;
+            display: block;
+            left: 0;
+            top: -5px;
+            border: 1px solid $bordergray;
+            width: 20px;
+            height: 20px;
+            background: $buttontext;
+        }
+        &:after{
+                content: '';
+                position:absolute;
+                display: block;
+                width: 7px;
+                height: 17px;
+                border-bottom: 2px solid transparent;
+                border-right: 2px solid transparent;
+                left: 13px;
+                top: -8px;
+                transform: rotate(35deg);
+        }
+    }
+}
