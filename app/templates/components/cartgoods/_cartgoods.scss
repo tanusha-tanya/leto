@@ -29,9 +29,13 @@
             width: calc(50% - 20px);
         }
         &__2{
-            display: flex;
-            margin: 32px 10px;
-            width: calc(50% - 20px);
+            @media(min-width: $tablet){
+                display: flex;
+                margin: 32px 10px;                
+            }
+            @media(min-width: $desktop){
+                width: calc(50% - 20px);
+            }
         }
     }
      &-pic{

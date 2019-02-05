@@ -7,19 +7,28 @@
     margin-bottom: 40px;
     z-index:3;
     background: $buttontext;
+    @media(min-width:$tablet){
+        padding: 0 30px;
+    }
+    @media(min-width:$desktop){
+        padding: 27px 30px;
+    }
     &-shadow{
         position: relative;
         &:after{
-        content: "";
-        display: block;
-        width: 75%;
-        height: 20px;
-        -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-        position: absolute;
-        bottom: 0;
-        z-index: -1;
-        right: 12%;
+            content: "";
+            display: block;
+            width: 75%;
+            height: 20px;
+            -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            bottom: 0;
+            z-index: -1;
+            right: 12%;
+            @media(min-width:$tablet){
+                width: 68%;
+            }
         }
     }    
     &-top{
@@ -27,6 +36,17 @@
         text-align:center;
         span{
             font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        }
+        @media(min-width:$tablet){
+            padding: 0;
+            padding-top: 20px;
+            text-align: left;
+        }
+        @media(min-width: $desktop){
+            padding: 20px 0;
+            span{
+                font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
+            }
         }
     }
     &-bottom{
@@ -43,6 +63,11 @@
             visibility: visible;
             height: auto;
         }
+        @media(min-width:$tablet){
+            position: relative;
+            height:auto;
+            visibility: visible;
+        }
     }
     &-openspoiler{
         cursor: pointer;
@@ -51,6 +76,9 @@
         text-align: center;
         display: block;
         border-top: 1px solid $borderorder;
+        @media(min-width:$tablet){
+            display: none;
+        }
         &:after{
             content: '';
             border-top: 2px solid $arrow;
@@ -82,6 +110,9 @@
     }
     &-name{
        font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif; 
+        @media(min-width:$desktop){
+            font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif; 
+        }
     }
     &-brand{
         font: 15px/24px MuseoSansLightItalic, Arial, Helvetica, sans-serif;
@@ -92,11 +123,23 @@
         span{
             font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;  
             margin-right: 15px;  
+            @media(min-width:$desktop){
+                 margin-right: 10px;
+            }
+            &:last-of-type{
+                border-left: 1px solid $bordergray;
+                @media(min-width:$desktop){
+                    padding-left: 10px;
+                }
+            }
         }
     }
     &-info{
         font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;  
         color:$secondary;
         margin-bottom: 10px;
+        @media(min-width:$desktop){
+            font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;  
+        }
     }
 }

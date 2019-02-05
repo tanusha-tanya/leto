@@ -1,5 +1,6 @@
 extends _layouts/default
 include components/maintop/maintopmenu/maintopmenu
+include components/cartaction/cartaction
 block title
   title корзина
 block header
@@ -16,7 +17,7 @@ block content
         include components/cartgoods/cartgoods
         include components/freedelivery/freedelivery
         .cartgoods-bottom
-          include components/cartaction/cartaction
+          +cartaction(".cartgoods-action__padding")
           include components/order/order
 block footer
   include  _layouts/footer/footer

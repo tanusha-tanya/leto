@@ -1,5 +1,6 @@
 extends _layouts/default
 include components/maintop/maintopmenu/maintopmenu
+include components/cartaction/cartaction
 block title
   title оформить заказ
 block header
@@ -8,14 +9,18 @@ block content
   main.main-wrap
     +maintopmenu()
     include components/breadcrumbs/breadcrumbs
-    .container
-      h1 оформить заказ
-      include components/auth/auth
-      include components/deliveryfree/deliveryfree
-      include components/ordersum/ordersum
-      include components/cartaction/cartaction
-      include components/checkbox/checkbox
-      include components/orderform/orderform
+    section.order
+      .container
+        h1 оформить заказ
+        include components/auth/auth
+        .order-flex
+          .order-col__right          
+            include components/deliveryfree/deliveryfree
+            include components/ordersum/ordersum
+            +cartaction()
+            include components/checkbox/checkbox
+          .order-col__left
+            include components/orderform/orderform
 block footer
   include  _layouts/footer/footer
   .body-dark

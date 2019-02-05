@@ -178,6 +178,7 @@ h6{
       width: 180px;
       height: 247px;
       top: 5%;
+      z-index: -1;
     }
     &:after{
       content: '';
@@ -188,6 +189,33 @@ h6{
       width: 180px;
       height: 247px;
       top: 28%;
+      z-index: -1;
+    }
+  }
+}
+.order{
+  position: relative;
+  @media(min-width: $desktop){
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      background-image: url("../images/svg/branch.svg");
+      width: 180px;
+      height: 247px;
+      top: 5%;
+      z-index: -1;
+    }
+    &:after{
+      content: '';
+      background-image: url("../images/svg/rose.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 0;
+      width: 180px;
+      height: 247px;
+      top: 28%;
+      z-index: -1;
     }
   }
 }
@@ -231,4 +259,32 @@ h6{
     display:flex;
     padding: 30px 24px;
   }
+}
+.order-flex{
+  @media(min-width:$tablet){
+    display: flex;
+    margin: 0 -10px;
+    flex-direction: row-reverse;
+  }
+}
+.order-col{
+  &__right{
+     @media(min-width:$tablet){
+       margin: 0 10px;
+       width: calc(100% / 8 * 3 - 20px)
+     }
+    @media(min-width:$desktop){
+      width: calc(34% - 20px);
+    }
+  }
+   &__left{
+     @media(min-width:$tablet){
+       margin: 0 10px;
+       width: calc(100% / 8 * 5 - 20px)
+    }
+    @media(min-width:$desktop){
+      width: calc(66% - 20px);
+    }
+  }
+
 }

@@ -1,7 +1,8 @@
-.cartgoods-action
-    .cartgoods-action-title Акции
-    input(type="checkbox")(id="action").cartgoods-action-checkbox
-    label.cartgoods-action-label(for="action") Упаковать в подарочную упаковку БЕСПЛАТНО
-    span.cartgoods-action-promo
-        input(type="text", placeholder="Я знаю промокод").cartgoods-action-input
-    
+mixin cartaction(className)
+    .cartgoods-action(class=className)
+        .cartgoods-action-title Акции
+        input(type="checkbox")(id="action").cartgoods-action-checkbox
+        label.cartgoods-action-label(for="action") Упаковать в подарочную упаковку БЕСПЛАТНО
+        span.cartgoods-action-promo
+            input(type="text", placeholder="Я знаю промокод").cartgoods-action-input
+        

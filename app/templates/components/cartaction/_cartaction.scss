@@ -1,18 +1,30 @@
 .cartgoods-action{
-    padding: 20px 10px;
+    &__padding{
+        padding: 20px 10px;
+    }   
     @media(min-width:$tablet){
-        padding: 0;
-        margin:0 10px;
-        width: calc(50% - 20px)
+        &__padding{
+            padding: 0;
+            margin:0 10px;
+            width: calc(50% - 20px)
+        }
     }
     @media(min-width:$desktop){
-        margin: 0;
-        width: 50%;
+        &__padding{
+            margin: 0;
+            width: 50%;
+        }
     }
     &-title{
         font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
         color: $title;
         margin-bottom: 23px;
+        @media(min-width:$desktop){
+            font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
+            &__padding{
+            font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        }
+    }
     }
     &-checkbox{
         visibility: hidden;
