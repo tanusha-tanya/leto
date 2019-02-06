@@ -219,6 +219,21 @@ h6{
     }
   }
 }
+.delivery{
+  position: relative;
+  @media(min-width: $desktop){
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      background-image: url("../images/svg/branch.svg");
+      width: 180px;
+      height: 247px;
+      top: 5%;
+      z-index: -1;
+    }
+  }
+}  
 .container__card{
   @media(min-width: $tablet){
     margin-top: 40px;

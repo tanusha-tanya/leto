@@ -1,0 +1,80 @@
+.innermenu-hamburger{
+    width: 40px;
+    height: 40px;
+    background: $border;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    position: relative;
+    margin: 20px 0;
+    cursor: pointer;
+    @media(min-width:$desktop){
+        display: none;
+    }
+    span{
+        width:20px;
+        height: 2px;
+        display: block;
+        background: $buttontext;
+        position: absolute;
+        left: 10px;
+        top: 20px;
+        &:before, &:after{
+            content:'';
+            display: block;
+            width:20px;
+            height: 2px;
+            background: $buttontext;
+            position: absolute;
+            left:0;
+        }
+        &:before{
+            top: -7px;
+        }
+        &:after{
+            top: 7px;
+        }
+    }
+}
+.innermenu-fullmenu{
+    display: none;
+    @media(min-width: $desktop){
+        display: flex; 
+        justify-content: space-between; 
+        margin: 60px 0;      
+        border-bottom: 1px solid $dots;
+        background: $buttontext;
+    }
+    &-li{
+        list-style:none;        
+    }
+    &-link{
+        border: none;
+        font: 12px/20px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        letter-spacing: 0.05em;
+        color: $link;
+        text-transform: uppercase;
+        display: block;
+        padding: 10px 40px;
+        background: transparent;
+        transition: background .3s, color .3s;
+        border-bottom-left-radius: 30px;
+        border-top-right-radius: 30px;      
+        height: 100%;
+        box-sizing: border-box;
+        &:hover{
+            background: $border;            
+            color: $buttontext;
+        }
+    }
+    &-current{
+        background: $border;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        display: block;
+        color: $buttontext;
+        padding: 10px 40px;
+        font: 12px/20px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+}

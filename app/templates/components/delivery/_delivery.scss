@@ -1,0 +1,205 @@
+.delivery{
+    &-description{
+        margin: 16px 0;
+        background: $buttontext;
+    }
+    &-city{
+        padding: 20px;
+        background: $cartbg;
+        font-size: 0;
+        @media(min-width: $tablet){
+            padding: 40px;
+            padding-left: 23px;
+        }
+        @media(min-width: $desktop){
+            width: calc(66% - 20px);
+        }
+        &-title{
+            font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
+            margin-bottom: 10px;
+            @media(min-width: $tablet){
+                display: inline-block;
+                margin-right: 75px;
+            }
+        }
+        &-input{
+            width: 260px;
+            height: 50px;
+            box-sizing: border-box;
+            padding: 10px 40px 10px 20px;
+            display: block;
+            position: relative;
+            margin: 0 auto;
+            border-top-right-radius: 30px;
+            outline: none;
+            border: 1px solid $brandborder;
+            @media(min-width: $tablet){
+                display: inline-block;
+                width: 360px;
+                border-radius: 0;
+            }
+        }
+        &-button{
+            width: 260px;
+            height: 50px;
+            box-sizing: border-box;
+            display: block;
+            position: relative;
+            margin: 0 auto;
+            background: $buttontext;
+            border: 1px solid $link;
+            text-transform: uppercase;
+            @media(min-width: $tablet){
+                display: inline-block;
+                border-top-right-radius: 30px;
+                width: 120px;
+            }
+        }
+    }
+    &-radioblock{
+        margin: 30px 0;
+    }
+    &-radio{
+        position: absolute;
+        visibility: hidden;
+        &:checked{
+            +label{
+                &:after{
+                    background: $selection;
+                    transition: background .3s;
+                }
+            }
+        }
+    }
+    &-label{
+        position: relative;
+        cursor:pointer;
+        display: block;
+        margin: 10px 0;
+        padding-left: 40px;
+        &:before{
+            content: '';
+            position:absolute;
+            display: block;
+            left: 0;
+            border: 1px solid $bordergray;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            background: $buttontext;
+        }
+        &:after{
+                content: '';
+                position:absolute;
+                display: block;
+                width: 12px;
+                height: 12px;
+                border-radius: 100%; 
+                left: 5px;
+                top: 5px;               
+        }
+    }
+    &-company-title{
+        font: 20px/30px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
+        margin: 20px 0; 
+    }
+    &-company-info{
+        padding: 20px;
+        padding-right: 10px;
+        background: $cartbg;
+        @media(min-width:$tablet){
+            display: flex;
+            flex-wrap: wrap;
+        }
+         @media(min-width: $desktop){
+            width: calc(66% - 20px);
+        }
+    }
+    &-info-string{
+        display: flex;
+        justify-content: space-between;  
+        @media(min-width:$tablet){
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 33%;
+        }
+    }
+    &-info-title{
+        padding-top: 20px;
+        font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
+        @media(min-width:$tablet){
+            margin-bottom: 20px;
+        }
+    }
+    &-white-block{
+        width: 140px;
+        background: $buttontext;
+        padding: 10px;
+        padding-top: 20px;
+        box-sizing: border-box;
+        @media(min-width:$tablet){
+            width: 100%;
+            height: 100%;
+        }
+        p{
+            font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
+            &.grey{
+                color: $secondary;
+            }
+        }
+    }
+    &-disclaimer{
+        margin-top: 20px;
+        h3{
+            font: 12px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
+            color: $price;
+        }
+        p{
+            font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        }
+    }
+    &-time{
+        margin-top: 50px;
+        margin-bottom: 20px;
+        &-title{
+            margin: 10px 0;
+        }
+        &-info{
+            color: $secondary;
+        }
+        &-city{
+            @media(min-width:$tablet){
+                display: flex;
+            }
+        }
+        &-item{
+            @media(min-width:$tablet){
+                width: 33%;
+            }
+        }
+         @media(min-width: $desktop){
+            width: calc(66% - 20px);
+            margin-top: 50px;
+            margin-bottom: 60px;
+        }
+    }
+    &-contacts{
+        background: $cartbg;
+        padding: 30px 20px;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+        margin-top: 25px;
+        margin-bottom: 60px;
+        @media(min-width:$tablet){
+                display: flex;
+        }
+    }
+    &-phone{
+        margin: 10px 0;
+        font: 26px/36px MuseoSansDark, Arial, Helvetica, sans-serif;
+        @media(min-width:$tablet){
+               width: 600px;
+               margin-left: 20px;
+        }
+    }
+}

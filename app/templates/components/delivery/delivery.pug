@@ -1,0 +1,50 @@
+.delivery-description Выбирайте удобный для вас способ доставки
+.delivery-city
+    .delivery-city-title Ваш город
+    input.delivery-city-input(placeholder="Анжеро-Судженск")
+    button.delivery-city-button Показать
+.delivery-radioblock
+    h2 Способ доставки
+    input(type="radio", id="ship", name="delivery", checked="checked").delivery-radio
+    label(for="ship").delivery-label Курьерская доставка
+    input(type="radio", id="pickup", name="delivery").delivery-radio
+    label(for="pickup").delivery-label Самовывоз
+.delivery-method
+    .delivery-method-item(data-for="delivery")
+        .delivery-company-title Транспортная компания СДЭК
+        .delivery-company-info
+            .delivery-info-string
+                .delivery-info-title Срок доставки
+                .delivery-white-block 
+                    p 1-4 дня
+                    p.grey c 30.07.2018
+                    p.grey по 02.08.2018
+            .delivery-info-string
+                .delivery-info-title Оплата
+                .delivery-white-block 
+                    p Наличными или банковской картой
+            .delivery-info-string
+                .delivery-info-title Время доставки
+                .delivery-white-block 
+                    p с 11:00 до 20:00
+            .delivery-disclaimer
+                h3 Внимание!
+                p Сроки доставки указан при заказе в будние дни. При заказе в выходные дни, срок доставки может быть увеличен на 1-2 дня.
+        .delivery-time
+            h2 Сроки доставки
+            .delivery-time-city
+                .delivery-time-item
+                    .delivery-time-title Москва и область:
+                    .delivery-time-info 1-3 дня
+                .delivery-time-item
+                    .delivery-time-title Санкт-Петербург и область:
+                    .delivery-time-info 1-4 дня
+                .delivery-time-item
+                    .delivery-time-title Другие города России:
+                    .delivery-time-info 3-14 дней
+        .delivery-contacts
+            p В ряде случаев (в период праздников) сроки доставок могут быть увеличены. 
+                | Уточняйте, пожалуйста, детали 
+                | у наших менеджеров или операторов службы доставки 
+                | по телефону:
+            .delivery-phone 8 800 700 45 11
