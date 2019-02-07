@@ -99,6 +99,112 @@
                 top: 5px;               
         }
     }
+    &-method-item{
+        position: absolute;
+        visibility: hidden;
+        height:0;
+        overflow:hidden;
+        opacity: 0;
+        transition: opacity .3s;
+        &__active{
+            position: relative;
+            visibility: visible;
+            opacity: 1;
+            height: auto;
+        }
+        &__big{
+            @media(min-width:$tablet){
+                 margin-right: -34px;
+            }
+            @media(min-width:$desktop){
+                 margin-right: 0;
+            }
+        }
+    }
+    &-addresses-top{
+        padding: 20px 30px;
+    }
+    &-addresses-items{
+        height: 340px;
+        padding-right: 10px;
+        @media(min-width:$tablet){
+            height: 670px;
+        }
+    }
+    &-addresses-title{
+        margin-bottom: 10px;
+        font: 20px/30px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
+    }
+    &-addresses-counter{
+        color: $secondary;
+    }
+
+    &-addresses-item{
+        padding: 20px 30px;
+        display: block;
+        transition: background .3s;
+        border-bottom: 1px solid $brandborder;
+        cursor:pointer;
+        @media(min-width:$tablet){
+            padding: 20px;
+        }
+        &__active{
+            background: $cartbg;
+        }
+        small{
+            font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
+            display: block;
+            margin-bottom: 26px;
+            margin-top: 10px;
+        }
+        span{
+            color: $secondary;
+        }
+    }
+    &-addresses-container{
+        @media(min-width:$tablet){
+            width: 43%;
+        }
+        @media(min-width:$desktop){
+            width: 33%;
+        }
+
+    }
+    &-map{
+        #map{
+            width: 600px;
+            height: 400px;
+        }
+        @media(min-width: $tablet){
+            width: calc(57% + 34px);  
+            position:relative;
+            #map{
+                height: 734px;
+                width: 100%;
+                &>ymaps{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    right:0;
+                    bottom:0;
+                }                
+            }          
+        }
+        @media(min-width: $desktop){
+            width:66%;
+        }
+    }
+    &-mapcontainer{
+        border: 1px solid $brandborder;
+        @media(min-width:$tablet){
+            display: flex;
+        }
+        @media(min-width:$desktop){
+            border-right: 0;
+        }
+    }
     &-company-title{
         font: 20px/30px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
         margin: 20px 0; 
