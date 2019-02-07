@@ -1,0 +1,81 @@
+.pay{
+    &-container{
+        margin-bottom: 60px;
+        border: 1px solid $brandborder;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        padding: 0 20px;
+        position: relative;
+        background: $buttontext;
+        @media(min-width:$tablet){
+            padding: 0 30px;
+        }
+        @media(min-width:$desktop){
+            width: 66%;
+        }
+        &:after{
+            content: "";
+            display: block;
+            width: calc(100% - 50px);
+            height: 20px;
+            -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            bottom: 0;
+            z-index: -1;
+            right: 25px;
+        }
+    }
+    &-title{
+        padding: 20px 0;
+    }
+    &-item{
+        padding: 20px 0;
+        border-top: 1px solid $borderorder;
+        position: relative;
+        cursor: pointer;
+        padding-right: 30px;        
+        &:after{
+            content: '';
+            width: 9px;
+            height: 9px;
+            border-left: 1px solid $arrow;
+            border-bottom: 1px solid $arrow;
+            position: absolute;
+            right: 10px;
+            top: 30px;
+            transform: rotate(-48deg);
+            transition: transform .3s;
+        }
+        &__activ{
+          &:after{
+              transform: rotate(130deg);
+          }  
+          .pay-info{
+                position: relative;
+                height: auto;
+                visibility: visible;
+            }
+        }
+    }
+    &-method{
+        font: 20px/30px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
+    }
+    &-info{
+        position: absolute;
+        height: 0;
+        visibility: hidden;
+        overflow: hidden;
+        transition: height .3s;
+        margin-top: 20px;
+    }
+    &-picks{
+            margin: 0 -10px;
+            position: relative;
+        img{
+            margin: 15px 10px;
+            display: inline-block;
+        }
+    }
+        
+}

@@ -7,6 +7,9 @@
     position: relative;
     margin: 20px 0;
     cursor: pointer;
+    @media(min-width:$tablet){
+        margin: 40px 0;
+    }
     @media(min-width:$desktop){
         display: none;
     }
