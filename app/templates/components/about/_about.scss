@@ -1,0 +1,144 @@
+.about-info{
+    margin: 20px;
+    p{
+        margin: 10px 0;
+    }
+    strong{
+        font: 15px/20px MuseoSansDark, Arial, Helvetica, sans-serif;
+    }
+}
+.about-feedback{
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+.about-form{
+    margin-top: 20px;
+    background: $cartbg;
+    padding: 10px;
+    padding-bottom: 40px;
+    @media(min-width:$tablet){
+        padding: 20px;
+        padding-bottom: 40px;
+    }
+    @media(min-width:$desktop){
+        width: 66%;
+    }
+}
+.about-fieldset{
+    margin-bottom: 20px;
+    @media(min-width:$tablet){
+        display: flex;
+        margin: 0 -10px 20px -10px;        
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+.about-input{
+    width: 100%;
+    max-width: 400px;
+    height: 50px;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 auto; 
+    display: block;
+    border: 1px solid $brandborder;
+    padding:20px;
+    @media(min-width:$tablet){
+       width: 500px;
+       max-width: 500px;
+       margin: 0 20px 10px 10px;
+    }
+    @media(min-width:$desktop){
+       width: 480px;
+       max-width: 480px;
+    }
+}
+.about-textarea{
+    width: 100%;
+    max-width: 400px;
+    height: 160px;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 auto; 
+    display: block;
+    border: 1px solid $brandborder;
+    padding:20px;
+     @media(min-width:$tablet){
+       width: 500px;
+       max-width: 500px;
+       margin: 0 20px 10px 10px;
+    }
+    @media(min-width:$desktop){
+       width: 480px;
+       max-width: 480px;
+    }
+}
+.about-label{
+    font: 15px/20px MuseoSansDark, Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+    @media(min-width:$tablet){
+       width: calc(25% - 20px);
+       max-width: calc(25% - 20px);
+       margin: 0 10px 10px 20px;
+    }
+    @media(min-width:$desktop){
+       width: calc(100% - 500px);
+       max-width: calc(100% - 500px);;
+    }
+}
+.about-wrap{
+    @media(min-width:$tablet){
+       width: 500px;
+       max-width: 500px;
+       text-align: right;
+    }
+     @media(min-width:$desktop){
+       width: 480px;
+       max-width: 480px;
+       text-align: right;
+    }
+}
+.about-button{
+    position: relative;
+    margin:0 auto;
+    display: block;
+    outline: none;
+    background: $selection;
+    color: $buttontext;
+    border: none;
+    box-sizing: border-box;
+    border-top-right-radius: 32px;
+    border-bottom-left-radius: 32px;
+    font: 12px/28px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+    height: 60px;
+    @media(min-width: $tablet){
+           width: 280px;
+           margin: 0;
+    }
+}
+.about-map{
+    position: relative;
+    height:0;
+    width: 100%;
+    padding-top: 58%;
+    overflow: hidden;
+    #aboutmap{
+        position: absolute;
+        top:0;
+        bottom: 0;
+        left:0;
+        right:0;
+        width: 100%;
+        height: 100%!important;
+    }
+    @media(min-width: $tablet){
+           padding-top: 71%;
+    }
+   @media(min-width: $desktop){
+           padding-top: 32%;
+    }
+}

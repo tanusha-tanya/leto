@@ -1,17 +1,21 @@
 extends _layouts/default
 include components/maintop/maintopmenu/maintopmenu
 block title
-  title Оформление заказа
+  title О компании
 block header
   include  _layouts/header/header
 block content
   main.main-wrap
     +maintopmenu()
     include components/breadcrumbs/breadcrumbs
-    .container
-      h1 Оформление заказа
-      include components/filter/filter
+    section.delivery
+      .container
+        h1 О компании
+        include components/innermenu/innermenu
+        h2.delivery-h2 Наши контакты
+      include components/about/about
 block footer
   include  _layouts/footer/footer
   .body-dark
   include  components/filterpanel/filterpanel
+  include  components/innermobilemenu/innermobilemenu
