@@ -9,10 +9,7 @@
     margin: 0 -12px;
     margin-top: 42px;
   }
-  @media(min-width: $desktop){
-    justify-content: center;
-    margin: 42 -120px 0 -120px;
-  }
+ 
   &-svg{
     @media(min-width: $tablet){
       order:1;
@@ -35,8 +32,8 @@
       margin-right: 0;
     }
     svg{
-      fill:$dots;
-      color:$dots;
+      fill:$buttontext; 
+      color:$buttontext;
       transition: color .3s, fill .3s;
       &:hover,  &:active{
         fill:$selection;
@@ -52,7 +49,7 @@
     }
   }
   &-num{
-    font: 14px/17px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    font: 14px/17px MuseoSansMidle, Arial, Helvetica, sans-serif;
     color: $buttontext;
   }
   &-country{

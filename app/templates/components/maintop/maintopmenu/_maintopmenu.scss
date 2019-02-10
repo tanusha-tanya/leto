@@ -27,7 +27,7 @@
   &-link{
     text-transform: uppercase;
     text-decoration: none;
-    font: 15px MuseoSansDark;
+    font: 15px MuseoSansNormal, Arial, Helvetica, sans-serif;
     letter-spacing: 0.05em;
     color: $primary;
     border-bottom: none;
@@ -64,10 +64,10 @@
     &.active{
       visibility: visible;
       background:$buttontext;
-      width: calc(100% - 4px);
-      left:2px;
-      right:3px;
-      top: 35px;
+      width: 100%;
+      left:0;
+      right:0;
+      top: 13px;
       display: flex;
       padding: 50px;
       padding-top:65px;
@@ -78,6 +78,7 @@
       align-content: flex-start;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
       z-index: 700;
+      border-top-right-radius: 35px;
     }
   }
   &-subul{
@@ -109,8 +110,23 @@
     }
     .maintopmenu-submenu{
       &.active{
-        top: 57px
+        top: 41px
       }
     }
+  }
+}
+.link__menu{
+  font: 12px/14px MuseoSansNormal, Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  transition: color .3s;
+  text-decoration: none;
+  border:0;
+  color: $primary;
+  &:hover, &:active{
+    color: $selection;
+    border:0;
+  }
+  &:active{
+    font-family: MuseoSansBold, Arial, Helvetica, sans-serif;
   }
 }

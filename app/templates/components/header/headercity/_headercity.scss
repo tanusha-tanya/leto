@@ -6,7 +6,8 @@
   &-link{
     font: 12px/14px MuseoSansNormal, Arial, Helvetica, sans-serif;
     text-transform: uppercase;
-    border-bottom: 1px dashed $selection;
+    border-bottom: 2px dashed $selection;
     margin-left: 10px;
+    color: $primary;
   }
 }

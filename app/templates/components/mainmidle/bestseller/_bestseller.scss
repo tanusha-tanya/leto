@@ -56,11 +56,11 @@
           content: '';
           position: absolute;
           background: $brandborder;
-          width: 160px;
+          width: 110px;
           height: 1px;
         }
         @media(min-width:$desktop){
-          width: 25%;
+          width: 22%;
         }
       }
       &:before{

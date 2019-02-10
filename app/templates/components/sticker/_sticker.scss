@@ -7,9 +7,9 @@
   height: 52px;
   text-align: center;
   box-sizing: border-box;
-  padding-top: 12px;
+  padding-top: 18px;
   z-index: 200;
-  font: 12px/28px MuseoSansNormal, Arial, Helvetica, sans-serif;
+  font: 13px MuseoSansNormal, Arial, Helvetica, sans-serif;
   &__green{
       background-image: url('../images/svg/ellipse_green.svg');
   }
@@ -24,6 +24,18 @@
   }
 }
 .saleofday-pick .sticker{
-  top: 10px;
-  left: 10px;
+    top: 10px;
+    left: 10px;
+    @media(min-width:$tablet){
+        top: 33px;
+        left: 33px;
+        width: 50px;
+        height: 44px;
+        background-image: url('../images/svg/sale.svg');
+        padding-top: 15px;
+    }   
+    @media(min-width:$desktop){
+      top: 39px;
+      left: 39px;
+    }
 }

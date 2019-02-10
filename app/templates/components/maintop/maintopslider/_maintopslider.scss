@@ -51,7 +51,47 @@
       height: 572px;
     }
   }
-  &.owl-theme .owl-nav.disabled + .owl-dots{
+  &.owl-theme .owl-nav{
+      position: absolute;
+      bottom: 142px;
+      right: 417px;
+      button.owl-prev, button.owl-next{
+        opacity:1;
+        background: rgba(255, 255, 255, 0.5);
+        width: 80px;
+        height: 80px;
+        border-top-right-radius: 40px;
+        border-bottom-left-radius: 40px;
+        border: 1px solid $bordergray;
+        position:absolute;
+        left:15px;
+        top:30px;
+        transition: opacity .3s;
+        svg{
+          transition: color .3s, fill .3s;
+            color: $selection;
+            fill: $selection;
+        }
+        &:active, &:hover{
+          background: $selection;
+          border: 1px solid $selection;
+          svg{
+            color: $buttontext;
+            fill: $buttontext;
+          }
+        }
+      }
+      button.owl-next{
+        right:0;
+        top:30px;
+        left: auto;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+      }
+    }
+  &.owl-theme .owl-nav + .owl-dots{
     position: absolute;
     top: 0;
     right: 25px;

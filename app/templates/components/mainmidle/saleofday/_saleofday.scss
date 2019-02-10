@@ -8,8 +8,8 @@
     margin-bottom: 0;
   }
   @media(min-width: $desktop){
-    padding-bottom: 318px;
-    margin-bottom: -66px;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
   &:after{
     content: '';
@@ -31,6 +31,7 @@
     }
     @media(min-width: $desktop){
       left: 68%;
+      bottom: 0;
     }
   }
   &-container{
@@ -75,6 +76,10 @@
       background-image: url('../images/svg/flower_middle.svg');
       padding: 20px 0;
     }
+    @media(min-width:$desktop){
+      background-position: center;
+    }
+
   }
   &-svg{
     position: relative;
@@ -145,6 +150,9 @@
       width: 100%;
       text-align: left;
     }
+    @media(min-width:$desktop){
+      margin-top: 20px;
+    }
   }
   &-prices{
     display: flex;
@@ -190,6 +198,7 @@
     position: relative;
     z-index:999;
     margin-bottom: 12px;
+    letter-spacing: 0.05em;
     &:hover, &:focus{
       outline: none;
       border: 1px solid $selection;
@@ -236,7 +245,7 @@
     width:100%;
     @media(min-width: $tablet){
       border: 1px solid $brandborder;
-      padding: 29px;
+      padding: 39px;
       border-top-right-radius: 50px;
       border-bottom-left-radius: 50px;
       box-sizing: border-box;
@@ -300,6 +309,8 @@
       margin: 0;
       border-top-right-radius: 0;
       border-bottom-left-radius: 0;
+      position: relative;
+      z-index:200;
     }
   }
   &-goods{
@@ -407,5 +418,6 @@
   &-linkbrand{
     font: 15px/24px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
     color: $secondary;
+    margin-bottom: 34px;
   }
 }

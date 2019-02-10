@@ -70,20 +70,6 @@ h6{
 .secondary-text{
   font: 36px/22px MuseoSansNormal, Arial, Helvetica, sans-serif;
 }
-.link__menu{
-  font: 12px/14px MuseoSansDark, Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  transition: color .3s;
-  text-decoration: none;
-  border:0;
-  &:hover, &:active{
-    color: $selection;
-    border:0;
-  }
-  &:active{
-    font-family: MuseoSansBold, Arial, Helvetica, sans-serif;
-  }
-}
 .link{
   font: 24px/15px MuseoSansNormal, Arial, Helvetica, sans-serif;
   transition: color .3s;

@@ -33,7 +33,7 @@
   }
   &-topli{
     list-style: none;
-    margin: 20px 10px;
+    margin: 15px 10px;
     @media(min-width: $tablet){
       margin: 20px 36px;
     }
@@ -43,6 +43,7 @@
     text-transform: uppercase;
     color: $primary;
     border-bottom: none;
+    letter-spacing: 0.05em;
     &__icon{
       &:before{
         content: "";
@@ -68,7 +69,7 @@
   }
   &-botli{
     list-style: none;
-    margin: 20px 10px;
+    margin: 15px 10px;
     @media(min-width: $tablet){
       margin: 20px 36px;
     }
@@ -80,7 +81,7 @@
     color: $primary;
   }
   &-address{
-    margin-top: 40px;
+    margin-top: 30px;
     padding-left: 10px;
     @media(min-width:$tablet){
       padding-left: 30px;
@@ -91,7 +92,7 @@
     }
   }
   &-enterance{
-    margin-top: 30px;
+    margin-top: 20px;
     font: 13px/16px MuseoSansNormal, Arial, Helvetica, sans-serif;
     padding-left: 10px;
     display: inline-block;

@@ -9,6 +9,9 @@
   z-index: auto;
   box-sizing: border-box;
   background: $buttontext;
+  @media(min-width:$tablet){
+    height: 615px;
+  }
   @media(min-width: $desktop){
     border-color: transparent;
     transition: border .3s, box-shadow .3s;
@@ -192,18 +195,34 @@
   &-priceblock{
     text-align: center;
     margin-top: 14px;
+    @media(min-width:$tablet){
+      padding-top: 20px;
+      position: absolute;
+      padding-left: 25%;
+      padding-right: 25%;
+      bottom: 89px;
+    }
+    @media(min-width:$desktop){
+       padding-left: 20%;
+      padding-right: 20%;
+    }
   }
   &-price{
     margin-top: 60px;
     font: 26px/28px MuseoSansDark, Arial, Helvetica, sans-serif;
     @media(min-width:$tablet){
       margin-top: 20px;
+      
     }
   }
   &-oldprice{
     font: 15px/36px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    @media(min-width:$tablet){
+      position: absolute;
+      top: -10px;
+    }
     @media(min-width:$desktop){
-      text-align: left;
+      left: -10px;
     }
     span{
       text-decoration: line-through;
@@ -227,6 +246,7 @@
     cursor:pointer;
     background: transparent;
     margin-top: 16px;
+    letter-spacing: 0.05em;
     &:hover, &:focus{
       outline: none;
       border: 1px solid $selection;
@@ -239,7 +259,9 @@
       background: $selection;
     }
     @media(min-width:$tablet){
-      margin-top: 31px;
+          position: absolute;
+          left: calc(50% - 80px);
+          bottom: 20px;
     }
   }
 }

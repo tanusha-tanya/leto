@@ -20,7 +20,8 @@ $('.bestseller-carousel').owlCarousel({
         center: false,
         margin: 40,
         nav: true,
-        navText:["<svg role='img' width='21' height='21'><use xlink:href='#arrow_carousel'></svg>", "<svg role='img' width='21' height='21'><use xlink:href='#arrow_carousel-right'></svg>"]
+        navText:["<svg role='img' width='21' height='21'><use xlink:href='#arrow_carousel'></svg>", "<svg role='img' width='21' height='21'><use xlink:href='#arrow_carousel-right'></svg>"],
+        slideBy: 4
        }
     }
 });

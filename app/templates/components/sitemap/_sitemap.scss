@@ -1,0 +1,11 @@
+.sitemap{
+    li{
+        list-style: none;
+    }
+    &-li{
+        &__title{
+            font: 20px/30px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
+            margin: 10px 0; 
+        }
+    }
+}

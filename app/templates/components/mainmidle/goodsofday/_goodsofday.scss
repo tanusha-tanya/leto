@@ -90,7 +90,8 @@
     height: 52px;
     text-align: center;
     box-sizing: border-box;
-    padding-top: 12px;
+    padding-top: 18px;
+    font: 13px/15px MuseoSansNormal, Arial, Helvetica, sans-serif;
     @media(min-width:$tablet){
       left: auto;
       right: -78px;
@@ -222,6 +223,7 @@
     cursor:pointer;
     background: transparent;
     transition: border .3s, color .3s, background .3s;
+    letter-spacing: 0.05em;
     &:hover, &:focus{
       outline: none;
       border: 1px solid $selection;
