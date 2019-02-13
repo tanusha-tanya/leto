@@ -1,7 +1,8 @@
 extends _layouts/default
 include components/maintop/maintopmenu/maintopmenu
+include components/mainmidle/bestseller/bestseller
 block title
-  title О компании
+  title Доставка
 block header
   include  _layouts/header/header
 block content
@@ -10,10 +11,11 @@ block content
     include components/breadcrumbs/breadcrumbs
     section.delivery
       .container
-        h1 О компании
+        h1 Личный кабинет
         include components/innermenu/innermenu
-        h2.delivery-h2 Наши контакты
-      include components/about/about
+        include components/personal/personal
+        include components/mainmidle/maingoods/maingoods
+        +bestseller("Бестсселлеры")(class="bestseller__main")
 block footer
   include  _layouts/footer/footer
   .body-dark

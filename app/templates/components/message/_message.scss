@@ -1,0 +1,52 @@
+.message{
+    padding: 20px;
+    &-title{
+        font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        color: #000;
+        @media(min-width: $tablet){
+            font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        }
+    }
+    &-fieldset{
+        position: relative;
+        margin: 20px auto;
+        width: 260px;
+    }
+    &-legend{
+        font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
+        margin: 10px 0;
+    }
+    &-input{
+        box-sizing: border-box;
+        border: 1px solid #E0E0E0;
+        width: 260px;
+        height: 50px;
+        padding: 10px;
+    }
+    &-textarea{
+        box-sizing: border-box;
+        border: 1px solid #E0E0E0;
+        width: 260px;
+        height: 180px;
+        padding: 10px;
+    }
+    &-button{
+        width: 260px;
+        height: 60px;
+        position: relative;
+        margin: 0 auto;
+        display: block;
+        box-sizing: border-box;
+        color: #fff;
+        background: #697F34;
+        text-transform: uppercase;
+        border: none;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        cursor: pointer;
+        transition: background .3s;
+        &.disabled{
+            background: #E0E0E0;
+        }
+    }
+}

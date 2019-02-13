@@ -106,6 +106,20 @@ h6{
       border-bottom: none;
     }
   }
+  &__popup{
+    max-width: 1020px;
+    box-sizing: border-box;
+    padding: 70px;
+    padding-bottom: 0;
+    .card-slider__for .card-slider-item{
+      padding: 0;
+      width: 265px!important;
+      img{
+        max-width:140px;
+        //margin: 0;
+      }
+    }
+  }
 }
 .main-wrap{
   flex-grow: 1;
@@ -237,6 +251,22 @@ h6{
     width: calc(50% - 20px);
     margin: 0 10px;
   }
+  &__30{
+    width: calc(30% - 20px);
+    margin: 0 10px;
+  }
+  &__70{
+    width: calc(70% - 20px);
+    margin: 0 10px;
+  }
+  &__100{
+    width: calc(100% - 20px);
+    margin: 0 10px;
+    border-top: 1px solid #E0DFDA;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px 0;
+  }
 }
 .cartgoods-wrap{
   background: $cartbg;
@@ -288,4 +318,53 @@ h6{
     }
   }
 
+}
+.mfp-content{
+  background: $buttontext;
+  max-width: 1020px;
+}
+.fastshow{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  &-link{
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #000;
+    border-bottom: 0;
+    margin-top: 20px;  
+    position: relative;
+    display: inline-block;
+    margin-left: -125px;
+  }
+  &-circl{
+      width: 3px;
+      height: 3px;
+      display: block;
+      border-radius: 100%;
+      background: #000;
+      position: absolute;
+      right: -10px;
+      bottom: 3px;
+      &:after, &:before{
+        content: '';
+        position: absolute;
+        right: -15px;
+        width: 3px;
+        height: 3px;
+        display: block;
+        border-radius: 100%;
+        background: #000;
+      }
+      &:before{
+        position: absolute;
+        right: -30px;
+      }
+   }
+}
+.mfp-close-btn-in .mfp-content  .mfp-close{
+   color: #828282;
+   font-size: 40px;
 }

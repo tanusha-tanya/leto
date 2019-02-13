@@ -1,0 +1,53 @@
+.notfound{
+    margin: 40px 0;
+    text-align: center;
+    @media(min-width: $tablet){
+        margin-bottom: 90px;
+    }
+    @media(min-width: $desktop){
+        background-image: url(/images/svg/leto_large.svg);
+        margin-bottom: 110px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: content;
+        background-color: #fff;
+    }    
+    &-rose{
+        position: relative;
+        margin: 0 auto;
+        width: 290px;
+        height: 200px;
+    }
+    &-title{
+        font: 20px/30px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
+        text-transform: unset;
+    }
+    &-404{
+        margin: 34px auto;
+        position: relative;
+        padding: 17px 0 10px 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(/images/svg/leto.svg);
+        background-size: content;
+        @media(min-width:$tablet){
+            background-image: url(/images/svg/leto_big.svg);
+            margin-top: 10px;
+            svg{
+                width: 424px;
+                height: 162px;
+            }
+        }
+        @media(min-width:$desktop){
+            background: none;
+            margin-top: 38px;
+        }
+    }
+    &-link{
+        display: inline-block;
+        a{
+            font: 15px MuseoSansNormal, Arial, Helvetica, sans-serif;
+            color: #333;
+        }
+    }
+}

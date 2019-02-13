@@ -1,11 +1,80 @@
 .sitemap{
+    &-h2{
+        display: none;
+        @media(min-width: $desktop){
+            display: block;
+            margin: 60px 0 40px 0;
+            background: #fff;
+        }
+    }
     li{
         list-style: none;
+        color: #000000;
+        a{
+            border-bottom: 0;
+            color: #000000;
+        }
+    }
+    &-ul{
+        margin-bottom: 40px;
+        @media(min-width:$tablet){
+            margin-bottom: 60px;
+        }
+        @media(min-width:$desktop){
+            margin-bottom: 200px;
+        }
+    }
+    &-ul__inner{
+        position: absolute;
+        height: 0;
+        visibility:hidden;
     }
     &-li{
         &__title{
-            font: 20px/30px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
-            margin: 10px 0; 
+            font: 20px/30px PlayfairDisplayItalic, Arial, Helvetica, sans-serif; 
+            cursor: pointer;
+            a{
+               font: 20px/30px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;  
+            }
+            &.open{
+               .sitemap-ul__inner{
+                   position: relative;
+                   height: auto;
+                   visibility: visible;
+               } 
+            }  
+        }
+        &__sub{
+            margin: 10px 0;
+            margin-left: 30px;
+            cursor: pointer;
+            &.open{
+               .sitemap-ul__spoiler{
+                   position: relative;
+                   height: auto;
+                   visibility: visible;
+               } 
+                .sitemap-sub-item{
+                    border-bottom: none;
+                }
+            } 
+        }
+    }
+    &-sub-item{
+        font: 15px/15px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        border-bottom: 1px dashed #000000;
+        display: inline-block;
+    }
+    &-ul__spoiler{
+        margin-left: 20px;
+        font: 12px/32px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        margin-top: 10px;
+        position: absolute;
+        height: 0;
+        visibility: hidden;
+        overflow: hidden;
+        a{
+            font: 12px/32px MuseoSansNormal, Arial, Helvetica, sans-serif;
         }
     }
 }
