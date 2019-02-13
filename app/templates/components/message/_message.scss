@@ -1,16 +1,25 @@
 .message{
     padding: 20px;
+    @media(min-width: $tablet){
+        padding: 60px;
+    }
     &-title{
         font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
         color: #000;
         @media(min-width: $tablet){
             font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
+            margin-bottom:40px;
         }
     }
     &-fieldset{
         position: relative;
         margin: 20px auto;
         width: 260px;
+         @media(min-width: $tablet){
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
     }
     &-legend{
         font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
@@ -22,6 +31,9 @@
         width: 260px;
         height: 50px;
         padding: 10px;
+        @media(min-width:$tablet){
+            width: 340px;
+        }
     }
     &-textarea{
         box-sizing: border-box;
@@ -29,6 +41,9 @@
         width: 260px;
         height: 180px;
         padding: 10px;
+        @media(min-width:$tablet){
+            width: 340px;
+        }
     }
     &-button{
         width: 260px;
@@ -45,6 +60,10 @@
         border-bottom-left-radius: 30px;
         cursor: pointer;
         transition: background .3s;
+        @media(min-width:$tablet){
+            width: 180px;
+            margin-right: 0;
+        }
         &.disabled{
             background: #E0E0E0;
         }

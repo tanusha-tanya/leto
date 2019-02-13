@@ -320,8 +320,13 @@ h6{
 
 }
 .mfp-content{
-  background: $buttontext;
-  max-width: 1020px;
+   background: $buttontext;
+  @media(min-width: $tablet){   
+    max-width: 700px;
+  }
+  @media(min-width: $desktop){
+    max-width: 700px;
+  }
 }
 .fastshow{
   display: flex;
