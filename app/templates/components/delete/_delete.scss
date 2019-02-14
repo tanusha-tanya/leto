@@ -1,0 +1,21 @@
+.delete{
+    text-align: center;
+    padding: 20px;
+    @media(min-width: $tablet){
+        padding: 60px;
+    }
+    .add-fieldset{
+        margin-bottom: 40px;
+    }
+    .add-button-wrap{
+        width: 100%;
+        justify-content: center;
+    }
+    .add-button{
+        position: relative;
+        margin: 10px auto;
+       @media(min-width: $tablet){
+        margin: 0 10px;
+     } 
+    }
+}

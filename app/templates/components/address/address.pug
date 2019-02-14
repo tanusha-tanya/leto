@@ -1,22 +1,28 @@
 .address-information
     .address-top 
         .address-title Мои адреса
-        a(href="addressadd.html").address-add
+        a(href="addressadd.html").address-add.js-popup добавить
     .address-block
-        .address-info
-            strong Адрес:
-            | 426000, Удмуртская республика, Ижевск,ул. Кирова, 30, офис 45
-        .address-info.address-current Это ваш адрес доставки по умолчанию
-        .address-change
-            a.address-link(href="change.html") Изменить
-            a.address-link(href="change.html") Удалить
+        .address-content
+            .address-info
+                strong Адрес: 
+                | 426000, Удмуртская республика, Ижевск,ул. Кирова, 30, офис 45
+            .address-info.address-current Это ваш адрес доставки по умолчанию
+        .address-changes
+            .address-change
+                a.address-link.js-popup(href="change.html") Изменить
+            .address-change
+                a.address-link.js-popup(href="delete.html") Удалить
     .address-block
-        .address-info
-            strong Адрес:
-            | 426000, Удмуртская республика, Ижевск,ул. Кирова, 30, офис 45
-        .address-info.address-current 
-            input(type="checkbox").address-checkbox
-            label.address-label Выбрать в качестве адреса доставки по умолчанию
-        .address-change
-            a.address-link(href="change.html") Изменить
-            a.address-link(href="change.html") Удалить
+        .address-content
+            .address-info
+                strong Адрес: 
+                | 426000, Удмуртская республика, Ижевск,ул. Кирова, 30, офис 45
+            .address-info.address-current 
+                input(type="checkbox")(id="current").address-checkbox
+                label.address-label(for="current") Выбрать в качестве адреса доставки по умолчанию
+        .address-changes
+            .address-change
+                a.address-link(href="change.html").js-popup Изменить
+            .address-change
+                a.address-link.js-popup(href="delete.html") Удалить

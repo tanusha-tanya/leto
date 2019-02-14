@@ -1,0 +1,28 @@
+.add
+    form.add-form
+        .add-fieldset
+            .add-title Мои адреса
+        .add-fieldset
+            legend.add-legend Регион
+            input(type="text").add-input
+        .add-fieldset
+            legend.add-legend Город
+            input(type="text").add-input
+        .add-fieldset
+            legend.add-legend Почтовый индекс
+            .add-input-wrap
+                input(type="text").add-input.add-input__index
+        .add-fieldset
+            legend.add-legend Адрес
+            .add-inputs-wrap
+                input(type="text").add-input
+                .add-inputs-small
+                    input(type="text").add-input.add-input__small
+                    input(type="text").add-input.add-input__small
+        .add-fieldset
+            input(type="checkbox", id="current").add-checkbox
+            label.add-label(for="current") Ваш адрес доставки по умолчанию
+        .add-fieldset.add-fieldset__right
+            .add-button-wrap
+                button.add-button.add-button__close.disabled отмена
+                button.add-button.add-button__send.disabled сохранить адрес

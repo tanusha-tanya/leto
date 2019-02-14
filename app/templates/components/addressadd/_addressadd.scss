@@ -1,0 +1,156 @@
+.add{    
+    padding: 20px;
+    @media(min-width: $tablet){
+        padding: 60px;
+    }
+    &-title{
+        font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        color: #000;
+        @media(min-width: $tablet){
+            font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
+            margin-bottom:40px;
+        }
+    }
+    &-fieldset{
+        position: relative;
+        margin: 20px auto;
+        width: 260px;
+         @media(min-width: $tablet){
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        &__right{
+            @media(min-width: $tablet){
+                justify-content: flex-end;
+            }
+        }
+    }
+    &-legend{
+        font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
+        margin: 10px 0;
+    }
+    &-input{
+        box-sizing: border-box;
+        border: 1px solid #E0E0E0;
+        width: 260px;
+        height: 50px;
+        padding: 10px;
+        @media(min-width:$tablet){
+            width: 340px;
+        }
+        &-wrap{
+           @media(min-width:$tablet){
+            width: 340px;
+        } 
+        }
+        &__small{
+            width: calc(50% - 20px);
+            margin: 0 10px;
+        }
+        &__index{
+            @media(min-width: $tablet){
+                width: calc(50% - 10px);
+            }
+        }
+    }
+    &-inputs{
+        &-wrap{
+            @media(min-width:$tablet){
+                width: 340px;
+            }
+        }
+        &-small{
+            display: flex;
+            margin: 20px -10px;
+        }
+    }
+    &-button{
+        width: 260px;
+        height: 60px;
+        position: relative;
+        margin: 0 auto;
+        display: block;
+        box-sizing: border-box;
+        color: #fff;
+        background: #697F34;
+        text-transform: uppercase;
+        border: none;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        cursor: pointer;
+        transition: background .3s;
+        margin: 20px 0;
+        @media(min-width:$tablet){
+            width: 180px;
+            margin-right: 0;
+        }
+        &__close{
+            background: #fff;
+            border: 1px solid #000;
+            color: #000;
+            &.disabled{
+                display: none;
+            }
+        }
+        &__send{
+            &.disabled{
+                background: #E0E0E0;
+            }
+        } 
+        &-wrap{
+            @media(min-width:$tablet){
+                 width: 340px;
+                 justify-content: flex-end;
+                 display: flex;
+                 align-items: center;
+            }
+        }      
+    }
+    &-checkbox{
+        position: absolute;
+        visibility: hidden;
+        &:checked + label{
+            &:after{
+                border-bottom: 2px solid #697F34;
+                border-right: 2px solid #697F34;
+                transition: border-color .3s;
+            }
+        }
+    }
+    &-label{
+        display: block;
+        padding-left: 30px;
+        position: relative;
+        color: #838383;
+        cursor: pointer;
+        &:before{
+            border: 1px solid #E0DFDA;
+            content: '';
+            width: 20px;
+            height: 20px;
+            display:block;
+            position:absolute;
+            left: 0;
+            top: 5px;
+            @media(min-width:$tablet){
+                top: 0;
+            }
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            display: block;
+            width: 7px;
+            height: 17px;
+            border-bottom: 2px solid transparent;
+            border-right: 2px solid transparent;
+            left: 13px;
+            top: 2px;
+            transform: rotate(35deg);
+            @media(min-width:$tablet){
+                top: -3px;
+            }
+        }
+    }
+}
