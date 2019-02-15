@@ -1,27 +1,17 @@
-.documents-item
-    .documents-row.documents-col__2
-        .documents-col__left
-            .documents-name Название
-        .documents-col__right
-            .documents-info Договор 542.pdf
-    .documents-row.documents-col__2
-        .documents-col__left
-            .documents-name Дата загрузки
-        .documents-col__right
-            .documents-info 12.06.2018
-    .documents-row.documents-col__1
-        .documents-col__left
-            .documents-name Размер
-        .documents-col__right
-            .documents-info 234 КБ 
-    .documents-row.documents-col__2
-        .documents-col__left
-            .documents-name Описание
-        .documents-col__right
-            .documents-info.documents-info__message  Договор получен от вас с неверными реквизитами. Использовать только для ознакомления с текстом ..
-    .documents-row.documents-col__1
-        .documents-col__left
-        .documents-col__right
+.documents-table-row
+    .documents-table-col(data-title="Название")
+        .documents-info Договор 542.pdf
+    .documents-table-col(data-title="Дата")
+        .documents-info  12.06.2018
+    .documents-table-col(data-title="Размер") 
+         .documents-info 234 КБ 
+    .documents-table-col(data-title="Описание") 
+         .documents-info  Договор получен от вас с неверными реквизитами. Использовать только для ознакомления с текстом ..
+         .documents-info__message Посмотреть
+    .documents-table-col
+        .documents-info
             a(href="#").documents-download
                 svg.documents-svg(role="img")(width="12")(height="12"): use(xlink:href="#download")
                 span Скачать
+        .documents-info__message.documents-info__download Скачать
+.documents-table-grey

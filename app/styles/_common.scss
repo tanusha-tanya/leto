@@ -321,12 +321,9 @@ h6{
 }
 .mfp-content{
    background: $buttontext;
-  @media(min-width: $tablet){   
-    max-width: 700px;
-  }
-  @media(min-width: $desktop){
-    max-width: 700px;
-  }
+}
+.mfp-inline-holder .mfp-content, .mfp-ajax-holder .mfp-content{
+  width: auto!important;
 }
 .fastshow{
   display: flex;
