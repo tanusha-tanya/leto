@@ -6,11 +6,18 @@
     @media(min-width:$desktop){
         margin-bottom: 150px;
     }
+    &-title{
+        font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        @media(min-width:$tablet){
+            font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        }
+    }
     &-table{
         background: #F4F4F0;
         position: relative; 
         margin: 0 -10px;
         justify-content:space-between;
+        box-sizing: border-box;
         @media(min-width:$tablet){
             background: #F4F4F0;
             display: table;

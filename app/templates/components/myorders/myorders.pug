@@ -1,17 +1,26 @@
-.documents
-    .documents-myoders
-        .documents-title Мои заказы
-        .documents-volume Объем заказов: 45 784 руб 
-    .documents-table
-        .documents-table-top
-            .documents-table-col Номер заказа
-            .documents-table-col Дата оформления заказа
-            .documents-table-col Доставка
-            .documents-table-col Оплата
-            .documents-table-col Сумма (руб)
-            .documents-table-col Статус
-        include myordersitem
-        include myordersitem
-        include myordersitem
-        include myordersitem
-        include myordersitem
+.myorders
+    .myorders-documents
+        .documents-myorders
+            .documents-title Мои заказы
+            .documents-volume Объем заказов: 45 784 руб 
+        .documents-table
+            .documents-table-top
+                .documents-table-col
+                    .documents-name Номер заказа
+                .documents-table-col
+                    .documents-name Дата оформления заказа
+                .documents-table-col
+                    .documents-name Доставка
+                .documents-table-col
+                    .documents-name Оплата
+                .documents-table-col
+                    .documents-name Сумма (руб)
+                .documents-table-col
+                    .documents-name Статус
+            include myordersitem
+            include myordersitem
+            include myordersitem
+            include myordersitem 
+            include myordersitem
+    .myoders-detail
+        include orderitem

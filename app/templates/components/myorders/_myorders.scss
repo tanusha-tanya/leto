@@ -1,0 +1,36 @@
+.documents{
+    &-myorders{
+        @media(min-width:$tablet){
+            display: flex;
+            margin: 20px 0;
+            justify-content: space-between;
+        }
+    }
+    &-volume{
+        margin:10px 0 20px 0;
+    }
+}
+.myorders{
+    margin-bottom: 40px;
+    @media(min-width:$tablet){
+        margin-bottom: 60px;
+    }
+    @media(min-width:$desktop){
+        display: flex;
+        position: relative;
+        margin: -10px auto;
+    }
+    .documents-table-grey{
+        height: 20px;
+    }
+    &-detail{
+        width: calc(34px - 20px);
+        margin: 0 10px;
+    }
+    &-documents{
+         @media(min-width:$desktop){
+            width: calc(66% - 20px);
+            margin: 0 10px;
+        }
+    }
+}
