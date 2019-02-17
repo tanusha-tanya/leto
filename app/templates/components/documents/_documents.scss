@@ -65,6 +65,12 @@
         &-row{
             background: #F4F4F0;
             padding: 20px 10px;
+            font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
+            color: #333;
+            border-bottom: none;
+            &:hover{  
+                color: #333;
+            }
             @media(min-width: $tablet){
                 display: table-row;
                 background: #fff;
@@ -74,9 +80,10 @@
                 cursor:pointer;
                 .documents-table-col{
                     border: 1px solid #fff;
-                    transition: border-color .3s;
+                    transition: border-color .3s, background .3s, color .3s;
                 }           
-                &:hover{                    
+                &:hover{  
+                    color: #333;
                     .documents-table-col{
                        border-top: 1px solid #697F34;
                        border-bottom: 1px solid #697F34;
@@ -87,6 +94,17 @@
                             border-right: 1px solid #697F34;
                         }
                     }
+                }
+                &.active{
+                   .documents-table-col{
+                       background:#697F34;
+                       border: 1px solid #697F34;
+                   } 
+                   .documents-info{
+                       background:#697F34;
+                       color: #fff;
+                       transition: color .3s, background .3s;
+                   } 
                 }
             }
         }

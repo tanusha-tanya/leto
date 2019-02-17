@@ -5,9 +5,16 @@
             margin: 20px 0;
             justify-content: space-between;
         }
+         @media(min-width:$desktop){
+             margin: 0;
+             align-items: center;
+         }
     }
     &-volume{
         margin:10px 0 20px 0;
+        @media(min-width:$desktop){
+            margin: 0;
+        }
     }
 }
 .myorders{
@@ -18,7 +25,8 @@
     @media(min-width:$desktop){
         display: flex;
         position: relative;
-        margin: -10px auto;
+        margin: 0 -10px;
+        margin-bottom: 130px;
     }
     .documents-table-grey{
         height: 20px;
@@ -32,5 +40,89 @@
             width: calc(66% - 20px);
             margin: 0 10px;
         }
+    }
+}
+.myorders-detail{
+    width: calc(34% - 20px);
+    margin: 0 10px;
+    position: relative;
+    box-sizing: border-box;
+    display: none;
+    margin-top: 80px;
+    &:after{
+            content: "";
+            display: block;
+            width: 68%;
+            height: 20px;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            bottom: 0;
+            z-index: -1;
+            right: 12%;
+        }
+    @media(min-width:$desktop){
+        display: block;
+    }
+}
+.myorders-orderitem{    
+    border: 1px solid $borderorder;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    position: relative;
+    padding: 16px 30px;    
+    z-index:3;
+    background: $buttontext;    
+    
+}
+.orderitem-block{
+    border-top: 1px solid #E4E4E4;
+    margin: 20px 0;
+    padding-top: 20px;
+}
+.orderitem-title{
+        font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        display: inline-block;
+}
+.orderitem-status{
+    font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
+}
+.orderitem-brand{
+    font: 15px/24px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
+    color: $secondary;
+}
+.orderitem-text{
+    span{
+        color: #697F34;
+    }
+}
+.orderitem-quantity{
+    margin-top: 10px;
+    span{
+        font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;  
+        margin-right: 10px;  
+        &:last-of-type{
+            border-left: 1px solid $bordergray;
+            padding-left: 10px;
+        }
+    }
+}
+.orderitem-text__big{
+    margin-bottom: 15px;
+    font: 30px/40px MuseoSansDark, Arial, Helvetica, sans-serif;  
+}
+ .orderitem-flex{
+     display: flex;
+     justify-content: space-between;
+ }
+.orderitem-gray{
+    color: $secondary;
+}
+.orderitem-info{
+    margin-bottom: 15px;
+}
+.orderitem{
+    padding: 40px 20px;
+    @media(min-width:$tablet){
+        padding: 60px;
     }
 }

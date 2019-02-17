@@ -1,0 +1,123 @@
+.bonuses{
+    &-middle{
+        @media(min-width:$tablet){
+            display: flex;
+            margin: 0 -10px;
+        }   
+    }    
+    &-left{
+        display: none;
+        @media(min-width:$tablet){
+            display: block;
+            width: calc(66% - 20px);
+            margin: 0 10px;
+        }
+    }
+    &-right{
+        @media(min-width:$tablet){
+            width: calc(34% - 20px);
+            margin: 0 10px;
+        }
+    }
+    &-counter{
+        font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    }
+    &-value{
+        font: 20px/30px MuseoSansDark, Arial, Helvetica, sans-serif;
+        margin: 10px 0;
+    }
+    &-button{
+        width: 220px;
+        height: 60px;
+        display: block;
+        box-sizing: border-box;
+        background: #697F34;
+        color: #fff;
+        text-transform: uppercase;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        text-align: center;
+        padding-top: 20px;
+        margin: 10px 0;
+        &:hover{
+            color: #fff;
+        }
+    }
+    &-link{
+        color: #000;        
+    }
+    &-program{
+       border: 1px solid #E4E4E4;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+        position: relative;
+        padding: 16px 30px;
+        z-index: 3;
+        background: #fff;    
+        margin: 20px 0;    
+    }
+    &-shadow{
+        position: relative;
+        &:after{
+            content: "";
+            display: block;
+            width: 68%;
+            height: 20px;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            bottom: 0;
+            z-index: -1;
+            right: 12%;
+        }
+    }
+    &-program-title{
+        font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    }
+    &-block{
+        border-top: 1px solid #E4E4E4;
+        padding: 15px 0;
+    }
+    &-info{
+        margin: 15px 0;
+        
+    }
+    &-promo{
+        font: 20px/30px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
+    }
+    &-form{
+        margin: 15px 0;
+    }
+    &-number{
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 239px; 
+        height:50px;
+        border: 1px solid #E0E0E0;
+        border-top-right-radius: 30px;
+        position: relative;
+        margin: 0 auto;
+        text-align:center;
+        padding-top: 15px;
+        &__big{
+            box-sizing: border-box;
+idth: 100%;            max-width: 239px; 
+            height:50px;
+            border: 1px solid #E0E0E0;
+            border-top-right-radius: 30px;
+            position: relative;
+            margin: 0 auto;
+            font: 26px/36px MuseoSansDark, Arial, Helvetica, sans-serif;
+            text-align:center;
+            padding-top: 5px;
+        }
+    }
+    &-copy{
+        width: 100%;
+        max-width: 238px;
+        height: 50px;
+        border: 1px solid #000000;
+        background: #fff;
+        outline:none;
+        text-transform: uppercase;        
+    }
+}

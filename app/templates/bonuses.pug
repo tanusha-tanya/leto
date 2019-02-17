@@ -2,7 +2,7 @@ extends _layouts/default
 include components/maintop/maintopmenu/maintopmenu
 include components/mainmidle/bestseller/bestseller
 block title
-  title Мои заказы
+  title Бонусы
 block header
   include  _layouts/header/header
 block content
@@ -13,7 +13,9 @@ block content
       .container
         h1 Личный кабинет
         include components/innermenu/innermenu
-        include components/myorders/myorders
+        include components/bonuses/bonuses
+        include components/mainmidle/maingoods/maingoods
+        +bestseller("Бестсселлеры")(class="bestseller__main")
 block footer
   include  _layouts/footer/footer
   .body-dark
