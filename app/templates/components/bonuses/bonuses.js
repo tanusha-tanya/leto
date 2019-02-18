@@ -1,0 +1,17 @@
+let copyPromo = document.querySelectorAll('.bonuses-copy')
+if(copyPromo){
+    let number = null;
+    copyPromo.forEach((copy) =>{
+        copy.addEventListener('click', ()=>{
+            number = copy.parentNode.querySelector('.bonuses-number');
+            number.select();
+  try {  
+    var successful = document.execCommand('copy');  
+    var msg = successful ? 'successful' : 'unsuccessful';  
+    console.log('Cutting text command was ' + msg);  
+  } catch(err) {  
+    console.log('Oops, unable to cut');  
+  }  
+        })
+    })
+}

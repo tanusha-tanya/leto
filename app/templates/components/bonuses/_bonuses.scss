@@ -9,12 +9,21 @@
         display: none;
         @media(min-width:$tablet){
             display: block;
+            width: calc(62% - 20px);
+            margin: 0 10px;
+        }
+        @media(min-width:$desktop){
             width: calc(66% - 20px);
             margin: 0 10px;
         }
     }
     &-right{
+         margin-bottom: 30px;
         @media(min-width:$tablet){
+            width: calc(38% - 20px);
+            margin: 0 10px;
+        }
+        @media(min-width:$desktop){
             width: calc(34% - 20px);
             margin: 0 10px;
         }
@@ -48,16 +57,24 @@
         text-align: center;
         padding-top: 20px;
         margin: 10px 0;
+        @media(min-width:$tablet){
+            float: right;
+        }        
         &:hover{
             color: #fff;
+        }
+        &__small{
+            @media(min-width:$tablet){
+                display: none;
+            }  
         }
     }
     &-link{
         color: #000;  
-        font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;  
+        font: 15px MuseoSansNormal, Arial, Helvetica, sans-serif;  
         @media(min-width:$tablet){
             display: inline-block;
-            margin: -30px 0 10px 10px;
+            margin: 10px 0;
         }        
     }
     &-program{
@@ -69,6 +86,9 @@
         z-index: 3;
         background: #fff;    
         margin: 20px 0;    
+        @media(min-width:$tablet){
+            margin: 0; 
+        }
     }
     &-shadow{
         position: relative;
@@ -86,20 +106,34 @@
     }
     &-program-title{
         font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        margin-bottom: 10px;
+        @media(min-width:$tablet){
+            font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;  
+        }
     }
     &-block{
         border-top: 1px solid #E4E4E4;
         padding: 15px 0;
+        @media(min-width:$tablet){
+            padding: 10px 0;
+        }
     }
     &-info{
-        margin: 15px 0;
-        
+        margin: 15px 0;       
     }
     &-promo{
         font: 20px/30px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
+        margin-bottom: 15px;
     }
     &-form{
-        margin: 15px 0;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 238px;
+        box-sizing: border-box;
+        position: relative;
+        @media(min-width:$desktop){
+            max-width: 100%;
+        }
     }
     &-number{
         box-sizing: border-box;
@@ -111,19 +145,15 @@
         position: relative;
         margin: 0 auto;
         text-align:center;
-        padding-top: 15px;
+        padding: 0 10px;
+        @media(min-width: $desktop){
+            border-radius: 0;
+        }
         &__big{
-            box-sizing: border-box;
-            width: 100%;  
-            max-width: 239px; 
-            height:50px;
-            border: 1px solid #E0E0E0;
-            border-top-right-radius: 30px;
-            position: relative;
-            margin: 0 auto;
             font: 26px/36px MuseoSansDark, Arial, Helvetica, sans-serif;
-            text-align:center;
-            padding-top: 5px;
+            @media(min-width: $desktop){
+                border-radius: 0;
+            }
         }
     }
     &-copy{
@@ -133,43 +163,104 @@
         border: 1px solid #000000;
         background: #fff;
         outline:none;
-        text-transform: uppercase;        
+        text-transform: uppercase; 
+        position: relative;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        display: block; 
+        cursor: pointer;
+        @media(min-width:$desktop){
+            border-top-right-radius: 30px;
+        }      
     }
     &-top{
-        @media(min-width:$tablet){
+        @media(min-width:$tablet){  
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-between;
             margin: 25px -10px;
             position: relative;
+            align-items: flex-end;
         }
     }
     &-account{
-        @media(min-width:$tablet){
-            width: calc(66% - 20px);
-            margin: 0 10px;
-        }        
+        @media(min-width: $tablet){
+            display: flex; 
+        }  
     }
     &-button-wrap{
+        display: none;
         @media(min-width:$tablet){
-            width: calc(34% - 20px);
+            display: block;
+            width: calc(38% - 20px);
             margin: 0 10px;
         } 
+        @media(min-width:$desktop){
+            width: calc(34% - 20px);
+            margin: 0 10px;
+        }
     }
     &-table{
+        width: 100%;
+        box-sizing: border-box;
         display: table;
         background: #F4F4F0;
         padding: 20px 10px;
     }
     &-row{
         display: table-row;
+        background: #fff;
+    }
+     &-row__top{
+        display: table-row;
     }
     &-cell{
         display: table-cell;
+        background: #fff;
+        padding: 10px 20px;
+        font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        &::first-of-type{
+            padding-left: 0;
+        }
+        @media(min-width:$desktop){
+            padding: 20px;
+        }
     }
     &-cell__top{
         display: table-cell;
         font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
-
+        padding: 10px 20px;
+         @media(min-width:$desktop){
+            padding: 20px;
+        }
+    }
+    &-gray{
+        background: #F4F4F0;
+        width: 100%;
+        height: 10px;
+    }
+    &-howuse{
+        margin-top: 40px;
+    }
+    &-title{
+        font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;  
+        margin-bottom: 14px;
+    }
+    &-code{
+        @media(min-width:$desktop){
+            display: flex;
+        }
+    }
+    &-title-wrap{
+        @media(min-width:$tablet){           
+            width: calc(62% - 20px);
+            margin: 0 10px;
+        }
+        @media(min-width:$desktop){
+            display: flex;
+            width: calc(66% - 20px);
+            margin: 0 10px;
+            justify-content: space-between;
+            background: #fff;
+        }  
     }
 }

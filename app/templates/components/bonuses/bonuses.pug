@@ -1,15 +1,18 @@
 .bonuses
     .bonuses-top
-        .bonuses-account
-            .bonuses-counter Бонусный счет: 
-            .bonuses-value 4 021 бонусов
+        .bonuses-title-wrap
+            .bonuses-account
+                .bonuses-counter Бонусный счет: 
+                .bonuses-value 4 021 бонусов
+                a(href="withdraw.html").js-popup.bonuses-button.bonuses-button__small вывести бонусы
+            .bonuses-top-link
+                a(hre="#").bonuses-link Как получить больше бонусов
         .bonuses-button-wrap
             a(href="withdraw.html").js-popup.bonuses-button вывести бонусы
-        a(hre="#").bonuses-link Как получить больше бонусов
     .bonuses-middle
         .bonuses-left 
             .bonuses-table
-                .bonuses-row
+                .bonuses-row__top
                     .bonuses-cell__top Размер бонуса
                     .bonuses-cell__top Дата 
                     .bonuses-cell__top Комментарий
@@ -18,17 +21,19 @@
                     .bonuses-cell +125 
                     .bonuses-cell 12.06.2018
                     .bonuses-cell Получен бонус за отзыв на товар
-                    .bonuses-cell__top Начисление
+                    .bonuses-cell Начисление
+                .bonuses-gray
                 .bonuses-row
                     .bonuses-cell +125 
                     .bonuses-cell 12.06.2018
                     .bonuses-cell Получен бонус за отзыв на товар
-                    .bonuses-cell__top Начисление
+                    .bonuses-cell Начисление
+                .bonuses-gray
                 .bonuses-row
                     .bonuses-cell +125 
                     .bonuses-cell 12.06.2018
                     .bonuses-cell Получен бонус за отзыв на товар
-                    .bonuses-cell__top Начисление
+                    .bonuses-cell Начисление
             .bonuses-howuse
                 .bonuses-title Как использовать бонусы
                 p Интернет-магазин «LETO» - это уникальная возможность приобрести подходящую вам косметику и аксессуары не выходя из дома. Для вас мы очень кропотливо относимся к выбору каждого продукта. Именно поэтому работает только с сертифицированными дистрибьюторами.
@@ -39,15 +44,17 @@
                     .bonuses-block
                         .bonuses-info Передайте вашим друзьям и клиентам промокод или зарегестрируйте по индивидуальнйо реферальной ссылке.
                         .bonuses-info Вы и ваши друзья получат дополнительные бонусы. 
-                    .bonuses-block
-                        .bonuses-promo Мой промокод на скидку 10%
+                    .bonuses-block                        
                         .bonuses-form
-                            .bonuses-number__big 4 7 7 8 5 9 4
-                            button.bonuses-copy Копировать
-                        a.bonuses-link(href="#") Изменить промокод
-                    .bonuses-block
-                        .bonuses-promo Моя ссылка
+                            .bonuses-promo Мой промокод на скидку 10%
+                            .bonuses-code                                
+                                input(type="text", value="4778594").bonuses-number.bonuses-number__big
+                                button.bonuses-copy Копировать
+                            a.bonuses-link(href="#") Изменить промокод
+                    .bonuses-block                        
                         .bonuses-form
-                            .bonuses-number leto.ru73838930711
-                            button.bonuses-copy Копировать
+                            .bonuses-promo Моя ссылка
+                            .bonuses-code                                
+                                input(type="text", value="leto.ru73838930711").bonuses-number
+                                button.bonuses-copy Копировать
                     
