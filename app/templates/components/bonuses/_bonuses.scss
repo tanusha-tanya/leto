@@ -21,10 +21,19 @@
     }
     &-counter{
         font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        @media(min-width:$tablet){
+            display: inline-block;
+            font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        } 
     }
     &-value{
         font: 20px/30px MuseoSansDark, Arial, Helvetica, sans-serif;
         margin: 10px 0;
+        @media(min-width:$tablet){
+            display: inline-block;
+            font: 30px/40px MuseoSansDark, Arial, Helvetica, sans-serif;
+            margin: 0;
+        } 
     }
     &-button{
         width: 220px;
@@ -44,7 +53,12 @@
         }
     }
     &-link{
-        color: #000;        
+        color: #000;  
+        font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;  
+        @media(min-width:$tablet){
+            display: inline-block;
+            margin: -30px 0 10px 10px;
+        }        
     }
     &-program{
        border: 1px solid #E4E4E4;
@@ -100,7 +114,8 @@
         padding-top: 15px;
         &__big{
             box-sizing: border-box;
-idth: 100%;            max-width: 239px; 
+            width: 100%;  
+            max-width: 239px; 
             height:50px;
             border: 1px solid #E0E0E0;
             border-top-right-radius: 30px;
@@ -119,5 +134,42 @@ idth: 100%;            max-width: 239px;
         background: #fff;
         outline:none;
         text-transform: uppercase;        
+    }
+    &-top{
+        @media(min-width:$tablet){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 25px -10px;
+            position: relative;
+        }
+    }
+    &-account{
+        @media(min-width:$tablet){
+            width: calc(66% - 20px);
+            margin: 0 10px;
+        }        
+    }
+    &-button-wrap{
+        @media(min-width:$tablet){
+            width: calc(34% - 20px);
+            margin: 0 10px;
+        } 
+    }
+    &-table{
+        display: table;
+        background: #F4F4F0;
+        padding: 20px 10px;
+    }
+    &-row{
+        display: table-row;
+    }
+    &-cell{
+        display: table-cell;
+    }
+    &-cell__top{
+        display: table-cell;
+        font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
+
     }
 }
