@@ -6,21 +6,25 @@
     form.entry-form.js-form
         .entry-fieldset
             legend.entry-legend E-mail или телефон
-            input(type="text").entry-input
+            input(type="text" name="E-mail или телефон").entry-input.js-inputcheck
         .entry-fieldset
             legend.entry-legend Пароль
-            label.entry-label(for="password").js-password 
-                input(type="password" id="password").entry-input
-                svg.entry-eye(role="img")(width="22")(height="18"): use(xlink:href="#closeeye")(data-href="#eye")
+            label.entry-label(for="password") 
+                input(type="password" id="password" name="Пароль").entry-input.js-inputcheck
+                svg.entry-eye(role="img")(width="22")(height="18"): use(xlink:href="#closeeye")(data-href="#eye").js-password
+        .error-text
         .entry-fieldset            
             input(type="checkbox", id="remember").entry-checkbox
             label.entry-label__checkbox(for="remember") Запомнить меня
         .entry-fieldset
-            button.entry-button войти
+            button.entry-button.js-button войти
             a(href="").entry-link__small.js-popup Забыли парль?
     .entry-bottom
         p Вход через социальные сети
         .entry-social
-            svg.entry-svg(role="img")(width="11")(height="20"): use(xlink:href="#fb")
-            svg.entry-svg(role="img")(width="26")(height="16"): use(xlink:href="#google")
-            svg.entry-svg(role="img")(width="22")(height="20"): use(xlink:href="#insta")
+            a(href="#")
+                svg.entry-svg(role="img")(width="11")(height="20"): use(xlink:href="#fb")
+            a(href="#")
+                svg.entry-svg(role="img")(width="26")(height="16"): use(xlink:href="#google")
+            a(href="#")
+                svg.entry-svg(role="img")(width="22")(height="20"): use(xlink:href="#insta")
