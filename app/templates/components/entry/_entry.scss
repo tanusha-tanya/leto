@@ -3,34 +3,64 @@
     padding-top: 50px;
     width: 300px;
     box-sizing: border-box;
+    @media(min-width:$tablet){
+        width: 700px;
+        padding: 60px;
+    }
     &-title{
         font: 30px/45px MuseoSansNormal, Arial, Helvetica, sans-serif;
         letter-spacing: 0.05em;
         text-transform: uppercase;
+        display: block;
+        margin-right: 30px;
     }
     &-top{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media(min-width:$tablet){
+            justify-content: flex-start;
+        }
     }
     &-form{
         position: relative;
-        width: 260px;
+        width: 100%;
         margin: 0 auto;
+        @media(min-width:$tablet){
+            margin-top: 40px;
+        }
     }
     &-reg{
         border-bottom: 0; 
         text-transform: uppercase;
         letter-spacing: 0.05em;  
         color: #333333;
+        position: relative;
+        padding-right: 30px;
     }
     &-svg{
         margin-left: 20px;
         color: #CCC6B7;
         fill: #CCC6B7;
+        position: absolute;
+        right: 0;
+        top:0;
     }
     &-fieldset{
         margin: 20px 0;
+        @media(min-width:$tablet){
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+        }
+        &-button{
+            @media(min-width:$tablet){
+                display: flex;
+                justify-content:space-between;
+                align-items: center;
+                width: 380px;
+            }
+        }
     }
     &-legend{
         font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
@@ -40,22 +70,41 @@
         width: 260px;
         height: 50px;
         box-sizing: border-box;
-        padding: 5px;
+        padding: 20px;
         padding-right: 35px;
         transition: border-color .3s;
         border: 1px solid #E0E0E0;
+        position: relative;
+        z-index: 3;
+        @media(min-width:$tablet){
+            width: 380px;
+        }
         &.error{
             border-color: #AB0052;
         }
     }
     &-label{
         position: relative;
-        display: block;
+        display: block;        
     }
     &-eye{
         position: absolute;
-        right: 7px;  
-        top: 18px;
+        right: 0;  
+        top: 0;
+        padding: 7px;
+        padding-top: 15px;
+        cursor:pointer;
+        z-index: 10;
+        height: 50px;
+        width: 40px;
+        box-sizing: border-box;
+        border-bottom: none;
+        background-image: url(../images/svg/eye.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        &.hide{
+            background-image: url(../images/svg/closeeye.svg);
+        }
     }
     &-fieldset{
         position: relative;
@@ -109,6 +158,10 @@
         margin: 20px auto;
         border: none;
         cursor: pointer;
+        @media(min-width:$tablet){
+            order: 2; 
+            margin-right: 0;   
+        }
     }
     &-bottom{
         display: flex;
@@ -119,9 +172,13 @@
             width: calc(50% - 20px);
             margin-right: 10px;
             font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
+            @media(min-width:$tablet){
+                width: auto;
+            }
         }
         a{
             border: none;
+            margin: 0 10px;
         }
     }
     &-social{
@@ -130,9 +187,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media(min-width:$tablet){
+             width: auto;
+        }
+        &-svg{
+            color: #CCC6B7;
+            fill: #CCC6B7;
+        }
     }
 }
 .error-text{
     color: #AB0052;
     font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    margin-top: 10px;
 }

@@ -1,16 +1,24 @@
 let hide = true;
 document.body.onclick = (e)=>{
+    //alert(e.target.classList)
     if(e.target.classList.contains('js-button')){
        e.preventDefault();
        let form = e.target.closest('.js-form');
        check(form);
     }
-    else if(e.target.classList.contains('.js-password')){
-        let svgPath = e.target.querySelector('use');
-        let svgShow = svgPath.dataset.href;
-        let password = svg.parrentNode.querySelector('input');
+    else if(e.target.classList.contains('js-password')){
+        e.preventDefault();
+        let label = e.target.closest('.entry-label');
+        let input = label.querySelector('.entry-input__password');
         hide = !hide;
-
+        if(hide === false){
+            input.type ='text';
+            e.target.classList.remove('hide')
+        }
+        else{
+            input.type = 'password';
+            e.target.classList.add('hide')
+        }
     }
 }
 let check = function(form){
@@ -46,15 +54,10 @@ let check = function(form){
     }
 }
 
-document.body.onchange = (e)=>{
+/*document.body.onchange = (e)=>{
     if(e.target.classList.contains('js-inputcheck')){
        let form = e.target.closest('.js-form');
        check(form)
     }
-}
-const formCollection = document.querySelectorAll('.js-form')
-if(formCollection){
-    formCollection.forEach((form) => {
-        console.log(form)
-    })
-}
+}*/
+

@@ -10,21 +10,22 @@
         .entry-fieldset
             legend.entry-legend Пароль
             label.entry-label(for="password") 
-                input(type="password" id="password" name="Пароль").entry-input.js-inputcheck
-                svg.entry-eye(role="img")(width="22")(height="18"): use(xlink:href="#closeeye")(data-href="#eye").js-password
-        .error-text
-        .entry-fieldset            
-            input(type="checkbox", id="remember").entry-checkbox
-            label.entry-label__checkbox(for="remember") Запомнить меня
-        .entry-fieldset
-            button.entry-button.js-button войти
-            a(href="").entry-link__small.js-popup Забыли парль?
+                input(type="password" id="password" name="Пароль").entry-input.entry-input__password.js-inputcheck
+                a(href="#").entry-eye.js-password.hide
+                .error-text
+        .entry-fieldset 
+            .entry-fieldset-checkbox
+                input(type="checkbox", id="remember").entry-checkbox
+                label.entry-label__checkbox(for="remember") Запомнить меня
+            .entry-fieldset-button
+                button.entry-button.js-button войти
+                a(href="").entry-link__small.js-popup Забыли парль?
     .entry-bottom
         p Вход через социальные сети
         .entry-social
-            a(href="#")
-                svg.entry-svg(role="img")(width="11")(height="20"): use(xlink:href="#fb")
-            a(href="#")
-                svg.entry-svg(role="img")(width="26")(height="16"): use(xlink:href="#google")
-            a(href="#")
-                svg.entry-svg(role="img")(width="22")(height="20"): use(xlink:href="#insta")
+            a(href="#").entry-social-link
+                svg.entry-social-svg(role="img")(width="11")(height="20"): use(xlink:href="#fb")
+            a(href="#").entry-social-link
+                svg.entry-social-svg(role="img")(width="26")(height="16"): use(xlink:href="#google")
+            a(href="#").entry-social-link
+                svg.entry-social-svg(role="img")(width="22")(height="20"): use(xlink:href="#insta")
