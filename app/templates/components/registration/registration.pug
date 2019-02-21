@@ -1,18 +1,30 @@
 .entry
     .entry-top
-        .entry-title Вход
-        a(href="registration.html").entry-reg.js-popup-inside регистрация
+        .entry-title Регистрация
+        a(href="entry.html").entry-reg.js-popup вход
             svg.entry-svg(role="img")(width="19")(height="18"): use(xlink:href="#arrow")
     form.entry-form.js-form
         .entry-fieldset
             legend.entry-legend E-mail или телефон
             input(type="text" name="E-mail или телефон").entry-input.js-inputcheck
         .entry-fieldset
-            legend.entry-legend Пароль
+            legend.entry-legend Повторить пароль
             label.entry-label(for="password") 
-                input(type="password" id="password" name="Пароль").entry-input.entry-input__password.js-inputcheck
+                input(type="password" id="password" name="повторить пароль").entry-input.entry-input__password.js-inputcheck
+                a(href="#").entry-eye.js-password.hide
+        .entry-fieldset
+            legend.entry-legend пароль
+            label.entry-label(for="password") 
+                input(type="password" id="password" name="пароль").entry-input.entry-input__password.js-inputcheck
                 a(href="#").entry-eye.js-password.hide
                 .error-text
+        .entry-fieldset
+            .entry-fieldset-master
+                input(type="checkbox", id="remember").entry-checkbox
+                label.entry-label__checkbox(for="remember") Я мастер или салон
+                .entry-fieldset-file 
+                    input(type="file", id="file").entry-file
+                    label.entry-label__file(for="file")  Прикрепить сертификат мастера    
         .entry-fieldset 
             .entry-fieldset-checkbox
                 input(type="checkbox", id="remember").entry-checkbox
@@ -22,7 +34,7 @@
                 a(href="").entry-link__small.js-popup Забыли парль?
     .entry-bottom
         p Вход через социальные сети
-        .entry-social
+        .entry-social 
             a(href="#").entry-social-link
                 svg.entry-social-svg(role="img")(width="11")(height="20"): use(xlink:href="#fb")
             a(href="#").entry-social-link

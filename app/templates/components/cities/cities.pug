@@ -1,0 +1,34 @@
+.cities
+    .cities-block  
+        .cities-title Ваш город доставки
+        input.cities-input(type="text")(placeholder="введите название населенного пункта")
+        a(href="#").cities-detect.js-cities Определить автоматически
+        ul.cities-autocomplete
+            li.cities-list.hide
+                a(href="#").cities-link Москва        
+            li.cities-list.hide
+                a(href="#").cities-link Санкт-Петербург
+            li.cities-list.hide
+                a(href="#").cities-link Екатеринбург
+            li.cities-list.hide
+                a(href="#").cities-link Новосибирск
+            li.cities-list.hide
+                a(href="#").cities-link Ростов-на-Дону
+        .cities-popular Популярные города:
+        ul.cities-ul
+            li.cities-li 
+                a(href="#").cities-link Москва
+            li.cities-li 
+                a(href="#").cities-link Санкт-Петербург
+            li.cities-li 
+                a(href="#").cities-link Екатеринбург
+            li.cities-li  
+                a(href="#").cities-link Новосибирск
+            li.cities-li 
+                a(href="#").cities-link Ростов-на-Дону
+        .cities-button-block
+            button.cities-button.disabled Запомнить выбор
+            a(href="#").cities-reset Отменить
+        .cities-close
+            span
+            

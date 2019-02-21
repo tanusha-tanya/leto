@@ -1,5 +1,6 @@
 .headercity{
   display: flex;
+  position: relative;
   @media(min-width:$desktop){
     margin-top: 10px;
   }

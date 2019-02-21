@@ -1,6 +1,5 @@
 let hide = true;
 document.body.onclick = (e)=>{
-    //alert(e.target.classList)
     if(e.target.classList.contains('js-button')){
        e.preventDefault();
        let form = e.target.closest('.js-form');

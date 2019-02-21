@@ -1,0 +1,24 @@
+.entry
+    .entry-top
+        .entry-title Вывести бонусы
+    form.entry-form.js-form
+        .entry-fieldset
+            legend.entry-legend Сумма к выводу
+            input(type="text" name="E-mail или телефон").entry-input.js-inputcheck
+        .entry-fieldset
+            legend.entry-legend Ваш комментарий
+            label
+                input(type="textarea" name="комментарий").entry-input.entry-input__textarea
+                .error-text
+        .entry-fieldset-withdrow
+            .entry-fieldset-withdrow-button
+                button.entry-button.js-button вывести бонусы
+    .entry-bottom
+        p Вход через социальные сети
+        .entry-social
+            a(href="#").entry-social-link
+                svg.entry-social-svg(role="img")(width="11")(height="20"): use(xlink:href="#fb")
+            a(href="#").entry-social-link
+                svg.entry-social-svg(role="img")(width="26")(height="16"): use(xlink:href="#google")
+            a(href="#").entry-social-link
+                svg.entry-social-svg(role="img")(width="22")(height="20"): use(xlink:href="#insta")
