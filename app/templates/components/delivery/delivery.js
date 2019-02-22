@@ -20,8 +20,7 @@ $(function(){
     ymaps.ready(init);
     function init() {
     var myMap = new ymaps.Map('map', {
-        center: [56.8522511,53.2091607],        
-        
+        center: [56.8522511,53.2091607],     
         zoom: 12
     }, {
         balloonPanelMaxMapArea: Infinity

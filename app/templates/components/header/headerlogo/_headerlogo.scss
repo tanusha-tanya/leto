@@ -1,4 +1,7 @@
 .headerlogo{
+  &-link{
+    border-bottom: none;
+  }
   &-svg{
     &__small{
       @media(min-width: 400px){

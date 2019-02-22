@@ -60,9 +60,15 @@
     }
     &-autocomplete{
         display: none;
+        &.active{
+            display: block;
+        }
     }
     &-popular{
         margin-top: 15px;
+        @media(min-width:$tablet){
+            margin-top: 30px;
+        }
     }
     &-ul{
         margin-bottom: 15px;
