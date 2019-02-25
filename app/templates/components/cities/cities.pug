@@ -1,34 +1,50 @@
 .cities
     form.cities-block  
         .cities-title Ваш город доставки
-        input.cities-input(type="text")(placeholder="введите название населенного пункта")
-        input.cities-hidden(type="hidden")(id="cityId")
-        a(href="#").cities-detect Определить автоматически
-        ul.cities-autocomplete
-            li.cities-list.hide
-                a(href="#", data-id="1").cities-link Москва        
-            li.cities-list.hide
-                a(href="#", data-id="2").cities-link Санкт-Петербург
-            li.cities-list.hide
-                a(href="#", data-id="3").cities-link Екатеринбург
-            li.cities-list.hide
-                a(href="#", data-id="4").cities-link Новосибирск
-            li.cities-list.hide
-                a(href="#", data-id="5").cities-link Ростов-на-Дону
-            li.cities-list.hide
-                a(href="#", data-id="6").cities-link Ижевск
+        label.cities-label
+            input.cities-input(type="text")(placeholder="введите название населенного пункта")
+            input.cities-hidden(type="hidden")(id="cityId")
+            a(href="#").cities-detect Определить автоматически
+            .cities-autocomplete
+                ul.cities-ul
+                    li.cities-list.hide
+                        a(href="#", data-id="1").cities-link Москва        
+                    li.cities-list.hide
+                        a(href="#", data-id="2").cities-link г Ставрополь
+                    li.cities-list.hide
+                        a(href="#", data-id="3").cities-link г Стерлитамак
+                    li.cities-list.hide
+                        a(href="#", data-id="4").cities-link г Ступино
+                    li.cities-list.hide
+                        a(href="#", data-id="5").cities-link г Строитель
+                    li.cities-list.hide
+                        a(href="#", data-id="6").cities-link г Стрежевой
+                    li.cities-list.hide
+                        a(href="#", data-id="7").cities-link г Стародуб
+                    li.cities-list.hide
+                        a(href="#", data-id="8").cities-link г Струнино
+                    li.cities-list.hide
+                        a(href="#", data-id="9").cities-link г Санкт-Петербург
+                    li.cities-list.hide
+                        a(href="#", data-id="10").cities-link Ижевск
+                    li.cities-list.hide
+                        a(href="#", data-id="11").cities-link  Екатеринбург
+                    li.cities-list.hide
+                        a(href="#", data-id="12").cities-link  Новосибирск
+                    li.cities-list.hide
+                        a(href="#", data-id="13").cities-link  Ростов-на-Дону
         .cities-popular Популярные города:
         ul.cities-ul
             li.cities-li 
-                a(href="#").cities-link Москва
+                a(href="#", data-id="1").cities-link Москва
             li.cities-li 
-                a(href="#").cities-link Санкт-Петербург
+                a(href="#", data-id="9").cities-link Санкт-Петербург
             li.cities-li 
-                a(href="#").cities-link Екатеринбург
+                a(href="#", data-id="11").cities-link Екатеринбург
             li.cities-li  
-                a(href="#").cities-link Новосибирск
+                a(href="#", data-id="12").cities-link Новосибирск
             li.cities-li 
-                a(href="#").cities-link Ростов-на-Дону
+                a(href="#", data-id="13").cities-link Ростов-на-Дону
         .cities-button-block
             button.cities-button.disabled Запомнить выбор
             a(href="#").cities-reset Отменить

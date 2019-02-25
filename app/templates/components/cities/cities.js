@@ -30,8 +30,9 @@ if(cities){
         event = new Event("change"),
         cityName = null,
         citiesLinkCollection = document.querySelectorAll('.cities-link'),
-        citiesPopupLink = document.querySelector('.js-cities'),
-        autocomplete = document.querySelector('.cities-autocomplete');
+        citiesPopupLinkCollection = document.querySelectorAll('.js-cities'),
+        autocomplete = document.querySelector('.cities-autocomplete'),
+        listShow = document.querySelectorAll('.cities-list:not(.hide)');
     detect.onclick = (e) => {
         e.preventDefault();
         setMap();
@@ -62,7 +63,9 @@ if(cities){
                     cityName = link.textContent;
                 }
             })
-            citiesPopupLink.textContent = cityName;
+            citiesPopupLinkCollection.forEach((city) => {
+                city.textContent = cityName;
+            })
         }
     }    
     setCityName()
@@ -81,11 +84,41 @@ if(cities){
     inputText.oninput = ()=>{
         if(inputText.value !== ""){            
             citiesLinkCollection.forEach((link) => {
-                if(link.textContent.indexOf(inputText.value) !== -1){
+                let word = inputText.value.toLowerCase();
+                let city = link.textContent.toLowerCase();
+                if(city.indexOf(word) !== -1){
                     autocomplete.classList.add('active');
-                    link.parentNode.classList.remove('hide')
+                    link.parentNode.classList.remove('hide');
                 }
-            })
+                else{
+                    link.parentNode.classList.add('hide');
+                    
+                }
+            }) 
+            if(listShow.length < 0){
+                autocompleteHide()
+            }          
         }
+        else{
+            autocompleteHide()
+        }
+        
+    }
+    citiesLinkCollection.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            inputHidden.value = link.dataset.id;
+            inputHidden.dispatchEvent(event);
+            inputText.value = link.textContent;
+            autocompleteHide()
+        })
+    })
+    
+    let autocompleteHide = function(){
+         autocomplete.classList.remove('active');
+        citiesListCollection.forEach((list) => {
+            list.classList.add('hide')
+        })
     }
 }
+$('.cities-autocomplete').mCustomScrollbar();
