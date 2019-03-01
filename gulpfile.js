@@ -134,6 +134,10 @@ gulp.task('wiredep', function() {
 gulp.task('extras', function() {
   return gulp.src([
     'app/*.*',
+	'app/fonts',
+	'app/libs',
+	'app/assets/',
+	'.tmp',
     '!app/*.html',
     '!app/*.pug'
   ], {

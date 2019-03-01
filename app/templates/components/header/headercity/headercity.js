@@ -1,33 +1,35 @@
 const citiesPopupLink = document.querySelectorAll('.js-cities'),
 citiesPopup = document.querySelector('.cities'),
-close = citiesPopup.querySelector('.cities-close'),
-headercityCollection = document.querySelectorAll('.headercity')
-
+headercityCollection = document.querySelectorAll('.headercity');
 if(citiesPopupLink){  
+    let closePopup = citiesPopup.querySelector('.cities-close');
     citiesPopupLink.forEach((link) =>{
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            if(!link.closest('.headercity').querySelector('.cities')){
+            if(link.closest('.headercity').querySelector('.cities')){
+                link.closest('.headercity').removeChild(citiesPopup);
+                citiesPopup.classList.remove('active');                
+            }
+            else{
                 link.closest('.headercity').append(citiesPopup);
                 citiesPopup.classList.add('active');
             }
-            else{
-                citiesPopup.classList.remove('active');
-                 link.closest('.headercity').removeChild(citiesPopup);
-            }
         })           
     })
-     close.onclick = () => {
-        citiesPopup.classList.remove('active');
-        this.closest('.headercity').removeChild(citiesPopup);
-    }
+    closePopup.addEventListener('click', () => {
+        closePopup.closest('.headercity').removeChild(citiesPopup);
+        citiesPopup.classList.remove('active');       
+    })
     document.body.onclick = (e) => {
         if(e.target !== citiesPopup && !e.target.closest('.cities') && !e.target.classList.contains('js-cities')){
-           citiesPopup.classList.remove('active')  
-           headercityCollection.forEach((headercity) => {
-               headercity.removeChild(citiesPopup);
-           })
+            if(citiesPopup.classList.contains('active')){
+                citiesPopup.classList.remove('active')  
+                headercityCollection.forEach((headercity) => {
+                    if(headercity.querySelector('.cities')){ 
+                        headercity.removeChild(citiesPopup)
+                    }
+                })
+            }
         }
-    }
-    
+    }    
 }

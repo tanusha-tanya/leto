@@ -3,43 +3,45 @@ let city = null;
 let defaultCity = "Москва";
 
 function setMap(){
-    ymaps.geolocation.get({
-        provider:"yandex",
-        autoReverseGeocode: true
-    })
-    .then(function (result)  {
-        city = result.geoObjects.get(0).properties.get('metaDataProperty.GeocoderMetaData.AddressDetails.Country.AdministrativeArea.SubAdministrativeArea.Locality.LocalityName');  
-        return city
-    })
-    .catch(function (err) {
-        console.log('Не удалось установить местоположение', err);
-    });
-  }
-window.onload = function () {
-    if (ymaps) {        
-        setMap();
-    };
-}
+        ymaps.geolocation.get({
+            provider:"yandex",
+            autoReverseGeocode: true
+        })
+        .then(function (result)  {
+            city = result.geoObjects.get(0).properties.get('metaDataProperty.GeocoderMetaData.AddressDetails.Country.AdministrativeArea.SubAdministrativeArea.Locality.LocalityName');  
+            return city
+        })
+        .catch(function (err) {
+            console.log('Не удалось установить местоположение', err);
+        });
+    }
+    window.onload = function () {
+        if (ymaps) {   
+            setMap();
+        };
+    }
 
 if(cities){
     let inputText = cities.querySelector('.cities-input'),
         inputHidden = cities.querySelector('.cities-hidden'),
         detect = cities.querySelector('.cities-detect'),
         citiesListCollection = cities.querySelectorAll('.cities-list'),
-        button = cities.querySelector('.cities-button'),
-        event = new Event("change"),
+        buttonCities = cities.querySelector('.cities-button'),
+        event = new Event("changeValue"),
         cityName = null,
         citiesLinkCollection = document.querySelectorAll('.cities-link'),
         citiesPopupLinkCollection = document.querySelectorAll('.js-cities'),
         autocomplete = document.querySelector('.cities-autocomplete'),
-        listShow = document.querySelectorAll('.cities-list:not(.hide)');
-    detect.onclick = (e) => {
+        listShow = document.querySelectorAll('.cities-list:not(.hide)'),
+        reset = cities.querySelector('.cities-reset');
+  
+    detect.addEventListener('click', (e) => {
         e.preventDefault();
         setMap();
         setCity(city)
-    }
+    })
 
-    let setCity = function(city){
+    function setCity(city){
         citiesListCollection.forEach((li) => {
             let currentCity = li.querySelector('.cities-link');
             if(city === currentCity.textContent){
@@ -50,37 +52,51 @@ if(cities){
         })
     }    
 
-    inputHidden.addEventListener('change', () =>{
-        if(inputHidden.value.length >= 0){
-            button.classList.remove("disabled")
+    inputHidden.addEventListener('changeValue', () =>{
+        if(inputHidden.value.length > 0){
+            buttonCities.classList.remove("disabled")
+        }
+        else{
+            buttonCities.classList.add("disabled")
         }
     })
 
-    let setCityName = () => {
-        if (localStorage.getItem('cityId') !== null) {
-            citiesLinkCollection.forEach((link) => {
-                if(link.dataset.id === localStorage.getItem('cityId')){
-                    cityName = link.textContent;
+    function setCityName(){
+         try{
+                if (localStorage.getItem('cityId')) {                   
+                    citiesLinkCollection.forEach((link) => {
+                    if(link.dataset.id === localStorage.getItem('cityId')){
+                        cityName = link.textContent;
+                    }
+                    })
+                        citiesPopupLinkCollection.forEach((city) => {
+                            city.textContent = cityName;
+                    })
                 }
-            })
-            citiesPopupLinkCollection.forEach((city) => {
-                city.textContent = cityName;
-            })
-        }
+            }
+            catch(err){
+                console.log('Включите файлы coocies')
+            }
+        
     }    
     setCityName()
 
-    button.onclick = (e) => {
+    buttonCities.addEventListener('click', (e) => {
         e.preventDefault();
-        if(button.classList.contains('desabled')){
+        if(buttonCities.classList.contains('desabled')){
             return
         }
-        else{            
-            localStorage.setItem('cityId', inputHidden.value);
+        else{ 
+            try{
+                localStorage.setItem('cityId', inputHidden.value);
+            }
+            catch(err){
+                alert('В вашем браузере выключены файлы cookie, для продолжения включите файлы cookie в настройках вашего браузера')
+            }
             setCityName()
             cities.classList.remove('active')
         }
-    }
+    })
     inputText.oninput = ()=>{
         if(inputText.value !== ""){            
             citiesLinkCollection.forEach((link) => {
@@ -100,6 +116,8 @@ if(cities){
             }          
         }
         else{
+            inputHidden.value = "";
+            inputHidden.dispatchEvent(event);
             autocompleteHide()
         }
         
@@ -115,10 +133,18 @@ if(cities){
     })
     
     let autocompleteHide = function(){
-         autocomplete.classList.remove('active');
+        autocomplete.classList.remove('active');
         citiesListCollection.forEach((list) => {
             list.classList.add('hide')
         })
+    }
+
+    reset.onclick = function(e){
+        e.preventDefault();
+        inputHidden.value = "";
+        inputText.value = "";
+        inputHidden.dispatchEvent(event);        
+        autocompleteHide()
     }
 }
 $('.cities-autocomplete').mCustomScrollbar();

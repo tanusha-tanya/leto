@@ -1,12 +1,25 @@
-const search = document.querySelector(".headersearch")
+
+/*$(".headersearch-input").easyAutocomplete({
+  url: "../search.json",
+  getValue: "item",
+  list: {	
+    match: {
+      enabled: true
+    }
+  },
+  theme: "square"
+});
+*/
+
+
+/*const search = document.querySelector(".headersearch")
 if(search){
   let json = '../search.json';
   let input = document.querySelector(".headersearch-input");
   let list = document.querySelector('.autocomplete');
-  let li = "";
+  let li = '';
   let array = [];
-  let strings = [];
-  let flag = true;
+  let isPushed = false;
 
   function parseJson(word){
     fetch(json)
@@ -25,14 +38,16 @@ if(search){
   	.then(function (data) {
       data.forEach((string)=>{
         let smallString = string.item.toLowerCase().trim();
-        if(smallString.indexOf(word) != -1){
-          checkArray(string)
-          showAutocomplete()
+        if(smallString.indexOf(word) !== -1){
+           checkArray(string)
         }
         else{
           hideAutocomplete()
         }
       })
+      if(isPushed){
+        showAutocomplete()
+      }
   	})
 
   	.catch(function (error) {
@@ -46,28 +61,31 @@ if(search){
       parseJson(word);
     }
     else{
-      hideAutocomplete(strings)
+      hideAutocomplete()
     }
   }
 
   function checkArray(string){
     if(array.length === 0){
-      array.push(string);
-      strings.push(string.item);
+      array.push(string.item);
+      isPushed = true;
+    }
+    else if(array.indexOf(string.item) == -1){
+        array.push(string.item);
+        isPushed = true;
     }
     else{
-      if(strings.indexOf(string.item) == -1){
-        array.push(string);
-        strings.push(string.item);
-      }
+        isPushed = false;       
     }
+    return isPushed
   }
-
-  function showAutocomplete(){
+  
+  
+  function showAutocomplete(){    
     list.classList.add("active");
     list.innerHTML = "";
     array.forEach((item) =>{
-      li += `<li><a href="${item.link}">${item.item}</a></li>`
+      li += `<li>${item}</li>`
     });
     list.innerHTML = li;
   }
@@ -76,6 +94,6 @@ if(search){
     list.classList.remove("active");
     list.innerHTML = "";
     array = [];
-    strings = []
   }
 }
+*/
