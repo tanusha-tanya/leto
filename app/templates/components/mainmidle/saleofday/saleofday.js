@@ -48,7 +48,7 @@ $(document).ready(function() {
   }
 });
 
-$(window).resize(function() {
+/*$(window).resize(function() {
   $('.saleofday-items').slick('unslick');
   $('.saleofday-links').slick('unslick');
   $('.saleofday-items').owlCarousel('destroy');
@@ -58,4 +58,4 @@ $(window).resize(function() {
   else{    
     slickInitialize();
   }
-});
+});*/
