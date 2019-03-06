@@ -29,6 +29,11 @@
     &:last-of-type{
       margin-right: 3px;
     }
+    @media(min-width:460px){
+      &:last-of-type{
+        margin-right: 15px;
+      }         
+    }
     @media(min-width:$tablet){
       width: 70px;
       margin: 0 10px;

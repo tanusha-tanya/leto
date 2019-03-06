@@ -76,10 +76,14 @@
   &-carousel{
     margin-top: 15px;
     @media(min-width:$tablet){
+      position: relative;
+      margin: 0 auto;
       margin-top: 28px;
+      max-width: 740px;
     }
     @media(min-width:$desktop){
       padding-bottom: 100px;
+      max-width: 1220px;
       .owl-nav{
         position: absolute;
         left: calc(50% - 150px);

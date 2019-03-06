@@ -10,10 +10,11 @@ block content
     include components/breadcrumbs/breadcrumbs
     section.delivery
       .container
-        h1 О компании
-        include components/innermenu/innermenu
-        h2.delivery-h2 Наши контакты
-      include components/about/about
+        .white-block
+          h1 О компании
+          include components/innermenu/innermenu
+          h2.delivery-h2 Наши контакты
+          include components/about/about
 block footer
   include  _layouts/footer/footer
   .body-dark

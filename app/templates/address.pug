@@ -11,11 +11,12 @@ block content
     include components/breadcrumbs/breadcrumbs
     section.delivery
       .container
-        h1 Личный кабинет
-        include components/innermenu/innermenu
-        include components/address/address
-        include components/mainmidle/maingoods/maingoods
-        +bestseller("Бестсселлеры")(class="bestseller__main")
+        .white-block
+          h1 Личный кабинет
+          include components/innermenu/innermenu
+          include components/address/address
+          include components/mainmidle/maingoods/maingoods
+          +bestseller("Бестсселлеры")(class="bestseller__main")
 block footer
   include  _layouts/footer/footer
   .body-dark

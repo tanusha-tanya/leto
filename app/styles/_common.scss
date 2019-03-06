@@ -18,6 +18,8 @@ body{
   overflow-x: hidden;
   min-height: 100vh;
   position: relative;
+  margin: 0 auto;
+  max-width: 2200px;
 }
 i,em{
   font-family: MuseoSansNormalItalic, Arial, Helvetica, sans-serif;
@@ -369,4 +371,12 @@ h6{
 .mfp-close-btn-in .mfp-content  .mfp-close{
    color: #828282;
    font-size: 40px;
+}
+.white-block{
+  @media(min-width:$desktop){
+    background: #fff;
+    margin: 0 -20px;
+    position: relative;
+    padding: 20px;
+  }
 }

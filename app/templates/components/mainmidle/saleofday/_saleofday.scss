@@ -37,6 +37,12 @@
   &-container{
     @media(min-width: $tablet){
       padding-top: 43px;
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+    }
+     @media(min-width: $desktop){
+      max-width: 1220px;
     }
   }
   &-head{
@@ -212,6 +218,9 @@
     }
   }
   &-items{
+    max-width: 500px;
+    position: relative;
+    margin: 0 auto;
     @media(min-width: $tablet){
       width: 75%;
       margin-bottom: 16px;
@@ -274,6 +283,20 @@
       max-width: 560px;
     }
   }
+  &-linkpick{
+    @media(min-width: $tablet){
+      border: 1px solid $brandborder;
+      border-color: $brandborder;
+      box-sizing: border-box;
+      width: 200px;
+      padding: 15px 10px;
+      border-top-right-radius: 50px;
+      border-bottom-left-radius: 50px;
+    }
+    @media(min-width: $desktop){
+      border: none;
+    } 
+  }
   &-links{
     display: none;
     @media(min-width: $tablet){
@@ -288,11 +311,7 @@
       margin-right:20px;
     }
   }
-  &-link{
-    border: 1px solid $brandborder;
-    padding: 15px 10px;
-    border-top-right-radius: 50px;
-    border-bottom-left-radius: 50px;
+  &-link{   
     box-sizing: border-box;
     display: block;
     position: relative;
@@ -318,18 +337,12 @@
       display: flex;
     }
     .slick-vertical .slick-slide{
-      border: 1px solid $brandborder;
-      border-color: $brandborder;
       width: auto;
       display: flex;
       opacity: 0;
       transition: opacity .3s, border .3s;
       &.slick-active{
         opacity: 1;
-      }
-      &:hover{
-        border: 1px solid $bannerdescription;
-        border-color: $bannerdescription;
       }
       @media(min-width: $desktop){
         border-color: transparent;
@@ -341,12 +354,13 @@
       }
     }
     .slick-vertical .slick-current{
-      border: 1px solid $bannerdescription;
-      border-color: $bannerdescription;
-      width: auto;
-      @media(min-width: $desktop){
-        border-color: transparent;
-        border-bottom: 1px solid $brandborder;
+      .saleofday-linkpick{
+        border: 1px solid $bannerdescription;
+        border-color: $bannerdescription;  
+        @media(min-width: $desktop){
+          border-color: transparent;
+          border-bottom: 1px solid $brandborder;
+        }
       }
     }
     .slick-dots{
@@ -354,6 +368,7 @@
       top: calc(50% - 75px);
       cursor: pointer;
       left: 0;
+      width: 16px;
       li{
         list-style:none;
         width:16px;

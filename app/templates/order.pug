@@ -11,16 +11,17 @@ block content
     include components/breadcrumbs/breadcrumbs
     section.order
       .container
-        h1 оформить заказ
-        include components/auth/auth
-        .order-flex
-          .order-col__right          
-            include components/deliveryfree/deliveryfree
-            include components/ordersum/ordersum
-            +cartaction()
-            include components/checkbox/checkbox
-          .order-col__left
-            include components/orderform/orderform
+        .white-block
+          h1 оформить заказ
+          include components/auth/auth
+          .order-flex
+            .order-col__right          
+              include components/deliveryfree/deliveryfree
+              include components/ordersum/ordersum
+              +cartaction()
+              include components/checkbox/checkbox
+            .order-col__left
+              include components/orderform/orderform
 block footer
   include  _layouts/footer/footer
   .body-dark

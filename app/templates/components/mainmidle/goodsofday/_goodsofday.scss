@@ -64,12 +64,15 @@
     }
   }
   &-figure{
+    margin: 0 auto;
     margin-top: 20px;
     position: relative;
     z-index: 100;
+    max-width: 500px;
     @media(min-width:$tablet){
       display: flex;
       margin-top: 0;
+      max-width: 800px;
     }
     @media(min-width:$desktop){
       background-image: url("../images/svg/brown_flower.svg");

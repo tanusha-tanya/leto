@@ -159,10 +159,13 @@
   &-figure{
     position: relative;
     padding-bottom: 30px;
+    max-width: 500px;
+    margin: 0 auto;
     @media(min-width:$tablet){
       display: flex;
       justify-content: space-between;
       padding-bottom: 0;
+      max-width: 800px;
     }
     @media(min-width:$desktop){
       display: block;
