@@ -63,11 +63,11 @@
              }            
         }
         &-row{
-            background: #F4F4F0;
             padding: 20px 10px;
             font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
             color: #333;
             border-bottom: none;
+            display: block;
             &:hover{  
                 color: #333;
             }

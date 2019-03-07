@@ -6,15 +6,6 @@
   }
   @media(min-width:$desktop){
     margin-top: 65px;
-    &:after{
-      content: '';
-      position:absolute;
-      left: 0;
-      background-image: url('../images/svg/branch.svg');
-      width: 180px;
-      height: 247px;
-      top: 181px;
-    }
   }
   &-title{
     color: $title;

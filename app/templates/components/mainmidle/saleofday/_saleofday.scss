@@ -23,7 +23,6 @@
     background-repeat: no-repeat;
     background-position: -135px top;
     display: block;
-    width: 100%;
     @media(min-width: $tablet){
       left: 51%;
       top: 22px;
@@ -295,6 +294,7 @@
     }
     @media(min-width: $desktop){
       border: none;
+      border-radius: 0;
     } 
   }
   &-links{

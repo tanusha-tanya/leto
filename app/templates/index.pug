@@ -6,9 +6,10 @@ block header
   include  _layouts/header/header
 block content
   main.main-wrap
-    include _layouts/maintop/maintop
-    include _layouts/mainmidle/mainmidle
-    include _layouts/mainbottom/mainbottom
+    section.main
+      include _layouts/maintop/maintop
+      include _layouts/mainmidle/mainmidle
+      include _layouts/mainbottom/mainbottom
 block footer
   include  _layouts/footer/footer
   .body-dark
