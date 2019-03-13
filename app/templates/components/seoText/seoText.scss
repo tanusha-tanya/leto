@@ -6,4 +6,7 @@
     margin: 40px 0 60px 0;
     color:$primary;
   }
+  @media(min-width:$desktop){
+    margin-bottom: 150px;
+  }
 }

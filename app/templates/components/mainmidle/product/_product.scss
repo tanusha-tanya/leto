@@ -219,10 +219,12 @@
     font: 15px/36px MuseoSansNormal, Arial, Helvetica, sans-serif;
     @media(min-width:$tablet){
       position: absolute;
-      top: -10px;
+      top: -15px;
     }
     @media(min-width:$desktop){
-      left: -10px;
+      left: 0;
+      right: 0;
+      text-align: center;
     }
     span{
       text-decoration: line-through;

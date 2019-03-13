@@ -5,6 +5,9 @@
   @media(min-width:$tablet){
     padding: 30px 200px;
   }
+  @media(min-width:$desktop){
+    margin: 0;
+  }
   &-svg{
     color:$arrow;
     fill:$arrow;
@@ -41,12 +44,20 @@
   &-links{
     display: flex;
     justify-content: space-between;
+    @media(min-width:$desktop){
+      margin: 0 auto;
+      position: relative;
+      max-width: 250px;
+    }
   }
   &-num{
     border:0;
     font: 15px/28px MuseoSansNormal, Arial, Helvetica, sans-serif;
     @media(min-width:$tablet){
       padding: 0 30px;
+    }
+    @media(min-width:$desktop){
+      padding: 0 15px;
     }
     &__current{
       color: $selection;

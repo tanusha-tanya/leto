@@ -89,5 +89,19 @@
   &-anchor{
     margin:0 20px;
     border: none;
+    color: #333333;
+    font: 12px/18px MuseoSansDark, Arial, Helvetica, sans-serif;
+  }
+  &-svg{
+    color: #333333;
+    fill: #333333;
+    transition: color .3s, fill .3s, transform .3s;
+    &:hover{
+       color: #697F34;
+      fill: #697F34;
+    } 
+    &.up{
+       transform: rotate(-180deg)
+    }      
   }
 }

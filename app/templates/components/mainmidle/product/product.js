@@ -19,7 +19,8 @@ $('.product-fastshow').magnificPopup({
                 focusOnSelect: true,
                 arrows: false,
             });
-            quantity($(this.content).find('#quantity'));           
+            quantity($(this.content).find('#quantity'));  
+            $body.trigger('ajaxReady')          
         }
     }
     

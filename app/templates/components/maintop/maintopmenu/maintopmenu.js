@@ -9,7 +9,7 @@ if(sub){
     }
   })
   document.body.onmouseover = function(e){
-    if(e.target != submenu && e.target.closest('.maintopmenu-submenu') == null && !e.target.classList.contains("maintopmenu-link__sub") && !e.target.classList.contains("maintopmenu-li__sub")){
+    if(e.target != submenu && e.target.closest('.maintopmenu-submenu') == null && !e.target.classList.contains("maintopmenu-link__sub") && !e.target.classList.contains("maintopmenu-li")){
         submenu.classList.remove('active');
         submenu.innerHTML = '';
         sub.forEach((elem)=>{

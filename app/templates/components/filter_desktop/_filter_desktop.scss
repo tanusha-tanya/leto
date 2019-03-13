@@ -34,7 +34,7 @@
         border-bottom: 1px solid $brandborder;
       }
       .deskfilter-spoiler-title::after{
-        transform: rotate(130deg) translate(5px);
+        transform: rotate(135deg);
       }
       .deskfilter-spoiler-title{
         border-bottom:0;
@@ -43,7 +43,7 @@
   }
   &-spoiler-title{
     border-bottom: 1px solid $brandborder;
-    padding: 15px 0;
+    padding: 13px 0;
     padding-right: 12px;
     font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
     color: $link;
@@ -64,6 +64,7 @@
   }
   &-spoiler-content{
     padding: 16px 20px;
+    padding-top: 5px;
     position: absolute;
     height:0;
     overflow: hidden;
@@ -180,5 +181,14 @@
     &:before{
       transform: rotate(-43deg);
     }
+  }
+  .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    background: #B4AE9E;
+    width: 6px;
+    border-radius: 3px;
+  }
+  .mCSB_scrollTools .mCSB_draggerRail{
+    width: 1px;
+    background: #C8C2B2;
   }
 }

@@ -7,7 +7,8 @@ $(".js-popup").magnificPopup({
 					type: 'ajax',
 					alignTop: true,
 					overflowY: 'scroll'
-				});                
+                });     
+                $body.trigger('ajaxReady')           
             }
         }    
 });
