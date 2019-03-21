@@ -1,0 +1,26 @@
+.message
+    form.message-form.js-form
+        .message-fieldset 
+            .message-title Написать отзыв    
+        .message-fieldset 
+            legend.message-legend Ваше имя
+            input(type="text").message-input.js-inputcheck 
+        .message-fieldset
+            legend.message-legend Оцените товар
+            .message-stars
+                input(type="hidden", value="", id="addreviews")
+                a.js-star(href="#")
+                    svg.stars-star(role="img")(width="20")(height="20"): use(xlink:href="#star")
+                a.js-star(href="#")
+                    svg.stars-star(role="img")(width="20")(height="20"): use(xlink:href="#star")
+                a.js-star(href="#")
+                    svg.stars-star(role="img")(width="20")(height="20"): use(xlink:href="#star")
+                a.js-star(href="#")
+                    svg.stars-star(role="img")(width="20")(height="20"): use(xlink:href="#star")
+                a.js-star(href="#")
+                    svg.stars-star(role="img")(width="20")(height="20"): use(xlink:href="#star")
+        .message-fieldset 
+            legend.message-legend Отзыв
+            textarea.message-textarea.js-inputcheck 
+        .message-fieldset
+            button.message-button.add-button__send.disabled отправить

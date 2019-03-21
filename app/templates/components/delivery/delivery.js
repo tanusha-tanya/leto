@@ -10,20 +10,20 @@ if(radioCollection){
                 method.classList.remove('delivery-method-item__active')
                 dataFor =  method.dataset['for'];
                 if(dataTarget === dataFor){
-                    method.classList.add('delivery-method-item__active')
+                    method.classList.add('delivery-method-item__active');
                 }
             })
         })   
     })
 }
+
 $(function(){
-    ymaps.ready(init);
+    ymaps.ready(init);    
     function init() {
+    $('#pickup').click(function(){
     var myMap = new ymaps.Map('map', {
         center: [56.8522511,53.2091607],     
         zoom: 12
-    }, {
-        balloonPanelMaxMapArea: Infinity
     });     
     var placemarks = [];
     var firstMark;
@@ -39,7 +39,7 @@ $(function(){
             iconLayout: 'default#image',
             iconImageHref: '/images/svg/baloon.svg',
             iconImageSize: [30, 42],
-            iconImageOffset: [-3, -42]
+            iconImageOffset: [-3, -42] 
         });
         myMap.geoObjects.add(placemarks[id]);
         if (!firstMark) {
@@ -63,7 +63,8 @@ $(function(){
         $(this).parents('.js-map__item').addClass('map__item-active');
 	    return false;
     })
-    
+
+    }) 
 }
 $('.delivery-addresses-items').mCustomScrollbar();
 })

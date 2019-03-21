@@ -54,7 +54,6 @@ h1{
 }
 h2{
   font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
-  letter-spacing: 0.05em;
 }
 h3{
   font: 26px/36px MuseoSansDark, Arial, Helvetica, sans-serif;
@@ -256,7 +255,7 @@ h6{
       background-image: url("../images/svg/branch.svg");
       width: 180px;
       height: 247px;
-      top: 5%;
+      top: 409px;
       z-index: -1;
     }
   }
@@ -404,4 +403,13 @@ h6{
     position: relative;
     padding: 20px;
   }
+}
+.mfp-image-holder .mfp-content{
+  background: #fff;
+  @media(min-width:$desktop){
+    width: 700px;
+  }
+}
+.mfp-figure figure{
+  background: #fff;
 }

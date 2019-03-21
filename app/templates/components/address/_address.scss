@@ -40,19 +40,20 @@
         font-size: 0;
         width: 24px;
         height: 24px;
-        border: 2px solid #000;
+        border: 1px solid #000;
         border-radius: 100%;
         display: block;
         position: relative;
+        box-sizing: border-box;
         &:after, &:before{
             content:'';
             display: block;
             position: absolute;
-            height: 20px;
-            width: 2px;
+            height: 17px;
+            width: 1px;
             background: #000;
-            left: calc(50% - 1px);
-            top: 2px;
+            left: calc(50% );
+            top: 3px;
         }
         &:before{
             transform: rotate(90deg)
@@ -122,6 +123,7 @@
         display: block;
         padding-left: 30px;
         position: relative;
+        cursor: pointer;
         &:before{
             border: 1px solid #E0DFDA;
             content: '';

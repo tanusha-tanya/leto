@@ -4,12 +4,6 @@
   &-star{
     color: $brandborder;
     fill: $brandborder;
-    transition: color .3s, fill .3s;
-    &:hover{
-      color: $border;
-      fill: $border;
-    }
-    cursor: pointer;
     &__full{
       color: $border;
       fill: $border;

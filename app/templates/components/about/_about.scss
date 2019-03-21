@@ -1,5 +1,5 @@
 .about-info{
-    margin: 20px;
+    margin: 20px 0;
     p{
         margin: 10px 0;
     }
@@ -10,27 +10,34 @@
 .about-feedback{
     margin-top: 30px;
     margin-bottom: 60px;
+    h2{
+        letter-spacing: normal;
+    }
 }
 .about-form{
     margin-top: 20px;
     background: $cartbg;
     padding: 10px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     @media(min-width:$tablet){
         padding: 20px;
         padding-bottom: 40px;
+        max-width: 780px;
     }
     @media(min-width:$desktop){
-        width: 66%;
+        padding-right: 60px;
     }
 }
 .about-fieldset{
+    max-width: 400px;
+    position: relative;
+    margin: 0 auto;
     margin-bottom: 20px;
     @media(min-width:$tablet){
-        display: flex;
-        margin: 0 -10px 20px -10px;        
-        justify-content: flex-end;
-        align-items: center;
+        display: flex;    
+        justify-content: space-between;
+        max-width: 100%;
+        align-items: flex-start;
     }
 }
 .about-input{
@@ -43,10 +50,12 @@
     display: block;
     border: 1px solid $brandborder;
     padding:20px;
+    color: #333333;
+    font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
     @media(min-width:$tablet){
        width: 500px;
        max-width: 500px;
-       margin: 0 20px 10px 10px;
+       margin: 0;
     }
     @media(min-width:$desktop){
        width: 480px;
@@ -63,10 +72,13 @@
     display: block;
     border: 1px solid $brandborder;
     padding:20px;
-     @media(min-width:$tablet){
+    resize:none;
+    color: #333333;
+    font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    @media(min-width:$tablet){
        width: 500px;
        max-width: 500px;
-       margin: 0 20px 10px 10px;
+       margin: 0;
     }
     @media(min-width:$desktop){
        width: 480px;
@@ -75,11 +87,10 @@
 }
 .about-label{
     font: 15px/20px MuseoSansDark, Arial, Helvetica, sans-serif;
-    margin-bottom: 10px;
+    margin-bottom:10px;
+    display: inline-block;
     @media(min-width:$tablet){
-       width: calc(25% - 20px);
-       max-width: calc(25% - 20px);
-       margin: 0 10px 10px 20px;
+        margin-top: 20px;
     }
     @media(min-width:$desktop){
        width: calc(100% - 500px);
@@ -90,7 +101,6 @@
     @media(min-width:$tablet){
        width: 500px;
        max-width: 500px;
-       text-align: right;
     }
      @media(min-width:$desktop){
        width: 480px;
@@ -115,6 +125,16 @@
     width: 100%;
     max-width: 400px;
     height: 60px;
+    letter-spacing: 0.1em;
+    transition: background .3s;
+    &:hover{
+        background: #A5BB70;
+    }
+    &.disabld{
+        &:hover{
+             background: #E0E0E0;
+        }
+    }
     @media(min-width: $tablet){
            width: 280px;
            margin: 0;
@@ -124,7 +144,7 @@
     position: relative;
     height:0;
     width: 100%;
-    padding-top: 58%;
+    padding-top: 100%;
     overflow: hidden;
     #aboutmap{
         position: absolute;
@@ -136,9 +156,9 @@
         height: 100%!important;
     }
     @media(min-width: $tablet){
-           padding-top: 71%;
+           padding-top: 66%;
     }
    @media(min-width: $desktop){
            padding-top: 32%;
     }
-}
+} 

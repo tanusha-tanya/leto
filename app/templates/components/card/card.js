@@ -13,3 +13,14 @@ $('.card-slider__nav').slick({
  focusOnSelect: true,
  arrows: false,
 });
+$('.js-img').magnificPopup({
+  type: 'image',
+  gallery:{
+    enabled:true
+  },
+  callbacks: {
+			ajaxContentAdded: function()    {  
+         $('body').trigger('ajaxReady') 
+      }
+    }         
+});

@@ -68,3 +68,26 @@ if(valume){
     })
   })
 }
+
+const addButton = document.querySelector('.js-add')
+const goodadded = document.querySelector('.goodadded')
+if(addButton){
+  addButton.onclick = () => {
+    addButton.textContent = "Товар в корзине";
+    goodadded.classList.toggle('active');
+    missClick();
+  }
+  let close = document.querySelector('.js-continue');
+    close.onclick = function(e){
+    e.preventDefault();
+    goodadded.classList.remove('active')
+  }
+}
+let missClick = ()=>{
+  document.body.onclick = (e) =>{
+    if ((e.target.closest !== goodadded || e.target !== goodadded) && e.target !== addButton){
+        goodadded.classList.remove('active')
+    } 
+  }
+}
+

@@ -27,14 +27,15 @@ if(cities){
         detect = cities.querySelector('.cities-detect'),
         citiesListCollection = cities.querySelectorAll('.cities-list'),
         buttonCities = cities.querySelector('.cities-button'),
-        event = new Event("changeValue"),
         cityName = null,
         citiesLinkCollection = document.querySelectorAll('.cities-link'),
         citiesPopupLinkCollection = document.querySelectorAll('.js-cities'),
         autocomplete = document.querySelector('.cities-autocomplete'),
         listShow = document.querySelectorAll('.cities-list:not(.hide)'),
         reset = cities.querySelector('.cities-reset');
-  
+    let event = document.createEvent('Event');
+    event.initEvent('changeValue', true, true);
+
     detect.addEventListener('click', (e) => {
         e.preventDefault();
         setMap();

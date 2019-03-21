@@ -11,7 +11,6 @@
         list-style: none;
         color: #000000;
         a{
-            border-bottom: 0;
             color: #000000;
         }
     }
@@ -24,40 +23,19 @@
             margin-bottom: 200px;
         }
     }
-    &-ul__inner{
-        position: absolute;
-        height: 0;
-        visibility:hidden;
-    }
     &-li{
         &__title{
             font: 20px/30px PlayfairDisplayItalic, Arial, Helvetica, sans-serif; 
             cursor: pointer;
-            a{
+            &>a{
+                border-bottom: none;
                font: 20px/30px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;  
             }
-            &.open{
-               .sitemap-ul__inner{
-                   position: relative;
-                   height: auto;
-                   visibility: visible;
-               } 
-            }  
         }
         &__sub{
             margin: 10px 0;
             margin-left: 30px;
             cursor: pointer;
-            &.open{
-               .sitemap-ul__spoiler{
-                   position: relative;
-                   height: auto;
-                   visibility: visible;
-               } 
-                .sitemap-sub-item{
-                    border-bottom: none;
-                }
-            } 
         }
     }
     &-sub-item{

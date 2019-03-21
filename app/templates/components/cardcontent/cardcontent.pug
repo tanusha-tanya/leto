@@ -22,7 +22,7 @@
   button.card-minus -
   input(type="text"  name="quantity" value="1")#quantity.card-pricecontroller-input
   button.card-plus +
-button.card-button добавить в корзину
+button.card-button.js-add добавить в корзину
 .card-heart
   svg(role="img")(width="20")(height="18"): use(xlink:href="#heart")
 .card-delivery Товар может быть доставлен вам в кратчайшие сроки.
@@ -31,4 +31,4 @@ button.card-button добавить в корзину
   |F114171A
 .card-feedback
   include ../stars/stars
-  .card-feedback-counter 257 отзывов
+   a(href="#reviews").card-feedback-counter 257 отзывов

@@ -1,0 +1,26 @@
+.add
+    form.add-form.js-form
+        .add-fieldset
+            .add-title Моя информация
+        .add-fieldset
+            legend.add-legend Фамилия
+            input(type="text", name="фамилия", value="Иванова").add-input.js-inputcheck
+        .add-fieldset
+            legend.add-legend Имя
+            input(type="text", name="имя", value="Елена").add-input.js-inputcheck
+        .add-fieldset
+            legend.add-legend Телефон
+            input(type="text", name="телефон", value="+7 912 885 55 55").add-input.js-inputcheck
+        .add-fieldset
+            legend.add-legend E-mail
+            input(type="text", name="e-mail", value="aleksandra1987@gmail.com").add-input.js-inputcheck
+        .add-fieldset  
+            legend.add-legend Фото
+            input(type="file", name="фото",id="photo").add-input-photo
+            label(for="photo").add-label-photo
+                img(src="assets/personal.png")
+                span Загрузить
+        .add-fieldset.add-fieldset__right
+            .add-button-wrap
+                a(href="#").add-button.add-button__close отмена
+                button.add-button.add-button__send.disabled сохранить

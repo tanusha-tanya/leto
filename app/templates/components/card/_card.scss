@@ -1,11 +1,18 @@
-.card{
+.card{ 
   &-slider{
     &-item{
       margin: 0 10px;
+      cursor: pointer;
       img{
         max-width: 100%;
         position: relative;
         margin: 0 auto;
+      }
+      .sticker{
+        left: 0;
+        @media(min-width:$tablet){
+          left: 20px;
+        }
       }
     }
     &__for{
@@ -39,7 +46,9 @@
       top: -10px;
       font-size:0;
       height: 20px;
+      overflow: hidden;
         li{
+          width: 60px;
           button{
             &:before{
               width: 100%;
@@ -61,4 +70,5 @@
       }
     }
   }
+  
 }

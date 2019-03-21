@@ -1,7 +1,9 @@
 .add{    
     padding: 20px;
+    box-sizing: border-box;
     @media(min-width: $tablet){
-        padding: 60px;
+        padding: 40px 60px;
+        padding-bottom: 20px;
         width: 700px;
     }
     &-title{
@@ -9,7 +11,7 @@
         color: #000;
         @media(min-width: $tablet){
             font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
-            margin-bottom:40px;
+            margin-bottom:20px;
         }
     }
     &-fieldset{
@@ -37,12 +39,13 @@
         width: 260px;
         height: 50px;
         padding: 10px;
+            font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
         @media(min-width:$tablet){
-            width: 340px;
+            width: 380px;
         }
         &-wrap{
            @media(min-width:$tablet){
-            width: 340px;
+            width: 380px;
         } 
         }
         &__small{
@@ -58,12 +61,13 @@
     &-inputs{
         &-wrap{
             @media(min-width:$tablet){
-                width: 340px;
+                width: 380px;
             }
         }
         &-small{
             display: flex;
             margin: 20px -10px;
+            margin-bottom: 0;
         }
     }
     &-button{
@@ -82,6 +86,8 @@
         cursor: pointer;
         transition: background .3s;
         margin: 20px 0;
+        text-align: center;
+        padding: 20px 0;
         @media(min-width:$tablet){
             width: 180px;
             margin-right: 0;
@@ -96,13 +102,17 @@
         }
         &__send{
             &.disabled{
-                background: #E0E0E0;
+            background: #E0E0E0;
+            cursor: text;
+                &:hover{
+                    background: #E0E0E0;
+                }
             }
         } 
         &-wrap{
             @media(min-width:$tablet){
-                 width: 340px;
-                 justify-content: flex-end;
+                 width: 380px;
+                 justify-content: space-between;
                  display: flex;
                  align-items: center;
             }
@@ -151,6 +161,40 @@
             transform: rotate(35deg);
             @media(min-width:$tablet){
                 top: -3px;
+            }
+        }
+    }
+    &-input-photo{
+        position: absolute;
+        visibility: hidden;
+    }
+    &-label-photo{
+        cursor: pointer;
+        text-align: left;
+        position: relative;
+        @media(min-width:$tablet){
+            width:380px;
+            height: 100px;
+        }
+        img{
+            width:100px;
+            height:100px;
+            border-top-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+            display:inline-block;
+            vertical-align: middle;
+            @media(min-width:$tablet){
+                position: absolute;
+                left: 0;
+            }
+        }
+        span{
+            margin-left: 20px;
+            vertical-align: middle;
+            @media(min-width:$tablet){
+                margin-left: 120px;
+                margin-top:40px;
+                display: inline-block;
             }
         }
     }

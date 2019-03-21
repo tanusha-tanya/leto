@@ -11,8 +11,9 @@
   }
  
   &-svg{
+     border: 0;
     @media(min-width: $tablet){
-      order:1;
+      order:1;     
     }
   }
   &-soc{

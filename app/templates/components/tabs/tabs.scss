@@ -51,6 +51,7 @@
   }
   &-anchor{
     font: 12px/20px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     border-bottom: none;
     color: $link;
@@ -100,6 +101,7 @@
       vertical-align: middle;
       width: 80px;
       display: inline-block;
+      text-align: center;
     }
     &-description{
       display: inline-block;

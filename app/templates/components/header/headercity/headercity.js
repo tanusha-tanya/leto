@@ -13,6 +13,7 @@ if(citiesPopupLink){
             else{
                 link.closest('.headercity').append(citiesPopup);
                 citiesPopup.classList.add('active');
+                cityMissClick();
             }
         })           
     })
@@ -20,16 +21,18 @@ if(citiesPopupLink){
         closePopup.closest('.headercity').removeChild(citiesPopup);
         citiesPopup.classList.remove('active');       
     })
-    document.body.onclick = (e) => {
+    let cityMissClick = () =>{
+        document.body.onclick = (e) => {
         if(e.target !== citiesPopup && !e.target.closest('.cities') && !e.target.classList.contains('js-cities')){
-            if(citiesPopup.classList.contains('active')){
-                citiesPopup.classList.remove('active')  
-                headercityCollection.forEach((headercity) => {
-                    if(headercity.querySelector('.cities')){ 
-                        headercity.removeChild(citiesPopup)
-                    }
-                })
-            }
+                if(citiesPopup.classList.contains('active')){
+                    citiesPopup.classList.remove('active')  
+                    headercityCollection.forEach((headercity) => {
+                        if(headercity.querySelector('.cities')){ 
+                            headercity.removeChild(citiesPopup)
+                        }
+                    })
+                }
+            } 
         }
-    }    
+    }
 }

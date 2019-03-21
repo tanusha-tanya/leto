@@ -2,7 +2,7 @@ extends _layouts/default
 include components/maintop/maintopmenu/maintopmenu
 include components/mainmidle/bestseller/bestseller
 block title
-  title Доставка
+  title Адреса
 block header
   include  _layouts/header/header
 block content
@@ -16,7 +16,7 @@ block content
           include components/innermenu/innermenu
           include components/address/address
           include components/mainmidle/maingoods/maingoods
-          +bestseller("Бестсселлеры")(class="bestseller__main")
+          +bestseller("Вам может понравиться")
 block footer
   include  _layouts/footer/footer
   .body-dark

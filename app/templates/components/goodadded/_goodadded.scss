@@ -1,0 +1,118 @@
+.goodadded{
+    background: #A5BB70;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%; 
+    display: none;
+    z-index: 800;
+    &.active{
+        display: block;
+    }   
+    @media(min-width:$desktop){
+        margin-top: 17px;
+        padding: 38px 0;        
+    }    
+    &-container{
+        padding: 10px 10px;
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: center;
+        @media(min-width:$tablet){
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            padding: 34px 34px;            
+        }
+        @media(min-width:$desktop){
+            padding: 0;
+            position: relative; 
+            margin: 0 auto;
+            max-width: 1180px;     
+        }
+    } 
+    &-center{
+        position: relative;
+        text-align: center;
+        order: 2;
+        margin: 10px 0;
+        @media(min-width:$tablet){
+            margin: 0;
+            order:0;
+        }
+    }
+    &-link{
+        &__transparent{            
+            display: block;
+            padding-top: 5px;
+            height: 40px;
+            box-sizing: border-box;
+            text-align: center;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font: 12px/28px MuseoSansNormal, Arial, Helvetica, sans-serif;
+            color: #fff;
+            border-top-right-radius: 32px;
+            border-bottom-left-radius: 32px;
+            border: 1px solid #fff;
+            transition: color .3s, border .3s, background .3s;
+            width: 120px;
+            margin: 0 10px;
+            @media(min-width: $desktop){
+                width: 160px;
+                margin:0;
+            }
+            &:hover{
+                border-color:  #697F34;
+                color:  #697F34;                
+            }
+        }
+        &__white{
+            display: block;
+            padding-top: 5px;
+            height: 40px;
+            box-sizing: border-box;
+            text-align: center;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font: 12px/28px MuseoSansNormal, Arial, Helvetica, sans-serif;
+            color: #333;
+            border: 0;
+            border-top-right-radius: 32px;
+            border-bottom-left-radius: 32px;
+            background: #fff;
+            transition: color .3s, border .3s, background .3s;
+            width: 120px;
+            margin: 0 10px;
+            @media(min-width:$desktop){
+                width: 200px;
+                margin: 0;
+            }
+            &:hover{
+                background:  #697F34;
+                color: #fff;
+            }
+        }
+    }
+    &-pick{
+        background: #A5BB70;
+        width: 82px;
+        height: 82px;
+        box-sizing: border-box;
+        border-radius: 100%;
+        position: absolute;
+        top: -80px;
+        left: calc(50% - 41px);        
+        display: none;
+        @media(min-width:$desktop){
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }  
+    &-info{
+        font: 15px/15px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        @media(min-width: $desktop){
+            font: 15px/20px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        }
+    }
+}

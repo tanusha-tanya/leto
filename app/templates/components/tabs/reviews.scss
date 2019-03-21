@@ -11,10 +11,13 @@
   &-title{
     font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
     color: $primary;
+    @media(min-width:$desktop){
+      font: 30px/36px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    }
   }
   &-total{
     font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
-    margin: 15px 0;
+    margin-bottom: 15px;
     @media(min-width:$tablet){
       margin: 0;
     }
@@ -34,6 +37,10 @@
     text-transform: uppercase;
     cursor: pointer;
     background: transparent;
+    display:block;
+    padding-top: 5px;
+    text-align: center;
+    letter-spacing: 0.1em;
     &:hover, &:focus{
       outline: none;
       border: 1px solid #697F34;
@@ -51,6 +58,7 @@
       display: block;
       width: calc(50% - 20px);
       margin: 0 10px;
+      margin-left: 20px;
     }
     &:after{
       content: '';
@@ -65,7 +73,7 @@
     }
   }
   &-item{
-    margin-top: 30px;
+    margin-bottom: 30px;
     &:last-of-type{
       margin-bottom: 80px;
     }
@@ -112,5 +120,15 @@
       width: calc(50% - 20px);
       margin: 0 10px;
     }
+  }
+  .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    background: #B4AE9E;
+    width: 6px;
+    height: 98px;
+    border-radius: 3px;
+  }
+  .mCSB_scrollTools .mCSB_draggerRail{
+    width: 1px;
+    background: #C8C2B2;
   }
 }

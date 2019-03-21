@@ -5,9 +5,10 @@ if(tabs){
   let tabsContent = document.querySelectorAll('.tabs-content')
   let target = null;
   let currenttab = null;
-  links.forEach((elem)=>{
-    elem.addEventListener('click', (e)=>{
-      e.preventDefault()
+
+  let openTab = () =>{
+    links.forEach((elem)=>{
+    if(location.hash === elem.hash){      
       for(let i = 0; i < links.length; i++){
         if(links[i] !== elem){
           links[i].classList.remove('tabs-anchor__active')
@@ -15,14 +16,32 @@ if(tabs){
         }
       }
       elem.classList.add('tabs-anchor__active')
-      target = elem.href.split('#')[1]
+      target = elem.hash.split('#')[1]
       currenttab = document.getElementById(target)
       currenttab.classList.add('tabs-content__active')
-    })
+    }
   })
+}  
+  openTab();
+
+  window.addEventListener('hashchange', hashchange);
+  function hashchange(e){ 
+    e.preventDefault();
+    var hash = location.hash;
+    openTab()
+  }
+
+  links.forEach((elem)=>{
+  elem.addEventListener('click', (e) => {
+    e.preventDefault();
+    location.hash = elem.hash;
+  })
+})
+
 }
 
-$('.tabs-links').slick({
+let linksScroll = () => {
+  $('.tabs-links').slick({
    slidesToShow: 3,
    slidesToScroll: 3,
    infinite: false,
@@ -34,3 +53,8 @@ $('.tabs-links').slick({
     }
   ]
 })
+
+}
+linksScroll()
+
+window.addEventListener('resize', linksScroll, false)

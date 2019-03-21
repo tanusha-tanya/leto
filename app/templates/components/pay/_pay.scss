@@ -2,8 +2,8 @@
     &-container{
         margin-bottom: 60px;
         border: 1px solid $brandborder;
-        border-top-right-radius: 30px;
-        border-bottom-left-radius: 30px;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 50px;
         padding: 0 20px;
         position: relative;
         background: $buttontext;
@@ -24,10 +24,14 @@
             bottom: 0;
             z-index: -1;
             right: 25px;
+            border-bottom-left-radius: 50px;
         }
     }
     &-title{
         padding: 20px 0;
+        h2{
+            letter-spacing: normal;
+        }
     }
     &-item{
         padding: 20px 0;

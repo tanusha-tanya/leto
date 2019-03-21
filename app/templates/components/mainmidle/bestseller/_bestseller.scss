@@ -86,7 +86,7 @@
         position: absolute;
         left: calc(50% - 100px);
         width: 200px;
-        bottom: 50px;
+        bottom: 60px;
       }
     }
   }
@@ -141,14 +141,17 @@
     .owl-nav button.owl-prev, .owl-nav button.owl-next{
       width: 80px;
       height: 80px;
-      border-top-right-radius: 40px;
-      border-bottom-left-radius: 40px;
+      border-top-right-radius: 32px;
+      border-bottom-left-radius: 32px;
       border: 1px solid $bordergray;
       position:absolute;
       left:0;
       svg{
         color: $arrow;
         fill: $arrow;
+        position: absolute;
+        top: calc(50% - 10px);
+        left: calc(50% - 10px);
       }
       &:hover{
         background: $buttontext;
@@ -170,8 +173,8 @@
     .owl-nav button.owl-next{
       border-top-right-radius: 0;
       border-bottom-left-radius: 0;
-      border-top-left-radius: 40px;
-      border-bottom-right-radius: 40px;
+      border-top-left-radius: 32px;
+      border-bottom-right-radius: 32px;
       left: auto;
       right:0;
     }

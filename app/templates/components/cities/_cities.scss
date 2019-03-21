@@ -131,6 +131,7 @@
         cursor: pointer;
         color: #fff;
         text-transform:uppercase;
+        transition: background .3s;
         @media(min-width:$tablet){
             order: 2;
             margin-left: 20px;
@@ -143,8 +144,14 @@
                 align-items: center;
             }
         }
+        &:hover{
+            background: #A5BB70;
+        }
         &.disabled{
             background: #E0E0E0;
+            &:hover{
+                background: #E0E0E0;
+            }
         }
     }
     &-close{

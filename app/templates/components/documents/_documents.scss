@@ -36,6 +36,14 @@
                 position: relative;
                 margin: 0 -20px;
             }
+            .documents-table-col{
+                padding-top: 10px;
+                &:first-child{
+                    @media(min-width: $tablet){
+                        padding-left: 0;
+                    }
+                }
+            }
         }
         &-col{
             display: flex;
@@ -87,7 +95,7 @@
                     .documents-table-col{
                        border-top: 1px solid #697F34;
                        border-bottom: 1px solid #697F34;
-                        &:first-of-type{
+                       &:first-of-type{
                             border-left: 1px solid #697F34;
                         }
                         &:last-of-type{
@@ -175,6 +183,11 @@
             text-align: center;
             padding-top: 18px;
             border: none;
+            transition: background .3s;
+            &:hover, &:active{
+                color: #fff;
+                background: #A5BB70;
+            }
             &:before, &:after{
                 display: none;
             }
@@ -200,6 +213,7 @@
         background: #fff;
         box-sizing: border-box;
         padding: 10px;
+        transition: background .3s;
         @media(min-width:$tablet){
             width: auto;
             padding: 0;

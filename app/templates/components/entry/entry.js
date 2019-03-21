@@ -1,7 +1,9 @@
-let hide = true;
+/*let hide = true;
 document.body.onclick = (e)=>{
+    console.log(e.target)
     if(e.target.classList.contains('js-button')){
        e.preventDefault();
+       alert('button')
        let form = e.target.closest('.js-form');
        check(form);
     }
@@ -19,8 +21,8 @@ document.body.onclick = (e)=>{
             e.target.classList.add('hide')
         }
     }
-}
-let check = function(form){
+}*/
+/*let check = function(form){
     let inputCollection = form.querySelectorAll('.js-inputcheck')
     let errorText = form.querySelector('.error-text')
     let name = null;
@@ -53,7 +55,7 @@ let check = function(form){
     }
 }
 
-/*document.body.onchange = (e)=>{
+document.body.onchange = (e)=>{
     if(e.target.classList.contains('js-inputcheck')){
        let form = e.target.closest('.js-form');
        check(form)

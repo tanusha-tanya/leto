@@ -1,24 +1,24 @@
 .add
-    form.add-form
+    form.add-form.js-form
         .add-fieldset
             .add-title Мои адреса
         .add-fieldset
             legend.add-legend Регион
-            input(type="text", value="Удмуртская республика").add-input
+            input(type="text", value="Удмуртская республика").add-input.js-inputcheck
         .add-fieldset
             legend.add-legend Город
-            input(type="text", value="Ижевск").add-input
+            input(type="text", value="Ижевск").add-input.js-inputcheck
         .add-fieldset
             legend.add-legend Почтовый индекс
             .add-input-wrap
-                input(type="text", value="426 035").add-input.add-input__index
+                input(type="text", value="426 035").add-input.add-input__index.js-inputcheck
         .add-fieldset
             legend.add-legend Адрес
             .add-inputs-wrap
-                input(type="text", value="ул. Пушкинская").add-input
+                input(type="text", value="ул. Пушкинская").add-input.js-inputcheck
                 .add-inputs-small
-                    input(type="text", value="31").add-input.add-input__small
-                    input(type="text", value="256").add-input.add-input__small
+                    input(type="text", value="31").add-input.add-input__small.js-inputcheck
+                    input(type="text", value="256").add-input.add-input__small.js-inputcheck
         .add-fieldset
             input(type="checkbox", id="current").add-checkbox
             label.add-label(for="current", checked) Ваш адрес доставки по умолчанию
@@ -26,4 +26,4 @@
             .add-button-wrap
                 button.add-button.add-button__send.disabled сохранить адрес
                 .add-link
-                    a.address-link.js-delete(href="delete.html").js-popup Удалить адрес
+                    a.address-link.js-delete(href="delete.html").js-popup-inside Удалить адрес
