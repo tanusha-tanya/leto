@@ -9,9 +9,11 @@
     &-item{
         margin: 0 10px;
         width: calc(50% / 3 - 20px);
+        font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif; 
         &__2{
             margin: 0 10px;
             width: calc(50% - 20px);
+            font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif; 
         }
     }
 }

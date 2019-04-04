@@ -32,5 +32,10 @@
         border-bottom-left-radius: 30px;
         cursor: pointer;
         display: inline-block;
+        font: 12px/28px MuseoSansNormal, Arial, Helvetica, sans-serif; 
+        transition: background .3s;
+        &:hover{
+            background: #A5BB70;
+        }
     }
 }

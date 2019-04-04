@@ -3,12 +3,12 @@
         .order-bgform 
             .order-fieldset
                 legend.order-legend Телефон
-                input.order-orderform-input(type="text")
+                input.order-orderform-input.js-phone(type="text", placeholder="+7(___) ___-____")
             .order-fieldset
                 legend.order-legend Город
-                input.order-orderform-input(type="text", value="Анжеро-Судженск") 
+                input.order-orderform-input#js-ordercity(type="text", placeholder="Город") 
             .order-fieldset
-                legend.order-legend Способ доставки
+                legend.order-legend.order-legend__top Способ доставки
                 .order-orderform-radioblock
                     input.order-orderform-radio(type="radio", name="delivery", id="ship")
                     label.order-orderform-label(for="ship") Курьерская доставка
@@ -29,8 +29,8 @@
                 legend.order-legend Фамилия
                 input.order-orderform-input(type="text")
             .order-fieldset
-                legend.order-legend Комментарий
-                input.order-orderform-textarea(type="textarea")
+                legend.order-legend.order-legend__top Комментарий
+                textarea.order-orderform-textarea
         .order-payblock
             input(type="radio", name="pay", id="cash").order-pay-radiobutton
             label.order-pay-radiolabel(for="cash") Оплата наличными при получении
@@ -42,7 +42,7 @@
         .order-totalblock
             .order-totalblock-top
                 .order-totalblock-title Сказать мастеру спасибо
-                fieldset.order-danate
+                .order-danate
                     label.danate-label Введите сумму: 
                     input.danate-input(type="text", value="0")
             .order-totalblock-bottom
@@ -64,6 +64,6 @@
         .order-send
             button.order-button Оформить заказ
             .order-disclaimer Нажимая на кнопку «Оформить заказ», вы даете своё согласие на обработку персональных данных в соответствии с 
-                a(href="#") Политикой конфидициальности
-                | и принимаете условия 
+                a(href="#") Политикой конфиденциальности 
+                |  и принимаете условия 
                 a(href="#") Публичной оферты

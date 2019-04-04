@@ -39,6 +39,7 @@
                 display: inline-block;
                 width: 360px;
                 border-radius: 0;
+                vertical-align: middle;
             }
         }
         &-button{
@@ -57,6 +58,7 @@
                 display: inline-block;
                 border-top-right-radius: 30px;
                 width: 120px;
+                vertical-align: middle;
             }
         }
     }

@@ -18,13 +18,14 @@
   .card-currentprice.card-currentprice__discount
     span#price(data-min="153", data-max="1050") 153 
     | руб
-.card-pricecontroller
-  button.card-minus -
-  input(type="text"  name="quantity" value="1")#quantity.card-pricecontroller-input
-  button.card-plus +
-button.card-button.js-add добавить в корзину
-.card-heart
-  svg(role="img")(width="20")(height="18"): use(xlink:href="#heart")
+form(action="#")
+  .card-pricecontroller
+    button.card-minus -
+    input(type="text", name="quantity", value="1")#quantity.card-pricecontroller-input
+    button.card-plus +
+  button.card-button.js-add добавить в корзину
+  .card-heart
+    svg(role="img")(width="20")(height="18"): use(xlink:href="#heart")
 .card-delivery Товар может быть доставлен вам в кратчайшие сроки.
 .card-article
   strong Артикул:

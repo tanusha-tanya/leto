@@ -1,14 +1,14 @@
-const quantity = document.querySelector('#quantity')
-if(quantity){
+const quantityValue = document.querySelector('#quantity')
+if(quantityValue){
   let minus = document.querySelector('.card-minus')
   let plus = document.querySelector('.card-plus')
 
-  quantity.onblur = ()=>{
-    if(quantity.value === '')
-      quantity.value = 1
+  quantityValue.onblur = ()=>{
+    if(quantityValue.value === '')
+      quantityValue.value = 1
   }
 
-  quantity.onkeypress = (e)=> {
+  quantityValue.onkeypress = (e)=> {
     e = e || event;
     if (e.ctrlKey || e.altKey || e.metaKey) return;
     var chr = getChar(e);
@@ -31,16 +31,20 @@ if(quantity){
 
       return null;
     }
-  minus.addEventListener('click', ()=>{
+  minus.addEventListener('click', (e)=>{   
+    e.preventDefault();
+    console.log(quantityValue)
     quantityChange(false)
   })
 
-  plus.addEventListener('click', ()=>{
+  plus.addEventListener('click', (e)=>{
+    e.preventDefault();
+    console.log(quantityValue)
     quantityChange(true)
   })
 
   let quantityChange = function(sign){
-    let value = quantity.value
+    let value = quantityValue.value
     if (!sign){
       if(value <= 1){
         return
@@ -52,7 +56,7 @@ if(quantity){
     else{
        value++
     }
-    quantity.value = value
+    quantityValue.value = value
   }
 }
 
@@ -69,24 +73,48 @@ if(valume){
   })
 }
 
-const addButton = document.querySelector('.js-add')
+
 const goodadded = document.querySelector('.goodadded')
-if(addButton){
-  addButton.onclick = () => {
-    addButton.textContent = "Товар в корзине";
-    goodadded.classList.toggle('active');
-    missClick();
-  }
+if(goodadded){
   let close = document.querySelector('.js-continue');
-    close.onclick = function(e){
+  close.onclick = function(e){
     e.preventDefault();
     goodadded.classList.remove('active')
   }
 }
+
+let goodAddedShow = (succes, info, button) => {
+  let status = goodadded.querySelector('.goodadded-status'),
+      text = goodadded.querySelector('.goodadded-text'),
+      svg = goodadded.querySelector('.goodadded-pick'),
+      buttonLeft = goodadded.querySelector('.js-continue'),
+      buttonRight =  $(button).clone();
+  if(succes){
+    status.textContent = "Вы добавили следующий товар";
+    text.textContent = info;
+    svg.innerHTML = '<svg class="goodadded-svg" role="img" width="28" height="32"><use xlink:href="#bag"></use></svg>';
+    $('.goodadded-right').html('<a class="goodadded-link__white" href="cart.html">В корзину</a>');
+  }
+  else{
+    status.textContent = "Ошибка";
+    text.textContent = info;
+    svg.innerHTML = '<svg class="goodadded-svg" role="img" width="28" height="32"><use xlink:href="#cancel"></use></svg>';
+    buttonLeft.textContent = 'Отмена';
+    $(buttonRight).text('Повторить операцию');
+    $(buttonRight).addClass('goodadded-link__white');
+    $('.goodadded-right').html(buttonRight);
+    buttonRight.click((e) => {
+      e.preventDefault();
+      goodAddedShow(true, 'крем', e.target)
+    })
+  }
+    goodadded.classList.add('active');
+    missClick();
+}
 let missClick = ()=>{
   document.body.onclick = (e) =>{
-    if ((e.target.closest !== goodadded || e.target !== goodadded) && e.target !== addButton){
-        goodadded.classList.remove('active')
+    if ((e.target.closest !== goodadded || e.target !== goodadded) && !e.target.classList.contains('js-add')){  
+      goodadded.classList.remove('active')
     } 
   }
 }

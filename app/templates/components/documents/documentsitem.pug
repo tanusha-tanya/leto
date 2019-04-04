@@ -1,4 +1,4 @@
-.documents-table-row
+.documents-table-row.documents-spoiler
     .documents-table-col(data-title="Название")
         .documents-info Договор 542.pdf
     .documents-table-col(data-title="Дата")
@@ -6,12 +6,10 @@
     .documents-table-col(data-title="Размер") 
          .documents-info 234 КБ 
     .documents-table-col(data-title="Описание") 
-         .documents-info  Договор получен от вас с неверными реквизитами. Использовать только для ознакомления с текстом ..
-         .documents-info__message Посмотреть
+         .documents-info.documents-info__spoil(data-text="Договор получен от вас с неверными реквизитами. Использовать только для ознакомления с текстом. И тут еще несколько строчек текста, чтобы полчился спойлер вот так.") Договор получен от вас с неверными реквизитами. Использовать только для ознакомления с текстом. И ... 
     .documents-table-col
         .documents-info
-            a(href="#").documents-download
+            a(href="/assets/goodsofday.png" download title="скачать").documents-download
                 svg.documents-svg(role="img")(width="12")(height="12"): use(xlink:href="#download")
                 span Скачать
-        .documents-info__message.documents-info__download Скачать
 .documents-table-grey

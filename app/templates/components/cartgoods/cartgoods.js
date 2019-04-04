@@ -1,4 +1,6 @@
 const cartQuantity = document.querySelectorAll('.cartgoods-quantity')
+const summ = document.querySelector('.cartgoods-order-summ span')
+const currentPrice = document.querySelectorAll('.cartcurrentprice')
 if(cartQuantity){
   let minus = document.querySelectorAll('.cartgoods-button-minus')
   let plus = document.querySelectorAll('.cartgoods-button-plus')
@@ -34,6 +36,7 @@ if(cartQuantity){
     }
     input.value = value;
     priceContainer.textContent = price*value;
+    changeSumm();
 }
 
 quantityCollection.forEach((quantity) =>{
@@ -45,7 +48,7 @@ quantityCollection.forEach((quantity) =>{
     let goods = quantity.closest('.cartgoods-item')
     let priceContainer = goods.querySelector('.cartcurrentprice')
     let price = priceContainer.dataset.price
-    priceContainer.textContent = price * quantity.value
+    priceContainer.textContent = price * quantity.value;
   }
 
   quantity.onkeypress = (e)=> {
@@ -74,4 +77,15 @@ quantityCollection.forEach((quantity) =>{
 
     
 })
+  let changeSumm = () => {
+    let number = 0;
+    currentPrice.forEach((price) => {
+        number+= Number(price.textContent);
+    })
+    summ.textContent = number;
+  }
+  if(summ){
+      changeSumm()
+  }
+
 }

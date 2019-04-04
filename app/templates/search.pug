@@ -1,0 +1,27 @@
+extends _layouts/default
+include components/maintop/maintopmenu/maintopmenu
+block title
+  title Результаты поиска
+block header
+  include  _layouts/header/header
+block content
+  main.main-wrap
+    +maintopmenu()
+    include components/breadcrumbs/breadcrumbs
+    section.catalog
+      .container
+        .white-block
+          h1 Тоник
+          include components/searchtext/searchtext
+          .row
+            .left-column
+              include components/filter/filter
+              include components/filter_desktop/filter_desktop
+            .right-column
+              include components/sort/sort
+              include _layouts/products/products
+              include components/pagination/pagination
+              include components/seoText/seoText
+block footer
+  include  _layouts/footer/footer
+  .body-dark

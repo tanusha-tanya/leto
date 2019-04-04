@@ -1,7 +1,9 @@
 .documents
     .documents-top
         .documents-title Мои документы
-        a(href="adddocuments.html").documents-add Добавить
+        .documents-add 
+            input(type="file", id="add")
+            label(for="add") Добавить
     .documents-table
         .documents-table-top
             .documents-table-col 

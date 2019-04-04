@@ -83,6 +83,7 @@
             transition: color .3s, border .3s, background .3s;
             width: 120px;
             margin: 0 10px;
+            overflow: hidden;
             @media(min-width:$desktop){
                 width: 200px;
                 margin: 0;

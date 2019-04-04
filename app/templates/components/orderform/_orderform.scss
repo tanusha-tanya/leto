@@ -1,8 +1,28 @@
+.order-orderform{
+    position: relative;
+    background: #fff;
+    z-index: 300;
+    @media(min-width:$desktop){
+        &:after{
+        content: "";
+        display: block;
+        width: calc(100% - 50px);
+        height: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        position: absolute;
+        bottom:0;
+        border-bottom-left-radius: 50px;
+        z-index:1;
+        left: 30px;
+    }
+    }
+}
 .order-bgform{
     background: $cartbg;
     margin: 0 -10px;
     padding: 20px 12px;
     box-sizing: border-box;
+    position: relative;
     @media(min-width:$tablet){
         margin:0;
         padding: 20px;
@@ -21,11 +41,19 @@
         display:flex;
         justify-content: space-between;
     }
+    input::placeholder{
+        font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        opacity: 1;
+    }
 }
 .order-legend{
     font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif; 
     margin: 10px 0;
-    
+    &__top{
+        @media(min-width:$desktop){
+            margin-top: -10px;
+        }
+    }
 }
 .order-orderform-input{
     box-sizing: border-box;
@@ -33,6 +61,7 @@
     height: 50px;
     border: 1px solid $brandborder;
     padding: 10px 20px;
+    font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
     @media(min-width:$tablet){
         width: 229px;
     }
@@ -70,6 +99,8 @@
     height: 120px;
     border: 1px solid $brandborder;
     padding: 10px 20px;
+    resize:none;
+    font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
     @media(min-width:$tablet){
          width: 229px;
     }
@@ -91,7 +122,7 @@
     padding-left: 32px;
     margin-bottom: 10px;
     position: relative;
-    font: 12px/18px MuseoSansNomal, Arial, Helvetica, sans-serif; 
+    font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif; 
     cursor: pointer;
     @media(min-width: $tablet){
         margin-left: 20px;
@@ -135,7 +166,8 @@
     border-top-right-radius: 30px;
     text-transform: uppercase;
     margin: 20px 0;
-    font: 12px/18px MuseoSansNomal, Arial, Helvetica, sans-serif;
+    font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    cursor: pointer;
     @media(min-width:$tablet){
         margin-left: 20px;
     }
@@ -177,15 +209,18 @@
     padding-top: 20px;
     padding-right: 50px;
     text-transform: uppercase;
-    font: 12px/20px MuseoSansNomal, Arial, Helvetica, sans-serif;
+    font: 12px/20px MuseoSansNormal, Arial, Helvetica, sans-serif;
     letter-spacing: 0.05em;
     transition: border-color .3s, color .3s;
     background: $buttontext;
     cursor: pointer;
+    color: #000;
     @media(min-width:$desktop){
         display: inline-block;
         width: calc(50% - 20px);
         margin: 10px;
+        height: 100px;
+        padding: 35px 0 0 70px;
     }
     &:before{
         content: "";
@@ -198,6 +233,9 @@
         position: absolute;
         left: 30px;
         top: 20px;
+        @media(min-width:$desktop){
+           top: 32px;
+        }
     }
     &:after{
         content: "";
@@ -209,11 +247,14 @@
         transition: background .3s;
         left: 35px;
         top: 25px;
+        @media(min-width:$desktop){
+           top: 37px;
+        }
     }
     span{
         text-transform: capitalize;
         display: block;
-        letter-spacing: auto;
+        letter-spacing: normal;
     }
 }
 .order-totalblock{
@@ -239,7 +280,7 @@
     border: 1px solid $brandborder;
     border-top-right-radius: 50px;
     padding: 20px;
-    font: 20px/30px MuseoSansNomal, Arial, Helvetica, sans-serif;
+    font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
     @media(min-width:$tablet){
         padding: 20px 32px;
     }
@@ -251,7 +292,7 @@
 }
 .order-totalblock-title{
     @media(min-width: $desktop){
-        font: 30px/40px MuseoSansNomal, Arial, Helvetica, sans-serif;
+        font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
         margin-top: 6px;
     }
 }
@@ -259,27 +300,36 @@
     border: none;
     outline: none;
     margin-top: 20px;
+    display: flex;
+    align-items: center;
     @media(min-width:$tablet){
         position:relative;
+        width: 370px;
         &:before{
             content: 'руб';
             position: absolute;
             right: 40px;
             font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
             color: $secondary;
-            top: 10px;
+            top: 8px;
         }
     }
     @media(min-width: $desktop){
         margin: 0;
+        width: 329px;
+        &:before{
+            top:14px;
+        }
     }
 }
 .danate-label{
     font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
     margin-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
     @media(min-width:$desktop){
         display: inline-block;
-        margin-top: -28px
+        
     }
 }
 .danate-input{
@@ -293,7 +343,7 @@
     font: 26px/36px MuseoSansDark, Arial, Helvetica, sans-serif;
     @media(min-width:$tablet){
         width: 229px;
-        padding-right: 60px;
+        padding-right: 70px;
     }
     @media(min-width:$desktop){
         width: 200px;
@@ -307,18 +357,28 @@
 }
 .order-send{
     border: 1px solid $brandborder;
+    padding: 20px;
+    border-bottom-left-radius: 50px;
+    margin-bottom: 40px;
+    position:relative;  
+    background: #fff;
+    z-index: 300;
     @media(min-width:$desktop){
         display: flex;
         flex-direction: row-reverse;
+        justify-content: space-between;        
     }
 }
 .order-totalblock-bottom{
-    padding: 10px 20px;
+    padding: 20px;
 }
 .order-totalblock-string{
     display: flex;
     justify-content: space-between;
-    margin: 6px 0;
+    align-items: baseline;
+    &:first-of-type{
+        margin-bottom: 6px;
+    }
 }
 .order-totalblock-total{
     font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
@@ -331,12 +391,6 @@
     @media(min-width:$tablet){
         font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif; 
     }
-}
-.order-send{
-    padding: 20px;
-    border-bottom-left-radius: 50px;
-    margin-bottom: 40px;
-    position:relative;    
 }
 .order-button{
     width: 260px;
@@ -352,11 +406,15 @@
     margin: 0 auto;
     box-sizing: border-box;
     display: block;
+    font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1em;
+    cursor: pointer;
     @media(min-width:$tablet){
         width: 390px
     }
     @media(min-width:$desktop){
         width: 280px;
+        margin: 0;
     }
 }
 .order-disclaimer{
@@ -368,6 +426,9 @@
     margin-top: 10px;
     @media(min-width:$tablet){
         max-width: 390px
+    }
+    @media(min-width:$desktop){
+        margin: 0;
     }
     a{
         border: none;

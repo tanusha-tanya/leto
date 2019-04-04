@@ -1,22 +1,36 @@
+let clickSearch = (input, button) => {
+  button.onclick = (e)=>{
+    e.preventDefault();
+    let searchText = input.value;
+    goSearch(searchText) 
+  }
+}
+let goSearch = (searchText) => {
+  window.location.search = "";
+  window.location = "search.html?q="+searchText;
+}
 
-/*$(".headersearch-input").easyAutocomplete({
-  url: "../search.json",
-  getValue: "item",
-  list: {	
-    match: {
-      enabled: true
-    }
-  },
-  theme: "square"
-});
-*/
+const headersearch = document.querySelector('.headersearch')
+if(headersearch){
+  let input = document.querySelector('.headersearch-input'),
+      button = document.querySelector('.headersearch-button'),
+      label = document.querySelector('.headersearch-label');
+  searchText(input, label)  
+  clickSearch(input, button)  
+
+}
+const mobilesearch = document.querySelector('.mobilesearch')
+if(mobilesearch){
+  let input = document.querySelector('.mobilesearch-input'),
+      button = document.querySelector('.mobilesearch-svg'),
+      label = document.querySelector('.mobilesearch-label');
+  searchText(input, label)  
+  clickSearch(input, button) 
+}
 
 
-/*const search = document.querySelector(".headersearch")
-if(search){
-  let json = '../search.json';
-  let input = document.querySelector(".headersearch-input");
-  let list = document.querySelector('.autocomplete');
+  
+  /*let list = document.querySelector('.autocomplete');
   let li = '';
   let array = [];
   let isPushed = false;
@@ -95,5 +109,4 @@ if(search){
     list.innerHTML = "";
     array = [];
   }
-}
-*/
+}*/

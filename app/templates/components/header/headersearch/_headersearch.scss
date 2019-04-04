@@ -60,6 +60,11 @@
       border-top-right-radius: 50px;
       text-align: center;
       padding:11px;
+      cursor:pointer;
+      transition: background .3s;
+      &:hover{
+        background: #697F34;;
+      }
     }
   }
   &-title{

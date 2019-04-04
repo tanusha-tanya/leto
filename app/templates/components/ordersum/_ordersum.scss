@@ -11,7 +11,7 @@
         padding: 0 30px;
     }
     @media(min-width:$desktop){
-        padding: 27px 30px;
+        padding-bottom: 10px;
     }
     &-shadow{
         position: relative;
@@ -20,11 +20,9 @@
             display: block;
             width: 75%;
             height: 20px;
-            -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
             box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
             position: absolute;
             bottom: 0;
-            z-index: -1;
             right: 12%;
             @media(min-width:$tablet){
                 width: 68%;
@@ -41,10 +39,14 @@
             padding: 0;
             padding-top: 20px;
             text-align: left;
+            span{
+                display: block;
+            }
         }
         @media(min-width: $desktop){
             padding: 20px 0;
             span{
+                display: inline-block;
                 font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
             }
         }
@@ -115,7 +117,7 @@
         }
     }
     &-brand{
-        font: 15px/24px MuseoSansLightItalic, Arial, Helvetica, sans-serif;
+        font: 15px/24px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
         color: $secondary;
     }
     &-quantity{

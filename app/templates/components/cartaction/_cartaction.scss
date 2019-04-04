@@ -70,6 +70,10 @@
                 transform: rotate(35deg);
         }
     }
+    input::placeholder{
+        font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        opacity: 1;
+    }
     &-input{
         width: 250px;
         height: 40px; 
@@ -79,6 +83,11 @@
         box-sizing: border-box;
         padding: 17px;
         padding-right: 45px;
+        &input::placeholder{
+            color: #828282;
+            opacity: 1;
+            font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif; 
+        }
     }
     &-promo{        
         position: relative;

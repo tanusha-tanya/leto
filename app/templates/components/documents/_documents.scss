@@ -68,7 +68,11 @@
                         display: block;
                     }
                 }              
-             }            
+             } 
+            @media(min-width: $desktop){
+                padding: 10px 20px;
+                vertical-align: middle;
+            }           
         }
         &-row{
             padding: 20px 10px;
@@ -87,8 +91,15 @@
                 margin-bottom: 11px;  
                 cursor:pointer;
                 .documents-table-col{
-                    border: 1px solid #fff;
                     transition: border-color .3s, background .3s, color .3s;
+                    border-top: 1px solid #fff;;
+                    border-bottom: 1px solid #fff;;
+                    &:first-of-type{
+                        border-left: 1px solid #fff;
+                    }
+                    &:last-of-type{
+                    border-right: 1px solid #fff;
+                    }
                 }           
                 &:hover{  
                     color: #333;
@@ -111,9 +122,12 @@
                    .documents-info{
                        background:#697F34;
                        color: #fff;
-                       transition: color .3s, background .3s;
+                       transition: color .3s, background .3s, height .3s;                                                  
                    } 
                 }
+            }
+            @media(min-width:$desktop){
+                padding: 0 20px;
             }
         }
         &-grey{
@@ -147,6 +161,12 @@
         }
     }
     &-add{
+        input{
+            position: absolute;
+            visibility: hidden;
+        }
+        label{
+        cursor: pointer;
         font-size: 0;
         width: 24px;
         height: 24px;
@@ -192,6 +212,7 @@
                 display: none;
             }
         }
+        }        
     }
     &-item{
         padding: 20px 10px;
@@ -242,34 +263,5 @@
             width: 24px;
             height: 24px;
         }
-    }
-    &-info__message{
-        width:120px;
-        height: 30px;
-        position: absolute;
-        top: -10px;
-        background: #fff;
-        box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
-        font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
-        text-align: center;
-        left: 40%;
-        box-sizing: border-box;
-        padding-top: 5px;
-        display: none;
-        &:after{
-            content: '';
-            width: 14px;
-            height: 14px;
-            background: #fff;
-            position: absolute;
-            left: 54px;
-            bottom: -5px;
-            z-index: 10;
-            transform: rotate(314deg);
-            box-shadow: -3px 2px 4px rgba(0, 0, 0, 0.25);
-        }     
-    }
-    &-info__download{
-        left: -40%;
     }
 } 

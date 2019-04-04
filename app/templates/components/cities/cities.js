@@ -1,6 +1,8 @@
 const cities = document.querySelector('.cities');
-let city = null;
-let defaultCity = "Москва";
+let city = null,
+    defaultCity = "Москва",
+    orderCity = document.querySelector('#js-ordercity');
+
 
 function setMap(){
         ymaps.geolocation.get({
@@ -12,13 +14,13 @@ function setMap(){
             return city
         })
         .catch(function (err) {
-            console.log('Не удалось установить местоположение', err);
+            console.log('Не удалось установить местоположение. Пожалуйста, введите адрес вручную', err);
         });
     }
     window.onload = function () {
         if (ymaps) {   
             setMap();
-        };
+        }
     }
 
 if(cities){
@@ -49,6 +51,9 @@ if(cities){
                 inputHidden.value = currentCity.dataset.id;
                 inputHidden.dispatchEvent(event);
                 inputText.value = currentCity.textContent;
+                if(orderCity){
+                    orderCity.value = currentCity.textContent;
+                }
             }
         })
     }    
@@ -72,6 +77,9 @@ if(cities){
                     })
                         citiesPopupLinkCollection.forEach((city) => {
                             city.textContent = cityName;
+                            if(orderCity){
+                                orderCity.value = cityName;
+                            }
                     })
                 }
             }

@@ -1,0 +1,20 @@
+.searchblock{
+    display: none;
+    &-ul{
+        background: #fff;
+        position: absolute;
+        z-index: 999;
+        top: calc(100% - 1px);
+        left: 0;
+        width: calc(100% + 85px);
+        border: 1px solid #A5BB70;
+        padding: 26px 20px 23px;
+        box-sizing: border-box;
+    }
+    &-li{
+        display: none;
+        &.active{
+            display: block;
+        }
+    }
+}

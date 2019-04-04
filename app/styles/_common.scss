@@ -302,10 +302,11 @@ h6{
     margin-bottom: 60px;
   }
   @media(min-width: $desktop){
-    margin: 50px auto 60px auto;
+    margin: 50px auto 148px auto;
     width: 100%;
     max-width: 1280px;
     padding: 40px 30px;
+    padding-top: 26px;
     box-sizing: border-box;
     position:relative;
     z-index:300;
@@ -315,6 +316,7 @@ h6{
   @media(min-width: $tablet){
     display:flex;
     padding: 30px 24px;
+    justify-content: space-between;
   }
 }
 .order-flex{
@@ -412,4 +414,13 @@ h6{
 }
 .mfp-figure figure{
   background: #fff;
+}
+.order-h1{
+  margin-bottom:20px;
+  @media(min-width:$tablet){
+    margin-bottom: 40px;
+  }
+  @media(min-width:$desktop){
+    margin-bottom:50px;
+  }
 }
