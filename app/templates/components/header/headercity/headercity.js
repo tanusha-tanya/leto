@@ -11,7 +11,7 @@ if(citiesPopupLink){
                 citiesPopup.classList.remove('active');                
             }
             else{
-                link.closest('.headercity').append(citiesPopup);
+                $(link).closest('.headercity').append(citiesPopup);
                 citiesPopup.classList.add('active');
                 cityMissClick();
             }

@@ -1,7 +1,8 @@
 mixin bestseller(text)
   .bestseller&attributes(attributes)
     .container.bestseller-container
-      h2.bestseller-title= text
+      .bestseller-title
+        h2= text
       .bestseller-carousel.owl-theme.owl-carousel
         .bestseller-item
           .product

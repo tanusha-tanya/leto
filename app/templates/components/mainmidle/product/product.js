@@ -20,7 +20,7 @@ $('.product-fastshow').magnificPopup({
                 arrows: false,
             });
             quantity($(this.content).find('#quantity'));  
-            $body.trigger('ajaxReady')          
+            $('body').trigger('ajaxReady')          
         }
     }
     

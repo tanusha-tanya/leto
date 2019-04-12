@@ -3,7 +3,7 @@ $(".personal-button").magnificPopup({
 		overflowY: 'scroll',
 		callbacks: {
 			ajaxContentAdded: function() {
-            $body.trigger('ajaxReady')                
+            $('body').trigger('ajaxReady')                
         }
     }
     

@@ -31,17 +31,22 @@ if(quantityValue){
 
       return null;
     }
-  minus.addEventListener('click', (e)=>{   
-    e.preventDefault();
-    console.log(quantityValue)
-    quantityChange(false)
-  })
+  
+  let plusMinus = () => {
+      minus.addEventListener('click', (e)=>{   
+        e.preventDefault();
+        console.log(quantityValue)
+        quantityChange(false)
+    })
 
-  plus.addEventListener('click', (e)=>{
-    e.preventDefault();
-    console.log(quantityValue)
-    quantityChange(true)
-  })
+    plus.addEventListener('click', (e)=>{
+      e.preventDefault();
+      console.log(quantityValue)
+      quantityChange(true)
+    })
+  }
+
+  plusMinus();
 
   let quantityChange = function(sign){
     let value = quantityValue.value
@@ -93,7 +98,7 @@ let goodAddedShow = (succes, info, button) => {
     status.textContent = "Вы добавили следующий товар";
     text.textContent = info;
     svg.innerHTML = '<svg class="goodadded-svg" role="img" width="28" height="32"><use xlink:href="#bag"></use></svg>';
-    $('.goodadded-right').html('<a class="goodadded-link__white" href="cart.html">В корзину</a>');
+    $('.goodadded-right').html('<a class="goodadded-link__white" href="/cart/">В корзину</a>');
   }
   else{
     status.textContent = "Ошибка";

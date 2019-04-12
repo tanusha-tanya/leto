@@ -38,6 +38,12 @@
         color: #333333;
         position: relative;
         padding-right: 30px;
+        &:hover{
+            .entry-svg{
+                color: #697F34;
+                fill: #697F34;    
+            }
+        }
     }
     &-svg{
         margin-left: 20px;
@@ -46,6 +52,7 @@
         position: absolute;
         right: 0;
         top:0;
+        transition: color .3s, fill .3s;
     }
     &-fieldset{
         margin: 20px 0;
@@ -221,6 +228,11 @@
         &-svg{
             color: #CCC6B7;
             fill: #CCC6B7;
+            transition: color .3s, fill .3s;
+            &:hover{
+                color: #697F34;
+                fill: #697F34;   
+            }
         }
     }
     &-file{

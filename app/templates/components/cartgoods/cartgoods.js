@@ -6,18 +6,23 @@ if(cartQuantity){
   let plus = document.querySelectorAll('.cartgoods-button-plus')
   let quantityCollection = document.querySelectorAll('.cartgoods-button-input')
   let resetCollection = document.querySelectorAll('.cartgoods-reset')
-  minus.forEach((elem) => {
-    elem.addEventListener('click', () => {    
+  
+  let plusMinus = () => {
+    minus.forEach((elem) => {
+      elem.addEventListener('click', () => {    
         changeAmount(elem, false)
+      })
     })
-  })
-  plus.forEach((elem) => {
-    elem.addEventListener('click', () => {
+    plus.forEach((elem) => {
+      elem.addEventListener('click', () => {
         changeAmount(elem, true)
+      })
     })
-  })
+  }
+ 
+  plusMinus();
 
- let changeAmount = function(elem, sign){
+let changeAmount = function(elem, sign){
      let goods = elem.closest('.cartgoods-item')
      let input = goods.querySelector('.cartgoods-button-input')
      let priceContainer = goods.querySelector('.cartcurrentprice')
@@ -35,8 +40,8 @@ if(cartQuantity){
        value++
     }
     input.value = value;
-    priceContainer.textContent = price*value;
-    changeSumm();
+    //priceContainer.textContent = price*value;
+    //changeSumm();
 }
 
 quantityCollection.forEach((quantity) =>{
@@ -48,7 +53,7 @@ quantityCollection.forEach((quantity) =>{
     let goods = quantity.closest('.cartgoods-item')
     let priceContainer = goods.querySelector('.cartcurrentprice')
     let price = priceContainer.dataset.price
-    priceContainer.textContent = price * quantity.value;
+    //priceContainer.textContent = price * quantity.value;
   }
 
   quantity.onkeypress = (e)=> {
@@ -77,7 +82,7 @@ quantityCollection.forEach((quantity) =>{
 
     
 })
-  let changeSumm = () => {
+  /*let changeSumm = () => {
     let number = 0;
     currentPrice.forEach((price) => {
         number+= Number(price.textContent);
@@ -86,6 +91,6 @@ quantityCollection.forEach((quantity) =>{
   }
   if(summ){
       changeSumm()
-  }
+  }*/
 
 }

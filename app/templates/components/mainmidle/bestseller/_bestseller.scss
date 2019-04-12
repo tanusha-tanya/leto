@@ -7,41 +7,40 @@
   }
   &-title{
     text-align: center;
-    font: 30px/50px MuseoSansNormal, Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    color: $link;
-    background-image: url('../images/svg/flower_little.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    display: block;
-    padding: 10px 0;
     position: relative;
     @media(min-width:$tablet){
-      font: 40px/60px MuseoSansNormal, Arial, Helvetica, sans-serif;
-      background-image: url('../images/svg/flower_middle.svg');
-      padding: 20px 0;
-    }
-    @media(min-width:$desktop){
-      background-image: url('../images/svg/flower.svg');
-      padding: 30px 0;
-      &:after, &:before{
+      &:before{
           content: '';
           position: absolute;
           background: $brandborder;
-          width: 15%;
+          width: 100%;
+          left:0;
+          right:0;
           height: 1px;
+          top:50%;
       }
-      &:before{
-        right: 0;
-        top: 50%;
-      }
-      &:after{
-        left: 0;
-        top: 50%;
+    }
+    h2{
+      font: 30px/50px MuseoSansNormal, Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      color: $link;
+      background-color: #fff;
+      background-image: url('../images/svg/flower_little.svg');
+      background-repeat: no-repeat;
+      background-position: top center;
+      display: inline-block;
+      padding: 20px 30px;
+      z-index: 100;
+      position: relative;     
+      @media(min-width:$tablet){
+        font: 40px/60px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        padding: 40px 120px;
+        background-size: contain;
+        background-position: center;
       }
     }
   }
-  &__main{
+  /*&__main{
     .bestseller-title{
       &:after, &:before{
         @media(min-width:$tablet){
@@ -64,7 +63,7 @@
         top: 50%;
       }
     }
-  }
+  }*/
   &-carousel{
     margin-top: 15px;
     @media(min-width:$tablet){

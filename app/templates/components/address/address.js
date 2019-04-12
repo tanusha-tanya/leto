@@ -55,8 +55,10 @@ let check = function(form){
     let button = form.querySelector('.add-button__send');
     let arr = 0
     inputs.forEach((input) => {
+        console.log(input.value.length)
         if(input.value.length <= 0){
             arr++
+             console.log(arr)
        }
     })   
     if(arr === 0){

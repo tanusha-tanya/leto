@@ -26,8 +26,11 @@
             }
         }
     }
+    &-slider{
+      display: flex;
+    }
     &-item{
-        width: 100%;
+        width: 100%;       
         @media(min-width: $desktop){
           max-width: 360px;
         }

@@ -15,6 +15,15 @@
         display: none;
         &.active{
             display: block;
+            transition: background .3s, color .3s;
+            margin: 0 -20px;
+            padding: 0 20px;
+            cursor: pointer;
+            &:hover{
+                background: #A5BB70;
+                color: #fff;             
+                box-sizing: border-box;
+            }
         }
     }
 }

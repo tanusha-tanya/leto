@@ -5,6 +5,7 @@ $('.bestseller-carousel').owlCarousel({
     dots: true,
     autoheight: false,
     center: true,
+    onInitialized: callbackBestseller,
     responsive : {
        0: {
         items:1,
@@ -25,3 +26,6 @@ $('.bestseller-carousel').owlCarousel({
        }
     }
 });
+function callbackBestseller(event) {
+  $('body').trigger('ajaxReady');
+}

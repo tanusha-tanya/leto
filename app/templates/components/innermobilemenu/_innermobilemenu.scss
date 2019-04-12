@@ -48,13 +48,14 @@
         width: 26px;
         height: 26px;
         position: absolute;
-        top: 25px;
+        top: 12px;
         right: 6px;
         transition: background .3s;
         cursor: pointer;
         &:before, &:after{
             content: "";
             display: block;
+            top: 12px;
             width: 26px;
             height: 2px;
             background: $border;

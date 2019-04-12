@@ -20,8 +20,8 @@
                 .error-text
         .entry-fieldset
             .entry-fieldset-master
-                input(type="checkbox", id="remember").entry-checkbox
-                label.entry-label__checkbox(for="remember") Я мастер или салон
+                input(type="checkbox", id="master").entry-checkbox
+                label.entry-label__checkbox(for="master") Я мастер или салон
                 .entry-fieldset-file 
                     input(type="file", id="file").entry-file
                     label.entry-label__file(for="file")  Прикрепить сертификат мастера    
@@ -30,7 +30,7 @@
                 input(type="checkbox", id="remember").entry-checkbox
                 label.entry-label__checkbox(for="remember") Запомнить меня
             .entry-fieldset-button
-                button.entry-button.js-button войти
+                button.entry-button.js-button.add-button__send.disabled войти
                 a(href="forgotpassword.html").entry-link__small.js-popup-inside Забыли парль?
     .entry-bottom
         p Вход через социальные сети

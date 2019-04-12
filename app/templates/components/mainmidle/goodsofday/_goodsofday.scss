@@ -134,6 +134,8 @@
       margin: 0;
       width: 338px;
       height: 368px;
+      flex-grow: 1;
+      flex-shrink: 0;
     }
     @media(min-width:$desktop){
       width: 330px;

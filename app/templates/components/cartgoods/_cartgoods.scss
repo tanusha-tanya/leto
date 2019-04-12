@@ -235,13 +235,26 @@
     &-delete,&-favorite{
         color: $link;
         display:inline-block;
-        font: 12px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        font: 12px/12px MuseoSansNormal, Arial, Helvetica, sans-serif;
     }
     &-favorite{
         margin-top: 15px;
         @media(min-width:$desktop){
             margin-left: 25px;
         }        
+    }
+    &-delete{
+        @media(min-width:$desktop){
+            position: relative;
+            &:after{
+                content: '';
+                background: #E0DFDA;
+                width: 1px;
+                height: 20px;
+                position: absolute;
+                right: -13px;
+            }
+        }
     }
   }
  }

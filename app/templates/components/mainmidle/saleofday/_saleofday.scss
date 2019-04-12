@@ -4,12 +4,11 @@
   margin-top: 13px;
   margin-bottom: -56px;
   @media(min-width: $tablet){
-    padding-bottom: 146px;
-    margin-bottom: 0;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
   }
   @media(min-width: $desktop){
-    padding-bottom: 0;
-    margin-bottom: 0;
+    margin-bottom: 109px;
   }
   &:after{
     content: '';
@@ -27,6 +26,7 @@
       left: 51%;
       top: 22px;
       background-position: 63px top;
+      bottom: 0;
     }
     @media(min-width: $desktop){
       left: 68%;
@@ -226,6 +226,8 @@
     @media(min-width: $tablet){
       width: 75%;
       margin-bottom: 16px;
+      flex-grow: 1;
+      flex-shrink: 0;
     }
     @media(min-width: $desktop){
       width: 50%;
@@ -420,6 +422,9 @@
       }
       li button{
         opacity:0;
+        &:before{
+          font-size: 0;
+        }
       }
     }
   }

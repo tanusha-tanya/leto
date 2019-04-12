@@ -1,13 +1,15 @@
 let cases = document.querySelectorAll('.searchblock-li'),
     searchblock = document.querySelector('.searchblock-ul');
-let searchText = (input, label) => {
-    input.oninput = () => {
-        matchWord(input.value)
+let searchText = (inputSearch, label) => {
+    inputSearch.oninput = () => {
+        console.log(inputSearch.value)
+        matchWord(inputSearch.value)
         cases.forEach((caseLi) => {
             if(caseLi.classList.contains('active')){
-                label.append(searchblock)
+                label.append(searchblock);
+                chooseWord(inputSearch, label);
             }
-            else if(label.queryselector('.searchblock-ul')){
+            else if(label.querySelector('.searchblock-ul')){
                 label.removeChild(searchblock)
             }
         })
@@ -23,13 +25,25 @@ let matchWord = (word) => {
                 caseLi.classList.add('active')
             }
             else{
-                caseLi.classList.remove('active')
+                caseLi.classList.remove('active');
             }
         })
     }    
     else{
         cases.forEach((caseLi) => {
-             caseLi.classList.remove('active')
+             caseLi.classList.remove('active');
         })
     }
 }
+
+let chooseWord = (inputSearch, label) => {
+    cases.forEach((item) =>{
+        item.addEventListener('click',() => {
+            inputSearch.value = item.textContent;
+            if(label.querySelector('.searchblock-ul')){
+                label.removeChild(searchblock)
+            }
+            searchText(inputSearch, label) 
+        })
+    })
+} 
