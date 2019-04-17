@@ -20,9 +20,9 @@
     | руб
 form(action="#")
   .card-pricecontroller
-    button.card-minus -
-    input(type="text", name="quantity", value="1")#quantity.card-pricecontroller-input
-    button.card-plus +
+    button.card-minus.js-minus -
+    input(type="text", name="quantity", value="1").js-quantity.card-pricecontroller-input
+    button.card-plus.js-plus +
   button.card-button.js-add добавить в корзину
   .card-heart
     svg(role="img")(width="20")(height="18"): use(xlink:href="#heart")

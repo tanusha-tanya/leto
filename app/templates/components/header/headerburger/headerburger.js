@@ -5,6 +5,6 @@ if(burger){
   burger.onclick = function(){
     menu.classList.toggle("open");
     burger.classList.toggle("open");
-    wrap.classList.toggle("hide");
+    //wrap.classList.toggle("hide");
   }
 }

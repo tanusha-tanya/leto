@@ -1,70 +1,52 @@
-const cartQuantity = document.querySelectorAll('.cartgoods-quantity')
-const summ = document.querySelector('.cartgoods-order-summ span')
-const currentPrice = document.querySelectorAll('.cartcurrentprice')
-if(cartQuantity){
-  let minus = document.querySelectorAll('.cartgoods-button-minus')
-  let plus = document.querySelectorAll('.cartgoods-button-plus')
-  let quantityCollection = document.querySelectorAll('.cartgoods-button-input')
-  let resetCollection = document.querySelectorAll('.cartgoods-reset')
+let plusMinus = ()=>{
+  let minus = document.querySelectorAll('.js-minus');
+  let plus = document.querySelectorAll('.js-plus');
+  let quantityCollection = document.querySelectorAll('.js-quantity');
   
-  let plusMinus = () => {
+  if(quantityCollection){
     minus.forEach((elem) => {
-      elem.addEventListener('click', () => {    
-        changeAmount(elem, false)
-      })
-    })
-    plus.forEach((elem) => {
-      elem.addEventListener('click', () => {
-        changeAmount(elem, true)
-      })
-    })
-  }
- 
-  plusMinus();
+  elem.addEventListener('click', (e) => {    
+    e.preventDefault();
+    changeAmount(elem, false)
+  })
+})
+
+plus.forEach((elem) => {
+  elem.addEventListener('click', (e) => {
+    e.preventDefault();
+    changeAmount(elem, true)
+  })
+})
 
 let changeAmount = function(elem, sign){
-     let goods = elem.closest('.cartgoods-item')
-     let input = goods.querySelector('.cartgoods-button-input')
-     let priceContainer = goods.querySelector('.cartcurrentprice')
-     let price = priceContainer.dataset.price
-     let value = input.value   
-     if (!sign){
-        if(value <= 1){
-            return
-        }
-        else{
-            value--
-        }
+  let input = elem.parentNode.querySelector('.js-quantity');
+  let value = input.value; 
+  if (!sign){
+    if(value <= 1){
+      return
     }
     else{
-       value++
+      value--
     }
-    input.value = value;
-    //priceContainer.textContent = price*value;
-    //changeSumm();
+  }
+  else{
+    value++
+  }
+  input.value = value;
 }
 
-quantityCollection.forEach((quantity) =>{
-    quantity.onblur = ()=>{
-    if(quantity.value === '')
-      {
-          quantity.value = 1
-      }
-    let goods = quantity.closest('.cartgoods-item')
-    let priceContainer = goods.querySelector('.cartcurrentprice')
-    let price = priceContainer.dataset.price
-    //priceContainer.textContent = price * quantity.value;
-  }
-
+quantityCollection.forEach((quantity)=>{
   quantity.onkeypress = (e)=> {
     e = e || event;
     if (e.ctrlKey || e.altKey || e.metaKey) return;
     var chr = getChar(e);
     if (chr == null) return;
     if (chr <= '0' || chr > '9') {
-      return false;
+        return false;
     }
-}
+  }
+})
+
 
   function getChar(event) {
       if (event.which == null) {
@@ -80,17 +62,7 @@ quantityCollection.forEach((quantity) =>{
       return null;
     }
 
-    
-})
-  /*let changeSumm = () => {
-    let number = 0;
-    currentPrice.forEach((price) => {
-        number+= Number(price.textContent);
-    })
-    summ.textContent = number;
   }
-  if(summ){
-      changeSumm()
-  }*/
-
 }
+
+plusMinus()
