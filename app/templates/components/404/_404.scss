@@ -23,8 +23,8 @@
     }
     &-title{
         font: 20px/30px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
-        text-transform: unset;
-        letter-spacing: normal;
+        text-transform: none;
+        letter-spacing: normal; 
     }
     &-404{
         margin: 34px auto;

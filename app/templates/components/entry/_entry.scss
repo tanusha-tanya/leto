@@ -98,6 +98,7 @@
         }
         &__textarea{
             height: 160px;
+            resize: none;
         }
     }
     &-label{
@@ -177,7 +178,7 @@
     &-button{
         background:#697F34;
         color: #fff;
-        letter-spacing: 5%;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
         display: block;
         width: 260px;
@@ -189,7 +190,8 @@
         margin: 20px auto;
         border: none;
         cursor: pointer;
-        transition: background .3s;        
+        transition: background .3s;  
+        font: 12px/14px MuseoSansNormal, Arial, Helvetica, sans-serif;      
         &:hover{
             background: #A5BB70;
         }

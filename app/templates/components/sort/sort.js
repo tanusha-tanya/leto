@@ -20,9 +20,4 @@ if(sort){
       sort.classList.remove('sort-block__active')
     })
   })
-  const price = document.querySelector('.sort-anchor__price')
-  price.onclick = function(e){
-    e.preventDefault();
-    price.classList.toggle('up')
-  }
 }

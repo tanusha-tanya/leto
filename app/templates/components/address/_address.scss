@@ -40,24 +40,13 @@
         font-size: 0;
         width: 24px;
         height: 24px;
-        border: 1px solid #000;
-        border-radius: 100%;
         display: block;
         position: relative;
         box-sizing: border-box;
-        &:after, &:before{
-            content:'';
-            display: block;
-            position: absolute;
-            height: 17px;
-            width: 1px;
-            background: #000;
-            left: calc(50% );
-            top: 3px;
-        }
-        &:before{
-            transform: rotate(90deg)
-        }
+        background: url('../images/svg/plus.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-bottom: none;
     }
     &-block{
         border-top: 1px solid  #E4E4E4;

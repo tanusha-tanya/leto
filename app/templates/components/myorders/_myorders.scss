@@ -103,10 +103,10 @@
     }
 }
 .orderitem-title{
-        font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
         display: inline-block;
-        @media(min-width: $desktop){
-            font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        @media(min-width: $tablet){
+            font:  30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
         }   
 }
 .orderitem-status{

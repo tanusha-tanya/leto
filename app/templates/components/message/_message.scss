@@ -45,6 +45,7 @@
         height: 180px;
         padding: 10px;
         font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        resize: none;
         @media(min-width:$tablet){
             width: 340px;
         }

@@ -211,7 +211,6 @@
         display: none;
         @media(min-width:$tablet){
             display: block;
-            width: calc(37% - 20px);
             margin: 0 10px;
         } 
         @media(min-width:$desktop){
@@ -227,6 +226,9 @@
         padding: 20px 10px;
         @media(min-width:$tablet){
              padding: 20px 10px;
+        }
+        @media(min-width:$desktop){
+             padding: 20px;
         }
     }
     &-row{
@@ -285,7 +287,6 @@
     }
     &-title-wrap{
         @media(min-width:$tablet){           
-            width: calc(63% - 20px);
             margin: 0 10px;
         }
         @media(min-width:$desktop){

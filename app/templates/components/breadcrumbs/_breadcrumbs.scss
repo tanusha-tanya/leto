@@ -17,6 +17,9 @@
     color: $selection;
     text-transform: uppercase;
     font: 12px/20px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    span{
+      vertical-align: middle;
+    }
     @media(min-width:$tablet){
       text-transform: capitalize;
       font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
@@ -38,6 +41,7 @@
       display: inline-block;
       font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
       color:$brandborder;
+      vertical-align: middle;
       span{
         color: $link;
       }

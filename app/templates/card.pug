@@ -17,8 +17,9 @@ block content
             include components/cardcontent/cardcontent
       include components/goodadded/goodadded
       include components/tabs/tabs
-      +bestseller("с этим товаром покупают")
-      +bestseller("недавно просмотренные")
+      .container
+        +bestseller("с этим товаром покупают")
+        +bestseller("недавно просмотренные")
 block footer
   include  _layouts/footer/footer
   .body-dark

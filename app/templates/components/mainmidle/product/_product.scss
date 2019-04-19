@@ -21,6 +21,9 @@
     height: 615px;
     &:hover{
       border: 1px solid $bordergray;
+      .product-name{
+        color: #697F34;
+      }
       &:after{
         content: "";
         display: block;
@@ -31,10 +34,31 @@
         bottom: 0;
         z-index: -1;
         right: 10px;
-      }
-      .product-heart{
+      }     
+    }
+     .product-heart{
         opacity: 1;
       }
+  }
+  &-noimage{
+    &:before{
+      content: '';
+      background: #EAEAEA;
+      position: absolute;
+      left:0;
+      right:0;
+      top:0;
+      bottom: 55%;
+      @media(min-width: $desktop){
+        bottom: 50%;
+      }
+    } 
+    .product-pick{
+       svg{
+        position: relative;
+        display: block;
+        margin: 0 auto;
+      }   
     }
   }
   &-title{
@@ -139,6 +163,7 @@
     max-width: 86px;
     position: relative;
     margin: 0 auto;
+    display: block;
     @media(min-width:$tablet){
       max-width: 140px;
       height: auto;
@@ -152,6 +177,7 @@
     color: $title;
     font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
     margin-top:25px;
+    transition: color .3s;
     @media(min-width:$tablet){
       margin-top: 56px;
     }

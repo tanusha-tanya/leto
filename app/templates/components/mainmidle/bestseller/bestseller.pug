@@ -1,6 +1,6 @@
 mixin bestseller(text)
   .bestseller&attributes(attributes)
-    .container.bestseller-container
+    .bestseller-container
       .bestseller-title
         h2= text
       .bestseller-carousel.owl-theme.owl-carousel
@@ -21,13 +21,13 @@ mixin bestseller(text)
               .product-price 1 235 руб
             button.product-button Купить
         .bestseller-item
-          .product
+          .product.product-noimage
             +sticker("purple", "Sale")
             .product-heart
               svg(role="img")(width="20")(height="18"): use(xlink:href="#heart")
             .product-pick
               a(href="fastshow.html").product-fastshow
-                img.product-img(src="/assets/bestseller1.png" alt="Спрей с кератином для сильно поврежденных волос Biolage")
+                svg(role="img")(width="180")(height="151"): use(xlink:href="#noimage")
             .product-name Спрей с кератином для сильно поврежденных волос Biolage
             .product-brand Loreal Professional
             .product-rating

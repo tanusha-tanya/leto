@@ -82,6 +82,9 @@
     &:hover{
       color: $border;
     }
+    &__active{
+      color: $border;
+    }
   }
   &-brands{
     margin-top: 40px;

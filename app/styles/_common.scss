@@ -349,7 +349,13 @@ h6{
 }
 .mfp-content{
    background: $buttontext;
+  .mfp-counter{
+    right: 10px;
+  }
 }
+ .mfp-image-holder .mfp-content .mfp-close, .mfp-iframe-holder .mfp-content .mfp-close{
+    right: 0;
+  }
 .mfp-inline-holder .mfp-content, .mfp-ajax-holder .mfp-content{
   width: auto!important;
 }

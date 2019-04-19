@@ -91,6 +91,9 @@
     border: none;
     color: #333333;
     font: 12px/18px MuseoSansDark, Arial, Helvetica, sans-serif;
+    &__active{
+        color: $selection;
+    }
   }
   &-svg{
     color: #333333;
@@ -100,8 +103,5 @@
        color: #697F34;
       fill: #697F34;
     } 
-    &.up{
-       transform: rotate(-180deg)
-    }      
   }
 }
