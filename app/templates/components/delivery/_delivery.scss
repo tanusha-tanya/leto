@@ -1,4 +1,8 @@
 .delivery{
+    input::placeholder{
+        font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        opacity: 1;
+    }
     &-description{
         margin: 16px 0;
         background: $buttontext;
@@ -11,6 +15,8 @@
         @media(min-width: $tablet){
             padding: 40px;
             padding-left: 23px;
+            display: flex;
+            align-items: center;
         }
         @media(min-width: $desktop){
             width: calc(66% - 20px);
@@ -20,7 +26,7 @@
             font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
             margin-bottom: 10px;
             @media(min-width: $tablet){
-                display: inline-block;
+                margin-bottom: 0;
                 margin-right: 75px;
             }
         }
@@ -35,8 +41,9 @@
             border-top-right-radius: 30px;
             outline: none;
             border: 1px solid $brandborder;
+            font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
             @media(min-width: $tablet){
-                display: inline-block;
+                margin:0;
                 width: 360px;
                 border-radius: 0;
                 vertical-align: middle;
@@ -55,10 +62,10 @@
             cursor:pointer;
             font: 12px/16px MuseoSansNormal, Arial, Helvetica, sans-serif;
             @media(min-width: $tablet){
-                display: inline-block;
+                margin:0;
                 border-top-right-radius: 30px;
                 width: 120px;
-                vertical-align: middle;
+                padding-top: 3px;
             }
         }
     }
@@ -122,7 +129,7 @@
                  margin-right: -34px;
             }
             @media(min-width:$desktop){
-                 margin-right: -30%;
+                 margin-right: 0;
             }
         }
     }
@@ -172,6 +179,7 @@
         }
         @media(min-width:$desktop){
             width: 33%;
+            border:1px solid #E0E0E0;
         }
 
     }
@@ -183,7 +191,9 @@
         @media(min-width:$tablet){
             height: 750px;
             padding-top: 0;
-            //width: 57%;
+        }
+        @media(min-width:$desktop){
+            width: 67%;
         }
         #map{
             position: absolute;
@@ -195,6 +205,9 @@
             height: 100%;
             @media(min-width:$tablet){
                 position: relative;
+            }
+            @media(min-width:$desktop){
+                position: absolute;
             }
         }
         /*#map{
@@ -228,7 +241,7 @@
             display: flex;
         }
         @media(min-width:$desktop){
-            border-right: 0;
+            border: 0;
         }
     }
     &-company-title{

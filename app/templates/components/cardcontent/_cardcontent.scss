@@ -72,11 +72,11 @@
       margin-top: 0;
     }
     span{
-      letter-spacing: 0.1em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
       color: $selection;
       margin-right: 10px;
-      font: 15px/28px MuseoSansNormal, Arial, Helvetica, sans-serif;
+      font: 15px/28px MuseoSansDark, Arial, Helvetica, sans-serif;
     }
   }
   &-price{
@@ -154,6 +154,7 @@
     cursor: pointer;
     display: inline-block;
     transition: background .3s;
+    font: 12px/15px MuseoSansNormal, Arial, Helvetica, sans-serif;
     @media(min-width: $tablet){
       width: 280px;
     }
@@ -200,6 +201,8 @@
       font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
       color: $primary;
       border: none;
+      margin-top: 1px;
+      vertical-align: top;
     }
   }
 }

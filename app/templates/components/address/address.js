@@ -28,16 +28,18 @@ $(".js-popup").magnificPopup({
         }    
 });
 
-$('body').on('submit','.ajaxform', function(event){
+$('body').on('click','.add-button__send', function(event){
     event.preventDefault();
-    let button = $(this).find('.add-button__send');
+    let button = $(this);
+    let form = $(this).closest('.js-form');
     if(button.hasClass('disabled')){
         return
     }
     else{
-      $(this).submit()  
+        form.submit() 
     }
 });
+
 $('body').on('click', '.add-button__close', function(){
     var magnificPopup = $.magnificPopup.instance; 
     magnificPopup.close(); 
@@ -55,18 +57,18 @@ let check = function(form){
     let button = form.querySelector('.add-button__send');
     let arr = 0
     inputs.forEach((input) => {
-        console.log(input.value.length)
         if(input.value.length <= 0){
             arr++
-             console.log(arr)
        }
     })   
     if(arr === 0){
+
         button.classList.remove('disabled')
     }
     else{
          button.classList.add('disabled')
     }
+    console.log(button)
 }
 
 const deleteCollection = document.querySelectorAll('.js-delete');

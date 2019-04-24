@@ -6,13 +6,16 @@
         width: calc(50% - 20px);
         text-align: right;
     }
-     @media(min-width:$desktop){
+    @media(min-width:$desktop){
         margin: 0;
         width: 50%;
     }
     &-title{
         font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
         display: inline-block;
+        @media(min-width:$desktop){
+            font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        }
     }
     &-summ{
         font: 26px/36px MuseoSansDark, Arial, Helvetica, sans-serif;
@@ -26,6 +29,7 @@
         box-sizing: border-box;
         color: $buttontext;
         background: $selection;
+        letter-spacing: 0.05em;
         text-transform: uppercase;
         border: none;
         border-top-right-radius: 30px;

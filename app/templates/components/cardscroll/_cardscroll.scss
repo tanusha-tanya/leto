@@ -1,0 +1,74 @@
+.cardscroll{
+    opacity: 0;
+    display: none;
+    transition: opacity .3s;
+    background: #F4F4F0;
+    &.active{
+        @media(min-width:$desktop){
+            opacity: 1;
+            display: block;
+            position:fixed;
+            bottom:0;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 780;
+        }        
+    }
+    &-wrap{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 -10px;
+        box-sizing: border-box;
+        padding: 20px 0;
+        align-content: center;
+    }
+    &-descript{
+        margin: 0 10px;
+        width:calc(50% - 20px);
+        display: flex;
+        align-items: center;
+    }
+    &-buy{
+        margin: 0 10px;
+        width:calc(50% - 20px);
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    &-pick{
+        width: 80px;
+        height: 80px;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    &-img{
+        width: 80px;
+        height: auto;
+    }
+    &-title{
+        color: #000000;
+        margin: 0 20px;
+        font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;        
+    }
+    &-button{
+        width: 280px;
+        height: 60px;
+        box-sizing: border-box;
+        color: $buttontext;
+        background: $selection;
+        text-transform: uppercase;
+        border: none;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        cursor: pointer;
+        display: inline-block;
+        transition: background .3s;
+        letter-spacing: 0.05em;
+        font: 12px/15px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    }
+    &-price{
+        color: #AB0052;
+        font: 26px/28px MuseoSansDark, Arial, Helvetica, sans-serif;
+        margin: 0 20px;
+        }
+    }

@@ -130,8 +130,9 @@
             }
             &:last-of-type{
                 border-left: 1px solid $bordergray;
+                padding-left: 15px;
                 @media(min-width:$desktop){
-                    padding-left: 10px;
+                     padding-left: 10px;
                 }
             }
         }

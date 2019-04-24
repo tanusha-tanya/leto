@@ -210,9 +210,9 @@
         width: calc(100% / 3 - 30px)
         
     }
-      &-title{
-          margin-bottom:30px;
-          font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
+    &-title{
+        margin-bottom:30px;
+        font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
         @media(min-width:$desktop){
             display: none;
         }
