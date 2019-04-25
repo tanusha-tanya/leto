@@ -4,7 +4,7 @@
     transition: opacity .3s;
     background: #F4F4F0;
     &.active{
-        @media(min-width:$desktop){
+        @media(min-width:$tablet){
             opacity: 1;
             display: block;
             position:fixed;
@@ -24,34 +24,54 @@
     }
     &-descript{
         margin: 0 10px;
-        width:calc(50% - 20px);
+        width:calc(37% - 20px);
         display: flex;
         align-items: center;
+        @media(min-width:$desktop){
+            width:calc(50% - 20px);
+        }        
     }
     &-buy{
         margin: 0 10px;
-        width:calc(50% - 20px);
+        width:calc(63% - 20px);
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        @media(min-width:$desktop){
+            width:calc(50% - 20px);
+        }
     }
     &-pick{
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
         overflow: hidden;
         box-sizing: border-box;
+        flex-grow:1;
+        flex-shrink:0;
+        @media(min-width:$desktop){
+            width: 80px;
+            height: 80px;
+        }
     }
     &-img{
-        width: 80px;
-        height: auto;
+        width: 70px;
+        height: auto;        
+        @media(min-width:$desktop){
+            width: 80px;
+        }
     }
     &-title{
         color: #000000;
         margin: 0 20px;
-        font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;        
+        font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;  
+        flex-grow:0;
+        flex-shrink:1;
+        @media(min-width:$desktop){            
+            font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif; 
+        }       
     }
     &-button{
-        width: 280px;
+        width: 250px;
         height: 60px;
         box-sizing: border-box;
         color: $buttontext;
@@ -65,6 +85,12 @@
         transition: background .3s;
         letter-spacing: 0.05em;
         font: 12px/15px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        &:hover{
+           background: #A5BB70;
+        }
+        @media(min-width:$desktop){
+            width: 280px;
+        }
     }
     &-price{
         color: #AB0052;
