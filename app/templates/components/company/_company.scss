@@ -1,21 +1,20 @@
 .company{
-    margin-top: 30px;
-    margin-bottom: 60px;
+    margin-top: -12px;
+    margin-bottom: 48px;
     &-center{
         text-align: center;
-        padding: 0 10px;
+        padding: 0 24px;
         position: relative;
         margin: 0 auto;
     }
     &-svg{
-        margin-bottom: 25px;
+        margin-bottom: 34px;
     }
     &-slogan{
         font: 20px/30px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
         color: #3F3F3F;
     }
     &-flex{
-        margin: 15px 0;
     }
     &-col{
         position: relative;
@@ -27,6 +26,19 @@
             height:0;
             margin-top: 10px;
             margin-bottom: 30px;
+            &__left{
+                padding-top: 72%;
+                margin-top: 12px;
+                margin-bottom: 31px;
+            }
+            &__right{
+                padding-top: 65%;
+                margin-top: 38px;
+                margin-bottom: 42px;
+            }
+        }
+        &__my{
+            margin-top: 40px;
         }
     }
     &-bg{
@@ -46,7 +58,7 @@
         position: relative;
         text-align: center;
         display: block;
-        margin: 15px auto;
+        margin: 4px auto;
         text-transform: uppercase;
         background-image: url(../images/svg/flower.svg);
         padding: 30px; 
@@ -58,28 +70,34 @@
     &-text{
         p{
             font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif; 
-            margin-bottom: 40px;
+            margin-bottom: 25px;
         }
     }   
     &-h4{
-       font: 20px MuseoSansNormal, Arial, Helvetica, sans-serif;  
+       font: 20px/25px MuseoSansNormal, Arial, Helvetica, sans-serif;  
     }
     &-values{
+        margin-bottom: 25px;
         p{
             font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;  
-            margin: 20px 0;
+            margin: 10px 0;
         }
     }  
+    &-ul{
+        margin-top:7px;
+        &__my{
+            margin-top: 12px;
+        }
+    }
     &-li{
         position: relative;
         list-style: none;
         font: 20px/30px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;  
-        text-indent: 25px;
-        margin: 20px 0;        
+        text-indent: 25px; 
         &:before{
             content: '';
             position: absolute;
-            width: 20px;
+            width: 18px;
             height: 1px;
             left: 0;
             top: 15px;
@@ -88,7 +106,7 @@
         }
         &__check{
             position: relative;
-            margin: 20px 0 20px 30px;
+            margin: 6px 0 11px 30px;
             list-style: none;
             font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;  
             &:before{
@@ -96,12 +114,12 @@
                 position: absolute;
                 display: block;
                 left: -30px;
-                top: 6px;
-                width: 14px;
-                height: 7px;
+                top: 8px;
+                width: 17px;
+                height: 5px;
                 border-left: 1px solid #A5BB70;
                 border-bottom: 1px solid #A5BB70;
-                transform: skew(12deg) rotate(-50deg);
+                transform: skew(19deg) rotate(-36deg);
             }
         }
     }   
@@ -128,8 +146,8 @@
     &-decoration{
         position: absolute;
         z-index: 90;
-        left: 15%;
-        top: 10%;
+        left: 14%;
+        top: 14%;
         bottom:0;
         right: 25%;
         background-size: contain;
@@ -150,16 +168,21 @@
         transition: background .3s;
         letter-spacing: 0.05em;
         font: 12px/15px MuseoSansNormal, Arial, Helvetica, sans-serif;
-        margin: 20px auto;
+        margin: 12px auto;
         position: relative;
         &:hover{
              background: #A5BB70;
         }
     }
-    img{
+    &-img{
         width: 100%;
         position: relative;
         margin: 0 auto;
+        margin-top: 7px;
+        margin-bottom: 2px;
         height: auto;
+    }
+    &__my{
+        margin-top:30px;
     }
 }
