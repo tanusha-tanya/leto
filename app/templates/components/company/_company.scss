@@ -1,25 +1,60 @@
 .company{
     margin-top: -12px;
     margin-bottom: 48px;
+    @media(min-width:$tablet){
+        margin-bottom: 56px;
+    }
     &-center{
         text-align: center;
         padding: 0 24px;
         position: relative;
         margin: 0 auto;
+        @media(min-width:$tablet){
+            padding: 0 34px;
+        }
+        &__bg{
+            @media(min-width:$tablet){
+                &:before{
+                    content: '';
+                    background-image: url(../images/svg/rose_bg.svg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 198px;
+                    height: 177px;
+                    display: block;
+                    position: absolute;
+                    top: -50px;
+                    right: 0;
+                }
+            }            
+        }
     }
     &-svg{
-        margin-bottom: 34px;
+        margin-bottom: 20px;
+        margin-top: 16px;
+        @media(min-width:$tablet){
+            width: 282px;
+            height: 95px;
+            margin-top: 0;
+            margin-bottom: 36px;
+        }
     }
     &-slogan{
         font: 20px/30px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
         color: #3F3F3F;
     }
     &-flex{
+        @media(min-width:$tablet){
+            margin-top: 49px;
+        }
     }
     &-col{
         position: relative;
         margin: 0 auto;
         padding: 0 10px;
+        @media(min-width:$tablet){
+            padding: 0 34px;
+        }
         &__overflow{
             position: relative;
             padding-top: 75%;
@@ -30,15 +65,33 @@
                 padding-top: 72%;
                 margin-top: 12px;
                 margin-bottom: 31px;
+                @media(min-width:$tablet){
+                    margin-top: 33px;
+                }
             }
             &__right{
                 padding-top: 65%;
                 margin-top: 38px;
                 margin-bottom: 42px;
+                @media(min-width:$tablet){
+                    margin-top: 7px;
+                    padding-top: 71%;
+                    margin-bottom: 52px;
+                }
+            }
+        }
+        &__left{
+            @media(min-width:$tablet){
+                display: flex;
+                margin-left: -10px;
+                margin-right: -10px;
             }
         }
         &__my{
             margin-top: 40px;
+            @media(min-width:$tablet){
+                margin-top: 38px;
+            }
         }
     }
     &-bg{
@@ -68,32 +121,51 @@
         color: #000000;
     }
     &-text{
+        @media(min-width:$tablet){
+            margin-top: 38px;
+        }
         p{
             font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif; 
             margin-bottom: 25px;
         }
     }   
     &-h4{
-       font: 20px/25px MuseoSansNormal, Arial, Helvetica, sans-serif;  
+       font: 20px/25px MuseoSansNormal, Arial, Helvetica, sans-serif; 
+        @media(min-width:$tablet){
+            font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif; 
+            margin-top: -11px;
+        } 
     }
     &-values{
         margin-bottom: 25px;
         p{
             font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;  
             margin: 10px 0;
+            @media(min-width:$tablet){
+                margin-bottom: 25px;
+            }
         }
     }  
     &-ul{
         margin-top:7px;
+        @media(min-width:$tablet){
+            margin-bottom: 15px;
+        }
         &__my{
             margin-top: 12px;
+            @media(min-width:$tablet){
+                margin-top: 5px;
+            }
         }
     }
     &-li{
         position: relative;
         list-style: none;
         font: 20px/30px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;  
-        text-indent: 25px; 
+        text-indent: 25px;
+        @media(min-width:$tablet){
+             margin-bottom: 9px;
+        } 
         &:before{
             content: '';
             position: absolute;
@@ -121,6 +193,9 @@
                 border-bottom: 1px solid #A5BB70;
                 transform: skew(19deg) rotate(-36deg);
             }
+            @media(min-width:$tablet){
+                margin: 6px 0 22px 30px;
+            }
         }
     }   
     &-gradient{
@@ -142,6 +217,9 @@
         background-size: cover;
         background-repeat: no-repeat;
         z-index:100;
+        @media(min-width:$tablet){
+            left: 33%;
+        }
     } 
     &-decoration{
         position: absolute;
@@ -152,6 +230,12 @@
         right: 25%;
         background-size: contain;
         background-repeat: no-repeat;
+        @media(min-width:$tablet){
+            left: 5%;
+            top: 14%;
+            bottom: 0;
+            right: 0%;
+        }
     }  
     &-button{
         width: 280px;
@@ -170,19 +254,36 @@
         font: 12px/15px MuseoSansNormal, Arial, Helvetica, sans-serif;
         margin: 12px auto;
         position: relative;
+        @media(min-width:$tablet){
+            margin-top: 22px;
+        }
         &:hover{
              background: #A5BB70;
         }
     }
     &-img{
+        display: block;
         width: 100%;
+        max-width: 555px;
         position: relative;
         margin: 0 auto;
         margin-top: 7px;
         margin-bottom: 2px;
         height: auto;
+        @media(min-width:$tablet){
+            margin-top: 35px;
+        }
     }
-    &__my{
+    &-my{
         margin-top:30px;
+        p{
+            margin-top: 7px;
+        }
+    }
+    &-part{
+        @media(min-width:$tablet){
+            width: calc(50% - 20px);
+            margin: 0 10px;
+        }
     }
 }

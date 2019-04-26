@@ -1,6 +1,6 @@
 .company
-    .company-center
-        svg.company-svg(role="img")(width="266")(height="89"): use(xlink:href="#logobig")
+    .company-center.company-center__bg
+        svg.company-svg(role="img")(width="266")(height="89"): use(xlink:href="#logosmall")
         .company-slogan Компания LETO – это надежный профессиональный партнер, который создает возможность для успешного развития Вашего бизнеса.
     .company-flex
         .company-col
@@ -11,20 +11,22 @@
         .company-col__overflow.company-col__overflow__left
             .company-bg(style="background-image:url('assets/lilac.png')")
     .company-flex
-        .company-col.company-col__order__left
-            h4.company-h4 Наши ценности  
-            .company-values
-                p Профессионализм
-                p Партнерские отношения
-                p Постоянное развитие
-            h4.company-h4 Преимущества сотрудничества
-            ul.company-ul
-                li.company-li__check Вся необходимая продукция в одном месте
-                li.company-li__check Приятные бонусы с КАЖДОЙ покупкой
-                li.company-li__check Выгодные акции и предложения
-                li.company-li__check Уникальная возможность протестировать товар
-                li.company-li__check Профессиональная поддержка наших менеджеров
-                li.company-li__check Качественный сервис
+        .company-col.company-col__left
+            .company-part
+                h4.company-h4 Наши ценности  
+                .company-values
+                    p Профессионализм
+                    p Партнерские отношения
+                    p Постоянное развитие
+            .company-part
+                h4.company-h4 Преимущества сотрудничества
+                ul.company-ul
+                    li.company-li__check Вся необходимая продукция в одном месте
+                    li.company-li__check Приятные бонусы с КАЖДОЙ покупкой
+                    li.company-li__check Выгодные акции и предложения
+                    li.company-li__check Уникальная возможность протестировать товар
+                    li.company-li__check Профессиональная поддержка наших менеджеров
+                    li.company-li__check Качественный сервис
         .company-col__overflow.company-col__overflow__right
             .company-gradient
                 .company-decoration(style="background-image:url('images/svg/company_rose.svg')")
