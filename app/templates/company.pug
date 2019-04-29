@@ -8,11 +8,12 @@ block content
   main.main-wrap
     +maintopmenu()
     include components/breadcrumbs/breadcrumbs
-    .container
-      .white-block
-        h1 ПРО LETO
-        include components/innermenu/innermenu
-    include components/company/company
+    section.catalog
+      .container
+        .white-block
+          h1 ПРО LETO
+          include components/innermenu/innermenu
+          include components/company/company
 block footer
   include  _layouts/footer/footer
   .body-dark

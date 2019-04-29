@@ -4,13 +4,22 @@
     @media(min-width:$tablet){
         margin-bottom: 56px;
     }
+    @media(min-width:$desktop){
+        margin-top: 106px;
+        margin-bottom: 70px;
+    }
     &-center{
         text-align: center;
         padding: 0 24px;
         position: relative;
         margin: 0 auto;
+        box-sizing: border-box;
         @media(min-width:$tablet){
             padding: 0 34px;
+        }
+        @media(min-width:$desktop){
+            max-width: 100%;
+            margin-top: 49px;
         }
         &__bg{
             @media(min-width:$tablet){
@@ -26,7 +35,10 @@
                     top: -50px;
                     right: 0;
                 }
-            }            
+            }  
+            @media(min-width:$desktop){
+                max-width: 740px;
+            }          
         }
     }
     &-svg{
@@ -47,26 +59,44 @@
         @media(min-width:$tablet){
             margin-top: 49px;
         }
+        @media(min-width:$desktop){
+            display: flex;
+            margin: 0 -10px;
+            margin-top: 64px;
+        }
     }
     &-col{
         position: relative;
         margin: 0 auto;
-        padding: 0 10px;
-        @media(min-width:$tablet){
-            padding: 0 34px;
+        @media(min-width:$desktop){
+            margin: 0 10px;
+            width: calc(50% - 20px);
         }
         &__overflow{
             position: relative;
             padding-top: 75%;
             height:0;
-            margin-top: 10px;
-            margin-bottom: 30px;
+            margin: 10px -10px 30px -10px;
+            @media(min-width:$tablet){
+                margin: 10px -34px 30px -34px;
+            }
+            @media(min-width:$desktop){
+                height: auto;
+                padding-top: 0;
+                width: calc(50% - 20px);
+                margin: 0 10px;
+            }
             &__left{
                 padding-top: 72%;
                 margin-top: 12px;
                 margin-bottom: 31px;
                 @media(min-width:$tablet){
                     margin-top: 33px;
+                }
+                @media(min-width:$desktop){
+                    padding-top: 0;
+                    margin: 0 10px;
+                    width: calc(50% - 20px);
                 }
             }
             &__right{
@@ -78,6 +108,11 @@
                     padding-top: 71%;
                     margin-bottom: 52px;
                 }
+                @media(min-width:$desktop){
+                    padding-top: 0;
+                    margin: 0 10px;
+                    width: calc(50% - 20px);
+                }
             }
         }
         &__left{
@@ -86,12 +121,20 @@
                 margin-left: -10px;
                 margin-right: -10px;
             }
+            @media(min-width:$desktop){
+                order: 2;
+                display: block;
+            }
         }
         &__my{
             margin-top: 40px;
             @media(min-width:$tablet){
                 margin-top: 38px;
             }
+            @media(min-width:$desktop){
+                width: calc(50% - 20px);
+                margin: 0 10px;                
+            }   
         }
     }
     &-bg{
@@ -104,6 +147,10 @@
         bottom: 0;
         background-size: cover;
         background-repeat: no-repeat;
+        @media(min-width:$desktop){
+            right: -30%;
+            width: 130%;
+        }
     }
     &-title{
         font: 30px/50px MuseoSansNormal, Arial, Helvetica, sans-serif; 
@@ -119,10 +166,23 @@
         background-position: center;
         background-size: contain;
         color: #000000;
+        @media(min-width:$desktop){
+            font: 40px/60px MuseoSansNormal, Arial, Helvetica, sans-serif; 
+            background-position: 80px center;
+            padding-left: 0;
+            margin: 0;
+            text-align: left;
+        }
     }
     &-text{
         @media(min-width:$tablet){
             margin-top: 38px;
+        }
+        @media(min-width:$desktop){
+            padding-left: 102px;
+            padding-right: 80px;
+            margin-top: 48px;
+             margin-bottom: 80px;
         }
         p{
             font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif; 
@@ -138,6 +198,9 @@
     }
     &-values{
         margin-bottom: 25px;
+        @media(min-width:$desktop){
+                margin-bottom: 53px;
+        }
         p{
             font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;  
             margin: 10px 0;
@@ -151,10 +214,17 @@
         @media(min-width:$tablet){
             margin-bottom: 15px;
         }
+        @media(min-width:$desktop){
+            margin-top: 16px;
+        }
         &__my{
             margin-top: 12px;
             @media(min-width:$tablet){
                 margin-top: 5px;
+            }
+            @media(min-width:$desktop){
+                margin-top: 18px;
+                padding-left: 102px;
             }
         }
     }
@@ -207,6 +277,10 @@
         bottom: 0;
         left: 0;
         right: 0;
+        @media(min-width:$desktop){
+            width: 130%;
+            left: -30%;
+        }
     }     
     &-face{
         top: 0;
@@ -257,6 +331,9 @@
         @media(min-width:$tablet){
             margin-top: 22px;
         }
+        @media(min-width:$desktop){
+            margin-left: 100px;
+        }
         &:hover{
              background: #A5BB70;
         }
@@ -273,9 +350,19 @@
         @media(min-width:$tablet){
             margin-top: 35px;
         }
+        @media(min-width:$desktop){
+            width: calc(50% - 20px);
+            margin: 0 10px;
+            margin-left: 22px;
+            margin-top: 3px;
+        }
     }
     &-my{
         margin-top:30px;
+        @media(min-width:$desktop){
+            padding-left: 100px;
+            margin-top:39px;
+        }
         p{
             margin-top: 7px;
         }
@@ -284,6 +371,12 @@
         @media(min-width:$tablet){
             width: calc(50% - 20px);
             margin: 0 10px;
+        }
+        @media(min-width:$desktop){
+            width: auto;
+            margin-left: 121px;
+            margin-top: 21px;
+            margin-right: 0;
         }
     }
 }
