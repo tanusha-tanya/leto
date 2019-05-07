@@ -6,7 +6,7 @@ let searchText = (inputSearch, label) => {
         matchWord(inputSearch.value)
         cases.forEach((caseLi) => {
             if(caseLi.classList.contains('active')){
-                label.append(searchblock);
+                $(label).append(searchblock);
                 chooseWord(inputSearch, label);
             }
             else if(label.querySelector('.searchblock-ul')){

@@ -4,38 +4,39 @@ $('.product-fastshow').magnificPopup({
 		overflowY: 'scroll',
 		callbacks: {
 			ajaxContentAdded: function() {
-            $(this.content).find('.card-slider__for').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false,
-                fade: true,
-                asNavFor: '.card-slider__nav'
-            });
-            $(this.content).find('.card-slider__nav').slick({
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                asNavFor: '.card-slider__for',
-                dots: true,
-                focusOnSelect: true,
-                arrows: false,
-            });
-            quantity($(this.content).find('#quantity'));  
-            $('body').trigger('ajaxReady')          
+        let content = $(this.content);
+          content.find('.card-slider__for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.card-slider__nav'
+          });
+          content.find('.card-slider__nav').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.card-slider__for',
+            dots: true,
+            focusOnSelect: true,
+            arrows: false,
+          });
+          let minus = content.find('.js-minus');
+          let plus = content.find('.js-plus');
+          let quantityCollection = content.find('.js-quantity');  
+          quantity(minus, plus, quantityCollection);
+          $('body').trigger('ajaxReady')          
         }
     }
     
 });
-function quantity(){
-    if(quantity){
-  let minus = $(this.content).find('.card-minus')
-  let plus = $(this.content).find('.card-plus')
+let quantity = (minus, plus, quantityCollection) => {
 
-  quantity.onblur = ()=>{
-    if(quantity.value === '')
-      quantity.value = 1
-  }
+  $(quantityCollection).on('blur', ()=>{
+    if($(quantityCollection).val() === '')
+      $(quantityCollection).val(1)
+  })
 
-  quantity.onkeypress = (e)=> {
+  quantityCollection.onkeypress = (e)=> {
     e = e || event;
     if (e.ctrlKey || e.altKey || e.metaKey) return;
     var chr = getChar(e);
@@ -58,16 +59,18 @@ function quantity(){
 
       return null;
     }
-  minus.addEventListener('click', ()=>{
+  $(minus).on('click', (e)=>{
+    e.preventDefault();
     quantityChange(false)
   })
 
-  plus.addEventListener('click', ()=>{
+  $(plus).on('click', (e)=>{
+    e.preventDefault();
     quantityChange(true)
   })
 
-  let quantityChange = function(sign){
-    let value = quantity.value
+  let quantityChange = (sign) => {
+    let value = $(quantityCollection).val()
     if (!sign){
       if(value <= 1){
         return
@@ -79,11 +82,11 @@ function quantity(){
     else{
        value++
     }
-    quantity.value = value
+    $(quantityCollection).val(value);
   }
 }
 
-const valume = $(this.content).find('.card-volume')
+/*const valume = $(this.content).find('.card-volume')
 
 if(valume){
   const valumeNum = valume.querySelectorAll('.card-volume-num');
@@ -100,5 +103,5 @@ if(valume){
 else{    
     $('.product-fastshow').click(function(e) {
         e.preventDefault();
-    })
-}
+    })*/
+} 

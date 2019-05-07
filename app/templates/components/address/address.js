@@ -13,7 +13,9 @@ $.extend(true, $.magnificPopup.defaults, {
     tError: '<a href="%url%">Контент</a> не может быть загружен.'
   }
 });
-$(".js-popup").magnificPopup({
+
+let openPopup = () => {
+    $(".js-popup").magnificPopup({
     type: 'ajax',
 		overflowY: 'scroll',
 		callbacks: {
@@ -27,6 +29,9 @@ $(".js-popup").magnificPopup({
             }
         }    
 });
+}
+
+openPopup()
 
 $('body').on('click','.add-button__send', function(event){
     event.preventDefault();
@@ -40,7 +45,8 @@ $('body').on('click','.add-button__send', function(event){
     }
 });
 
-$('body').on('click', '.add-button__close', function(){
+$('body').on('click', '.add-button__close', function(e){
+    e.preventDefault();
     var magnificPopup = $.magnificPopup.instance; 
     magnificPopup.close(); 
 })

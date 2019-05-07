@@ -260,6 +260,35 @@ h6{
     }
   }
 }  
+.proleto{
+  position: relative;
+  @media(min-width: $desktop){
+    background-image: url("../images/svg/rowan.svg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      background-image: url("../images/svg/branch.svg");
+      width: 10%;
+      height: 247px;
+      top: 8%;
+      z-index: -1;
+    }
+    &:after{
+      content: '';
+      background-image: url("../images/svg/rose.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 0;
+      width: 180px;
+      height: 247px;
+      top: 61%;
+      z-index: -1;
+    }
+  }
+}
 .container__card{
   @media(min-width: $tablet){
     margin-top: 40px;
@@ -273,11 +302,13 @@ h6{
   }
 }
 .card-col{
+  position:relative;
   @media(min-width: $tablet){
     width: calc(50% - 20px);
-    margin: 0 10px;
+    margin: 0 10px;    
   }
   &__30{
+    position:relative;
     width: calc(30% - 20px);
     margin: 0 10px;
   }

@@ -1,5 +1,5 @@
 $(function(){
-    ymaps.ready(init);
+    let contacts = document.querySelector('.aboutmap')
     function init() {
         var myMap = new ymaps.Map('aboutmap', {
             center: [55.711016, 37.436283],        
@@ -16,5 +16,8 @@ $(function(){
         });
     // Размещение геообъекта на карте.
         myMap.geoObjects.add(myPlacemark); 
+    }
+    if(contacts){
+        ymaps.ready(init);
     }
 });

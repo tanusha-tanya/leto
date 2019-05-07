@@ -1,22 +1,21 @@
-let plusMinus = ()=>{
-  let minus = document.querySelectorAll('.js-minus');
-  let plus = document.querySelectorAll('.js-plus');
-  let quantityCollection = document.querySelectorAll('.js-quantity');
-  
-  if(quantityCollection){
-    minus.forEach((elem) => {
-  elem.addEventListener('click', (e) => {    
-    e.preventDefault();
-    changeAmount(elem, false)
-  })
-})
+let minus = document.querySelectorAll('.js-minus');
+let plus = document.querySelectorAll('.js-plus');
+let quantityCollection = document.querySelectorAll('.js-quantity');
+let plusMinus = (minus, plus, quantityCollection)=>{
 
-plus.forEach((elem) => {
-  elem.addEventListener('click', (e) => {
-    e.preventDefault();
-    changeAmount(elem, true)
+  minus.forEach((elem) => {
+    elem.addEventListener('click', (e) => {    
+      e.preventDefault();
+      changeAmount(elem, false)
+    })
   })
-})
+
+  plus.forEach((elem) => {
+    elem.addEventListener('click', (e) => {
+      e.preventDefault();
+      changeAmount(elem, true)
+    })
+  })
 
 let changeAmount = function(elem, sign){
   let input = elem.parentNode.querySelector('.js-quantity');
@@ -63,6 +62,7 @@ quantityCollection.forEach((quantity)=>{
     }
 
   }
-}
 
-plusMinus()
+if(quantityCollection){
+  plusMinus(minus, plus, quantityCollection)
+}

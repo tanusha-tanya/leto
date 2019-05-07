@@ -172,7 +172,7 @@
       color: $selection;
       fill: $selection;
     }
-    &:active{
+    &:active, &.active{
       background-image: url("../images/svg/click.svg");
       background-repeat: no-repeat;
       svg{
