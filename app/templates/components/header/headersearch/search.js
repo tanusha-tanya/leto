@@ -23,7 +23,7 @@ if(headersearch){
 const mobilesearch = document.querySelector('.mobilesearch')
 if(mobilesearch){
   let inputSearch = document.querySelector('.mobilesearch-input'),
-      button = document.querySelector('.mobilesearch-svg'),
+      button = document.querySelector('.mobilesearch-search'),
       label = document.querySelector('.mobilesearch-label');
   searchText(inputSearch, label)  
   clickSearch(inputSearch, button) 

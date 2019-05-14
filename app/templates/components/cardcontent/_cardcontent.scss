@@ -66,10 +66,18 @@
     color: $link;
     max-width: 290px;
     box-sizing: border-box;
+    transition: background .3s;
     @media(min-width: $desktop){
       display: inline-block;
       margin-left: 40px;
       margin-top: 0;
+      &:hover{
+        background:  #C8C2B2;
+        color: $link;
+        span{
+          color: #fff;
+        }
+      }
     }
     span{
       letter-spacing: 0.05em;
@@ -77,6 +85,7 @@
       color: $selection;
       margin-right: 10px;
       font: 15px/28px MuseoSansDark, Arial, Helvetica, sans-serif;
+      transition: color .3s;
     }
   }
   &-price{

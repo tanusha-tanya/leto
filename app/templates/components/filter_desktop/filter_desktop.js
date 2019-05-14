@@ -23,16 +23,24 @@ if (deskfilter){
 
   brandCheck.forEach((elem)=>{
     elem.addEventListener('change',()=>{
+      brandCounter()
+    })
+  })
+
+
+  let brandCounter = () => {
       let j = 0;
+      console.log(j)
       for(let i = 0; i < brandCheck.length; i++){
         if(brandCheck[i].checked){
           j++;
         }
       }
       counter.textContent = j;
-    })
-  })
+  }
 
+  brandCounter();
+  
   reset.addEventListener('click', (e)=>{
     e.preventDefault();
     brandCheck.forEach((elem)=>{

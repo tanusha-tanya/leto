@@ -1,5 +1,5 @@
 $(function(){
-    let contacts = document.querySelector('.aboutmap')
+    let contacts = document.querySelector('.about-map')
     function init() {
         var myMap = new ymaps.Map('aboutmap', {
             center: [55.711016, 37.436283],        

@@ -24,6 +24,10 @@
   &-spoilers{
     border-top: 1px solid $brandborder;
   }
+  &-favorite{
+    border-top: 1px solid $brandborder;
+    margin-bottom: 80px;
+  }
   &-spoiler{
     &__active{
       .deskfilter-spoiler-content{
@@ -40,6 +44,14 @@
         border-bottom:0;
       }
     }
+  }
+  &-favorite-title{
+    border-bottom: 1px solid #E0E0E0;
+    padding: 13px 0;
+    padding-right: 12px;
+    font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    color: #000000;
+    position: relative;
   }
   &-spoiler-title{
     border-bottom: 1px solid $brandborder;

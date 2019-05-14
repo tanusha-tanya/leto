@@ -1,0 +1,26 @@
+extends _layouts/default
+include components/maintop/maintopmenu/maintopmenu
+block title
+  title Избранные товары
+block header
+  include  _layouts/header/header
+block content
+  main.main-wrap
+    +maintopmenu()
+    include components/breadcrumbs/breadcrumbs
+    section.catalog
+      .container
+        .white-block
+          h1 Избранные товары
+          .row
+            .left-column
+              include components/favoritfilter/favoritfilter
+              include components/favoritfilter_desktop/favoritfilter_desktop
+            .right-column
+              include components/sort/sort
+              include _layouts/products/products
+              include components/pagination/pagination
+              include components/seoText/seoText
+block footer
+  include  _layouts/footer/footer
+  .body-dark
