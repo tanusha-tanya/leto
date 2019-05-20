@@ -5,12 +5,15 @@ if(search){
   const close = document.querySelector('.mobilesearch-close');
   search.onclick = function(){
     searchmenu.classList.add('open');
-    console.log(bodydark);
     bodydark.classList.add('active');
   }
   close.onclick = function(){
+    label = document.querySelector('.mobilesearch-label');
+    console.log(label)
+    if(label.querySelector('.searchblock-ul')){
+       label.removeChild(searchblock)
+    }
     searchmenu.classList.remove('open');
-    console.log(bodydark);
     bodydark.classList.remove('active');
   }
 }

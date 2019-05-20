@@ -2,7 +2,6 @@ let cases = document.querySelectorAll('.searchblock-li'),
     searchblock = document.querySelector('.searchblock-ul');
 let searchText = (inputSearch, label) => {
     inputSearch.oninput = () => {
-        console.log(inputSearch.value)
         matchWord(inputSearch.value)
         cases.forEach((caseLi) => {
             if(caseLi.classList.contains('active')){

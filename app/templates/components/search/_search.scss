@@ -3,26 +3,37 @@
     &-ul{
         background: #fff;
         position: absolute;
-        z-index: 999;
-        top: calc(100% - 1px);
+        z-index: 999;        
         left: 0;
-        width: calc(100% + 85px);
-        border: 1px solid #A5BB70;
-        padding: 26px 20px 23px;
+        right: 0;        
+        padding: 10px;
         box-sizing: border-box;
+        @media(min-width: 400px){
+            padding: 10px 34px;
+        }
+        @media(min-width: $desktop){
+            padding: 26px 20px 23px;
+            top: calc(100% - 1px);
+            width: calc(100% + 85px);
+            right: auto;
+            border: 1px solid #A5BB70;
+        }
     }
     &-li{
         display: none;
         &.active{
             display: block;
             transition: background .3s, color .3s;
-            margin: 0 -20px;
+            margin: 15px 0;
             padding: 0 20px;
             cursor: pointer;
             &:hover{
                 background: #A5BB70;
                 color: #fff;             
                 box-sizing: border-box;
+            }
+            @media(min-width:$desktop){
+                margin: 0 -20px;
             }
         }
     }

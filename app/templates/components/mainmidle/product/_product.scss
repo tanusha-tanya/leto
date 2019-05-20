@@ -34,18 +34,18 @@
         bottom: 0;
         z-index: -1;
         right: 10px;
-      }
-          
+      }          
     }
-     .product-heart{
-        opacity: 1;
-      }
+    .product-heart{
+      opacity: 1;
+    }
   }
   &-fastshow{
     position: relative;
-    display: block;
-    @media(min-width:$desktop){
-      &-title{
+    display: block;        
+    &-title{
+      display: none;
+      @media(min-width:$desktop){ 
         position: absolute;
         top: calc(50% - 15px);
         left: calc(50% - 65px);
@@ -59,12 +59,13 @@
         padding: 5px 0;
         font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
         z-index: 800;
-        display: none;
-      }
-      &:hover{
-        .product-fastshow-title{
+      }     
+    }
+    &:hover{
+      .product-fastshow-title{
+        @media(min-width:$desktop){
           display: block;
-        }
+        }     
       }
     }
   }

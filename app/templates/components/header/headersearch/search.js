@@ -2,13 +2,14 @@ let clickSearch = (inputSearch, button) => {
   button.onclick = (e)=>{
     e.preventDefault();
     let text = inputSearch.value;
-    goSearch(text) 
+    goSearch(text, inputSearch) 
   }
 }
 
-let goSearch = (text) => {
+let goSearch = (text, inputSearch) => {
+  let formAction = inputSearch.closest('.headersearch-form').action
   window.location.search = "";
-  window.location = "search.html?q="+text;
+  window.location = formAction+"?q="+text;
 }
 
 const headersearch = document.querySelector('.headersearch')

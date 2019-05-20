@@ -102,6 +102,9 @@
     &:hover{
        color: #697F34;
       fill: #697F34;
-    } 
+    }
+    &.up{
+       transform: rotate(-180deg)
+    }    
   }
 }
