@@ -68,13 +68,11 @@ let check = function(form){
        }
     })   
     if(arr === 0){
-
         button.classList.remove('disabled')
     }
     else{
          button.classList.add('disabled')
     }
-    console.log(button)
 }
 
 const deleteCollection = document.querySelectorAll('.js-delete');

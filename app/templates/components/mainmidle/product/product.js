@@ -24,6 +24,9 @@ $('.product-fastshow').magnificPopup({
           let plus = content.find('.js-plus');
           let quantityCollection = content.find('.js-quantity');  
           quantity(minus, plus, quantityCollection);
+          $(this.content).find(".js-img").on('click', (e)=>{
+            e.preventDefault();
+          })
           $('body').trigger('ajaxReady')          
         }
     }
@@ -85,23 +88,4 @@ let quantity = (minus, plus, quantityCollection) => {
     $(quantityCollection).val(value);
   }
 }
-
-/*const valume = $(this.content).find('.card-volume')
-
-if(valume){
-  const valumeNum = valume.querySelectorAll('.card-volume-num');
-  const price = $(this.content).find('#price');
-  valumeNum.forEach((elem)=>{
-    elem.addEventListener('click', ()=>{
-      let valumeId = elem.id
-      price.textContent = price.dataset[valumeId]
-    })
-  })
-}
-}
-}
-else{    
-    $('.product-fastshow').click(function(e) {
-        e.preventDefault();
-    })*/
 } 

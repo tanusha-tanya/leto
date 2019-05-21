@@ -9,7 +9,6 @@ if(search){
   }
   close.onclick = function(){
     label = document.querySelector('.mobilesearch-label');
-    console.log(label)
     if(label.querySelector('.searchblock-ul')){
        label.removeChild(searchblock)
     }

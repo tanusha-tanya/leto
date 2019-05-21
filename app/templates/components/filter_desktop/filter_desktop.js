@@ -30,7 +30,6 @@ if (deskfilter){
 
   let brandCounter = () => {
       let j = 0;
-      console.log(j)
       for(let i = 0; i < brandCheck.length; i++){
         if(brandCheck[i].checked){
           j++;

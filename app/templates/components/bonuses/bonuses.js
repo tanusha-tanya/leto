@@ -7,8 +7,7 @@ if(copyPromo){
             number.select();
   try {  
     var successful = document.execCommand('copy');  
-    var msg = successful ? 'successful' : 'unsuccessful';  
-    console.log('Cutting text command was ' + msg);  
+    var msg = successful ? 'successful' : 'unsuccessful';   
   } catch(err) {  
     console.log('Oops, unable to cut');  
   }  

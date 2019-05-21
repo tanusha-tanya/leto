@@ -139,9 +139,9 @@ h6{
     padding-bottom: 0;
     .card-slider__for .card-slider-item{
       padding: 0;
-      width: 265px!important;
+      //width: 265px!important;
       img{
-        max-width:140px;
+        max-width:100%;
         //margin: 0;
       }
     }
