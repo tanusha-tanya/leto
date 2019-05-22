@@ -89,3 +89,8 @@ let quantity = (minus, plus, quantityCollection) => {
   }
 }
 } 
+else{
+  $('.product-fastshow').on('click', (e) => {
+    e.preventDefault();
+  })
+}

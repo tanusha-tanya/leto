@@ -461,3 +461,11 @@ h6{
     margin-bottom:50px;
   }
 }
+.no-js .owl-carousel{
+  .owl-item{
+   opacity:1;
+    &.current{
+      opacity:1;
+    }
+  }
+}
