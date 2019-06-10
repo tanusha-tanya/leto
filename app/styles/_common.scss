@@ -8,6 +8,9 @@
 *:hover{
   outline: 0;
 }
+window{
+  scroll-behavior: smooth;
+}
 html{
   width: 100%;
   position: relative;
