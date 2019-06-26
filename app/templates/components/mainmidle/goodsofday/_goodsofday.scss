@@ -47,7 +47,7 @@
   &-title{
     font: 30px/50px MuseoSansNormal, Arial, Helvetica, sans-serif;
     text-transform: uppercase;
-    color: $link;
+    color: $greyText;
     background-image: url('../images/svg/flower_little.svg');
     background-repeat: no-repeat;
     display: block;
@@ -171,7 +171,7 @@
   }
   &-name{
     font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
-    color: $link;
+    color: $greyText;
     @media(min-width:$tablet){
       font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
     }

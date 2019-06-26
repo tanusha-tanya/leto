@@ -17,7 +17,7 @@
     }
     &-title{
         font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
-        color: $title;
+        color: $greyText;
         margin-bottom: 23px;
         @media(min-width:$desktop){
             font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
@@ -42,7 +42,7 @@
     &-label{
         position: relative;
         font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif; 
-        color: $primary;
+        color: $greyText;
         padding-left: 40px;
         cursor:pointer;
         display: block;

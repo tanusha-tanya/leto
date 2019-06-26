@@ -29,7 +29,7 @@
     text-decoration: none;
     font: 15px MuseoSansDark, Arial, Helvetica, sans-serif;
     letter-spacing: 0.05em;
-    color: $primary;
+    color: $greyText;
     border-bottom: none;
     transition: .3 font-family;
     &:active{
@@ -121,7 +121,7 @@
   transition: color .3s;
   text-decoration: none;
   border:0;
-  color: $primary;
+  color: $greyText;
   &:hover, &:active{
     color: $selection;
     border:0;

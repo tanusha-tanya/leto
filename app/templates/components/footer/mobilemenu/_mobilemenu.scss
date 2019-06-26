@@ -41,7 +41,7 @@
   &-toplink{
     font: 15px/18px MuseoSansDark, Arial, Helvetica, sans-serif;
     text-transform: uppercase;
-    color: $primary;
+    color: $greyText;
     border-bottom: none;
     letter-spacing: 0.05em;
     &__icon{
@@ -78,7 +78,7 @@
     font: 12px/14px MuseoSansNormal, Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     border-bottom: none;
-    color: $primary;
+    color: $greyText;
   }
   &-address{
     margin-top: 30px;

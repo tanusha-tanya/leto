@@ -54,7 +54,7 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     border-bottom: none;
-    color: $link;
+    color: $greyText;
     transition: color .3s;
     &__active{
       color: $selection;

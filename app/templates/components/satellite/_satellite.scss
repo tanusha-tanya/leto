@@ -53,7 +53,7 @@
        justify-content: space-between;
     }
     &-name{
-        color: $link;
+        color: $greyText;
         font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
         @media(min-width:$desktop){
           font: 15px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;  

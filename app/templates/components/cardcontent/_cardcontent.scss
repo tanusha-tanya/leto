@@ -6,7 +6,7 @@
     font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
     text-transform: inherit;
     letter-spacing: 0;
-    color: $link;
+    color: $greyText;
     @media(min-width:$desktop){
       font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
     }
@@ -26,7 +26,7 @@
     &-text{
       display: inline-block;
       font: 15px MuseoSansDark, Aral, Helvetica, sans-serif;
-      color: $primary;
+      color: $greyText;
     }
     &-num{
       position: absolute;
@@ -41,7 +41,7 @@
       cursor: pointer;
       transition: color .3s;
       margin: 0 10px;
-      color: $link;
+      color: $greyText;
       font: 15px MuseoSansDark, Aral, Helvetica, sans-serif;
       @media(min-width: $tablet){
         margin: 0 5px;
@@ -49,7 +49,7 @@
     }
   }
   &-promo{
-    color: $link;
+    color: $greyText;
     font: 12px MuseoSansNormal, Arial, Helvetica, sans-serif;
     @media(min-width: $desktop){
       width: 180px;
@@ -63,7 +63,7 @@
     padding: 12px 19px;
     background: $background;
     border-radius: 30px;
-    color: $link;
+    color: $greyText;
     max-width: 290px;
     box-sizing: border-box;
     transition: background .3s;
@@ -73,7 +73,7 @@
       margin-top: 0;
       &:hover{
         background:  #C8C2B2;
-        color: $link;
+        color: $greyText;
         span{
           color: #fff;
         }
@@ -94,7 +94,7 @@
   &-oldprice{
     display: inline-block;
     font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
-    color: $primary;
+    color: $greyText;
     vertical-align: middle;
     span{
       text-decoration:line-through;
@@ -129,7 +129,7 @@
     box-sizing: border-box;
     font-size: 20px;
     text-align: center;
-    color: $link;
+    color: $greyText;
     cursor: pointer;
   }
   &-minus{
@@ -193,10 +193,10 @@
     font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
     margin: 20px 0;
     margin-bottom: 10px;
-    color: $primary;
+    color: $greyText;
   }
   &-article{
-    color: $primary;
+    color: $greyText;
     margin: 10px 0;
     strong{
       font-weight: 700;
@@ -208,7 +208,7 @@
       margin-left: 5px;
       display: inline-block;
       font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
-      color: $primary;
+      color: $greyText;
       border: none;
       margin-top: 1px;
       vertical-align: top;

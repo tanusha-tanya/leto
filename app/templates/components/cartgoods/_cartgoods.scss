@@ -64,7 +64,7 @@
     }
     &-name{
         font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
-        color: $title;
+        color: $greyText;
         text-align: center;
         @media(min-width:$tablet){
             text-align: left;
@@ -83,7 +83,7 @@
         display: none;
         @media(min-width: $tablet){
             display: block;
-            color: $primary;
+            color: $greyText;
             font: 15px/24px MuseoSansDark, Arial, Helvetica, sans-serif;
             margin: 20px 0;
         }
@@ -157,7 +157,7 @@
     box-sizing: border-box;
     font-size: 20px;
     text-align: center;
-    color: $link;
+    color: $greyText;
     cursor: pointer;
     vertical-align: middle;
     transition: color .3s, border .3s;
@@ -233,7 +233,7 @@
       }
     }
     &-delete,&-favorite{
-        color: $link;
+        color: $greyText;
         display:inline-block;
         font: 12px/12px MuseoSansNormal, Arial, Helvetica, sans-serif;
     }

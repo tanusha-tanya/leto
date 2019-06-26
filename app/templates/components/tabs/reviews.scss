@@ -10,7 +10,7 @@
   }
   &-title{
     font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
-    color: $primary;
+    color: $greyText;
     @media(min-width:$desktop){
       font: 30px/36px MuseoSansNormal, Arial, Helvetica, sans-serif;
     }
@@ -93,7 +93,7 @@
   }
   &-name{
     font: 15px/20px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;
-    color: $primary;
+    color: $greyText;
   }
   &-date{
     color: $secondary;
@@ -104,7 +104,7 @@
   }
   &-body{
     font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
-    color: $link;
+    color: $greyText;
     margin-top: 10px;
   }
   &-top{
@@ -132,3 +132,4 @@
     background: #C8C2B2;
   }
 }
+ 

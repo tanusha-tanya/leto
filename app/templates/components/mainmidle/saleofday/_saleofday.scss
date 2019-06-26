@@ -69,7 +69,7 @@
   &-title{
     font: 30px/50px MuseoSansNormal, Arial, Helvetica, sans-serif;
     text-transform: uppercase;
-    color: $link;
+    color: $greyText;
     background-image: url('../images/svg/flower_little.svg');
     background-repeat: no-repeat;
     background-position: left;
@@ -445,7 +445,7 @@
     }
   }
   &-linkname{
-    color: $link;
+    color: $greyText;
     font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
   }
   &-linkbrand{

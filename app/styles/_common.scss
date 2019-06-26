@@ -22,7 +22,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  color: #666;
+  color: $greyText;
   font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
   overflow-x: hidden;
   min-height: 100vh;
@@ -41,7 +41,7 @@ b,strong{
   font-style: normal;
 }
 a{
-  font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
+  font: 15px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
   transition: color .3s;
   text-decoration: none;
   border-bottom: 1px solid;

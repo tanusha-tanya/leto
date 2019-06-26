@@ -8,7 +8,7 @@
     margin-top: 65px;
   }
   &-title{
-    color: $title;
+    color: $greyText;
     font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
     margin-top: 14px;
     margin-bottom: 6px;
@@ -109,7 +109,7 @@
     &__day{
       background: $yellowbutton;
       width: 200px;
-      color: $primary;
+      color: $greyText;
       bottom:0;
       @media(min-width:$tablet){
         bottom: -29px;
