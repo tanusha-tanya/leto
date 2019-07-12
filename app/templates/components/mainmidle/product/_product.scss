@@ -208,6 +208,10 @@
     margin-top:25px;
     transition: color .3s;
     border-bottom: none;
+    a{
+      text-decoration: none;
+      border: none;
+    }
     @media(min-width:$tablet){
       margin-top: 56px;
     }
