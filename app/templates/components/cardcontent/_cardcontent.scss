@@ -1,12 +1,14 @@
 .card{
   &-info{
     border-bottom: 1px solid $bordergray;
+    padding-bottom: 20px;
   }
   &-title{
     font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
     text-transform: inherit;
     letter-spacing: 0;
     color: $greyText;
+    margin-bottom: 12px;
     @media(min-width:$desktop){
       font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
     }
@@ -58,19 +60,18 @@
   &-special{
     display: block;
     border: none;
-    margin: 20px 0;
+    margin-top: 20px;
     text-align: center;
     padding: 12px 19px;
     background: $background;
     border-radius: 30px;
     color: $greyText;
-    max-width: 290px;
     box-sizing: border-box;
     transition: background .3s;
     @media(min-width: $desktop){
       display: inline-block;
       margin-left: 40px;
-      margin-top: 0;
+      margin-top: 0;      
       &:hover{
         background:  #C8C2B2;
         color: $greyText;

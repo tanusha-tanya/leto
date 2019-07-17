@@ -118,6 +118,7 @@
         overflow:hidden;
         opacity: 0;
         transition: opacity .3s;
+        height: 0;
         &__active{
             position: relative;
             visibility: visible;
