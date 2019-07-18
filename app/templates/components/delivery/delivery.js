@@ -8,7 +8,7 @@ if(radioCollection){
             dataTarget = radio.dataset['target'];
             methodCollection.forEach((method) => {
                 method.classList.remove('delivery-method-item__active')
-                dataFor =  method.dataset['for'];
+                dataFor = method.dataset['for'];
                 if(dataTarget === dataFor){
                     method.classList.add('delivery-method-item__active');
                 }

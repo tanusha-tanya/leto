@@ -37,26 +37,27 @@
     position: relative;
     text-align: center;
     margin-top:30px;
+    height:223px;
+    width: 100%;
     @media(min-width:$tablet){
-      margin-top:0;
+      width: calc(50% - 20px);
+      height:280px;
     }
     @media(min-width:$desktop){
-      top: -38px;
-      left: 142px;
+      height: 376px;
+      width: calc(100% - 225px);
+      float: right;
     }
   }
   &-image{
-    max-width: 208px;
-    @media(min-width:$tablet){
-      max-width: 100%;
-      position:relative;
-      top: 13px;
-      right: 33px;
-    }
+    width:100%;
+    height: 100%;
+    background-position:center center;
+    background-size: contain;
+    background-repeat: no-repeat;
     @media(min-width:$desktop){
-      max-width: 100%;
-      top: 13px;
-    }
+      background-position:center bottom;
+    }   
   }
   &-link{
     position: absolute;
@@ -95,12 +96,7 @@
     &__new{
       background: $greenbutton;
       color: $buttontext;
-      @media(min-width:$tablet){
-        bottom: 10px;
-      }
-      @media(min-width:$desktop){
-        bottom: 34px;
-      }
+      bottom:0;
       .maingoods-svg{
         color: $buttontext;
         fill: $buttontext;
@@ -111,12 +107,6 @@
       width: 200px;
       color: $greyText;
       bottom:0;
-      @media(min-width:$tablet){
-        bottom: -29px;
-      }
-      @media(min-width:$desktop){
-        bottom: 55px;
-      }
       .maingoods-svg{
         color: $primary;
         fill: $primary;
@@ -149,59 +139,25 @@
   }
   &-figure{
     position: relative;
-    padding-bottom: 30px;
-    max-width: 500px;
+    padding-bottom: 30px;   
     margin: 0 auto;
     @media(min-width:$tablet){
       display: flex;
       justify-content: space-between;
-      padding-bottom: 0;
-      max-width: 800px;
+      padding-bottom: 0;      
     }
     @media(min-width:$desktop){
       display: block;
+      height: 100%;      
     }
   }
   &-item{
     margin-top: 18px;
+    position: relative;
     @media(min-width:$desktop){
       margin: 0 10px;
       width: calc(50% - 20px);
-    }
-    &__action{
-      .maingoods-figure{
-        @media(min-width:$tablet){
-          padding-bottom: 80px;
-        }
-        @media(min-width:$desktop){
-          padding-bottom: 0;
-        }
-      }
-      .maingoods-pick{
-        @media(min-width:$desktop){
-          top:-50px;
-        }
-      }
-      .maingoods-image{
-        @media(min-width:$tablet){
-          top: 142px;
-          right: -3px;
-        }
-        @media(min-width:$desktop){
-          top: 0;
-          right: 31px;
-        }
-      }
-      .maingoods-title{
-        @media(min-width:$tablet){
-          margin-top: 31px;
-          margin-bottom: 14px;
-        }
-        @media(min-width:$desktop){
-          margin-top: 0;
-        }
-      }
-    }
+    }   
     .maingoods-newprice{
       @media(min-width:$tablet){
         margin-top: 8px;
