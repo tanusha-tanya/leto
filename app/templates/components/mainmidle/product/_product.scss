@@ -23,6 +23,8 @@
       border: 1px solid $bordergray;
       .product-name{
         color: #697F34;
+        background: #fff;
+        height: auto;
       }
       &:after{
         content: "";
@@ -214,6 +216,10 @@
     }
     @media(min-width:$tablet){
       margin-top: 56px;
+      height: 52px;
+      overflow: hidden;
+      display: block;
+      transition: height .3s, background .3s;
     }
   }
   &-brand{

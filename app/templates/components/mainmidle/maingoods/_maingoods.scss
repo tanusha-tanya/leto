@@ -44,9 +44,12 @@
       height:280px;
     }
     @media(min-width:$desktop){
-      height: 376px;
+      height: 301px;
       width: calc(100% - 225px);
       float: right;
+      position: absolute; 
+      bottom: -200px;
+      right: 0;
     }
   }
   &-image{
@@ -78,7 +81,10 @@
     z-index: 800;
     transition: background .3s, color .3s;
     @media(min-width:$tablet){
-      bottom: 0;
+      bottom: -10px;
+    }
+    @media(min-width:$desktop){
+      bottom: -200px;
     }
     &:hover, &:active{
       background: $selection;
@@ -95,8 +101,7 @@
     }
     &__new{
       background: $greenbutton;
-      color: $buttontext;
-      bottom:0;
+      color: $buttontext;      
       .maingoods-svg{
         color: $buttontext;
         fill: $buttontext;
@@ -105,8 +110,7 @@
     &__day{
       background: $yellowbutton;
       width: 200px;
-      color: $greyText;
-      bottom:0;
+      color: $greyText;      
       .maingoods-svg{
         color: $primary;
         fill: $primary;
@@ -157,13 +161,9 @@
     @media(min-width:$desktop){
       margin: 0 10px;
       width: calc(50% - 20px);
+      padding-bottom: 200px;
     }   
-    .maingoods-newprice{
-      @media(min-width:$tablet){
-        margin-top: 8px;
       }
-    }
-  }
   &-container{
     @media(min-width:$desktop){
       display: flex;

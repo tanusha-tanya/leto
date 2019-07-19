@@ -144,6 +144,8 @@
     font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
     margin-top: 20px;
     margin-right: 50px;
+    border: none;
+    display: block;
     @media(min-width: $tablet){
       font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
       margin-right: 0;
