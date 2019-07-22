@@ -94,3 +94,30 @@ else{
     e.preventDefault();
   })
 }
+
+let cuter = (element, size, n)=>{
+  let text = null, fullText = null;  
+  for(var i = 0; i < element.length; i++) { 
+    if(element[i].innerHTML.length > size) {
+      fullText = element[i].innerHTML;
+      text = element[i].innerHTML.substr(0,n);
+      element[i].setAttribute('data-text', element[i].innerHTML)          
+      element[i].addEventListener('mouseover', (event) => {       
+        event.target.innerHTML = event.target.dataset.text;     
+      })  
+      element[i].addEventListener('mouseout', (event) => {
+        event.target.innerHTML = event.target.innerHTML.substr(0,n) + '...';
+      })
+    }
+  else {
+    text = element[i].innerHTML;
+  }
+    element[i].innerHTML = text + '...';
+  }
+}
+
+let productName = document.querySelectorAll('.product-name')
+if(productName){
+  cuter(productName, 40, 45)  
+}
+
