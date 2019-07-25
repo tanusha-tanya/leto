@@ -1,8 +1,7 @@
-let minus = document.querySelectorAll('.js-minus');
-let plus = document.querySelectorAll('.js-plus');
 let quantityCollection = document.querySelectorAll('.js-quantity');
-let plusMinus = (minus, plus, quantityCollection)=>{
-
+let plusMinus = ()=>{
+  let minus = document.querySelectorAll('.js-minus');
+  let plus = document.querySelectorAll('.js-plus');
   minus.forEach((elem) => {
     elem.addEventListener('click', (e) => {    
       e.preventDefault();
@@ -64,5 +63,5 @@ quantityCollection.forEach((quantity)=>{
   }
 
 if(quantityCollection){
-  plusMinus(minus, plus, quantityCollection)
+  plusMinus()
 }

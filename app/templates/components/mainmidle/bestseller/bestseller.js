@@ -9,7 +9,8 @@ $('.bestseller-carousel').owlCarousel({
     responsive : {
        0: {
         items:1,
-        center: true
+        center: true,
+        autoHeight:true
       },
        768: {
         items:2,
