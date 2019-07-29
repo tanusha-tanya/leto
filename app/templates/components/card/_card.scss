@@ -29,6 +29,7 @@
   &__nav{
     position: relative;
     padding-top: 10px;
+    display: flex;
     @media(min-width:$desktop){
       width: 270px;
       margin: 0 auto;
@@ -75,5 +76,11 @@
   width: 100%;
   .js-img{
     cursor: default;
+  }
+}
+.card-slider-item__for{
+  display: none;
+  &:first-of-type{
+    display: block;
   }
 }

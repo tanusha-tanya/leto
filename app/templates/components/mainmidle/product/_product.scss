@@ -42,10 +42,19 @@
     .product-heart{
       opacity: 1;
     }
+    &:hover{
+      .product-fastshow-title{
+        @media(min-width:$desktop){
+          display: block;
+        }     
+      }
+    }
   }
   &-fastshow{
     position: relative;
-    display: block;        
+    display: flex;
+    height: 100%;
+    align-items: center;        
     &-title{
       display: none;
       @media(min-width:$desktop){ 
@@ -63,14 +72,7 @@
         font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
         z-index: 800;
       }     
-    }
-    &:hover{
-      .product-fastshow-title{
-        @media(min-width:$desktop){
-          display: block;
-        }     
-      }
-    }
+    }    
   }
   &-noimage{
     &:before{

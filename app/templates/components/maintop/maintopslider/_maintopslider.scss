@@ -51,11 +51,15 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    display: none;
     @media(min-width: $tablet){
       height: 570px;
     }
     @media(min-width: $desktop){
       height: 572px;
+    }
+    &:first-of-type{
+      display: block;
     }
   }
   &-nav{
@@ -164,4 +168,8 @@
     }
   }    
 }
-
+.owl-item{
+  .maintopslider-item{
+    display: block;
+  }
+}

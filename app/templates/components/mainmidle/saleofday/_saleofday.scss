@@ -305,7 +305,6 @@
       }
     }
     @media(min-width: $desktop){
-      height: auto;
       border: none;
       border-radius: 0;
       position: relative;
@@ -322,7 +321,7 @@
     }
     @media(min-width: $desktop){
       padding-left: 50px;
-      margin-top: 124px;
+      margin-top: 65px;
       margin-right:20px;
     }
   }
@@ -380,7 +379,7 @@
     }
     .slick-dots{
       position: absolute;
-      top: calc(50% - 215px);
+       top: calc(50% - 75px);
       cursor: pointer;
       left: 0;
       width: 16px;
@@ -434,9 +433,11 @@
     width: 120px;
     position:relative;
     margin:0 auto;
-    @media(min-width: $desktop){
-      margin-top: 33px;
-    }
+    height:100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
   }
   &-description{
     display: none;
