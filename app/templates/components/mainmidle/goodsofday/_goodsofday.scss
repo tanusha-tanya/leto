@@ -114,7 +114,7 @@
     width: 180px;
     height: 180px;
     display: flex;
-    align-item:center;
+    align-items:center;
     justify-content: center;
     margin: 0 auto;
     background: $buttontext;
@@ -162,6 +162,10 @@
       position: absolute;
       left: 148px;
       bottom: 82px;
+      width: 100%;
+      max-width: 162px;
+      height: auto;
+      max-height: 128px;
     }
   }
   &-figcaption{

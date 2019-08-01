@@ -54,7 +54,8 @@
     position: relative;
     display: flex;
     height: 100%;
-    align-items: center;        
+    align-items: center; 
+    justify-content: center;       
     &-title{
       display: none;
       @media(min-width:$desktop){ 

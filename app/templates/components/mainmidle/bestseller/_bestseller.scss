@@ -145,6 +145,7 @@
       border: 1px solid $bordergray;
       position:absolute;
       left:0;
+      z-index:100;
       svg{
         color: $arrow;
         fill: $arrow;
