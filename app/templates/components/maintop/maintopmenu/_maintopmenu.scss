@@ -92,10 +92,17 @@
   }
   &-subli{
     list-style:none;
-    margin: 10px 0;
+    margin: 10px 0;    
   }
   &-sublink{
-    border-bottom: none;
+      font: 15px/28px MuseoSansNormal, Arial, Helvetica, sans-serif;
+      color: #000000;
+      border-bottom: none;
+    &__inner{
+      border-bottom: none;
+      font: 12px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
+      color: #666;
+    }
   }
   &-inner{
     display: none;

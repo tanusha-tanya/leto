@@ -15,12 +15,13 @@ if (deskfilter){
         }
       }
     })
-  })
+  })  
+}
+const brandCheck = document.querySelectorAll('.deskfilter-scroll-checkbox')
+const counter = document.querySelector('.counter');
+const reset = document.querySelector('.deskfilter-reset');
 
-  const brandCheck = document.querySelectorAll('.deskfilter-scroll-checkbox')
-  const counter = document.querySelector('.counter');
-  const reset = document.querySelector('.deskfilter-reset');
-
+if(counter){
   brandCheck.forEach((elem)=>{
     elem.addEventListener('change',()=>{
       brandCounter()
@@ -52,4 +53,5 @@ if (deskfilter){
      deskfilter.classList.remove('deskfilter__active')
    })
 }
+  
 $('.deskfilter-scroll-container').mCustomScrollbar();

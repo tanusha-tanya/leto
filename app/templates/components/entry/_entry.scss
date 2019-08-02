@@ -56,16 +56,35 @@
     }
     &-fieldset{
         margin: 20px 0;
+        position: relative;
         @media(min-width:$tablet){
             display: flex;
             justify-content:space-between;
+            align-items: center;
         }
+        &-withdrow{
+            @media(min-width:$tablet){
+                display: flex;
+                justify-content: flex-end;
+            }
+            &-button{
+                @media(min-width:$tablet){
+                    width:380px;
+                    .entry-button{
+                        margin-left: 0;
+                    }
+                }
+            }
+        }        
         &-button{
             @media(min-width:$tablet){
                 display: flex;
-                justify-content:space-between;
+                justify-content:flex-end;
                 align-items: center;
                 width: 380px;
+                .entry-button{
+                    margin-left:16px;
+                }
             }
         }
         &__left{
@@ -122,23 +141,6 @@
         background-position: center;
         &.hide{
             background-image: url(../images/svg/closeeye.svg);
-        }
-    }
-    &-fieldset{
-        position: relative;
-        &-withdrow{
-            @media(min-width:$tablet){
-                display: flex;
-                justify-content: flex-end;
-            }
-            &-button{
-                @media(min-width:$tablet){
-                    width:380px;
-                    .entry-button{
-                        margin-left: 0;
-                    }
-                }
-            }
         }
     }
     &-checkbox{
@@ -198,6 +200,7 @@
         @media(min-width:$tablet){
             order: 2; 
             margin-right: 0;   
+            width: 180px;  
         }
     }
     &-bottom{
