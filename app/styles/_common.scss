@@ -330,7 +330,7 @@ h6{
     margin: 0 10px;
     border-top: 1px solid #E0DFDA;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 70px;
     padding: 20px 0;
   }
 }
@@ -409,34 +409,33 @@ h6{
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #000;
-    border-bottom: 0;
-    margin-top: 20px;  
+    border-bottom: 0; 
     position: relative;
     display: inline-block;
     margin-left: -125px;
   }
   &-circl{
-      width: 3px;
-      height: 3px;
+      width: 4px;
+      height: 4px;
       display: block;
       border-radius: 100%;
       background: #000;
       position: absolute;
-      right: -10px;
-      bottom: 3px;
+      right: -14px;
+      bottom: 8px;
       &:after, &:before{
         content: '';
         position: absolute;
-        right: -15px;
-        width: 3px;
-        height: 3px;
+        right: -8px;
+        width: 4px;
+        height: 4px;
         display: block;
         border-radius: 100%;
         background: #000;
       }
       &:before{
         position: absolute;
-        right: -30px;
+        right: -16px;
       }
    }
 }

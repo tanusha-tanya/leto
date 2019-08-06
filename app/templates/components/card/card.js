@@ -4,7 +4,7 @@ let cardCarousel = ()=>{
     slidesToScroll: 1,
     arrows: false,
     fade: true,
-    asNavFor: '.card-slider__nav'
+    asNavFor: '.card-slider__nav',
   });
   $('.card-slider__nav').slick({
     slidesToShow: 3,
