@@ -5,14 +5,15 @@ let cardCarousel = ()=>{
     arrows: false,
     fade: true,
     asNavFor: '.card-slider__nav',
+    dots: true,    
   });
   $('.card-slider__nav').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
-    asNavFor: '.card-slider__for',
-    dots: true,
+    asNavFor: '.card-slider__for',    
     focusOnSelect: true,
-    arrows: false,
+    arrows: false,  
+    dots: true,   
   });
 }
 
