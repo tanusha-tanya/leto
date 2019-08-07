@@ -2,14 +2,20 @@ let documentSpoiler = document.querySelectorAll('.documents-spoiler')
 
 if (documentSpoiler){
     documentSpoiler.forEach((spoiler) =>{
-        spoiler.addEventListener('click', ()=>{ 
-            documentSpoiler.forEach((element) => {
-                if(element !== spoiler){
-                    element.classList.remove('open')
-                }                
-            })  
-           spoiler.classList.toggle('open')   
-           checkTetx()                 
+        spoiler.addEventListener('click', (e)=>{  
+            console.log(e.target)           
+            if(e.target.closest('.documents-download') || e.target.classList.contains('documents-download')){
+                return
+            }
+            else{
+                documentSpoiler.forEach((element) => {
+                    if(element !== spoiler){
+                        element.classList.remove('open')
+                    }                
+                })  
+               spoiler.classList.toggle('open')   
+               checkTetx()  
+            }                          
         })        
     })
 

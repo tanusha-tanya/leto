@@ -72,8 +72,7 @@
     @media(min-width:$desktop){
       margin: 0 auto;
       max-width: 1180px;
-      padding: 0;
-      padding-top: 34px
+      padding: 34px 0;      
     }
   }
   &-content{
