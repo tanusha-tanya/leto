@@ -10,13 +10,14 @@ $('.product-fastshow').magnificPopup({
             slidesToScroll: 1,
             arrows: false,
             fade: true,
-            asNavFor: '.card-slider__nav'
+            asNavFor: '.card-slider__nav',
+            dots: true,
           });
           content.find('.card-slider__nav').slick({
             slidesToShow: 3,
             slidesToScroll: 1,
             asNavFor: '.card-slider__for',
-            dots: true,
+            dots: false,
             focusOnSelect: true,
             arrows: false,
           });

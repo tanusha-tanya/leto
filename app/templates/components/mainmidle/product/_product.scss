@@ -350,6 +350,9 @@
   &-fastshow{
     border: 0;
   } 
+  &-info{
+    margin: 20px 10px;
+  }
 }
 
 .products-item{
@@ -360,7 +363,6 @@
       display: block;
       width: calc(100% - 20px);
       height: 20px;
-      -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
       position: absolute;
       bottom: 30px;     

@@ -45,6 +45,12 @@
   @media(min-width: $desktop){
     min-height: 572px;
   }
+  &-link{
+    display:none;
+    &:first-of-type{
+      display: block;
+    }
+  }
   &-item{
     width:100%;
     height: 230px;
@@ -71,6 +77,8 @@
     }
     @media(min-width:$desktop){
       margin-top: -30px;
+    }
+    @media(min-width:1300px){
       width: 1220px;
     }
     button.owl-prev, button.owl-next{
@@ -171,5 +179,11 @@
 .owl-item{
   .maintopslider-item{
     display: block;
+  }
+  .maintopslider-link{
+    display:none;
+    &:first-of-type{
+      display: block;
+    }
   }
 }

@@ -13,7 +13,7 @@ let cardCarousel = ()=>{
     asNavFor: '.card-slider__for',    
     focusOnSelect: true,
     arrows: false,  
-    dots: true,   
+    dots: false,   
   });
 }
 

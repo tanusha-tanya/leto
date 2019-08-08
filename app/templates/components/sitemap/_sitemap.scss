@@ -26,7 +26,6 @@
     &-li{
         &__title{
             font: 20px/30px PlayfairDisplayItalic, Arial, Helvetica, sans-serif; 
-            cursor: pointer;
             &>a{
                 border-bottom: none;
                font: 20px/30px PlayfairDisplayItalic, Arial, Helvetica, sans-serif;  
@@ -35,7 +34,6 @@
         &__sub{
             margin: 10px 0;
             margin-left: 30px;
-            cursor: pointer;
         }
     }
     &-sub-item{

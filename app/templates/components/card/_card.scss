@@ -4,7 +4,6 @@
       margin: 0 10px;
       cursor: pointer;
       img{
-        max-width: 100%;
         position: relative;
         margin: 0 auto;
       }
@@ -17,57 +16,65 @@
     }
     &__for{
       position: relative;
-      padding-bottom: 40px;
-      @media(min-width:$desktop){
+      padding-bottom: 40px;    
         width: 380px;
         margin: 0 auto;
         .card-slider-item{
           padding: 17px 70px;
+          height: 240px;
+          a{
+            align-items: center;
+            display:flex;
+            height: 100%;
+            border-bottom: none;
+          }
+          img{
+            max-height: 100%;
+            width: auto;
+          }
         }
-      }
+        .slick-dots{
+          position: absolute;
+          bottom: -10px;
+          font-size:0;
+          height: 20px;
+          overflow: hidden;
+            li{
+              width: 60px;
+              button{
+                &:before{
+                  width: 100%;
+                  height: 2px;
+                  background: $dots;
+                  transition: background .3s, height .3s;
+                  font-size: 0;
+                }
+              }
+            }
+            .slick-active{
+              button{
+                &:before{
+                  background: $selection;
+                  height: 3px;
+                }
+              }
+            }
+          }      
     }
   &__nav{
     position: relative;
     padding-top: 10px;
-    display: flex;
-    @media(min-width:$desktop){
-      width: 270px;
-      margin: 0 auto;
-      .card-slider-item{
-        width: 80px;
-        overflow: hidden;
-      }
-      img{
-        width: 80px; 
-      }
-    }
-    .slick-dots{
-      position: absolute;
-      top: -10px;
-      font-size:0;
-      height: 20px;
+    display: flex;    
+    margin: 0 auto;
+    width: 270px;
+    .card-slider-item{
+      width: 80px;
       overflow: hidden;
-        li{
-          width: 60px;
-          button{
-            &:before{
-              width: 100%;
-              height: 2px;
-              background: $dots;
-              transition: background .3s, height .3s;
-              font-size: 0;
-            }
-          }
-        }
-        .slick-active{
-          button{
-            &:before{
-              background: $selection;
-              height: 3px;
-            }
-          }
-        }
-      }
+    }
+      img{
+        height: 80px;
+        width: auto;
+      }   
     }
   }  
 }
@@ -76,6 +83,9 @@
   .js-img{
     cursor: default;
   }
+}
+.fastshow .card-slider__nav{
+  width: 100%;
 }
 .card-slider-item__for{
   display: none;
