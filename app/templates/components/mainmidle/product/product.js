@@ -5,6 +5,8 @@ $('.product-fastshow').magnificPopup({
 		callbacks: {
 			ajaxContentAdded: function() {
         let content = $(this.content);
+        let sliderItems = content.find('.card-slider-item')
+        if(sliderItems.length > 1){
           content.find('.card-slider__for').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -21,6 +23,7 @@ $('.product-fastshow').magnificPopup({
             focusOnSelect: true,
             arrows: false,
           });
+        }
           let minus = content.find('.js-minus');
           let plus = content.find('.js-plus');
           let quantityCollection = content.find('.js-quantity');  

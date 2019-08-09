@@ -17,7 +17,12 @@ let cardCarousel = ()=>{
   });
 }
 
-cardCarousel();
+let sliderItems = document.querySelectorAll('.card-slider-item')
+
+if(sliderItems.length > 1){
+  cardCarousel();
+}
+
 
 $('.js-img').magnificPopup({
   type: 'image',

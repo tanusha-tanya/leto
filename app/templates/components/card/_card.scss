@@ -16,51 +16,54 @@
     }
     &__for{
       position: relative;
-      padding-bottom: 40px;    
+      padding-bottom: 40px;   
+      margin: 0 auto;
+      max-width: 380px;
+      @media(min-width: $tablet){
         width: 380px;
-        margin: 0 auto;
-        .card-slider-item{
-          padding: 17px 70px;
-          height: 240px;
-          a{
-            align-items: center;
-            display:flex;
-            height: 100%;
-            border-bottom: none;
-          }
-          img{
-            max-height: 100%;
-            width: auto;
-          }
+      }
+      .card-slider-item{
+          //padding: 17px 70px;
+          //height: 240px;
+        a{
+          align-items: center;
+          display:flex;
+          height: 100%;
+          border-bottom: none;
         }
-        .slick-dots{
-          position: absolute;
-          bottom: -10px;
-          font-size:0;
-          height: 20px;
-          overflow: hidden;
-            li{
-              width: 60px;
-              button{
-                &:before{
-                  width: 100%;
-                  height: 2px;
-                  background: $dots;
-                  transition: background .3s, height .3s;
-                  font-size: 0;
-                }
+        img{
+          //max-height: 100%;
+          //width: 100%;
+        }
+      }
+      .slick-dots{
+        position: absolute;
+        bottom: -10px;
+        font-size:0;
+        height: 20px;
+        overflow: hidden;
+          li{
+            width: 60px;
+            button{
+              &:before{
+                width: 100%;
+                height: 2px;
+                background: $dots;
+                transition: background .3s, height .3s;
+                font-size: 0;
               }
             }
-            .slick-active{
-              button{
-                &:before{
-                  background: $selection;
-                  height: 3px;
-                }
+          }
+          .slick-active{
+            button{
+              &:before{
+                background: $selection;
+                height: 3px;
               }
             }
-          }      
-    }
+          }
+        }      
+      }
   &__nav{
     position: relative;
     padding-top: 10px;
@@ -89,7 +92,19 @@
 }
 .card-slider-item__for{
   display: none;
+  margin: 0;
+  width: 100%;  
+  height: 380px;
+  display: flex;
+  align-content: center;
+  justify-content: center;  
+  @media(min-width: $tablet){
+    max-width: 380px;
+  }
+  img{
+    align-self: center;
+  }
   &:first-of-type{
-    display: block;
+    display: flex;
   }
 }

@@ -68,7 +68,7 @@
       left:0;
       right:0;
       top: 13px;
-      display: flex;
+      //display: flex;
       padding: 50px;
       padding-top:65px;
       flex-direction: column;
@@ -79,20 +79,22 @@
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
       z-index: 700;
       border-top-right-radius: 35px;
+      column-count:  4;
     }
   }
   &-subul{
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     margin-right:20px;
-    width: calc(25% - 20px);
+    display: block;
+    //width: calc(25% - 20px);
     &:last-of-type{
-      width: 25%;
+      //width: 25%;
       margin-right:0;
     }
   }
   &-subli{
     list-style:none;
-    margin: 10px 0;    
+    margin-bottom: 10px;    
   }
   &-sublink{
       font: 15px/28px MuseoSansNormal, Arial, Helvetica, sans-serif;
