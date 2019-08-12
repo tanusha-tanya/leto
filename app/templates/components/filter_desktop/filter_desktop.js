@@ -3,16 +3,17 @@ if (deskfilter){
   const spoilToggle = document.querySelectorAll('.deskfilter-opener')
   spoilToggle.forEach((elem)=>{
     elem.addEventListener('click',()=>{
-      let spoiler = elem.closest('.deskfilter-spoiler');
-      if(!spoiler.classList.contains('deskfilter-spoiler__active')){
-        spoiler.classList.add('deskfilter-spoiler__active')
+      let thisSpoiler = elem.closest('.deskfilter-spoiler');
+      let spoilers = document.querySelectorAll('.deskfilter-spoiler');
+      if(!thisSpoiler.classList.contains('deskfilter-spoiler__active')){
+        thisSpoiler.classList.add('deskfilter-spoiler__active')
       }
       else{
-        spoiler.classList.remove('deskfilter-spoiler__active')
+        thisSpoiler.classList.remove('deskfilter-spoiler__active')
       }
-      for(let i = 0; i < spoilToggle.length; i++){
-        if(spoilToggle[i] !== elem){
-          spoilToggle[i].parentNode.classList.remove('deskfilter-spoiler__active')
+      for(let i = 0; i < spoilers.length; i++){
+        if(spoilers[i] !== thisSpoiler){          
+          spoilers[i].classList.remove('deskfilter-spoiler__active')
         }
       }
     })
