@@ -1,13 +1,14 @@
 const deskfilter = document.querySelector('.deskfilter');
 if (deskfilter){
-  const spoilToggle = document.querySelectorAll('.deskfilter-spoiler-title')
+  const spoilToggle = document.querySelectorAll('.deskfilter-opener')
   spoilToggle.forEach((elem)=>{
     elem.addEventListener('click',()=>{
-      if(!elem.parentNode.classList.contains('deskfilter-spoiler__active')){
-        elem.parentNode.classList.add('deskfilter-spoiler__active')
+      let spoiler = elem.closest('.deskfilter-spoiler');
+      if(!spoiler.classList.contains('deskfilter-spoiler__active')){
+        spoiler.classList.add('deskfilter-spoiler__active')
       }
       else{
-        elem.parentNode.classList.remove('deskfilter-spoiler__active')
+        spoiler.classList.remove('deskfilter-spoiler__active')
       }
       for(let i = 0; i < spoilToggle.length; i++){
         if(spoilToggle[i] !== elem){

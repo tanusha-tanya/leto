@@ -36,13 +36,16 @@
         overflow: auto;
         visibility: visible;
         border-bottom: 1px solid $brandborder;
+      }      
+      .deskfilter-spoiler-title{       
+        border-bottom:0;             
       }
-      .deskfilter-spoiler-title::after{
+      .deskfilter-opener::after{
         transform: rotate(135deg);
       }
-      .deskfilter-spoiler-title{
-        border-bottom:0;
-      }
+    }
+    &-inside{
+      margin-left:10px;
     }
   }
   &-favorite-title{
@@ -59,8 +62,16 @@
     padding-right: 12px;
     font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
     color: $greyText;
-    position: relative;
+    position: relative;    
+    display: flex;
+    justify-content: space-between;
+    a{
+      border-bottom: 0;
+    }
+  }
+  &-opener{
     cursor: pointer;
+    width: 20px;
     &:after{
       content: '';
       width: 8px;
@@ -68,10 +79,11 @@
       border-left: $arrow 2px solid;
       border-bottom: $arrow 2px solid;
       position: absolute;
-      right: 12px;
-      top: 20px;
-      transform: rotate(-45deg);
+      right: 13px;
+      top: 15px;
+      transform: rotate(-49deg);
       transition: transform .3s;
+      margin-left: 5px;
     }
   }
   &-spoiler-content{
