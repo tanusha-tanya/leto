@@ -8,6 +8,7 @@
     z-index: 800;
     &.active{
         display: block;
+        z-index: 9999;
     }   
     @media(min-width:$desktop){
         margin-top: 17px;
