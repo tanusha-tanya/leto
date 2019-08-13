@@ -1,7 +1,7 @@
 extends _layouts/default
 include components/maintop/maintopmenu/maintopmenu
 block title
-  title Карта сайта
+  title моё leto
 block header
   include  _layouts/header/header
 block content
@@ -11,11 +11,10 @@ block content
     section.delivery
       .container
         .white-block
-          h1 Карта сайта
-          include components/innermenu/innermenu
-          include components/sitemap/sitemap
+          h1 моё leto
+          include components/defaultleto/defaultleto
+          include components/letoicons/letoicons
 block footer
   include  _layouts/footer/footer
   .body-dark
-  include  components/filterpanel/filterpanel
   include  components/innermobilemenu/innermobilemenu

@@ -1,0 +1,20 @@
+.letoicons{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px -10px;
+    &-item{
+        width: calc(50% - 20px);
+        margin: 15px 10px;
+        text-align: center;
+        @media(min-width: $tablet){
+            width: calc(33% - 20px);
+        }
+        @media(min-width: $desktop){
+            width: calc(16% - 20px);
+        }
+    }
+    &-description{
+        margin-top: 20px;
+        font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif; 
+    }
+}

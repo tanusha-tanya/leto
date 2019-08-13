@@ -147,9 +147,10 @@
         bottom: 0;
         background-size: cover;
         background-repeat: no-repeat;
+        max-height: 700px;
         @media(min-width:$desktop){
-            right: -30%;
-            width: 130%;
+            right: -100%;
+            width: 200%;
         }
     }
     &-title{
@@ -278,8 +279,8 @@
         left: 0;
         right: 0;
         @media(min-width:$desktop){
-            width: 130%;
-            left: -30%;
+            width: 200%;
+            left: -100%;
         }
     }     
     &-face{
@@ -338,6 +339,9 @@
         &:hover{
              background: #A5BB70;
         }
+        &__left{
+            margin: 40px 0;
+        }
     }
     &-img{
         display: block;
@@ -366,6 +370,11 @@
         }
         p{
             margin-top: 7px;
+        }
+        .company-ul__left{
+            @media(min-width:$desktop){
+                padding-left: 0;
+            }
         }
     }
     &-part{

@@ -1,0 +1,6 @@
+.leto-h3{
+    font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif; 
+    @media(min-width:$tablet){
+        font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif; 
+    }     
+}
