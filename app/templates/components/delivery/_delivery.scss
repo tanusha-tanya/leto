@@ -304,6 +304,7 @@
     }
     &-disclaimer{
         margin-top: 20px;
+        width: 100%;
         h3{
             font: 12px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
             color: $price;
@@ -345,15 +346,24 @@
         margin-top: 25px;
         margin-bottom: 60px;
         @media(min-width:$tablet){
-                display: flex;
+            display: flex;
+            justify-content:space-between;
+        }
+        @media(min-width:$desktop){
+            margin-bottom: 120px;
         }
     }
     &-phone{
         margin: 10px 0;
         font: 26px/36px MuseoSansDark, Arial, Helvetica, sans-serif;
         @media(min-width:$tablet){
-               width: 600px;
-               margin-left: 20px;
+            width: 600px;
+            margin-left: 20px;
+        }
+        @media(min-width:$desktop){
+            text-align: right;
+            margin-right: 100px;
+            width: 300px;
         }
     }
     .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{

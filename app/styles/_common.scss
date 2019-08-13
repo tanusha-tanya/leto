@@ -205,6 +205,7 @@ h6{
     background-image: url("../images/svg/rowan.svg");
     background-repeat: no-repeat;
     background-position: left 80%;
+    min-height: 100vh;
     &:before{
       content: '';
       position: absolute;
@@ -231,6 +232,7 @@ h6{
 .order{
   position: relative;
   @media(min-width: $desktop){
+    min-height: 100vh;
     &:before{
       content: '';
       position: absolute;
@@ -255,8 +257,9 @@ h6{
   }
 }
 .delivery{
-  position: relative;
+  position: relative;  
   @media(min-width: $desktop){
+    min-height: 100vh;
     &:before{
       content: '';
       position: absolute;
@@ -270,11 +273,12 @@ h6{
   }
 }  
 .proleto{
-  position: relative;
+  position: relative; 
   @media(min-width: $desktop){
     background-image: url("../images/svg/rowan.svg");
     background-repeat: no-repeat;
     background-position: left bottom;
+    min-height: 100vh;
     &:before{
       content: '';
       position: absolute;

@@ -47,17 +47,20 @@
         justify-content: space-between;
     }
     &-nameblock{
-       width: calc(100% - 90px);
-       display: flex;
-       flex-direction: column;
-       justify-content: space-between;
+      width: calc(100% - 90px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     &-name{
-        color: $greyText;
-        font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
-        @media(min-width:$desktop){
-          font: 15px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;  
-        }
+      color: $greyText;
+      font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
+      @media(min-width:$desktop){
+        font: 15px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;  
+      }
+      a{
+        border-bottom: none;
+      }
     }
     &-brand{
         color: $secondary;

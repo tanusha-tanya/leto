@@ -3,18 +3,19 @@
     background: #fff;
     z-index: 300;
     @media(min-width:$desktop){
+        margin-bottom: 120px;
         &:after{
-        content: "";
-        display: block;
-        width: calc(100% - 50px);
-        height: 20px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        position: absolute;
-        bottom:0;
-        border-bottom-left-radius: 50px;
-        z-index:1;
-        left: 30px;
-    }
+            content: "";
+            display: block;
+            width: calc(100% - 50px);
+            height: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            bottom:0;
+            border-bottom-left-radius: 50px;
+            z-index:1;
+            left: 30px;
+        }
     }
 }
 .order-bgform{
@@ -430,10 +431,13 @@
         max-width: 390px
     }
     @media(min-width:$desktop){
-        margin: 0;
+        margin: 0;        
+        max-width: 445px
     }
     a{
         border: none;
         color: $selection;
+        font-size: 12px;
+        line-height: 18px;
     }
 }
