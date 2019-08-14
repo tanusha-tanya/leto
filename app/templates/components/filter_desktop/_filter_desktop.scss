@@ -10,10 +10,7 @@
   transition: transform .3s;
   padding: 10px 6px 58px 35px;
   box-sizing: border-box;
-  max-width: 320px;  
-  @media(min-width: $tablet){
-    box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.25);
-  }
+  max-width: 320px; 
   @media(min-width: $desktop){
     transform: translateX(0);
     position: static;
@@ -176,6 +173,9 @@
   }
   &__active{
     transform: translateX(0);
+    @media(min-width: $tablet){
+      box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.25);
+    }
   }
   &-name{
     font: 20px/30px PlayfairDisplayItalic , Arial, Helvetica, sans-serif;

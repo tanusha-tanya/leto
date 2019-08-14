@@ -1,0 +1,22 @@
+extends _layouts/default
+include components/maintop/maintopmenu/maintopmenu
+block title
+  title моё leto
+block header
+  include  _layouts/header/header
+block content
+  main.main-wrap
+    +maintopmenu()
+    include components/breadcrumbs/breadcrumbs
+    section.delivery
+      .container
+        .white-block
+          h1 моё leto
+          include components/myleto/myleto
+          include components/letobonuses/letobonuses
+          include components/myletocontent/myletocontent
+          include components/letoicons/letoicons
+block footer
+  include  _layouts/footer/footer
+  .body-dark
+  include  components/innermobilemenu/innermobilemenu

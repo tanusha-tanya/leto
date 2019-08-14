@@ -1,0 +1,98 @@
+.letobonuses{
+    margin: 37px 0;
+    @media(min-width:$tablet){ 
+        width: 87%;
+    }
+    @media(min-width:$desktop){ 
+        width: 100%;
+        display: flex;
+        margin: 50px -10px 90px -10px;
+    }
+    &-col{
+        margin: 20px 0;
+        @media(min-width:$desktop){
+            width: calc(50% - 20px);
+            margin: 0 10px;
+        }
+    }
+    &-h3{
+        font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        margin-bottom: 10px;
+        @media(min-width:$tablet){
+            font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif; 
+            margin-bottom: 20px;
+        }
+    }
+    &-full{
+        padding: 10px;
+        background: #F4F4F0;
+        box-sizing: border-box; 
+        @media(min-width:$tablet){           
+            display: flex; 
+            padding: 20px 10px;           
+        }       
+    }
+    &-table{       
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+        margin-top:10px;        
+        &:first-of-type{
+            margin-top:0;            
+        }  
+        @media(min-width:$tablet){
+            margin:0 10px;
+            width: calc(100% - 20px);            
+        }
+        &__2{
+            @media(min-width:$tablet){
+                width: calc(50% - 20px);           
+            }
+        }    
+    }
+    &-thead{
+        .letobonuses-tr{
+            background: #F4F4F0;            
+            border-bottom: #F4F4F0 15px solid;        
+            @media(min-width:$tablet){
+                border-bottom: #F4F4F0 40px solid;        
+            }            
+        }         
+    }
+    &-th{  
+        font: 15px/18px MuseoSansDark, Arial, Helvetica, sans-serif;      
+        vertical-align: top;             
+        &__2{
+            width: 50%;
+        }
+        &__3{
+            width: 33%;
+        }
+    }    
+    &-tr{
+        background: #FFFFFF;
+        border-bottom: #F4F4F0 10px solid;
+        box-sizing: border-box;         
+    }
+    &-td{
+        vertical-align: top;
+        font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        padding: 20px 10px; 
+        &__left{
+            text-align: left;
+        }
+    }
+    &-description{
+        font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        margin: 20px 0; 
+        @media(min-width:$tablet){ 
+            margin: 30px 0;
+        } 
+        @media(min-width:$desktop){ 
+            margin: 20px 0;
+        } 
+        .red{
+            color:#AB0052;
+        }
+    }
+}
