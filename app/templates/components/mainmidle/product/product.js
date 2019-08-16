@@ -101,7 +101,7 @@ else{
 
 let cuter = (element, size, n)=>{
   let text = null, fullText = null;  
-  for(var i = 0; i < element.length; i++) { 
+  for(var i = 0; i < element.length; i++) {    
     if(element[i].innerHTML.length > size) {
       fullText = element[i].innerHTML;
       text = element[i].innerHTML.substr(0,n);
@@ -112,11 +112,11 @@ let cuter = (element, size, n)=>{
       element[i].addEventListener('mouseout', (event) => {
         event.target.innerHTML = event.target.innerHTML.substr(0,n) + '...';
       })
+      element[i].innerHTML = text + '...';
     }
   else {
     text = element[i].innerHTML;
-  }
-    element[i].innerHTML = text + '...';
+  }    
   }
 }
 

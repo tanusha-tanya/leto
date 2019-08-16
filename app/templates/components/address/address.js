@@ -24,7 +24,7 @@ let openPopup = () => {
 					type: 'ajax',
 					alignTop: true,
 					overflowY: 'scroll'
-                });
+                });                
                 $('body').trigger('ajaxReady')           
             }
         }    

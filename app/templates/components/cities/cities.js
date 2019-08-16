@@ -14,7 +14,14 @@ function setMap(){
             return city
         })
         .catch(function (err) {
-            console.log('Не удалось установить местоположение. Пожалуйста, введите адрес вручную', err);
+            let error = document.createElement('div');                       
+            error.classList.add('error-text')
+            error.textContent = 'Не удалось установить Ваше местоположение автоматически. Пожалуйста, введите город вручную или выберите из списка'
+            let detected = document.querySelector('.cities-detect');
+            let label = document.querySelector('.cities-label');
+            label.removeChild(detected);
+            label.appendChild(error);
+
         });
     }
     window.onload = function () {

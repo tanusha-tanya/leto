@@ -12,6 +12,10 @@
     font: 20px/30px MuseoSansNormal, Arial, Helvetica, sans-serif;
     margin-top: 14px;
     margin-bottom: 6px;
+    border-bottom: none;
+    &.product-fastshow{
+      display: block;
+    }
     @media(min-width:$tablet){
       font: 30px/40px MuseoSansNormal, Arial, Helvetica, sans-serif;
       max-width:340px;
