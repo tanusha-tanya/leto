@@ -7,7 +7,7 @@
             .order-fieldset
                 legend.order-legend Город
                 input.order-orderform-input#js-ordercity(type="text", placeholder="Город") 
-                span.js-close
+                span.js-close           
             .order-fieldset
                 legend.order-legend.order-legend__top Способ доставки
                 .order-orderform-radioblock
@@ -16,6 +16,19 @@
                     input.order-orderform-radio(type="radio", name="delivery", id="pickup")
                     label.order-orderform-label(for="pickup") Самовывоз
                     button.order-fieldset-button Выбрать
+            .order-fieldset
+                .order-choice-fieldset              
+                    input.order-choice-checkbox(type="checkbox", name="choice", id="choice")
+                    label.order-choice-label(for="choice") Выбрать адрес из списка 
+                .order-addreslist
+                    input(type="radio", name="address", id="1").order-orderform-radio.js-addresschoice
+                    label.order-orderform-label(for="1") Удмуртская республика, Ижевск,ул. Кирова, 30, офис 45
+                    input(type="radio", name="address", id="2").order-orderform-radio.js-addresschoice
+                    label.order-orderform-label(for="2") Удмуртская республика, Ижевск,ул. Кирова, 30, офис 45
+                    input(type="radio", name="address", id="3").order-orderform-radio.js-addresschoice
+                    label.order-orderform-label(for="3") Удмуртская республика, Ижевск,ул. Кирова, 30, офис 45
+                    input(type="radio", name="address", id="4").order-orderform-radio.js-addresschoice
+                    label.order-orderform-label(for="4") Удмуртская республика, Ижевск,ул. Кирова, 30, офис 45
             .order-fieldset
                 legend.order-legend Адрес
                 .order-fieldsetblock

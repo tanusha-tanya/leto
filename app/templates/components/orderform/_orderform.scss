@@ -68,7 +68,7 @@
     @media(min-width:$tablet){
         width: 229px;
     }
-    @media(min-width:$desktop){
+    @media(min-width:1000px){
         width: 480px;
     }
     &__small{
@@ -92,7 +92,7 @@
     @media(min-width:$tablet){
          width: 229px;         
     }
-    @media(min-width:$desktop){
+    @media(min-width:1000px){
         width: 480px;
     }
 }
@@ -107,7 +107,7 @@
     @media(min-width:$tablet){
          width: 229px;
     }
-    @media(min-width:$desktop){
+    @media(min-width:1000px){
         width: 480px;
     }
 }
@@ -441,4 +441,76 @@
         font-size: 12px;
         line-height: 18px;
     }
+}
+.order-choice{
+    &-fieldset{
+        position: relative;
+    }
+    &-checkbox{
+        visibility: hidden;
+        position: absolute;
+        &:checked{
+            +label{
+                &:after{
+                    border-bottom: 2px solid $selection;
+                    border-right: 2px solid $selection;
+                    transition: border-color .3s;
+                }
+            }
+        }
+    }
+    &-label{
+        position: relative;
+        font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif; 
+        color: $greyText;
+        padding-left: 40px;
+        cursor:pointer;
+        display: block;
+        &:before{
+            content: '';
+            position:absolute;
+            display: block;
+            left: 0;
+            top: -5px;
+            border: 1px solid $bordergray;
+            width: 20px;
+            height: 20px;
+            background: $buttontext;
+        }
+        &:after{
+                content: '';
+                position:absolute;
+                display: block;
+                width: 7px;
+                height: 17px;
+                border-bottom: 2px solid transparent;
+                border-right: 2px solid transparent;
+                left: 13px;
+                top: -8px;
+                transform: rotate(35deg);
+        }
+    }
+}
+.order-addreslist{
+    display: none;
+    margin: 10px 0;      
+    border: 1px solid #E0E0E0;
+    background: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    max-height: 200px;    
+    @media(min-width:$tablet){
+        width: 229px;
+        margin: 0; 
+        max-height: 150px;   
+    }
+    @media(min-width:1100px){
+        padding: 20px;
+        width: 480px;
+        flex-shrink: 0;
+        flex-grow: 1; 
+    }
+    &.open{
+        display: block;
+    }    
 }

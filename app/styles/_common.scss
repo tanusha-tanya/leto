@@ -349,9 +349,14 @@ h6{
   position: absolute;
   width: 20px;
   height: 20px;
-  right: 21px;
-  top: 15px;
+  right: 10px;
+  bottom: 15px;
   cursor: pointer;
+  @media(min-width:$tablet){
+    bottom: auto;
+    right: 21px;
+    top: 15px;
+  }
   &:before, &:after{
     content: '';
     position: absolute;
