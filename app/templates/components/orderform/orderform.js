@@ -38,15 +38,14 @@ if(orderform){
     }
 
     $('body').on('click','.js-close', function(event){
-        let input = this.parentNode.querySelector("input");
-            input.value = "";
-            city.value = "";
-            street.value = "";
-            build.value = "";
-            flat.value = "";
+        city.value = "";
+        street.value = "";
+        build.value = "";
+        flat.value = "";
     })
 
-    city.addEventListener('change', () => {        
+    city.addEventListener('change', () => { 
+        console.log(city.value)       
         if(city.value.length > 0){ 
             let string = city.value.trim();
             let compleet = document.querySelector('#js-citycompleet');

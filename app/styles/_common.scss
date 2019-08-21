@@ -376,3 +376,23 @@ h6{
     right:10px;
   }
 }
+.catalog{
+  @media(min-width: $desktop){
+    min-height: 100vh;
+  }
+}
+.order{
+  @media(min-width: $desktop){
+    min-height: 100vh;    
+  }
+}
+.delivery{  
+  @media(min-width: $desktop){
+    min-height: 100vh;    
+  }
+}  
+.proleto{
+  @media(min-width: $desktop){
+    min-height: 100vh;  
+  }
+}
