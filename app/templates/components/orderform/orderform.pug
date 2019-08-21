@@ -6,8 +6,11 @@
                 input.order-orderform-input.js-phone(type="text", placeholder="+7(___) ___-____")
             .order-fieldset
                 legend.order-legend Город
-                input.order-orderform-input#js-ordercity(type="text", placeholder="Город") 
-                span.js-close           
+                span.order-autocompleet-wrap
+                    input.order-orderform-input#js-ordercity(type="text", placeholder="Город")
+                    span.js-close
+                    input#js-ordercityhide(type="hidden")
+                    span.order-autocompleet#js-citycompleet      
             .order-fieldset
                 legend.order-legend.order-legend__top Способ доставки
                 .order-orderform-radioblock
@@ -21,21 +24,24 @@
                     input.order-choice-checkbox(type="checkbox", name="choice", id="choice")
                     label.order-choice-label(for="choice") Выбрать адрес из списка 
                 .order-addreslist
-                    input(type="radio", name="address", id="1").order-orderform-radio.js-addresschoice
+                    input(type="radio", name="address", id="1")(data-city="Удмуртская республика, Ижевск" data-street="Кирова" data-build="30" data-flat="45").order-orderform-radio.js-addresschoice
                     label.order-orderform-label(for="1") Удмуртская республика, Ижевск,ул. Кирова, 30, офис 45
-                    input(type="radio", name="address", id="2").order-orderform-radio.js-addresschoice
+                    input(type="radio", name="address", id="2")(data-city="Удмуртская республика, Ижевск" data-street="Красногеройская" data-build="30" data-flat="45").order-orderform-radio.js-addresschoice
                     label.order-orderform-label(for="2") Удмуртская республика, Ижевск,ул. Кирова, 30, офис 45
-                    input(type="radio", name="address", id="3").order-orderform-radio.js-addresschoice
+                    input(type="radio", name="address", id="3")(data-city="Удмуртская республика, Ижевск" data-street="Ленина" data-build="30" data-flat="45").order-orderform-radio.js-addresschoice
                     label.order-orderform-label(for="3") Удмуртская республика, Ижевск,ул. Кирова, 30, офис 45
-                    input(type="radio", name="address", id="4").order-orderform-radio.js-addresschoice
+                    input(type="radio", name="address", id="4")(data-city="Удмуртская республика, Ижевск" data-street="Кирова" data-build="30" data-flat="45").order-orderform-radio.js-addresschoice
                     label.order-orderform-label(for="4") Удмуртская республика, Ижевск,ул. Кирова, 30, офис 45
             .order-fieldset
                 legend.order-legend Адрес
                 .order-fieldsetblock
-                    input.order-orderform-input(type="text", placeholder="Улица")
+                    span.order-autocompleet-wrap
+                        input.order-orderform-input#js-orderstreet(type="text", placeholder="Улица")
+                        input#js-orderstreethide(type="hidden")
+                        span.order-autocompleet#js-streetcompleet
                     .order-fieldset__small
-                        input.order-orderform-input__small(type="text", placeholder="Дом")
-                        input.order-orderform-input__small(type="text", placeholder="Квартира")
+                        input.order-orderform-input__small#js-orderbuild(type="text", placeholder="Дом")
+                        input.order-orderform-input__small#js-orderflat(type="text", placeholder="Квартира")
             .order-fieldset
                 legend.order-legend Имя
                 input.order-orderform-input(type="text")

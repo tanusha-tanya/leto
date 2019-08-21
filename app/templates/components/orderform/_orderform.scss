@@ -514,3 +514,45 @@
         display: block;
     }    
 }
+.order-autocompleet-wrap{
+    position: relative;
+}
+.order-autocompleet{
+    display: none;
+    &.active{
+        display: block;
+        width: 100%;
+        position: relative;
+    }
+}
+.compleet{
+    &-ul{
+        position: absolute;
+        left: 0;
+        right:0;
+        width: 100%;
+        box-sizing: border-box;
+        background: #fff;
+        border: 1px solid #E0E0E0;
+        z-index: 100;
+        top: calc(100% - 3px);        
+    }
+    &-item{
+        display: block;
+        list-style: none;       
+        padding: 10px;
+        transition: background .3s;
+        &:hover, &:focus{
+            background: #A5BB70;
+            .compleet-link{
+                color: #fff;
+            }           
+        }
+    }
+    &-link{
+        display: block;
+        text-decoration: none;
+        border-bottom: none;
+        transition: color .3s;
+    }
+}
