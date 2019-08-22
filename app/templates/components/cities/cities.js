@@ -1,8 +1,7 @@
 const cities = document.querySelector('.cities');
 let city = null,
-    defaultCity = "Москва",
-    orderCity = document.querySelector('#js-ordercity');
-
+    defaultCity = "Москва";
+    //orderCity = document.querySelector('#js-ordercity');
 
 function setMap(){
         ymaps.geolocation.get({
@@ -58,9 +57,9 @@ if(cities){
                 inputHidden.value = currentCity.dataset.id;
                 inputHidden.dispatchEvent(event);
                 inputText.value = currentCity.textContent;
-                if(orderCity){
+                /*if(orderCity){
                     orderCity.value = currentCity.textContent;
-                }
+                }*/
             }
         })
     }    

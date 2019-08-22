@@ -396,3 +396,9 @@ h6{
     min-height: 100vh;  
   }
 }
+.send-button{
+  transition: background .3s;
+  &.disabled{
+    background: #E0E0E0;
+  }
+}
