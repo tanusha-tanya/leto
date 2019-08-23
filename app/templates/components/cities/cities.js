@@ -1,4 +1,4 @@
-const cities = document.querySelector('.cities');
+/*const cities = document.querySelector('.cities');
 let city = null,
     defaultCity = "Москва";
     //orderCity = document.querySelector('#js-ordercity');
@@ -60,7 +60,7 @@ if(cities){
                 /*if(orderCity){
                     orderCity.value = currentCity.textContent;
                 }*/
-            }
+            /*}
         })
     }    
 
@@ -162,4 +162,93 @@ if(cities){
         autocompleteHide()
     }
 }
-$('.cities-autocomplete').mCustomScrollbar();
+$('.cities-autocomplete').mCustomScrollbar();*/
+
+const cities = document.querySelector('.cities');
+let city = null,
+    defaultCity = "Москва";
+
+if(cities){
+    let citiesDetect = document.querySelector('.cities-detect');
+    let inputHidden = document.querySelector('#cityId');
+    let citiesInput = document.querySelector('.cities-input');
+    let buttonCities = document.querySelector('.cities-button');
+    let citiesPopupLinkCollection = document.querySelectorAll('.js-cities');
+    let event = document.createEvent('Event');  
+    let cityId = null;  
+    event.initEvent('changeValue', true, true);
+
+
+    citiesDetect.addEventListener('click', (e)=>{ 
+        e.preventDefault()       
+        fetch('/ajax/location_get_cur_city/')
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(myJson){                
+            let cityName = `${myJson.NAME} ${myJson.PARENT.NAME}`;
+            city = myJson.NAME;
+            citiesInput.value = cityName;
+            inputHidden.value = myJson.ID;
+            inputHidden.dispatchEvent(event);             
+        })
+        .catch(function (err) {
+            let error = document.createElement('div');                       
+            error.classList.add('error-text')
+            error.textContent = 'Не удалось установить Ваше местоположение автоматически. Пожалуйста, введите город вручную или выберите из списка'
+            let detected = document.querySelector('.cities-detect');
+            let label = document.querySelector('.cities-label');
+            label.removeChild(detected);
+            label.appendChild(error);
+        })
+    })
+
+    inputHidden.addEventListener('changeValue', () =>{
+        if(inputHidden.value.length > 0){
+            buttonCities.classList.remove("disabled")
+        }
+        else{
+            buttonCities.classList.add("disabled")
+        }
+    })
+
+    buttonCities.addEventListener('click', (e) => {
+        e.preventDefault();
+        if(buttonCities.classList.contains('desabled')){
+            return
+        }
+        else{ 
+            try{
+                localStorage.setItem('cityId', inputHidden.value);
+            }
+            catch(err){
+                alert('В вашем браузере выключены файлы cookie, для продолжения включите файлы cookie в настройках вашего браузера')
+            }
+            cityLink.textContent = city;
+            cities.classList.remove('active')
+        }
+    })
+
+    function getCityFromLS(){        
+        try{
+            if (localStorage.getItem('cityId')) { 
+                cityId = localStorage.getItem('cityId')
+                fetch(`/ajax/location_get_cities/?city_id=${cityId}`)
+                .then(function(response){
+                    return response.json();
+                })
+                .then(function(myJson){  
+                    city = myJson.NAME;
+                })                 
+            }      
+            citiesPopupLinkCollection.forEach((citylink) => {
+                cityLink.textContent = city;
+            })
+        }
+        catch(err){
+            console.log('Включите файлы coocies')
+        }
+    }
+
+    getCityFromLS()
+}
