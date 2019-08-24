@@ -350,10 +350,9 @@ h6{
   width: 20px;
   height: 20px;
   right: 10px;
-  bottom: 15px;
+  bottom: 0;
   cursor: pointer;
-  @media(min-width:$tablet){
-    bottom: auto;
+  @media(min-width:$tablet){    
     right: 21px;
     top: 15px;
   }

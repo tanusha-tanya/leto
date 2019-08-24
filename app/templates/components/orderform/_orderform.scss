@@ -539,13 +539,12 @@
     }
     &-item{
         display: block;
-        list-style: none;       
-        padding: 10px;
+        list-style: none;     
         transition: background .3s;
         &:hover, &:focus{
             background: #A5BB70;
             .compleet-link{
-                color: #fff;
+                color: #fff;                
             }           
         }
     }
@@ -554,5 +553,7 @@
         text-decoration: none;
         border-bottom: none;
         transition: color .3s;
+        display: block;
+        padding: 10px;
     }
 }
