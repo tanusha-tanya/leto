@@ -85,7 +85,7 @@ if(orderform){
                       return response.json();
                     })
                     .then(function(myJson){     
-                        if(myJson.length > 0){
+                        if(myJson.length > 0){                            
                             street.value = myJson[0].NAME;
                             hiddenStreet.value = myJson[0].ID;  
                         }   
@@ -172,6 +172,7 @@ if(orderform){
         hiddenStreet.value="";
         build.value = "";
         flat.value = "";
+        checkform(orderform)
     }
 
     let choiceCity = () => {
@@ -215,10 +216,11 @@ if(orderform){
             let autocompleet = (myJson) => {                
                 let ul = document.createElement('ul');
                     ul.className = 'compleet-ul';   
+                    console.log(myJson)
                 for(let i = 0; i<myJson.length; i++){                    
                     let li = document.createElement('li');
                     li.className = 'compleet-item';
-                    li.innerHTML = `<a href="#" data-id="${myJson[i].Id}" class="compleet-link">${myJson[i].NAME}</a>`
+                    li.innerHTML = `<a href="#" data-id="${myJson[i].ID}" class="compleet-link">${myJson[i].NAME}</a>`
                     ul.appendChild(li);                                     
                 }
                 streetCompleet.classList.add('active');

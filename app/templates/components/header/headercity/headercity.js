@@ -23,7 +23,7 @@ if(citiesPopupLink){
     })
     let cityMissClick = () =>{
         document.body.onclick = (e) => {
-        if(e.target !== citiesPopup && !e.target.closest('.cities') && !e.target.classList.contains('js-cities')){
+        if(e.target !== citiesPopup && !e.target.closest('.cities') && !e.target.classList.contains('js-cities') && !e.target.closest('.cities-ul') && !e.target.classList.contains('.cities-ul')){
                 if(citiesPopup.classList.contains('active')){
                     citiesPopup.classList.remove('active')  
                     headercityCollection.forEach((headercity) => {
@@ -32,7 +32,7 @@ if(citiesPopupLink){
                         }
                     })
                 }
-            } 
+            }
         }
     }
 }

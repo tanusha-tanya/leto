@@ -1,16 +1,14 @@
 const cities = document.querySelector('.cities');
-let headCity = null,
-    defaultCity = "Москва";
 
 if(cities){
     let citiesDetect = document.querySelector('.cities-detect');
     let headerInputHidden = document.querySelector('#cityId');
     let headerCityInput = document.querySelector('.cities-input');
     let buttonCities = document.querySelector('.cities-button');
-    //let citiesPopupLinkCollection = document.querySelectorAll('.js-cities');
     let headerevent = document.createEvent('Event');  
-    //let headerCityId = null; 
+    let headeCity = null; 
     let headerCityCompleet = document.querySelector('.cities-autocomplete');
+    let reset = document.querySelector('.cities-reset');
 
     headerevent.initEvent('changeInput', true, true);
 
@@ -34,16 +32,24 @@ if(cities){
             let label = document.querySelector('.cities-label');
             label.removeChild(citiesDetect);
             label.appendChild(error);
+            return
         })
     })
+    
 
-    headerInputHidden.addEventListener('changeInput', () =>{
+    let changeButton = ()=>{
         if(headerInputHidden.value.length > 0){
             buttonCities.classList.remove("disabled")
         }
         else{
             buttonCities.classList.add("disabled")
         }
+    }
+
+    changeButton()
+
+    headerInputHidden.addEventListener('changeInput', () =>{
+        changeButton()
     })
 
     headerCityInput.addEventListener('input', () => {        
@@ -72,15 +78,56 @@ if(cities){
                     ul.appendChild(li);                                     
                 }
                 headerCityCompleet.classList.add('active');
-                headerCityCompleet.appendChild(ul);                
+                headerCityCompleet.appendChild(ul);   
+                choiceLink(); 
+                $('.cities-autocomplete').mCustomScrollbar();      
+                closeAutocompeet();     
             } 
         }
         else{
             headerCityCompleet.innerHTML = "";
-            headerCityCompleet.classList.remove('active');            
+            headerCityCompleet.classList.remove('active');   
+            headerInputHidden.dispatchEvent(headerevent);    
+            changeButton();      
             headerCityInput.value = "";
             headerInputHidden.value = "";            
         }
-    })
-    $('.cities-autocomplete').mCustomScrollbar();
+    });
+
+    let choiceLink = ()=>{
+        let headerCityLink = document.querySelectorAll('.cities-link');   
+        headerCityLink.forEach((link) =>{               
+        link.addEventListener('click', (e) => {
+                e.preventDefault();                
+                headerCityInput.value = link.textContent;
+                headerInputHidden.value = link.dataset.id;
+                headerInputHidden.dispatchEvent(headerevent); 
+                headerCityCompleet.innerHTML = "";
+                headerCityCompleet.classList.remove('active');    
+            })
+        }) 
+    }
+    
+    reset.addEventListener('click', (e) => { 
+        e.preventDefault();
+        headerCityCompleet.innerHTML = "";
+        headerCityCompleet.classList.remove('active');   
+        headerInputHidden.dispatchEvent(headerevent); 
+        changeButton();         
+        headerCityInput.value = "";
+        headerInputHidden.value = "";   
+    });
+
+    choiceLink();
+
+    let closeAutocompeet = ()=>{
+        document.body.addEventListener('click', (e)=>{
+            e.preventDefault();
+            if(e.target !== headerCityCompleet && !e.target.closest('.cities-autocomplete')){
+                headerCityCompleet.innerHTML = "";
+                headerCityCompleet.classList.remove('active');   
+                headerInputHidden.dispatchEvent(headerevent);
+            }           
+        }) 
+    }
 }
