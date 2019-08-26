@@ -6,7 +6,7 @@ if(cities){
     let headerCityInput = document.querySelector('.cities-input');
     let buttonCities = document.querySelector('.cities-button');
     let headerevent = document.createEvent('Event');  
-    let headeCity = null; 
+    let headCity = null; 
     let headerCityCompleet = document.querySelector('.cities-autocomplete');
     let reset = document.querySelector('.cities-reset');
 

@@ -216,7 +216,6 @@ if(orderform){
             let autocompleet = (myJson) => {                
                 let ul = document.createElement('ul');
                     ul.className = 'compleet-ul';   
-                    console.log(myJson)
                 for(let i = 0; i<myJson.length; i++){                    
                     let li = document.createElement('li');
                     li.className = 'compleet-item';

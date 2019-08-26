@@ -1,8 +1,14 @@
+let loop = false;
+if(location.href.indexOf('bitrix_include_areas=Y') == -1){
+  loop = true;
+}
+
+
 $('.maintopbrends-carousel').owlCarousel({
   autoplay:true,
   autoplayTimeout:3000,
   autoplayHoverPause:true,
-  loop:true,
+  loop:loop,
   smartSpeed:450,
   dots: false,
   autoheight: false,

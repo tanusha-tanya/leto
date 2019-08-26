@@ -101,25 +101,11 @@ if(cityDelivery){
             .then(function(response){
               return response.json();
             })
-            .then(function(myJson){     
+            .then(function(myJson){                  
                 if(myJson.length > 0){
                   autocompleet(myJson) 
                 }   
-            });           
-            let autocompleet = (myJson) => {                
-                let ul = document.createElement('ul');
-                    ul.className = 'compleet-ul';   
-                for(let i = 0; i<myJson.length; i++){                    
-                    let li = document.createElement('li');
-                    li.className = 'compleet-item';
-                    li.innerHTML = `<a href="#" data-id="${myJson[i].ID}" class="compleet-link"><strong>${myJson[i].NAME}</strong> ${myJson[i].PARENT.NAME}</a>`
-                    ul.appendChild(li);                                     
-                }
-                cityCompleet.classList.add('active');
-                cityCompleet.appendChild(ul);
-                choiceCity();  
-                bodyClick();
-            } 
+            });            
         }
         else{
             cityCompleet.innerHTML = "";
@@ -128,6 +114,34 @@ if(cityDelivery){
             hiddenCityDelivery.value = "";            
         }
 
+        let autocompleet = (myJson) =>{
+            let ul = document.createElement('ul');
+                ul.className = 'compleet-ul';   
+            for(let i = 0; i<myJson.length; i++){                    
+                let li = document.createElement('li');
+                li.className = 'compleet-item';
+                li.innerHTML = `<a href="#" data-id="${myJson[i].ID}" class="compleet-link"><strong>${myJson[i].NAME}</strong> ${myJson[i].PARENT.NAME}</a>`
+                ul.appendChild(li);                                     
+            }
+            cityCompleet.classList.add('active');
+            cityCompleet.appendChild(ul);
+            choiceCity();  
+            bodyClick();
+            backspase()
+        }
+        
+        let backspase = () => {
+            let key = event.which || event.keyCode || event.charCode;
+            if(key == 8){
+                cityCompleet.innerHTML = "";
+                cityCompleet.classList.remove('active');    
+                if(cityInputDelivery.value.length < 0){
+                    cityInputDelivery.value = "";
+                    hiddenCityDelivery.value = "";  
+                }
+            }
+        }
+        
         let bodyClick = () => {
             document.body.addEventListener('click', (e) => {            
                 if(e.target !== cityCompleet && !e.target.closest('#js-citycompleet')){

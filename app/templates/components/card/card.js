@@ -1,3 +1,9 @@
+let navItems = document.querySelectorAll('.card-slider__nav .card-slider-item');
+let nav = 3;
+if(navItems.length < 3){
+  nav = navItems.length 
+}
+
 let cardCarousel = ()=>{
   $('.card-slider__for').slick({
     slidesToShow: 1,
@@ -8,12 +14,13 @@ let cardCarousel = ()=>{
     dots: true,    
   });
   $('.card-slider__nav').slick({
-    slidesToShow: 3,
+    slidesToShow: nav,
     slidesToScroll: 1,
     asNavFor: '.card-slider__for',    
     focusOnSelect: true,
     arrows: false,  
-    dots: false,   
+    dots: false, 
+    centerMode: true  
   });
 }
 

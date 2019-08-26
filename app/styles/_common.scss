@@ -401,3 +401,8 @@ h6{
     background: #E0E0E0;
   }
 }
+.bx-context-toolbar-empty-area{
+  .owl-carousel .owl-stage-outer{
+    overflow: unset;
+  }
+} 

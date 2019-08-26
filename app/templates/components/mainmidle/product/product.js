@@ -6,6 +6,11 @@ $('.product-fastshow').magnificPopup({
 			ajaxContentAdded: function() {
         let content = $(this.content);
         let sliderItems = content.find('.card-slider-item')
+        let navItems = content.find('.card-slider__nav .card-slider-item');
+        let nav = 3;
+        if(navItems.length < 3){
+          nav = navItems.length 
+        }
         if(sliderItems.length > 1){
           content.find('.card-slider__for').slick({
             slidesToShow: 1,
@@ -16,12 +21,13 @@ $('.product-fastshow').magnificPopup({
             dots: true,
           });
           content.find('.card-slider__nav').slick({
-            slidesToShow: 3,
+            slidesToShow: nav,
             slidesToScroll: 1,
             asNavFor: '.card-slider__for',
             dots: false,
             focusOnSelect: true,
             arrows: false,
+            centerMode: true
           });
         }
           let minus = content.find('.js-minus');
