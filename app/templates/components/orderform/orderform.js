@@ -1,6 +1,7 @@
 $('.js-phone').inputmask('+7(999) 999-9999');
 $('.order-addreslist').mCustomScrollbar();
 
+
 let checkform = (form) =>{    
     let inputForm = form.querySelectorAll('.required-input');
     let buttonForm = form.querySelector('.send-button');
@@ -23,7 +24,7 @@ if(orderform){
     checkform(orderform)
     let choiceCheckbox = document.querySelector('#choice')
     let addresslist = document.querySelector('.order-addreslist')
-    let orderInput = orderform.querySelectorAll('input')
+    let orderInput = orderform.querySelectorAll('input') 
     
     orderInput.forEach((input) => {
         input.addEventListener('change', ()=>{
@@ -114,7 +115,7 @@ if(orderform){
         if(cityInput.value.length > 0){ 
             cityCompleet.innerHTML = "";
             let string = cityInput.value.trim(); 
-            let path = `/ajax/location_get_cities/?city=${string}`           
+            let path = `/ajax/location_get_cities/?city=${string}`                     
             fetch(path)
             .then(function(response){
               return response.json();
@@ -137,7 +138,7 @@ if(orderform){
                 cityCompleet.appendChild(ul);
                 choiceCity();  
                 bodyClick()
-            } 
+            }
         }
         else{
             cityCompleet.innerHTML = "";
@@ -188,7 +189,8 @@ if(orderform){
                 hiddenStreet.value="";
                 build.value = "";
                 flat.value = "";  
-                showAddress();              
+                showAddress(); 
+                          
             })
         })
     }
@@ -196,6 +198,7 @@ if(orderform){
     let showAddress = () => {
         $(cartAddress).show()
     }
+
     street.addEventListener('input', () => { 
         streetCompleet.innerHTML = "";  
         if(street.value.length > 0){
@@ -209,9 +212,9 @@ if(orderform){
             })
             .then(function(myJson){     
                 if(myJson.length > 0){
-                   autocompleet(myJson) 
+                    autocompleet(myJson) 
                 }   
-            });
+            });                       
 
             let autocompleet = (myJson) => {                
                 let ul = document.createElement('ul');
@@ -225,15 +228,14 @@ if(orderform){
                 streetCompleet.classList.add('active');
                 streetCompleet.appendChild(ul);
                 choiceStreet();  
-                bodyClick();            
-            }         
+                bodyClick();                         
+            }      
         }
         else{
             streetCompleet.classList.remove('active');
             streetCompleet.innerHTML = "";   
         }
-    })   
-
+    }) 
     let choiceStreet = () => {
         let compleetlinks = document.querySelectorAll('.compleet-link');        
         compleetlinks.forEach((link)=>{
