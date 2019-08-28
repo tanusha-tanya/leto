@@ -28,9 +28,9 @@ if(cities){
             return response.json();
         })
         .then(function(myJson){                         
-            let cityName = `${myJson.NAME} ${myJson.PARENT.NAME}`;
+            let cityHeaderName = `${myJson.NAME} ${myJson.PARENT.NAME}`;
             headCity = myJson.NAME;
-            headerCityInput.value = cityName;
+            headerCityInput.value = cityHeaderName;
             headerInputHidden.value = myJson.ID;            
             headerInputHidden.dispatchEvent(headerevent);             
         })

@@ -55,6 +55,9 @@ if(orderform){
     let cartAddress = document.querySelector('.js-cart-order-address');
     let streetCompleet = document.querySelector('#js-streetcompleet');    
 
+    let showAddress = () => {
+        $(cartAddress).show()
+    }
     if(cityInput.value.length <= 0){
         hideAddress();
     }
@@ -73,8 +76,8 @@ if(orderform){
                       return response.json();
                     })
                     .then(function(myJson){     
-                        if(myJson.length > 0){
-                            cityName = `${myJson[0].NAME} ${myJson[0].PARENT.NAME}`
+                        if(myJson.length > 0){                            
+                            let cityName = `${myJson[0].NAME} ${myJson[0].PARENT.NAME}`
                             cityInput.value = cityName;
                             hiddenCity.value = cityId; 
                         }   
@@ -204,10 +207,7 @@ if(orderform){
             })
         })
     }
-    
-       let showAddress = () => {
-            $(cartAddress).show()
-        }
+       
     }
     
     let streetTyping = () => { 
