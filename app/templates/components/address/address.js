@@ -24,7 +24,7 @@ let openPopup = () => {
                     type: 'ajax',
                     alignTop: true,
                     overflowY: 'scroll'
-                });                
+                });                                
                 $('body').trigger('ajaxReady')           
             }
         }    
@@ -40,9 +40,9 @@ $('body').on('click','.add-button__send', function(event){
     if(button.hasClass('disabled')){
         return
     }
-    else{
+    /*else{
         form.submit() 
-    }
+    }*/
 });
 
 $('body').on('click', '.add-button__close', function(e){

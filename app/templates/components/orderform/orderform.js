@@ -54,7 +54,7 @@ if(orderform){
     let radioCollection = document.querySelectorAll('.js-addresschoice');
     let cityCompleet = document.querySelector('#js-citycompleet');
     let cartAddress = document.querySelector('.js-cart-order-address');
-    let streetCompleet = document.querySelector('#js-streetcompleet');
+    let streetCompleet = document.querySelector('#js-streetcompleet');    
 
     if(cityInput.value.length <= 0){
         hideAddress();
@@ -107,9 +107,46 @@ if(orderform){
         cityInput.value = "";
         hiddenCity.value = "";
         hideAddress();
-    })
-      
-    cityInput.addEventListener('input', () => { 
+    })  
+    
+    let bodyClick = () => {
+        document.body.addEventListener('click', (e) => {            
+            if((e.target !== cityCompleet && !e.target.closest('#js-citycompleet'))
+                || (e.target !== streetCompleet && !e.target.closest('#js-streetcompleet'))){
+                cityCompleet.innerHTML = "";
+                cityCompleet.classList.remove('active');                
+                streetCompleet.innerHTML = "";
+                streetCompleet.classList.remove('active');
+            }
+        })
+    } 
+
+    let hideAddress = () => {
+        $(cartAddress).hide()
+        street.value = "";
+        hiddenStreet.value="";
+        build.value = "";
+        flat.value = "";
+        checkform(orderform)
+    }
+    let typingTimer;                
+    let doneTypingInterval = 300; 
+    
+    cityInput.addEventListener('keyup', () => {
+        clearTimeout(typingTimer);
+        if (cityInput.value) {
+            typingTimer = setTimeout(cityTyping, doneTypingInterval);
+        }
+    });   
+    
+    street.addEventListener('keyup', () => {
+        clearTimeout(typingTimer);
+        if (street.value) {
+            typingTimer = setTimeout(streetTyping, doneTypingInterval);
+        }
+    });   
+    
+    let cityTyping = () => {
         cityCompleet.innerHTML = "";
         cityCompleet.classList.remove('active');        
         if(cityInput.value.length > 0){ 
@@ -121,7 +158,7 @@ if(orderform){
               return response.json();
             })
             .then(function(myJson){     
-                if(myJson.length > 0){
+                if(myJson.length > 0){  
                   autocompleet(myJson) 
                 }   
             });           
@@ -147,34 +184,8 @@ if(orderform){
             cityInput.value = "";
             hiddenCity.value = "";            
             hideAddress();
-        }
-    })
-    cityInput.addEventListener('change', () => {
-        if(hiddenCity.value.length <= 0){
-            hideAddress();
-        }
-    })
-
-    let bodyClick = () => {
-        document.body.addEventListener('click', (e) => {            
-            if((e.target !== cityCompleet && !e.target.closest('#js-citycompleet'))
-                || (e.target !== streetCompleet && !e.target.closest('#js-streetcompleet'))){
-                cityCompleet.innerHTML = "";
-                cityCompleet.classList.remove('active');                
-                streetCompleet.innerHTML = "";
-                streetCompleet.classList.remove('active');
-            }
-        })
-    } 
-
-    let hideAddress = () => {
-        $(cartAddress).hide()
-        street.value = "";
-        hiddenStreet.value="";
-        build.value = "";
-        flat.value = "";
-        checkform(orderform)
-    }
+        } 
+    
 
     let choiceCity = () => {
         let compleetlinks = document.querySelectorAll('.compleet-link');        
@@ -195,11 +206,12 @@ if(orderform){
         })
     }
     
-    let showAddress = () => {
-        $(cartAddress).show()
+       let showAddress = () => {
+            $(cartAddress).show()
+        }
     }
-
-    street.addEventListener('input', () => { 
+    
+    let streetTyping = () => { 
         streetCompleet.innerHTML = "";  
         if(street.value.length > 0){
             streetCompleet.innerHTML = ""; 
@@ -214,8 +226,7 @@ if(orderform){
                 if(myJson.length > 0){
                     autocompleet(myJson) 
                 }   
-            });                       
-
+            });                      
             let autocompleet = (myJson) => {                
                 let ul = document.createElement('ul');
                     ul.className = 'compleet-ul';   
@@ -234,8 +245,7 @@ if(orderform){
         else{
             streetCompleet.classList.remove('active');
             streetCompleet.innerHTML = "";   
-        }
-    }) 
+        }    
     let choiceStreet = () => {
         let compleetlinks = document.querySelectorAll('.compleet-link');        
         compleetlinks.forEach((link)=>{
@@ -247,5 +257,6 @@ if(orderform){
                 streetCompleet.innerHTML = "";                            
             })
         })
+    }
     }
 }

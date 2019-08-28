@@ -1,106 +1,65 @@
 let adressAdd = document.querySelector('.address-add')
-
 if(adressAdd){ 
-    document.body.oninput = (e)=>{
-        if(e.target.classList.contains('js-inputcheck')){            
-            let form = e.target.closest('.add-form') || null;
-            if (form){                
-                let cityInput = form.querySelector("#js-ordercity");
-                let street = form.querySelector("#js-orderstreet");
-                let build = form.querySelector("#js-orderbuild");
-                let flat = form.querySelector("#js-orderflat");
-                let hiddenCity = form.querySelector("#js-ordercityhide");
-                let hiddenStreet = form.querySelector("#js-orderstreethide");    
-                let cityCompleet = form.querySelector('#js-citycompleet');
-                let cartAddress = form.querySelector('.js-cart-order-address');
-                let streetCompleet = form.querySelector('#js-streetcompleet');
-                
-                let hideAddress = () => {
-                    $(cartAddress).hide()
-                    street.value = "";
-                    hiddenStreet.value="";
-                    build.value = "";
-                    flat.value = ""; 
-                }
-
-            $('body').on('click','.js-close', function(event){
-                cityInput.value = "";
-                hiddenCity.value = "";
-                hideAddress();
-            })
-      
-            cityInput.addEventListener('input', () => {                 
-                cityCompleet.innerHTML = "";
-                cityCompleet.classList.remove('active');        
-                if(cityInput.value.length > 0){ 
-                    cityCompleet.innerHTML = "";
-                    let string = cityInput.value.trim(); 
-                    let path = `/ajax/location_get_cities/?city=${string}`           
-                    fetch(path)
-                    .then(function(response){
-                    return response.json();
-                    })
-                    .then(function(myJson){     
-                        if(myJson.length > 0){
-                            autocompleet(myJson) 
-                        }   
-                    });           
-
-                    let autocompleet = (myJson) => {                
-                        let ul = document.createElement('ul');
-                            ul.className = 'compleet-ul';   
-                        for(let i = 0; i<myJson.length; i++){                    
-                            let li = document.createElement('li');
-                            li.className = 'compleet-item';
-                            li.innerHTML = `<a href="#" data-id="${myJson[i].ID}" class="compleet-link"><strong>${myJson[i].NAME}</strong> ${myJson[i].PARENT.NAME}</a>`
-                            ul.appendChild(li);                                     
-                        }
-                        cityCompleet.classList.add('active');
-                        cityCompleet.appendChild(ul);
-                        choiceCity();  
-                        bodyClick();
-                        backspase();
-                    } 
-                }
-                else{
-                    cityCompleet.innerHTML = "";
-                    cityCompleet.classList.remove('active');
-                    hiddenStreet.value="";
-                    cityInput.value = "";
-                    hiddenCity.value = "";            
-                    hideAddress();
-                }
-            })
-            cityInput.addEventListener('change', () => {
-                if(hiddenCity.value.length <= 0){
-                    hideAddress();
-                }
-            })
-            let backspase = () => {
-                let key = event.which || event.keyCode || event.charCode;
-                if(key == 8){
-                    cityCompleet.innerHTML = "";
-                    cityCompleet.classList.remove('active');    
-                    if(cityInputDelivery.value.length < 0){
-                        cityInputDelivery.value = "";
-                        hiddenCityDelivery.value = "";  
-                    }
-                }
+    let typingTimer;                
+    let doneTypingInterval = 500;     
+    
+    document.body.onkeyup = (e)=>{
+        if(e.target.id == "js-ordercity-popup"){
+            let cityInput = e.target;
+            clearTimeout(typingTimer);
+            if (cityInput.value) {
+                typingTimer = setTimeout(CityTyping(cityInput), doneTypingInterval);
             }
-            let bodyClick = () => {
-                document.body.addEventListener('click', (e) => {            
-                    if((e.target !== cityCompleet && !e.target.closest('#js-citycompleet'))
-                        || (e.target !== streetCompleet && !e.target.closest('#js-streetcompleet'))){
-                        cityCompleet.innerHTML = "";
-                        cityCompleet.classList.remove('active');                
-                        streetCompleet.innerHTML = "";
-                        streetCompleet.classList.remove('active');
-                    }
-                })
+        }
+        if(e.target.id == "js-orderstreet-popup"){
+            let streetInput = e.target;
+            clearTimeout(typingTimer);
+            if (streetInput.value) {
+                typingTimer = setTimeout(streetTyping(streetInput), doneTypingInterval);
+            }
+        }
+    }    
+
+    let CityTyping = (cityInput) => {
+        let form = cityInput.closest('.add-form');
+        let hiddenCity = form.querySelector("#js-ordercityhide");
+        let cityCompleet = form.querySelector('#js-citycompleet');
+        let addressBlock = form.querySelector('.js-cart-order-address');
+
+        cityCompleet.innerHTML = "";
+        cityCompleet.classList.remove('active');        
+        if(cityInput.value.length > 0){ 
+            cityCompleet.innerHTML = "";
+            let string = cityInput.value.trim(); 
+            let path = `/ajax/location_get_cities/?city=${string}`           
+            fetch(path)
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(myJson){     
+                if(myJson.length > 0){
+                    autocompleet(myJson) 
+                }   
+            });          
+            let autocompleet = (myJson) => {                
+                let ul = document.createElement('ul');
+                ul.className = 'compleet-ul';   
+                for(let i = 0; i<myJson.length; i++){                    
+                    let li = document.createElement('li');
+                    li.className = 'compleet-item';
+                    li.innerHTML = `<a href="#" data-id="${myJson[i].ID}" class="compleet-link"><strong>${myJson[i].NAME}</strong> ${myJson[i].PARENT.NAME}</a>`
+                    ul.appendChild(li);                                     
+                }
+                cityCompleet.classList.add('active');
+                cityCompleet.appendChild(ul);
+                choiceCity(); 
             } 
-
-            
-
+        }
+        else{
+            $(addressBlock).hide();             
+            hiddenCity.value = "";
+        }
+        
         let choiceCity = () => {
             let compleetlinks = document.querySelectorAll('.compleet-link');        
             compleetlinks.forEach((link)=>{
@@ -110,71 +69,80 @@ if(adressAdd){
                     hiddenCity.value = link.dataset.id;
                     cityCompleet.classList.remove('active');
                     cityCompleet.innerHTML = "";
-                    street.value = "";
-                    hiddenStreet.value="";
-                    build.value = "";
-                    flat.value = "";                      
-                    showAddress();              
+                    $(addressBlock).show();                             
                 })
             })
         }
-    
-        let showAddress = () => {
-            $(cartAddress).show()
-        }
-        street.addEventListener('input', () => { 
-            streetCompleet.innerHTML = "";  
-            if(street.value.length > 0){
-                streetCompleet.innerHTML = ""; 
-                let string = street.value.trim();            
-                let cityid = hiddenCity.value;
-                let path = `/ajax/location_get_streets/?city_id=${cityid}&street=${string}`
-                fetch(path)
-                .then(function(response){
-                    return response.json();
-                })
-                .then(function(myJson){     
-                    if(myJson.length > 0){
-                    autocompleet(myJson) 
-                    }   
-                });
-
-                let autocompleet = (myJson) => {                                 
-                    let ul = document.createElement('ul');
-                        ul.className = 'compleet-ul';   
-                    for(let i = 0; i<myJson.length; i++){                    
-                        let li = document.createElement('li');
-                        li.className = 'compleet-item';
-                        li.innerHTML = `<a href="#" data-id="${myJson[i].ID}" class="compleet-link">${myJson[i].NAME}</a>`
-                        ul.appendChild(li);                                     
-                    }
-                    streetCompleet.classList.add('active');
-                    streetCompleet.appendChild(ul);
-                    choiceStreet();  
-                    bodyClick();            
-                }         
-            }
-            else{
-                streetCompleet.classList.remove('active');
-                streetCompleet.innerHTML = "";   
-            }
-        })   
-
-                let choiceStreet = () => {
-                    let compleetlinks = document.querySelectorAll('.compleet-link');        
-                    compleetlinks.forEach((link)=>{
-                        link.addEventListener('click', (e) =>{                
-                            e.preventDefault();                            
-                            street.value = link.textContent;
-                            hiddenStreet.value = link.dataset.id;
-                            streetCompleet.classList.remove('active');
-                            streetCompleet.innerHTML = ""; 
-                        })
-                    })
-                }
-            }   
-        }
     }
+
+    let streetTyping = (streetInput) => {
+        let form = streetInput.closest('.add-form');
+        let hiddenStreet = form.querySelector("#js-orderstreethide");
+        let streetCompleet = form.querySelector('#js-streetcompleet');
+        let cityId = form.querySelector("#js-ordercityhide").value;
+
+        streetCompleet.innerHTML = "";  
+        if(streetInput.value.length > 0){
+            streetCompleet.innerHTML = ""; 
+            let string = streetInput.value.trim();            
+            let path = `/ajax/location_get_streets/?city_id=${cityId}&street=${string}`
+            fetch(path)
+            .then(function(response){
+                return response.json();
+            })
+           .then(function(myJson){     
+                if(myJson.length > 0){                    
+                   autocompleet(myJson) 
+               }   
+            });
+            let autocompleet = (myJson) => {                                 
+                let ul = document.createElement('ul');
+                    ul.className = 'compleet-ul';   
+                for(let i = 0; i<myJson.length; i++){                    
+                    let li = document.createElement('li');
+                    li.className = 'compleet-item';
+                    li.innerHTML = `<a href="#" data-id="${myJson[i].ID}" class="compleet-link">${myJson[i].NAME}</a>`
+                    ul.appendChild(li);                                     
+                }
+                streetCompleet.classList.add('active');
+                streetCompleet.appendChild(ul);
+                choiceStreet();
+            }        
+        }
+        let choiceStreet = () => {
+            let compleetlinks = document.querySelectorAll('.compleet-link');        
+            compleetlinks.forEach((link)=>{
+                link.addEventListener('click', (e) =>{                
+                    e.preventDefault();                          
+                    streetInput.value = link.textContent;
+                    hiddenStreet.value = link.dataset.id;
+                    streetCompleet.classList.remove('active');
+                    streetCompleet.innerHTML = "";
+                })
+            })
+        }
+    } 
+    $('body').on('click', '.js-close', function(e){
+        if(e.target.closest('.add-form')){
+            let form = e.target.closest('.add-form');
+            let hiddenStreet = form.querySelector("#js-orderstreethide");        
+            let streetInput = form.querySelector("#js-orderstreet-popup");
+            let cityInput = form.querySelector("#js-ordercity-popup");
+            let hiddenCity = form.querySelector("#js-ordercityhide");
+            let build = form.querySelector("#js-orderbuild");
+            let flat = form.querySelector("#js-orderflat");
+            let addressBlock = form.querySelector(".js-cart-order-address");
+            let button = form.querySelector(".add-button__send");        
+            hiddenStreet.value = "";
+            streetInput.value  = "";
+            cityInput.value  = "";
+            hiddenCity.value  = "";
+            build.value = ""; 
+            flat.value = "";
+            button.classList.add('disabled');
+            $(addressBlock).hide();    
+        }
+    })  
 }
-    
-    
+
+

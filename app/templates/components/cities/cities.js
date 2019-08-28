@@ -9,7 +9,16 @@ if(cities){
     let headCity = null; 
     let headerCityCompleet = document.querySelector('.cities-autocomplete');
     let reset = document.querySelector('.cities-reset');
-
+    let typingTimer;                
+    let doneTypingInterval = 300; 
+    
+    headerCityInput.addEventListener('keyup', () => {
+        clearTimeout(typingTimer);
+        if (headerCityInput.value) {
+            typingTimer = setTimeout(headerCityTyping, doneTypingInterval);
+        }
+    });   
+    
     headerevent.initEvent('changeInput', true, true);
 
     citiesDetect.addEventListener('click', (e)=>{ 
@@ -51,8 +60,7 @@ if(cities){
     headerInputHidden.addEventListener('changeInput', () =>{
         changeButton()
     })
-
-    headerCityInput.addEventListener('input', () => {        
+    let headerCityTyping = () => {
         headerCityCompleet.innerHTML = "";
         headerCityCompleet.classList.remove('active');        
         if(headerCityInput.value.length > 0){             
@@ -92,7 +100,7 @@ if(cities){
             headerCityInput.value = "";
             headerInputHidden.value = "";            
         }
-    });
+    }    
 
     let choiceLink = ()=>{
         let headerCityLink = document.querySelectorAll('.cities-link');   
