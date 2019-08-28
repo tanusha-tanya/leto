@@ -2,25 +2,24 @@ $('.js-phone').inputmask('+7(999) 999-9999');
 $('.order-addreslist').mCustomScrollbar();
 
 
-let checkform = (form) =>{    
-    let inputForm = form.querySelectorAll('.required-input');
-    let buttonForm = form.querySelector('.send-button');
-    let counter = 0;
-    inputForm.forEach((input) => {
-        if(input.value.length <= 0){
-            counter++
-        }        
-    })
-    if(counter >= 1){
-        buttonForm.classList.add('disabled')
-    }
-    else{        
-        buttonForm.classList.remove('disabled') 
-    }
-}
-
 let orderform = document.querySelector(".order-orderform")
 if(orderform){
+    let checkform = (form) =>{    
+        let inputForm = form.querySelectorAll('.required-input');
+        let buttonForm = form.querySelector('.send-button');
+        let counter = 0;
+        inputForm.forEach((input) => {
+            if(input.value.length <= 0){
+                counter++
+            }        
+        })
+        if(counter >= 1){
+            buttonForm.classList.add('disabled')
+        }
+        else{        
+            buttonForm.classList.remove('disabled') 
+        }
+    }
     checkform(orderform)
     let choiceCheckbox = document.querySelector('#choice')
     let addresslist = document.querySelector('.order-addreslist')

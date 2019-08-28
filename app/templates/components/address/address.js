@@ -14,17 +14,17 @@ $.extend(true, $.magnificPopup.defaults, {
   }
 });
 
-let openPopup = () => {
+let openPopup = () => {   
     $(".js-popup").magnificPopup({
         type: 'ajax',
         overflowY: 'scroll',
-        сallbacks: {
+        callbacks: {                                    
             ajaxContentAdded: function(){  
                 $(this.content).find(".js-popup-inside").magnificPopup({
                     type: 'ajax',
                     alignTop: true,
                     overflowY: 'scroll'
-                });                                
+                });                
                 $('body').trigger('ajaxReady')           
             }
         }    
@@ -40,9 +40,9 @@ $('body').on('click','.add-button__send', function(event){
     if(button.hasClass('disabled')){
         return
     }
-    /*else{
+    else{
         form.submit() 
-    }*/
+    }
 });
 
 $('body').on('click', '.add-button__close', function(e){
@@ -52,12 +52,6 @@ $('body').on('click', '.add-button__close', function(e){
 })
 
 document.body.oninput = (e)=>{
-    if(e.target.classList.contains('js-inputcheck')){
-       let form = e.target.closest('.js-form');
-       check(form)
-    }
-}
-document.body.onchange = (e)=>{
     if(e.target.classList.contains('js-inputcheck')){
        let form = e.target.closest('.js-form');
        check(form)
