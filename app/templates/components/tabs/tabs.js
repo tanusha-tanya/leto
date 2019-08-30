@@ -24,17 +24,13 @@ if(tabs){
 }  
   openTab();
 
-  window.addEventListener('hashchange', hashchange);
-  function hashchange(e){ 
-    e.preventDefault();
-    var hash = location.hash;
-    openTab()
-  }
 
-  links.forEach((elem)=>{
+links.forEach((elem)=>{
   elem.addEventListener('click', (e) => {
     e.preventDefault();
-    location.hash = elem.hash;
+    let hash = elem.hash;     
+    history.pushState(null, null, hash);
+    openTab()
   })
 })
 

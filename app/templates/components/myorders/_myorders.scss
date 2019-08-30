@@ -60,16 +60,15 @@
     display: none;
     margin-top: 80px;
     &:after{
-            content: "";
-            display: block;
-            width: 68%;
-            height: 20px;
-            box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-            position: absolute;
-            bottom: 0;
-            z-index: -1;
-            right: 12%;
-        }
+        content: "";
+        display: block;
+        width: 68%;
+        height: 20px;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        position: absolute;
+        bottom: 0;
+        right: 12%;
+    }
     @media(min-width:$desktop){
         display: block;
     }

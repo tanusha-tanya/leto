@@ -189,25 +189,24 @@ if(orderform){
         } 
     
 
-    let choiceCity = () => {
-        let compleetlinks = document.querySelectorAll('.compleet-link');        
-        compleetlinks.forEach((link)=>{
-            link.addEventListener('click', (e) =>{                
-                e.preventDefault();                            
-                cityInput.value = link.textContent;
-                hiddenCity.value = link.dataset.id;
-                cityCompleet.classList.remove('active');
-                cityCompleet.innerHTML = "";
-                street.value = "";
-                hiddenStreet.value="";
-                build.value = "";
-                flat.value = "";  
-                showAddress(); 
-                          
+        let choiceCity = () => {
+            let compleetlinks = document.querySelectorAll('.compleet-link');        
+            compleetlinks.forEach((link)=>{
+                link.addEventListener('click', (e) =>{                
+                    e.preventDefault();                            
+                    cityInput.value = link.textContent;
+                    hiddenCity.value = link.dataset.id;
+                    cityCompleet.classList.remove('active');
+                    cityCompleet.innerHTML = "";
+                    street.value = "";
+                    hiddenStreet.value="";
+                    build.value = "";
+                    flat.value = "";  
+                    showAddress(); 
+                            
+                })
             })
-        })
-    }
-       
+        } 
     }
     
     let streetTyping = () => { 
@@ -245,17 +244,17 @@ if(orderform){
             streetCompleet.classList.remove('active');
             streetCompleet.innerHTML = "";   
         }    
-    let choiceStreet = () => {
-        let compleetlinks = document.querySelectorAll('.compleet-link');        
-        compleetlinks.forEach((link)=>{
-            link.addEventListener('click', (e) =>{                
-                e.preventDefault();                            
-                street.value = link.textContent;
-                hiddenStreet.value = link.dataset.id;
-                streetCompleet.classList.remove('active');
-                streetCompleet.innerHTML = "";                            
+        let choiceStreet = () => {
+            let compleetlinks = document.querySelectorAll('.compleet-link');        
+            compleetlinks.forEach((link)=>{
+                link.addEventListener('click', (e) =>{                
+                    e.preventDefault();                            
+                    street.value = link.textContent;
+                    hiddenStreet.value = link.dataset.id;
+                    streetCompleet.classList.remove('active');
+                    streetCompleet.innerHTML = "";                            
+                })
             })
-        })
-    }
+        }
     }
 }

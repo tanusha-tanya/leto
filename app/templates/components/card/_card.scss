@@ -104,7 +104,15 @@
   img{
     align-self: center;
   }
+}
+.card-slider-item__for{
+  display: none;
   &:first-of-type{
-    display: flex;
+    display: block;
+  }
+}
+.slick-initialized{
+  .card-slider-item__for{
+    display: block;
   }
 }

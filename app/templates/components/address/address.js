@@ -25,7 +25,10 @@ let openPopup = () => {
                     alignTop: true,
                     overflowY: 'scroll'
                 });                
-                $('body').trigger('ajaxReady')           
+                $('body').trigger('ajaxReady');
+                let addresBlock = $(this.content).find(".js-cart-order-address");
+                let orederCity = $(this.content).find("#js-ordercity-popup");
+                if($(orederCity)[0].value) $(addresBlock).show()         
             }
         }    
     });
@@ -39,9 +42,6 @@ $('body').on('click','.add-button__send', function(event){
     let form = $(this).closest('.js-form');
     if(button.hasClass('disabled')){
         return
-    }
-    else{
-        form.submit() 
     }
 });
 
