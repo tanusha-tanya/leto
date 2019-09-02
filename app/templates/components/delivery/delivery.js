@@ -25,11 +25,12 @@ if(map){
     function init() {
     $('#pickup').click(function(){
     var myMap = new ymaps.Map('map', {
-        center: [56.8522511,53.2091607],     
+        center: [37.385529,37.622504],
+        checkZoomRange: true,     
         zoom: 12
     });     
     var placemarks = [];
-    var firstMark;
+    var firstMark = null;
     $('.js-map_point').each(function(index, element){
         var coords = $(element).data('coords').split(',');
         var balloon = $(element).data('baloon');
@@ -40,27 +41,27 @@ if(map){
             balloonContent: balloon
         },{
             iconLayout: 'default#image',
-            iconImageHref: '/images/svg/baloon.svg',
+            //iconImageHref: '/local/templates/tx/images/svg/baloon.svg',
             iconImageSize: [30, 42],
             iconImageOffset: [-3, -42] 
-        });
-        myMap.geoObjects.add(placemarks[id]);
+        });        
+        myMap.geoObjects.add(placemarks[id]);        
         if (!firstMark) {
             firstMark = placemarks[id];
         }
     })   
-    firstMark.options.set('iconImageHref','/images/svg/baloon_current.svg');
-    firstMark.balloon.open();      
-    
+    //firstMark.options.set('iconImageHref','/local/templates/tx/images/svg/baloon_current.svg');
+    firstMark.balloon.open();     
+    myMap.setCenter(firstMark.geometry._coordinates)
     $('.js-map_point').click(function(){
         var coords = $(this).data('coords').split(',');        
         var geoPoint = [Number(coords[0]), Number(coords[1])];
         var id = $(this).data('id');
         var mark = placemarks[id];
         placemarks.forEach(function(item, i, arr) {
-               item.options.set('iconImageHref','/images/svg/baloon.svg');
+               item.options.set('iconImageHref','/local/templates/tx/images/svg/baloon.svg');
             });
-            mark.options.set('iconImageHref','/images/svg/baloon_current.svg');
+            mark.options.set('iconImageHref','/local/templates/tx/images/svg/baloon_current.svg');
             mark.balloon.open();
         $('.js-map__item').removeClass('map__item-active');        
         $(this).parents('.js-map__item').addClass('map__item-active');
@@ -74,6 +75,7 @@ if(map){
 }
 }
 showMap();
+
 
 
 const mapLinks = document.querySelectorAll('.delivery-addresses-item');
