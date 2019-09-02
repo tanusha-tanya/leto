@@ -1,4 +1,6 @@
-const radioCollectionDelivery = document.querySelectorAll('.delivery-radio');
+
+let showMap = ()=>{
+    const radioCollectionDelivery = document.querySelectorAll('.delivery-radio');
 if(radioCollectionDelivery){
     let dataTarget = null;
     let dataFor = null;
@@ -16,7 +18,7 @@ if(radioCollectionDelivery){
         })   
     })
 }
-const map = document.querySelector('#map')
+    const map = document.querySelector('#map')
 if(map){
     $(function(){
     ymaps.ready(init);    
@@ -65,11 +67,14 @@ if(map){
 	    return false;
     })
 
-    }) 
+        }) 
+    }
+      $('.delivery-addresses-items').mCustomScrollbar();
+    })
 }
-$('.delivery-addresses-items').mCustomScrollbar();
-})
 }
+showMap();
+
 
 const mapLinks = document.querySelectorAll('.delivery-addresses-item');
 if(mapLinks.length >= 2){
