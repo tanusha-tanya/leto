@@ -353,6 +353,17 @@
   &-info{
     margin: 20px 10px;
   }
+  &-empty{
+    font: 12px/28px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    @media(min-width:$tablet){
+      position: absolute;
+      text-align: center;
+      left: 0;
+      right: 0;
+      bottom: 26px;     
+    }
+  }
 }
 
 .products-item{

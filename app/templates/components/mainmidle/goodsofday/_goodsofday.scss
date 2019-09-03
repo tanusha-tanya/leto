@@ -250,4 +250,10 @@
       background: $selection;
     }
   }
+  &-empty{
+    width: 160px;
+    @media(min-width:$tablet){
+      width: 100%;
+    }
+  }
 }

@@ -221,6 +221,9 @@
       background: $selection;
     }
   }
+  &-empty{
+    width: 158px;
+  }
   &-items{
     max-width: 500px;
     position: relative;
