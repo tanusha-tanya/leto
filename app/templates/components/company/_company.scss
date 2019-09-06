@@ -24,10 +24,7 @@
         &__bg{
             @media(min-width:$tablet){
                 &:before{
-                    content: '';
-                    background-image: url(../images/svg/rose_bg.svg);
-                    background-repeat: no-repeat;
-                    background-size: contain;
+                    content: '';                    
                     width: 198px;
                     height: 177px;
                     display: block;
@@ -160,8 +157,7 @@
         text-align: center;
         display: block;
         margin: 4px auto;
-        text-transform: uppercase;
-        background-image: url(../images/svg/flower.svg);
+        text-transform: uppercase;        
         padding: 30px; 
         background-repeat: no-repeat;
         background-position: center;

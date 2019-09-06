@@ -69,16 +69,13 @@
   &-title{
     font: 30px/50px MuseoSansNormal, Arial, Helvetica, sans-serif;
     text-transform: uppercase;
-    color: $greyText;
-    background-image: url('../images/svg/flower_little.svg');
-    background-repeat: no-repeat;
+    color: $greyText;    
     background-position: left;
     display: block;
     padding: 10px 0;
     position: relative;
     @media(min-width: $tablet){
       font: 40px/60px MuseoSansNormal, Arial, Helvetica, sans-serif;
-      background-image: url('../images/svg/flower_middle.svg');
       padding: 20px 0;
     }
     @media(min-width:$desktop){

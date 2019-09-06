@@ -24,9 +24,7 @@
       font: 30px/50px MuseoSansNormal, Arial, Helvetica, sans-serif;
       text-transform: uppercase;
       color: $greyText;
-      background-color: #fff;
-      background-image: url('../images/svg/flower_little.svg');
-      background-repeat: no-repeat;
+      background-color: #fff;      
       background-position: top center;
       display: inline-block;
       padding: 20px 0;
@@ -39,31 +37,7 @@
         background-position: center;
       }
     }
-  }
-  /*&__main{
-    .bestseller-title{
-      &:after, &:before{
-        @media(min-width:$tablet){
-          content: '';
-          position: absolute;
-          background: $brandborder;
-          width: 110px;
-          height: 1px;
-        }
-        @media(min-width:$desktop){
-          width: 22%;
-        }
-      }
-      &:before{
-        right: 0;
-        top: 50%;
-      }
-      &:after{
-        left: 0;
-        top: 50%;
-      }
-    }
-  }*/
+  }  
   &-carousel{
     margin-top: 15px;
     @media(min-width:$tablet){
