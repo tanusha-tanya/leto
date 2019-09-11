@@ -3,13 +3,13 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 68px;
+  top: 67px;
   z-index: 999;
   background: $buttontext;
   transform: translateX(-100%);
   transition: transform .3s;
   @media(min-width: 400px){
-    top: 92px;
+    top: 95px;
   }
   @media(min-width: 600px){
     max-width: 320px;

@@ -12,7 +12,7 @@
     height: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     position: absolute;
-    bottom: -57px;
+    bottom: -70px;
     @media(min-width: $tablet){
       bottom: -121px;
       width: calc(100% - 40px);
@@ -104,8 +104,10 @@
     }
   }
 }
-.no-js .owl-carousel{
-  &.maintopbrends-carousel{
-    display: flex;
+.no-js, .hide {
+  .owl-carousel{
+    &.maintopbrends-carousel{
+      display: flex;
+    }
   }
-} 
+}
