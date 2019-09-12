@@ -11,7 +11,7 @@
   &-content{
     @media(min-width:$tablet){
       width: 400px;
-      padding-top: 40px;
+      padding-top: 30px;
     }
     @media(min-width:$desktop){
       width: 700px;
@@ -92,7 +92,7 @@
       height: 100%;
       width: 50%;
       background-repeat: no-repeat;
-      background-position: right;
+      background-position: bottom right;
     }
     @media(min-width:$desktop){
       background-image: url(../assets/footerpickbig.png);

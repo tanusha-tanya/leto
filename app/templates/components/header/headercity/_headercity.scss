@@ -3,6 +3,10 @@
   position: relative;
   @media(min-width:$desktop){
     margin-top: 10px;
+    span{
+      margin-left: 10px;
+      text-align: right;
+    }
   }
   &-link{
     font: 12px/14px MuseoSansNormal, Arial, Helvetica, sans-serif;

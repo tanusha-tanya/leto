@@ -37,19 +37,20 @@ links.forEach((elem)=>{
 }
 
 let linksScroll = () => {
-  $('.tabs-links').slick({
-   slidesToShow: 3,
-   slidesToScroll: 3,
-   infinite: false,
-   mobileFirst: true,
-   responsive: [
-    {
-      breakpoint: 768,
-      settings: "unslick"
-    }
-  ]
-})
-
+  if($('.tabs-links-item').length > 2){
+      $('.tabs-links').slick({
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: false,
+        mobileFirst: true,
+        responsive: [
+        {
+          breakpoint: 768,
+          settings: "unslick"
+        }
+      ]
+    })
+  } 
 }
 linksScroll()
 

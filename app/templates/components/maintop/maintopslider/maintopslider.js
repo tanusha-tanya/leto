@@ -34,7 +34,7 @@ function sliderCarousel(){
 
 $(document).ready(function() {
     sliderCarousel();
-    $(window).resize(
+    $(window).resize(function(){
         sliderCarousel()
-    );
+    });
 });

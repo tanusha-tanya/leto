@@ -18,6 +18,14 @@ if (deskfilter){
       }
     })
   })  
+  let closeFilter = document.querySelector('.deskfilter-close');
+  if(closeFilter){
+    closeFilter.addEventListener('click', (e)=>{     
+      deskfilter.classList.remove('deskfilter__active')
+   })
+  }
+  $('.deskfilter-scroll-container').mCustomScrollbar();
+
 }
 const brandCheck = document.querySelectorAll('.deskfilter-scroll-checkbox')
 const counter = document.querySelector('.counter');
@@ -49,11 +57,8 @@ if(counter){
       elem.checked = false;
       counter.textContent = 0;
     })
-  })
-  const close = document.querySelector('.deskfilter-close');
-   close.addEventListener('click', (e)=>{
-     deskfilter.classList.remove('deskfilter__active')
-   })
+  })  
 }
+
+
   
-$('.deskfilter-scroll-container').mCustomScrollbar();

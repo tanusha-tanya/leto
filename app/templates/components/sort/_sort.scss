@@ -5,6 +5,10 @@
     position: relative;
     border-top-right-radius: 50px;
     box-sizing: border-box;
+    display: flex;
+    @media(min-width: $desktop){
+      display: block;
+    }    
     p{
       font: 12px/18px MuseoSansDark, Arial, Helvetica, sans-serif;
       color: $greyText;
@@ -12,22 +16,7 @@
       display: inline-block;
       margin-right: 12px;
     }
-    &:after{
-      content: '';
-      position: absolute;
-      display: block;
-      right: 40px;
-      top: 31px;
-      border-top: 2px solid $arrow;
-      border-left: 2px solid $arrow;
-      width: 7px;
-      height: 7px;
-      transform: rotate(-135deg);
-      transition: transform .3s, border-color .3s;
-      @media(min-width:$tablet){
-        display: none;
-      }
-    }
+    
     &__active{
       .sort-list{
         height:auto;
@@ -36,10 +25,12 @@
         padding: 18px 20px 12px 20px;
         border-top: 1px solid $buttontext;
       }
-      &:after{
-        transform: rotate(45deg) translateY(7px);
-        border-color:  $selection;
-      }
+      .sort-type{
+        &:after{
+          transform: rotate(45deg);
+          border-color:  $selection;
+        }
+      }      
     }
   }
   &-type{
@@ -49,8 +40,25 @@
     display: inline-block;
     position: relative;
     cursor:pointer;
+    width: 100%;
     @media(min-width:$tablet){
       display: none;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 2px;
+      border-top: 2px solid $arrow;
+      border-left: 2px solid $arrow;
+      width: 7px;
+      height: 7px;
+      transform: rotate(-135deg);
+      transition: transform .3s, border-color .3s;
+      @media(min-width:$tablet){
+        display: none;
+      }
     }
   }
   &-list{

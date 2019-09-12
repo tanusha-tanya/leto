@@ -26,6 +26,7 @@ function slickInitialize(){
     dots: false,
     arrows: false,
     vertical: true,
+    verticalSwiping: true,
     focusOnSelect: true,
     centerMode: false,
     draggable: true,

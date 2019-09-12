@@ -152,8 +152,7 @@
     margin: 0 auto;
     @media(min-width:$tablet){
       display: flex;
-      justify-content: space-between;
-      padding-bottom: 0;      
+      justify-content: space-between;      
     }
     @media(min-width:$desktop){
       display: block;

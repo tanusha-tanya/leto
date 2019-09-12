@@ -232,7 +232,7 @@
   }
   &-edit{
     &-links{
-      display: none;
+      //display: none;
       @media(min-width:$tablet){
           display: block;
           margin: 0 10px;

@@ -13,11 +13,13 @@
       display: flex;
       flex-grow: 1;
       flex-shrink: 0;
+      justify-content: space-between;
     }
   }
   &-city{
     @media(min-width: $desktop){
-      margin-left: 31px;
+      margin-right: 12px;
+      max-width: 162px;
     }
   }
   &-right{
@@ -27,7 +29,7 @@
     }
     @media(min-width: $desktop){
       width: auto;
-      margin-top: 14px;
+      margin-top: 14px;      
     }
   }
 }
