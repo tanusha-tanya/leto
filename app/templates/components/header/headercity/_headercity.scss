@@ -1,6 +1,7 @@
 .headercity{
   display: flex;
   position: relative;
+  align-items: center;
   @media(min-width:$desktop){
     margin-top: 10px;
     span{

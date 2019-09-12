@@ -62,7 +62,7 @@ if(cities){
     })
     let headerCityTyping = () => {
         headerCityCompleet.innerHTML = "";
-        headerCityCompleet.classList.remove('active');        
+        headerCityCompleet.classList.remove('active');               
         if(headerCityInput.value.length > 0){             
             headerCityCompleet.innerHTML = "";
             let string = headerCityInput.value.trim(); 
@@ -76,7 +76,7 @@ if(cities){
                   autocompleet(myJson) 
                 }   
             });           
-            let autocompleet = (myJson) => {
+            let autocompleet = (myJson) => {                
                 let ul = document.createElement('ul');
                     ul.className = 'cities-ul';   
                 for(let i = 0; i<myJson.length; i++){                    
@@ -87,7 +87,7 @@ if(cities){
                 }
                 headerCityCompleet.classList.add('active');
                 headerCityCompleet.appendChild(ul);   
-                choiceLink(); 
+                choiceLink();                 
                 $('.cities-autocomplete').mCustomScrollbar();      
                 closeAutocompeet();     
             } 
@@ -98,7 +98,7 @@ if(cities){
             headerInputHidden.dispatchEvent(headerevent);    
             changeButton();      
             headerCityInput.value = "";
-            headerInputHidden.value = "";            
+            headerInputHidden.value = "";  
         }
     }    
 
@@ -111,7 +111,7 @@ if(cities){
                 headerInputHidden.value = link.dataset.id;
                 headerInputHidden.dispatchEvent(headerevent); 
                 headerCityCompleet.innerHTML = "";
-                headerCityCompleet.classList.remove('active');    
+                headerCityCompleet.classList.remove('active');                   
             })
         }) 
     }
@@ -123,7 +123,7 @@ if(cities){
         headerInputHidden.dispatchEvent(headerevent); 
         changeButton();         
         headerCityInput.value = "";
-        headerInputHidden.value = "";   
+        headerInputHidden.value = "";          
     });
 
     choiceLink();
@@ -134,7 +134,7 @@ if(cities){
             if(e.target !== headerCityCompleet && !e.target.closest('.cities-autocomplete')){
                 headerCityCompleet.innerHTML = "";
                 headerCityCompleet.classList.remove('active');   
-                headerInputHidden.dispatchEvent(headerevent);
+                headerInputHidden.dispatchEvent(headerevent);                
             }           
         }) 
     }
