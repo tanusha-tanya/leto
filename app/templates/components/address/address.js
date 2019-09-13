@@ -28,7 +28,11 @@ let openPopup = () => {
                 $('body').trigger('ajaxReady');
                 let addresBlock = $(this.content).find(".js-cart-order-address");
                 let orederCity = $(this.content).find("#js-ordercity-popup");
-                if($(orederCity)[0].value) $(addresBlock).show()         
+                if($(orederCity).length > 0){
+                    if($(orederCity)[0].value) {
+                        $(addresBlock).show() 
+                    }              
+                }                
             }
         }    
     });
@@ -60,7 +64,7 @@ document.body.oninput = (e)=>{
 
 let check = function(form){
     let inputs = form.querySelectorAll('.js-inputcheck');
-    let button = form.querySelector('.add-button__send');
+    let button = form.querySelector('button');
     let arr = 0
     inputs.forEach((input) => {
         if(input.value.length <= 0){
@@ -83,5 +87,4 @@ if(deleteCollection){
         })
     })
 }
-
 

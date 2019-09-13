@@ -15,3 +15,14 @@ document.body.onclick = (e)=>{
         }
     }
 }
+
+document.body.onchange = (e)=>{    
+    if(e.target.classList.contains('entry-file')){
+        let label = document.querySelector('.entry-label__file');
+        let file = e.target;
+        if(file.value.length > 0){
+            let fileName = file.value.split(/(\\|\/)/g).pop();
+            label.innerHTML =  `${fileName} <span class="hr-delete"></span>`
+        }; 
+    }
+}

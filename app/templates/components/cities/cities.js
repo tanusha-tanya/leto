@@ -10,11 +10,12 @@ if(cities){
     let headerCityCompleet = document.querySelector('.cities-autocomplete');
     let reset = document.querySelector('.cities-reset');
     let typingTimer;                
-    let doneTypingInterval = 300; 
+    let doneTypingInterval = 300;    
     
+
     headerCityInput.addEventListener('keyup', () => {
         clearTimeout(typingTimer);
-        if (headerCityInput.value) {
+        if (headerCityInput.value) {            
             typingTimer = setTimeout(headerCityTyping, doneTypingInterval);
         }
     });   
@@ -86,16 +87,16 @@ if(cities){
                     ul.appendChild(li);                                     
                 }
                 headerCityCompleet.classList.add('active');
-                headerCityCompleet.appendChild(ul);   
-                choiceLink();                 
-                $('.cities-autocomplete').mCustomScrollbar();      
+                headerCityCompleet.appendChild(ul);    
+                $(ul).mCustomScrollbar();                 
+                choiceLink();                
                 closeAutocompeet();     
             } 
         }
         else{
             headerCityCompleet.innerHTML = "";
             headerCityCompleet.classList.remove('active');   
-            headerInputHidden.dispatchEvent(headerevent);    
+            headerInputHidden.dispatchEvent(headerevent);
             changeButton();      
             headerCityInput.value = "";
             headerInputHidden.value = "";  
@@ -111,7 +112,7 @@ if(cities){
                 headerInputHidden.value = link.dataset.id;
                 headerInputHidden.dispatchEvent(headerevent); 
                 headerCityCompleet.innerHTML = "";
-                headerCityCompleet.classList.remove('active');                   
+                headerCityCompleet.classList.remove('active');                
             })
         }) 
     }
@@ -134,8 +135,8 @@ if(cities){
             if(e.target !== headerCityCompleet && !e.target.closest('.cities-autocomplete')){
                 headerCityCompleet.innerHTML = "";
                 headerCityCompleet.classList.remove('active');   
-                headerInputHidden.dispatchEvent(headerevent);                
+                headerInputHidden.dispatchEvent(headerevent);                                
             }           
         }) 
-    }
+    }   
 }

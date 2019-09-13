@@ -3,11 +3,11 @@
         .order-bgform 
             .order-fieldset
                 legend.order-legend Телефон
-                input.order-orderform-input.js-phone(type="text", placeholder="+7(___) ___-____")
+                input.order-orderform-input.required-input.js-phone(type="text", placeholder="+7(___) ___-____")
             .order-fieldset
                 legend.order-legend Город
                 span.order-autocompleet-wrap
-                    input.order-orderform-input#js-ordercity(type="text", placeholder="Город")
+                    input.required-input.order-orderform-input#js-ordercity(type="text", placeholder="Город")
                     span.js-close
                     input#js-ordercityhide(type="hidden")
                     span.order-autocompleet#js-citycompleet      
@@ -78,7 +78,7 @@
                     .order-string Спасибо мастеру
                     .order-num 0 руб
         .order-send
-            button.order-button Оформить заказ
+            button.order-button.send-button Оформить заказ
             .order-disclaimer Нажимая на кнопку «Оформить заказ», вы даете своё согласие на обработку персональных данных в соответствии с 
                 a(href="#") Политикой конфиденциальности 
                 |  и принимаете условия 

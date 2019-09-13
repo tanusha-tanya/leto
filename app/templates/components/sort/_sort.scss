@@ -6,7 +6,7 @@
     border-top-right-radius: 50px;
     box-sizing: border-box;
     display: flex;
-    @media(min-width: $desktop){
+    @media(min-width: $tablet){
       display: block;
     }    
     p{

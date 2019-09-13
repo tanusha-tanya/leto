@@ -381,21 +381,25 @@ h6{
 }
 .catalog{
   position: relative;
+  min-height: 70vh;
   @media(min-width: $desktop){
     min-height: 100vh;
   }
 }
 .order{
+  min-height: 70vh;
   @media(min-width: $desktop){
     min-height: 100vh;    
   }
 }
 .delivery{  
+  min-height: 70vh;
   @media(min-width: $desktop){
     min-height: 100vh;    
   }
 }  
 .proleto{
+  min-height: 70vh;  
   @media(min-width: $desktop){
     min-height: 100vh;  
   }

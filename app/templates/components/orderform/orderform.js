@@ -1,5 +1,7 @@
 $('.js-phone').inputmask('+7(999) 999-9999');
-$('.order-addreslist').mCustomScrollbar();
+$('.order-addreslist').mCustomScrollbar({
+    theme:"dark"
+});
 
 
 let orderform = document.querySelector(".order-orderform")
@@ -24,7 +26,8 @@ if(orderform){
     let choiceCheckbox = document.querySelector('#choice')
     let addresslist = document.querySelector('.order-addreslist')
     let orderInput = orderform.querySelectorAll('input') 
-    
+
+ 
     orderInput.forEach((input) => {
         input.addEventListener('change', ()=>{
             checkform(orderform)
@@ -34,8 +37,17 @@ if(orderform){
         })
     })
 
-    if(choiceCheckbox){    
-        choiceCheckbox.addEventListener('change', ()=>{
+    let hideAddress = () => {
+        $(cartAddress).hide()
+        street.value = "";
+        hiddenStreet.value="";
+        build.value = "";
+        flat.value = "";
+        checkform(orderform)
+    }
+
+    if(choiceCheckbox){  
+        choiceCheckbox.addEventListener('change', ()=>{            
             if (choiceCheckbox.checked){
                 addresslist.classList.add('open')            
             }
@@ -123,14 +135,7 @@ if(orderform){
         })
     } 
 
-    let hideAddress = () => {
-        $(cartAddress).hide()
-        street.value = "";
-        hiddenStreet.value="";
-        build.value = "";
-        flat.value = "";
-        checkform(orderform)
-    }
+    
     let typingTimer;                
     let doneTypingInterval = 300; 
     

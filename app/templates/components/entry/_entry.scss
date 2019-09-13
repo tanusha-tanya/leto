@@ -89,7 +89,19 @@
         }
         &__left{
             @media(min-width:$tablet){
-                margin-left:170px;
+                margin-left:170px;                
+            }
+        }
+        &__end{
+            @media(min-width:$tablet){
+                justify-content: flex-end;
+                .entry-fieldset__left{
+                    margin-left:0;
+                    width: 380px;
+                }                
+                .entry-button{
+                    margin-left:0;  
+                  }
             }
         }
     }
@@ -260,6 +272,11 @@
 }
 .error-text{
     color: #AB0052;
+    font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+}
+.success-text{
+    color: #697F34;
     font: 12px/18px MuseoSansNormal, Arial, Helvetica, sans-serif;
     margin-top: 10px;
 }

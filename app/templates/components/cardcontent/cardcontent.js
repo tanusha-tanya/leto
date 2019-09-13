@@ -33,12 +33,14 @@ let goodAddedShow = (succes, info, button) => {
     })
   }
     goodadded.classList.add('active');
-    missClick();
+    cardMissClick();
 }
-let missClick = ()=>{
+let cardMissClick = ()=>{
   document.body.onclick = (e) =>{
     if ((e.target.closest !== goodadded || e.target !== goodadded) && !e.target.classList.contains('js-add')){  
-      goodadded.classList.remove('active')
+      if(goodadded.classList.contains('active')){
+        goodadded.classList.remove('active')
+      }      
     } 
   }
 }

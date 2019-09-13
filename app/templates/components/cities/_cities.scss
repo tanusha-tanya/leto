@@ -95,6 +95,9 @@
     }
     &-ul{
         margin-bottom: 15px;
+        max-height: 200px;
+        overflow: hidden;
+        background: #fff;
     }
     &-li{
         margin: 5px 0;
