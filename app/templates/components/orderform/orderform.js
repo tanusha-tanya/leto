@@ -263,3 +263,6 @@ if(orderform){
         }
     }
 }
+$('button.disabled').click((e)=>{
+    e.preventDefault()
+})
