@@ -39,7 +39,8 @@
         width: 260px;
         height: 50px;
         padding: 10px;
-            font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        font: 15px/24px MuseoSansNormal, Arial, Helvetica, sans-serif;
+        padding-right: 40px;
         @media(min-width:$tablet){
             width: 380px;
         }
@@ -199,4 +200,9 @@
             }
         }
     }
+}
+.compleet-ul{
+    max-height: 200px;
+    overflow: hidden;
+    background: #fff;
 }

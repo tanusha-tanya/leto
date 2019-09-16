@@ -20,6 +20,18 @@ if(adressAdd){
         }
     }    
 
+    document.body.onkeydown = (e)=>{        
+        let key = event.keyCode || event.charCode;    
+        if( key == 8 || key == 46 ){             
+            if(e.target.id == "js-ordercity-popup"){
+                
+            }
+            if(e.target.id == "js-orderstreet-popup"){
+                
+            }        
+        }           
+    };
+
     let CityTyping = (cityInput) => {
         let form = cityInput.closest('.add-form');
         let hiddenCity = form.querySelector("#js-ordercityhide");
@@ -41,17 +53,21 @@ if(adressAdd){
                     autocompleet(myJson) 
                 }   
             });          
-            let autocompleet = (myJson) => {                
+            let autocompleet = (myJson) => { 
+                cityCompleet.innerHTML = "";               
                 let ul = document.createElement('ul');
                 ul.className = 'compleet-ul';   
                 for(let i = 0; i<myJson.length; i++){                    
                     let li = document.createElement('li');
                     li.className = 'compleet-item';
                     li.innerHTML = `<a href="#" data-id="${myJson[i].ID}" class="compleet-link"><strong>${myJson[i].NAME}</strong> ${myJson[i].PARENT.NAME}</a>`
-                    ul.appendChild(li);                                     
+                    ul.appendChild(li);                                                      
                 }
                 cityCompleet.classList.add('active');
                 cityCompleet.appendChild(ul);
+                $(ul).mCustomScrollbar({
+                    theme:"dark"
+                }); 
                 choiceCity(); 
             } 
         }
@@ -95,7 +111,8 @@ if(adressAdd){
                    autocompleet(myJson) 
                }   
             });
-            let autocompleet = (myJson) => {                                 
+            let autocompleet = (myJson) => { 
+                streetCompleet.innerHTML = "";                                
                 let ul = document.createElement('ul');
                     ul.className = 'compleet-ul';   
                 for(let i = 0; i<myJson.length; i++){                    
@@ -106,6 +123,9 @@ if(adressAdd){
                 }
                 streetCompleet.classList.add('active');
                 streetCompleet.appendChild(ul);
+                $(ul).mCustomScrollbar({
+                    theme:"dark"
+                }); 
                 choiceStreet();
             }        
         }

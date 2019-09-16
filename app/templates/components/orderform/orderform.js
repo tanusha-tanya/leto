@@ -234,6 +234,9 @@ if(orderform){
             }
             cityCompleet.classList.add('active');
             cityCompleet.appendChild(ul);
+            $(ul).mCustomScrollbar({
+                theme:"dark"
+            }); 
             choiceCity();  
             bodyClick()
         }
@@ -291,6 +294,9 @@ if(orderform){
             }
             streetCompleet.classList.add('active');
             streetCompleet.appendChild(ul);
+            $(ul).mCustomScrollbar({
+                theme:"dark"
+            }); 
             choiceStreet();  
             bodyClick();                         
         }     

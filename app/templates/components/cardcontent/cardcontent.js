@@ -23,7 +23,7 @@ let goodAddedShow = (succes, info, button) => {
     status.textContent = "Ошибка";
     text.textContent = info;
     svg.innerHTML = '<svg class="goodadded-svg" role="img" width="28" height="32"><use xlink:href="#cancel"></use></svg>';
-    buttonLeft.textContent = 'Отмена';
+    buttonLeft.textContent = 'Закрыть';
     $(buttonRight).text('Повторить операцию');
     $(buttonRight).addClass('goodadded-link__white');
     $('.goodadded-right').html(buttonRight);

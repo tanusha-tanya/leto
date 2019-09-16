@@ -86,8 +86,12 @@ $('body').on('change', '.add-input-photo', function (event) {
             if (input.files[0].type.match('image.*')) {
                 var reader = new FileReader();
                 reader.onload = function (e) {
-                    $('.add-label-photo img').attr('src', e.target.result);
-                    $('.add-label-photo span').addClass('delete-photo');
+                    if($('.add-label-photo img').length>0){
+                        $('.add-label-photo img').attr('src', e.target.result);
+                    }
+                    else{                        
+                        $('.add-label-photo').prepend(`<img src="${e.target.result}">`)
+                    }                    
                     $('.add-label-photo span').html('Заменить');                    
                 }
                 reader.readAsDataURL(input.files[0]);
