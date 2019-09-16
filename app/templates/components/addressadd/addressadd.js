@@ -1,7 +1,7 @@
 let adressAdd = document.querySelector('.address-add')
 if(adressAdd){ 
     let typingTimer;                
-    let doneTypingInterval = 500;     
+    let doneTypingInterval = 300;     
     
     document.body.onkeyup = (e)=>{
         if(e.target.id == "js-ordercity-popup"){
@@ -11,27 +11,40 @@ if(adressAdd){
                 typingTimer = setTimeout(CityTyping(cityInput), doneTypingInterval);
             }
         }
-        if(e.target.id == "js-orderstreet-popup"){
+        else if(e.target.id == "js-orderstreet-popup"){
             let streetInput = e.target;
             clearTimeout(typingTimer);
             if (streetInput.value) {
                 typingTimer = setTimeout(streetTyping(streetInput), doneTypingInterval);
             }
         }
-    }    
+    }  
 
     document.body.onkeydown = (e)=>{        
         let key = event.keyCode || event.charCode;    
         if( key == 8 || key == 46 ){             
             if(e.target.id == "js-ordercity-popup"){
-                
+                let form = e.target.closest('.add-form');
+                let hiddenCity = form.querySelector("#js-ordercityhide");
+                let cityCompleet = form.querySelector('#js-citycompleet');
+                let addressBlock = form.querySelector('.js-cart-order-address');
+                cityCompleet.innerHTML = "";
+                cityCompleet.classList.remove('active');
+                $(addressBlock).hide();             
+                hiddenCity.value = "";
             }
-            if(e.target.id == "js-orderstreet-popup"){
-                
+            else if(e.target.id == "js-orderstreet-popup"){
+                let form = e.target.closest('.add-form');
+                let hiddenStreet = form.querySelector("#js-orderstreethide");
+                let streetCompleet = form.querySelector('#js-streetcompleet');
+                streetCompleet.innerHTML = "";
+                streetCompleet.classList.remove('active');
+                $(addressBlock).hide();             
+                hiddenStree.value = "";
             }        
         }           
     };
-
+    
     let CityTyping = (cityInput) => {
         let form = cityInput.closest('.add-form');
         let hiddenCity = form.querySelector("#js-ordercityhide");
@@ -85,7 +98,8 @@ if(adressAdd){
                     hiddenCity.value = link.dataset.id;
                     cityCompleet.classList.remove('active');
                     cityCompleet.innerHTML = "";
-                    $(addressBlock).show();                             
+                    $(addressBlock).show();
+                    return                            
                 })
             })
         }
@@ -138,6 +152,7 @@ if(adressAdd){
                     hiddenStreet.value = link.dataset.id;
                     streetCompleet.classList.remove('active');
                     streetCompleet.innerHTML = "";
+                    return 
                 })
             })
         }
