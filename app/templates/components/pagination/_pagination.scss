@@ -44,7 +44,7 @@
   }
   &-links{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     @media(min-width:$tablet){
       margin: 0 auto;
       position: relative;
