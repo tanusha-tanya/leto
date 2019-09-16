@@ -24,7 +24,8 @@ let openPopup = () => {
                     type: 'ajax',
                     alignTop: true,
                     overflowY: 'scroll'
-                });                
+                });             
+                $(this.content).find('.js-phone').inputmask('+7(999) 999-9999');   
                 $('body').trigger('ajaxReady');
                 let addresBlock = $(this.content).find(".js-cart-order-address");
                 let orederCity = $(this.content).find("#js-ordercity-popup");
@@ -79,6 +80,32 @@ let check = function(form){
     }
 }
 
+$('body').on('change', '.add-input-photo', function (event) {
+        var input = $(this)[0];
+        if (input.files && input.files[0]) {
+            if (input.files[0].type.match('image.*')) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('.add-label-photo img').attr('src', e.target.result);
+                    $('.add-label-photo span').addClass('delete-photo');
+                    $('.add-label-photo span').html('Заменить');                    
+                }
+                reader.readAsDataURL(input.files[0]);
+                let form = event.target.closest('.js-form');
+                check(form)
+            } else {
+                console.log('ошибка, не изображение');
+            }
+        } else {
+            console.log('хьюстон у нас проблема');
+        }
+    });
+
+    $('body').on('change', '.add-checkbox', function (event) {
+        let form = event.target.closest('.js-form');
+         check(form)
+    })
+    
 const deleteCollection = document.querySelectorAll('.js-delete');
 if(deleteCollection){
     deleteCollection.forEach((element) =>{
