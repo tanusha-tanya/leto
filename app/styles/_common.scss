@@ -408,6 +408,7 @@ h6{
   transition: background .3s;
   &.disabled{
     background: #E0E0E0;
+    cursor: text; 
   }
 }
 .bx-context-toolbar-empty-area{
