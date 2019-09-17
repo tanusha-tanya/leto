@@ -30,7 +30,7 @@ if(adressAdd){
                 let addressBlock = form.querySelector('.js-cart-order-address');
                 cityCompleet.innerHTML = "";
                 cityCompleet.classList.remove('active');
-                $(addressBlock).hide();             
+                $('.js-cart-order-address').hide();             
                 hiddenCity.value = "";
             }
             else if(e.target.id == "js-orderstreet-popup"){
@@ -39,7 +39,7 @@ if(adressAdd){
                 let streetCompleet = form.querySelector('#js-streetcompleet');
                 streetCompleet.innerHTML = "";
                 streetCompleet.classList.remove('active');
-                $(addressBlock).hide();             
+                $('.js-cart-order-address').hide();             
                 hiddenStree.value = "";
             }        
         }           
@@ -80,12 +80,13 @@ if(adressAdd){
                 cityCompleet.appendChild(ul);
                 $(ul).mCustomScrollbar({
                     theme:"dark"
-                }); 
+                });
+                bodyAdressClick(cityCompleet);    
                 choiceCity(); 
             } 
         }
         else{
-            $(addressBlock).hide();             
+            $('.js-cart-order-address').hide();             
             hiddenCity.value = "";
         }
         
@@ -98,7 +99,7 @@ if(adressAdd){
                     hiddenCity.value = link.dataset.id;
                     cityCompleet.classList.remove('active');
                     cityCompleet.innerHTML = "";
-                    $(addressBlock).show();
+                    $('.js-cart-order-address').show();
                     return                            
                 })
             })
@@ -140,7 +141,8 @@ if(adressAdd){
                 $(ul).mCustomScrollbar({
                     theme:"dark"
                 }); 
-                choiceStreet();
+                bodyAdressClick(streetCompleet);
+                choiceStreet();                
             }        
         }
         let choiceStreet = () => {
@@ -157,6 +159,15 @@ if(adressAdd){
             })
         }
     } 
+    let bodyAdressClick = (compleet) => {
+        document.body.addEventListener('click', (e) => {            
+            if(e.target !== compleet && !e.target.closest('#js-citycompleet') && !e.target.closest('#js-streetcompleet')){
+                compleet.innerHTML = "";
+                compleet.classList.remove('active');        
+            }
+        })
+    } 
+
     $('body').on('click', '.js-close', function(e){
         if(e.target.closest('.add-form')){
             let form = e.target.closest('.add-form');
@@ -175,7 +186,7 @@ if(adressAdd){
             build.value = ""; 
             flat.value = "";
             button.classList.add('disabled');
-            $(addressBlock).hide();    
+            $('.js-cart-order-address').hide();    
         }
     })  
 }
