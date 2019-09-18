@@ -12,14 +12,14 @@
     @media(min-width: $desktop){
       display: flex;
       flex-grow: 1;
-      flex-shrink: 0;
-      justify-content: space-between;
+      flex-shrink: 0;      
     }
   }
   &-city{
     @media(min-width: $desktop){
       margin-right: 12px;
-      max-width: 162px;
+      max-width: 200px;
+      margin-left: 32px;
     }
   }
   &-right{

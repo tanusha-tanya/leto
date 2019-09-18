@@ -76,10 +76,10 @@
         right: 0;
         box-sizing: border-box;
         padding: 10px 20px;
-        border: 1px solid #C8C2B2;
+        border: 1px solid #C8C2B2;        
+        display: none;
         max-height: 200px;
         overflow: hidden;
-        display: none;
         &.active{
             display: block;
         }
@@ -98,6 +98,8 @@
         max-height: 200px;
         overflow: hidden;
         background: #fff;
+        box-sizing: border-box;
+        padding-bottom: 20px;
     }
     &-li{
         margin: 5px 0;

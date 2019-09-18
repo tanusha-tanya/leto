@@ -185,6 +185,8 @@ h6{
   }
 }
 .tabletrow{
+  position: relative;
+  z-index: 100;
   @media(min-width: $tablet){
     display: flex;
     margin: 0 -10px;

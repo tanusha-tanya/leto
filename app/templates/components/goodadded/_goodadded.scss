@@ -19,16 +19,17 @@
         display: flex; 
         flex-wrap: wrap;
         justify-content: center;
-        @media(min-width:$tablet){
-            justify-content: space-between;
+        @media(min-width:$tablet){            
             flex-wrap: nowrap;
-            padding: 34px 34px;            
+            padding: 34px 34px;
+            justify-content: space-between;            
         }
         @media(min-width:$desktop){
             padding: 0;
             position: relative; 
             margin: 0 auto;
-            max-width: 1180px;     
+            max-width: 1180px;
+            justify-content: center;       
         }
     } 
     &-center{
@@ -39,6 +40,18 @@
         @media(min-width:$tablet){
             margin: 0;
             order:0;
+        }
+    }
+    &-left{
+        @media(min-width:$desktop){
+            position:absolute;
+            left:0;
+        }
+    }
+    &-right{
+        @media(min-width:$desktop){    
+            position:absolute;
+            right:0;
         }
     }
     &-link{

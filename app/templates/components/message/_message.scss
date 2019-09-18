@@ -1,5 +1,5 @@
 .message{
-    padding: 35px;
+    padding: 15px;
     box-sizing: border-box;
     @media(min-width: $tablet){
         padding: 60px;
@@ -78,9 +78,11 @@
             }
         }
     }
-    &-stars{
-        width: 340px;
+    &-stars{      
         margin-top: 5px;
+        @media(min-width:$tablet){
+            width: 340px;
+        }
         a{
             border: none;
             &:hover{

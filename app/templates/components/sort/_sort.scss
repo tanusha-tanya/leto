@@ -27,7 +27,7 @@
       }
       .sort-type{
         &:after{
-          transform: rotate(45deg);
+          transform: rotate(45deg) translate(5px, 3px);
           border-color:  $selection;
         }
       }      

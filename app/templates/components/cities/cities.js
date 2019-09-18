@@ -10,8 +10,8 @@ if(cities){
     let headerCityCompleet = document.querySelector('.cities-autocomplete');
     let reset = document.querySelector('.cities-reset');
     let typingTimer;                
-    let doneTypingInterval = 300;    
-    
+    let doneTypingInterval = 200;    
+    let isAutocompleet = false;
 
     headerCityInput.addEventListener('keyup', () => {
         clearTimeout(typingTimer);
@@ -20,6 +20,8 @@ if(cities){
         }
     });   
     
+    
+
     headerevent.initEvent('changeInput', true, true);
 
     citiesDetect.addEventListener('click', (e)=>{ 
@@ -62,9 +64,12 @@ if(cities){
         changeButton()
     })
     let headerCityTyping = () => {
-        headerCityCompleet.innerHTML = "";
-        headerCityCompleet.classList.remove('active');               
-        if(headerCityInput.value.length > 0){             
+        if(isAutocompleet){
+            headerCityCompleet.innerHTML = "";
+            headerCityCompleet.classList.remove('active');   
+            headerInputHidden.dispatchEvent(headerevent); 
+        }                     
+        if(headerCityInput.value.length > 0){                          
             headerCityCompleet.innerHTML = "";
             let string = headerCityInput.value.trim(); 
             let path = `/ajax/location_get_cities/?city=${string}`           
@@ -74,24 +79,9 @@ if(cities){
             })
             .then(function(myJson){     
                 if(myJson.length > 0){
-                  autocompleet(myJson) 
+                  headerAutocompleet(myJson) 
                 }   
-            });           
-            let autocompleet = (myJson) => {                
-                let ul = document.createElement('ul');
-                    ul.className = 'cities-ul';   
-                for(let i = 0; i<myJson.length; i++){                    
-                    let li = document.createElement('li');
-                    li.className = 'cities-list';
-                    li.innerHTML = `<a href="#" data-id="${myJson[i].ID}" class="cities-link"><strong>${myJson[i].NAME}</strong> ${myJson[i].PARENT.NAME}</a>`
-                    ul.appendChild(li);                                     
-                }
-                headerCityCompleet.classList.add('active');
-                headerCityCompleet.appendChild(ul);    
-                $(ul).mCustomScrollbar();                 
-                choiceLink();                
-                closeAutocompeet();     
-            } 
+            });          
         }
         else{
             headerCityCompleet.innerHTML = "";
@@ -103,7 +93,47 @@ if(cities){
         }
     }    
 
-    let choiceLink = ()=>{
+    let headerAutocompleet = (myJson) => {
+        isAutocompleet = true;                
+        let ul = document.createElement('ul');
+            ul.className = 'cities-ul';   
+        for(let i = 0; i<myJson.length; i++){                    
+            let li = document.createElement('li');
+            li.className = 'cities-list';
+            li.innerHTML = `<a href="#" data-id="${myJson[i].ID}" class="cities-link"><strong>${myJson[i].NAME}</strong> ${myJson[i].PARENT.NAME}</a>`
+            ul.appendChild(li);                                     
+        }
+        headerCityCompleet.classList.add('active');
+        headerCityCompleet.appendChild(ul);    
+        $(ul).mCustomScrollbar();                 
+        choiceHeaderLink();                
+        closeHeaderAutocompeet();   
+    } 
+
+    headerCityInput.onfocus = function(){        
+        if(headerInputHidden.value.length > 0){
+            if(isAutocompleet){
+                return
+            }    
+            else{
+                headerCityCompleet.innerHTML = "";
+                let string = headerCityInput.value.trim(); 
+                let path = `/ajax/location_get_cities/?city=${string}`           
+                fetch(path)
+                .then(function(response){
+                    return response.json();
+                })
+                .then(function(myJson){     
+                    if(myJson.length > 0){
+                        headerAutocompleet(myJson) 
+                    }   
+                });          
+            }
+        }  
+    }           
+    
+
+    let choiceHeaderLink = ()=>{
         let headerCityLink = document.querySelectorAll('.cities-link');   
         headerCityLink.forEach((link) =>{               
         link.addEventListener('click', (e) => {
@@ -126,11 +156,11 @@ if(cities){
         headerCityInput.value = "";
         headerInputHidden.value = "";          
     });
+    
 
-    choiceLink();
-
-    let closeAutocompeet = ()=>{
+    let closeHeaderAutocompeet = ()=>{
         document.body.addEventListener('click', (e)=>{
+            isAutocompleet = false;
             e.preventDefault();
             if(e.target !== headerCityCompleet && !e.target.closest('.cities-autocomplete')){
                 headerCityCompleet.innerHTML = "";
